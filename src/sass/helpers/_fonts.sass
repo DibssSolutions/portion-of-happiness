@@ -5,3 +5,47 @@
 	font-family: $name
 	font-style: $style
 	font-weight: $weight
+
+
+$familyRoboto: 'Roboto'
+$familyCirce: 'Circe'
+
+=roboto
+	font-family: 'Roboto', Arial, -apple-system, BlinkMacSystemFont, 'Oxygen', sans-serif
+=circe
+	font-family: 'Circe', Arial, -apple-system, BlinkMacSystemFont, 'Oxygen', sans-serif
+
+	//CIRCE
+@font-face
+	+fontdefault(normal, 800, $familyCirce)
+	+fontpath('Circe Extra Bold', 'circe-extrabold', Circe-ExtraBold)
+	
+@font-face
+	+fontdefault(normal, 700, $familyCirce)
+	+fontpath('Circe Bold', 'circe-bold', Circe-Bold)
+	
+@font-face
+	+fontdefault(normal, 400, $familyCirce)
+	+fontpath('Circe', 'circe-regular', Circe-Regular)
+
+	//ROBOTO
+@font-face
+	+fontdefault(normal, 700, $familyRoboto)
+	+fontpath('Roboto Bold', 'roboto-bold', Roboto-Bold)
+@font-face
+	+fontdefault(italic, 700, $familyRoboto)
+	+fontpath('Roboto Bold Italic', 'roboto-bolditalic', Roboto-BoldItalic)
+
+@font-face
+	+fontdefault(normal, 500, $familyRoboto)
+	+fontpath('Roboto Medium', 'roboto-medium', Roboto-Medium)
+@font-face
+	+fontdefault(italic, 500, $familyRoboto)
+	+fontpath('Roboto Medium Italic', 'roboto-mediumItalic', Roboto-MediumItalic)
+	
+@font-face
+	+fontdefault(normal, 400, $familyRoboto)
+	+fontpath('Roboto', 'roboto-regular', Roboto-Regular)
+@font-face
+	+fontdefault(italic, 400, $familyRoboto)
+	+fontpath('Roboto Italic', 'roboto-italic', Roboto-Italic)
