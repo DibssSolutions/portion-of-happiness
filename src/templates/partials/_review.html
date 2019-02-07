@@ -1,0 +1,24 @@
+<section class="review">
+        <div class="review__inner inner">
+            <div class="review__header">
+                <h2 class="review__title title">что говорят:</h2>
+                <a href="#" class="review__btn btn btn_md">все отзывы</a>
+            </div>
+            <ul class="review__list">
+                {% for item in range(0, 4) %}
+                <div class="review__item-wrap">
+                    <li class="review-item">
+                        <div class="review-item__img-wrap">
+                            <img src="img/review.png" alt="dish name">
+                        </div>
+                        <div class="review-item__text">
+                            <div class="review-item__name">Ирина Паноморенко</div>
+                            <a href="#" class="review-item__link">@iruna_panomarenko </a>
+                            <p>«Рецепты классные, все очень удобно, понятно и быстро готовить...»</p>
+                        </div>
+                    </li>
+                </div>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>

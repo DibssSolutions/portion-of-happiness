@@ -1,0 +1,35 @@
+.review
+    padding: 40px 0
+    &__header
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__list
+        display: flex
+        margin: 35px -40px 0
+    &__item-wrap
+        padding: 0 40px
+        width: 25%
+
+.review-item
+    max-width: 317px
+    width: 100%
+    font-size: 25px
+    &__img-wrap
+        border: 10px solid $coffee
+        max-height: 317px
+        overflow: hidden
+        height: 0
+        padding-bottom: 100%
+        img
+            width: 100%
+    &__text
+        margin-top: 30px
+    &__name
+        font-weight: 500
+    &__link
+        color: $blue
+        text-decoration: none
+        transition: color .3s
+        +hover
+            color: $orange
