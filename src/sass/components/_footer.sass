@@ -1,0 +1,72 @@
+.footer
+    &__inner
+    &__top
+        display: flex
+        justify-content: space-between
+    &__logo
+        // max-width: 156px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+    &-logo
+        font-size: 196px
+        .icon
+            display: block
+            max-width: 100%
+    &-slogan
+        margin-top: 29px
+        text-align: center
+        font-size: 19px
+    &__bottom
+        padding: 19px 0 26px
+        background-color: $brown
+        &-wrap
+            display: flex
+            justify-content: space-between
+            align-items: center
+            flex-wrap: wrap
+    &__copyright
+        color: $white
+    &__social
+        display: flex
+        align-items: center
+        margin: 0 15px
+    &__subscribe
+        display: block
+        color: $white
+        text-decoration: none
+        text-transform: uppercase
+        transition: color .3s
+        font-size: 22px
+        +hover
+            color: $orange
+        &:not(:first-child)
+            margin-left: 41px
+
+.social
+    display: flex
+    align-items: center
+    &__item
+        font-size: 35px
+        color: $white
+        transition: color .3s
+        +hover
+            color: $orange
+        &:not(:first-child)
+            margin-left: 32px
+        svg
+            display: block
+            max-width: 100%
+
+.stores
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__item
+        max-width: 150px
+        &:not(:first-child)
+            margin-left: 60px
+        img
+            display: block
+            max-width: 100%
