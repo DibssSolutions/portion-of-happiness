@@ -4,8 +4,33 @@
     color: $white
     +f(18px,500,1)
     text-transform: uppercase
+    text-align: center
+    text-decoration: none
     vertical-align: top
     display: inline-block
     border-radius: 20.5px
     background-color: $orange
+    position: relative
+    overflow: hidden
     transition: background-color .3s, color .3s
+    &:before
+        content: ''
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        background-color: $black
+        opacity: 0
+        transition: opacity .3s
+    span
+        z-index: 2
+    +hover
+        &:before
+            opacity: 0.2
+    &_md
+        min-width: 170px
+    &_l
+        min-width: 200px
+    &_blue
+        background-color: $blue

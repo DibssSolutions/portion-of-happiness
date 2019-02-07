@@ -1,0 +1,34 @@
+.info
+    padding: 32px 0
+
+
+.info-item
+    display: flex
+    align-items: center
+    position: relative
+    &:before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        background-color: $orange-bg
+        top: 0
+        left: 50%
+        z-index: -1
+    &:not(:last-child)
+        margin-bottom: 27px
+    &__img
+        max-width: 1065px
+        width: 66.5%
+        .info-item_order &
+            order: 2
+    &__main
+        margin: 0 auto
+        padding-left: 40px
+    &__btn
+        margin-top: 40px
+        +md
+            margin-top: 20px
+    &.info-item_order
+        &:before
+            left: -50%
