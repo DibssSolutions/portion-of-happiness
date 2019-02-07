@@ -1,6 +1,7 @@
 .header
-    background-color: $green
-    color: $white
+    &__top
+        background-color: $green
+        color: $white
     &__inner
         position: relative
         display: flex
@@ -32,6 +33,79 @@
             font-size: 30px
     &__city
         height: 100%
+    &__bottom
+        padding: 73px 0 31px
+        color: $green
+
+.main-menu
+    display: flex
+    align-items: center
+    letter-spacing: 0.05em
+    font-weight: 500
+    text-transform: uppercase
+    &__item
+        position: relative
+        padding: 27px 0 10px
+        display: flex
+        align-items: center
+        line-height: 1
+        &:not(:first-child)
+            margin-left: 60px
+        &:hover
+            .main-menu__submenu
+                opacity: 1
+                visibility: visible
+        &_submenu
+            z-index: 1
+    &__link
+        display: flex
+        align-items: center
+    &__arrow
+        font-size: 11px
+        .icon
+            display: block
+            margin-left: 15px
+    &__submenu
+        position: absolute
+        top: 0
+        left: -21px
+        padding: 105px 39px 41px 21px
+        background-color: rgba($lightGray, .8)
+        opacity: 0
+        visibility: hidden
+        z-index: -1
+        font-weight: 700
+        letter-spacing: 0.025em
+        color: $brown
+        transition: opacity .3s, visibility .3s
+        &-item
+            transition: color .3s
+            +hover
+                color: $green
+            &:not(:first-child)
+                margin-top: 25px
+        &-link
+            display: block
+            white-space: nowrap
+
+.basket
+    display: flex
+    align-items: center
+    &__text
+        display: flex
+        align-items: baseline
+        font-weight: 500
+        line-height: .9
+    &__title
+        text-transform: uppercase
+    &__sum
+        margin-left: 12px
+        font-size: 40px
+        font-weight: 700
+    &__currency
+        margin-left: 10px
+    &__btn
+        margin-left: 14px
 
 .city
     position: relative
@@ -40,10 +114,16 @@
     z-index: 1
     padding-right: 18px
     height: 100%
+    &:hover
+        .city__list
+            opacity: 1
+            visibility: visible
     &__current
+        z-index: 1
     &__arrow
         font-size: 11px
         margin-left: 20px
+        z-index: 1
         .icon
             display: block
     &__list
@@ -53,6 +133,15 @@
         right: 0
         padding: 83px 23px 36px
         background-color: rgba($black,.4)
+        opacity: 0
+        visibility: hidden
+        transition: opacity .3s, visibility .3s
+    &__item
+        transition: color .3s
+        +hover
+            color: $orange
+        a
+            display: block
 .account
     padding: 25px 27px
     display: flex
