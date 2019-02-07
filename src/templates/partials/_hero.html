@@ -1,45 +1,53 @@
 <div class="hero">
-    <div class="hero__slider hero-slider js-hero-slider">
-        {% for slide in [
-            {
-                title: 'ПРАЗДНИЧНОЕ  ПРЕДЛОЖЕНИЕ:“НЕДЕЛЯ  ДЛЯ  ДВОИХ”',
-                text: 'РЕКЛАМНЫЙ ТЕКСТ 
-                РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ 
-                РЕКЛАМНЫЙ  ТЕКСТИК 
-                РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ   
-                РЕКЛАМНЫЙ  ТЕКСТИК',
-                img: ''
-            },
-            {
-                title: 'ПРАЗДНИЧНОЕ  ПРЕДЛОЖЕНИЕ:“НЕДЕЛЯ  ДЛЯ  ДВОИХ”',
-                text: 'РЕКЛАМНЫЙ ТЕКСТ 
-                РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ 
-                РЕКЛАМНЫЙ  ТЕКСТИК 
-                РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ   
-                РЕКЛАМНЫЙ  ТЕКСТИК',
-                img: ''
-            },
-            {
-                title: 'ПРАЗДНИЧНОЕ  ПРЕДЛОЖЕНИЕ:“НЕДЕЛЯ  ДЛЯ  ДВОИХ”',
-                text: 'РЕКЛАМНЫЙ ТЕКСТ 
-                РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ 
-                РЕКЛАМНЫЙ  ТЕКСТИК 
-                РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ   
-                РЕКЛАМНЫЙ  ТЕКСТИК',
-                img: ''
-            }
-        ] %}
-            <div class="hero-slider__slide">
-                <h2 class="hero-slider__title">{{ slide.title }}</h2>
-                <div class="hero-slider__content">
-                    <p>
-                        {{ slide.text }}
-                    </p>
+    <div class="hero__inner inner-lg js-hero-slider-wrap">
+        <div class="hero__prev-arrow js-hero-prev">
+            {{ mixins.icon('arrow-left') }}
+        </div>
+        <div class="hero__next-arrow js-hero-next">
+            {{ mixins.icon('arrow-right') }}
+        </div>
+        <div class="hero__slider hero-slider js-hero-slider">
+            {% for slide in [
+                {
+                    title: 'ПРАЗДНИЧНОЕ  ПРЕДЛОЖЕНИЕ: “НЕДЕЛЯ  ДЛЯ  ДВОИХ”',
+                    text: 'РЕКЛАМНЫЙ ТЕКСТ 
+                    РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ 
+                    РЕКЛАМНЫЙ  ТЕКСТИК 
+                    РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ   
+                    РЕКЛАМНЫЙ  ТЕКСТИК',
+                    img: 'slide1'
+                },
+                {
+                    title: 'ПРАЗДНИЧНОЕ  ПРЕДЛОЖЕНИЕ: “НЕДЕЛЯ  ДЛЯ  ДВОИХ”',
+                    text: 'РЕКЛАМНЫЙ ТЕКСТ 
+                    РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ 
+                    РЕКЛАМНЫЙ  ТЕКСТИК 
+                    РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ   
+                    РЕКЛАМНЫЙ  ТЕКСТИК',
+                    img: 'slide1'
+                },
+                {
+                    title: 'ПРАЗДНИЧНОЕ  ПРЕДЛОЖЕНИЕ: “НЕДЕЛЯ  ДЛЯ  ДВОИХ”',
+                    text: 'РЕКЛАМНЫЙ ТЕКСТ 
+                    РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ 
+                    РЕКЛАМНЫЙ  ТЕКСТИК 
+                    РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ   
+                    РЕКЛАМНЫЙ  ТЕКСТИК',
+                    img: 'slide1'
+                }
+            ] %}
+                <div class="hero-slider__slide" style="background-image: url(./img/{{ slide.img }}.jpg)">
+                    <h2 class="hero-slider__title title title_lg">{{ slide.title }}</h2>
+                    <div class="hero-slider__content">
+                        <p>
+                            {{ slide.text }}
+                        </p>
+                    </div>
+                    <div class="hero-slider__btn">
+                        <a href="#" class="btn btn_pink"></a>
+                    </div>
                 </div>
-                <div class="hero-slider__btn">
-                    <a href="#" class="btn btn_pink"></a>
-                </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
 </div>
