@@ -1,11 +1,13 @@
 .form-sm
+    visibility: hidden
+    opacity: 0
+    position: absolute
     border: 15px solid $coffee
     padding: 40px 45px
     background-color: $green
     color: $white
     max-width: 416px
     width: 100%
-    position: relative
     &__title
         margin-bottom: 30px
     &__descr
@@ -14,3 +16,10 @@
         position: absolute
         top: 25px
         right: 25px
+    &.is-active
+        position: fixed
+        bottom: 83px
+        right: 40px
+        visibility: visible
+        opacity: 1
+        z-index: 2
