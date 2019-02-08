@@ -1,9 +1,13 @@
 .footer
     padding-top: 53px
+    background-color: rgba($brown, .1)
     &__inner
     &__top
         display: flex
         justify-content: space-between
+        padding-bottom: 40px
+        +lg
+            padding-bottom: 20px
     &__logo
         // max-width: 156px
         display: flex
@@ -85,8 +89,12 @@
         font-size: 22px
         +hover
             color: $orange
+        +lg
+            font-size: 17px
         &:not(:first-child)
             margin-left: 41px
+            +lg
+                margin-left: 20px
 
 .social
     display: flex
@@ -97,8 +105,12 @@
         transition: color .3s
         +hover
             color: $orange
+        +lg
+            font-size: 27px
         &:not(:first-child)
             margin-left: 32px
+            +lg
+                margin-left: 20px
         svg
             display: block
             max-width: 100%
@@ -109,8 +121,12 @@
     align-items: center
     &__item
         max-width: 150px
+        +lg
+            max-width: 100px
         &:not(:first-child)
             margin-left: 60px
+            +lg
+                margin-left: 30px
         img
             display: block
             max-width: 100%

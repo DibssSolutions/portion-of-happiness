@@ -1,0 +1,123 @@
+<div class="menu">
+    <div class="menu__inner inner-lg js-menu-slider-wrap">
+        <div class="menu__prev-arrow js-menu-prev">
+            {{ mixins.icon('arrow-left') }}
+        </div>
+        <div class="menu__next-arrow js-menu-next">
+            {{ mixins.icon('arrow-right') }}
+        </div>
+        <div class="menu__slider menu-slider js-menu-slider">
+            {% for slide in [
+                {
+                    title: 'МЕНЮ на',
+                    titleDate: '30 января - 5 февраля',
+                    subtitle: 'Доставка возможна с 30 января по 5 февраля – вы сами выбираете время',
+                    img: 'menu-slide1.jpg',
+                    homeMenu: [
+                        'филе индейки с тыквой и ананасом',
+                        'филе индейки с тыквой и ананасом',
+                        'филе индейки с тыквой и ананасом'
+                    ],
+                    chefMenu: [
+                        'филе индейки с тыквой и ананасом',
+                        'филе индейки с тыквой и ананасом',
+                        'филе индейки с тыквой и ананасом',
+                        'филе индейки с тыквой и ананасом',
+                        'филе индейки с тыквой и ананасом',
+                        'филе индейки с тыквой и ананасом',
+                        'филе индейки с тыквой и ананасом',
+                        'филе индейки с тыквой и ананасом',
+                        'филе индейки с тыквой и ананасом'
+                    ],
+                    lightMenu: [
+                        'филе индейки с тыквой и ананасом',
+                        'филе индейки с тыквой и ананасом',
+                        'филе индейки с тыквой и ананасом'
+                    ]
+                },
+                {
+                    title: 'МЕНЮ на',
+                    titleDate: '30 января - 5 февраля',
+                    subtitle: 'Доставка возможна с 30 января по 5 февраля – вы сами выбираете время',
+                    img: 'menu-slide1.jpg',
+                    homeMenu: [
+                        'филе индейки с тыквой и ананасом',
+                        'филе индейки с тыквой и ананасом',
+                        'филе индейки с тыквой и ананасом'
+                    ],
+                    chefMenu: [
+                        'филе индейки с тыквой и ананасом',
+                        'филе индейки с тыквой и ананасом',
+                        'филе индейки с тыквой и ананасом'
+                    ],
+                    lightMenu: [
+                        'филе индейки с тыквой и ананасом',
+                        'филе индейки с тыквой и ананасом',
+                        'филе индейки с тыквой и ананасом'
+                    ]
+                },
+                {
+                    title: 'МЕНЮ на',
+                    titleDate: '30 января - 5 февраля',
+                    subtitle: 'Доставка возможна с 30 января по 5 февраля – вы сами выбираете время',
+                    img: 'menu-slide1.jpg',
+                    homeMenu: [
+                        'филе индейки с тыквой и ананасом',
+                        'филе индейки с тыквой и ананасом',
+                        'филе индейки с тыквой и ананасом'
+                    ],
+                    chefMenu: [
+                        'филе индейки с тыквой и ананасом',
+                        'филе индейки с тыквой и ананасом',
+                        'филе индейки с тыквой и ананасом'
+                    ],
+                    lightMenu: [
+                        'филе индейки с тыквой и ананасом',
+                        'филе индейки с тыквой и ананасом',
+                        'филе индейки с тыквой и ананасом'
+                    ]
+                }
+            ] %}
+                <div class="menu-slider__slide" style="background-image: url(./img/{{ slide.img }})">
+                    <div class="menu-slider__slide-wrap">
+                        <div class="menu-slider__top">
+                            <div class="menu-slider__text">
+                                <div class="menu-slider__title">{{ slide.title }} <span>{{ slide.titleDate }}</span></div>
+                                <div class="menu-slider__subtitle">{{ slide.subtitle }}</div>
+                            </div>
+                            <div class="menu-slider__btn"><a href="№" class="btn btn_green btn_xl"><span>быстрый заказ</span></a></div>
+                        </div>
+                        <div class="menu-slider__bottom">
+                            <ul class="menu-slider__list menu-list">
+                                <li class="menu-list__item menu-list__item_green">
+                                    <a href="#" class="menu-list__link">Домашнее меню{{ mixins.icon('arrow-right') }}</a>
+                                    <ul class="menu-list__ingredients menu-ingredients">
+                                        {% for item in slide.homeMenu %}
+                                            <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">{{ item }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                                <li class="menu-list__item menu-list__item_orange">
+                                    <a href="#" class="menu-list__link">Шеф-меню{{ mixins.icon('arrow-right') }}</a>
+                                    <ul class="menu-list__ingredients menu-ingredients">
+                                        {% for item in slide.chefMenu %}
+                                            <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">{{ item }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                                <li class="menu-list__item menu-list__item_pink">
+                                    <a href="#" class="menu-list__link">Легкое меню{{ mixins.icon('arrow-right') }}</a>
+                                    <ul class="menu-list__ingredients menu-ingredients">
+                                        {% for item in slide.lightMenu %}
+                                            <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">{{ item }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
