@@ -15,7 +15,7 @@
     <div class="info__inner inner-lg">
         {% for item in info %}
             <div class="info-item {% if item.order %}{{item.order}}{% endif %}">
-                <img src="img/{{item.img}}" alt="products" class="info-item__img">
+                <div class="info-item__img" style="background-image: url(img/{{item.img}})"></div>
                 <div class="info-item__main">
                     <h2 class="info-item__title title">{{item.title | safe}}</h2>
                     <div class="info-item__btn">
