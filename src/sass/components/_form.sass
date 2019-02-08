@@ -1,0 +1,31 @@
+.form
+    &__btn
+        margin-top: 10px
+        .form_main &
+            margin-top: 35px
+.form-group
+    margin-top: 15px
+    input, textarea
+        width: 100%
+        +roboto
+        +f(20px, 400)
+        color: $black-opa
+        padding: 16px 20px
+        border-radius: 5px
+        +placeholder
+            +roboto
+            +f(20px, 400)
+            color: $black-opa
+        &:focus
+            &::placeholder
+                font-size: 0
+    textarea
+        resize: none
+        min-height: 180px
+        height: 100%
+        border: none
+    .form_main &
+        input, textarea
+            color: $black
+            +placeholder
+                color: $black

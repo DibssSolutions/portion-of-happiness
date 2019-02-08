@@ -26,6 +26,7 @@
     span
         position: relative
         z-index: 2
+        position: relative
     +hover
         &:before
             opacity: 0.2
@@ -47,3 +48,32 @@
             font-size: 26px
         +lg
             font-size: 20px
+
+.btn-close
+    display: inline-block
+    width: 28px
+    height: 28px
+    border-radius: 50%
+    border: 1px solid $white
+    background-color: transparent
+    outline: none
+    +pseudo
+    &:before, &:after
+        width: 18px
+        height: 2px
+        background-color: $white
+        color: $white
+        top: 50%
+        left: 50%
+    &:before
+        transform: translate(-50%, -50%) rotate(45deg)
+    &:after
+        transform: translate(-50%, -50%) rotate(-45deg)
+    &_l
+        width: 40px
+        height: 40px
+        border-color: $brown
+        &:before, &:after
+            background-color: $brown
+            color: $brown
+            width: 25px
