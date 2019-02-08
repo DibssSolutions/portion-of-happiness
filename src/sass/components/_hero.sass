@@ -13,7 +13,7 @@
         user-select: none
         .icon
             display: block
-            font-size: 55px
+            font-size: 57px
     &__prev-arrow
         left: -36px
         +r(1760)
@@ -27,9 +27,10 @@
         height: 10px
         border-radius: 50%
         background-color: $white
+        transition: background-color .3s
         .slick-initialized li.slick-active &
             background-color: $green
-    .slick-list.draggable
+    .slick-list
         overflow: visible
     .slick-dots
         position: absolute

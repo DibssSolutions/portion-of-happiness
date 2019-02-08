@@ -11,9 +11,13 @@
         display: flex
     &__left
         padding-right: 100px
+        +lg
+            padding-right: 80px
     &__right
         padding-left: 100px
         justify-content: flex-end
+        +lg
+            padding-left: 80px
     &__logo
         position: absolute
         top: 0
@@ -22,6 +26,8 @@
         background-color: $white
         width: 200px
         padding: 10px 30px
+        +lg
+            width: 150px
         img
             display: block
             max-width: 100%
@@ -31,11 +37,15 @@
         align-items: center
         span
             font-size: 30px
+            +xxl
+                font-size: 25px
     &__city
         height: 100%
     &__bottom
         padding: 73px 0 31px
         color: $green
+        +lg
+            padding: 40px 0 15px
 
 .main-menu
     display: flex
@@ -49,8 +59,15 @@
         display: flex
         align-items: center
         line-height: 1
+        white-space: nowrap
+        +lg
+            padding: 18px 0 8px
         &:not(:first-child)
             margin-left: 60px
+            +xxl
+                margin-left: 40px
+            +lg
+                margin-left: 25px
         &:hover
             .main-menu__submenu
                 opacity: 1
@@ -61,10 +78,14 @@
         display: flex
         align-items: center
     &__arrow
+        display: block
         font-size: 11px
+        margin-left: 15px
+        +lg
+            font-size: 6px
+            margin-left: 8px
         .icon
             display: block
-            margin-left: 15px
     &__submenu
         position: absolute
         top: 0
@@ -78,6 +99,8 @@
         letter-spacing: 0.025em
         color: $brown
         transition: opacity .3s, visibility .3s
+        +lg
+            padding: 70px 21px 30px
         &-item
             transition: color .3s
             +hover
@@ -102,6 +125,10 @@
         margin-left: 12px
         font-size: 40px
         font-weight: 700
+        +xxl
+            font-size: 34px
+        +lg
+            font-size: 26px
     &__currency
         margin-left: 10px
     &__btn
@@ -124,6 +151,9 @@
         font-size: 11px
         margin-left: 20px
         z-index: 1
+        +lg
+            font-size: 6px
+            margin-left: 8px
         .icon
             display: block
     &__list
@@ -136,6 +166,8 @@
         opacity: 0
         visibility: hidden
         transition: opacity .3s, visibility .3s
+        +lg
+            padding: 60px 23px 20px
     &__item
         transition: color .3s
         +hover
@@ -147,15 +179,28 @@
     display: flex
     align-items: center
     background-color: $pink
+    +lg
+        padding: 15px
     &__icon
         margin-right: 20px
         font-size: 40px
+        +xxl
+            font-size: 36px
+        +lg
+            font-size: 30px
+            margin-right: 10px
         .icon
             display: block
     &__text
         width: 310px
         padding-right: 20px
         font-size: 20px
+        +xxl
+            font-size: 18px
+            width: 290px
+        +lg
+            font-size: 16px
+            width: 250px
     &__points
         display: flex
         flex-direction: column
@@ -164,5 +209,9 @@
         &-number
             font-size: 30px
             font-weight: 700
+            +lg
+                font-size: 24px
         &-text
             font-size: 16px
+            +lg
+                font-size: 14px
