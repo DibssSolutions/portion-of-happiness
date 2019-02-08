@@ -1,0 +1,217 @@
+.header
+    &__top
+        background-color: $green
+        color: $white
+    &__inner
+        position: relative
+        display: flex
+    &__left,
+    &__right
+        width: 50%
+        display: flex
+    &__left
+        padding-right: 100px
+        +lg
+            padding-right: 80px
+    &__right
+        padding-left: 100px
+        justify-content: flex-end
+        +lg
+            padding-left: 80px
+    &__logo
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        background-color: $white
+        width: 200px
+        padding: 10px 30px
+        +lg
+            width: 150px
+        img
+            display: block
+            max-width: 100%
+    &__phone
+        margin-left: 15px
+        display: flex
+        align-items: center
+        span
+            font-size: 30px
+            +xxl
+                font-size: 25px
+    &__city
+        height: 100%
+    &__bottom
+        padding: 73px 0 31px
+        color: $green
+        +lg
+            padding: 40px 0 15px
+
+.main-menu
+    display: flex
+    align-items: center
+    letter-spacing: 0.05em
+    font-weight: 500
+    text-transform: uppercase
+    &__item
+        position: relative
+        padding: 27px 0 10px
+        display: flex
+        align-items: center
+        line-height: 1
+        white-space: nowrap
+        +lg
+            padding: 18px 0 8px
+        &:not(:first-child)
+            margin-left: 60px
+            +xxl
+                margin-left: 40px
+            +lg
+                margin-left: 25px
+        &:hover
+            .main-menu__submenu
+                opacity: 1
+                visibility: visible
+        &_submenu
+            z-index: 1
+    &__link
+        display: flex
+        align-items: center
+    &__arrow
+        display: block
+        font-size: 11px
+        margin-left: 15px
+        +lg
+            font-size: 6px
+            margin-left: 8px
+        .icon
+            display: block
+    &__submenu
+        position: absolute
+        top: 0
+        left: -21px
+        padding: 105px 39px 41px 21px
+        background-color: rgba($lightGray, .8)
+        opacity: 0
+        visibility: hidden
+        z-index: -1
+        font-weight: 700
+        letter-spacing: 0.025em
+        color: $brown
+        transition: opacity .3s, visibility .3s
+        +lg
+            padding: 70px 21px 30px
+        &-item
+            transition: color .3s
+            +hover
+                color: $green
+            &:not(:first-child)
+                margin-top: 25px
+        &-link
+            display: block
+            white-space: nowrap
+
+.basket
+    display: flex
+    align-items: center
+    &__text
+        display: flex
+        align-items: baseline
+        font-weight: 500
+        line-height: .9
+    &__title
+        text-transform: uppercase
+    &__sum
+        margin-left: 12px
+        font-size: 40px
+        font-weight: 700
+        +xxl
+            font-size: 34px
+        +lg
+            font-size: 26px
+    &__currency
+        margin-left: 10px
+    &__btn
+        margin-left: 14px
+
+.city
+    position: relative
+    display: flex
+    align-items: center
+    z-index: 1
+    padding-right: 18px
+    height: 100%
+    &:hover
+        .city__list
+            opacity: 1
+            visibility: visible
+    &__current
+        z-index: 1
+    &__arrow
+        font-size: 11px
+        margin-left: 20px
+        z-index: 1
+        +lg
+            font-size: 6px
+            margin-left: 8px
+        .icon
+            display: block
+    &__list
+        position: absolute
+        top: 0
+        left: -23px
+        right: 0
+        padding: 83px 23px 36px
+        background-color: rgba($black,.4)
+        opacity: 0
+        visibility: hidden
+        transition: opacity .3s, visibility .3s
+        +lg
+            padding: 60px 23px 20px
+    &__item
+        transition: color .3s
+        +hover
+            color: $orange
+        a
+            display: block
+.account
+    padding: 25px 27px
+    display: flex
+    align-items: center
+    background-color: $pink
+    +lg
+        padding: 15px
+    &__icon
+        margin-right: 20px
+        font-size: 40px
+        +xxl
+            font-size: 36px
+        +lg
+            font-size: 30px
+            margin-right: 10px
+        .icon
+            display: block
+    &__text
+        width: 310px
+        padding-right: 20px
+        font-size: 20px
+        +xxl
+            font-size: 18px
+            width: 290px
+        +lg
+            font-size: 16px
+            width: 250px
+    &__points
+        display: flex
+        flex-direction: column
+        align-items: center
+        line-height: 1
+        &-number
+            font-size: 30px
+            font-weight: 700
+            +lg
+                font-size: 24px
+        &-text
+            font-size: 16px
+            +lg
+                font-size: 14px

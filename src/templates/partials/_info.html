@@ -1,0 +1,28 @@
+{% set info = [
+    {
+        img: 'info1.jpg',
+        title: 'А что<br> в коробке?',
+        btn_mod: 'btn_pink'
+    },
+    {
+        img: 'info2.jpg',
+        title: 'Почему «порция  счастья»?',
+        btn_mod: '',
+        order: 'info-item_order'
+    }
+    ] %}
+<section class="info">
+    <div class="info__inner inner-lg">
+        {% for item in info %}
+            <div class="info-item {% if item.order %}{{item.order}}{% endif %}">
+                <img src="img/{{item.img}}" alt="products" class="info-item__img">
+                <div class="info-item__main">
+                    <h2 class="info-item__title title">{{item.title | safe}}</h2>
+                    <div class="info-item__btn">
+                        <a href="#" class="btn btn_md {{item.btn_mod}}"><span>Подробнее</span></a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>

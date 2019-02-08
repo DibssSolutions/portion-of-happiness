@@ -1,0 +1,47 @@
+{% set stock = [
+    {
+        img: 'stock-dish1.png',
+        date: 'до 25 января',
+        descr: 'xxxxx xxxx xxxxxxxxx xxxxxx xxxxxxxxxx'
+    },
+    {
+        img: 'stock-dish2.png',
+        date: 'до 25 января',
+        descr: 'Ххххххххх ххххххххх хх хххххх хххххх хххххххх хххххх хххххх хххххххххх ххх хххххх ххххххххххх хххххх хххххх '
+    },
+    {
+        img: 'stock-dish3.png',
+        date: 'до 25 января',
+        descr: 'xxxxxxxx xxxx xxxxxxx xx xx xxxxx xxxxx xxxx x xxxxx xxxxxx  xxxxx xxxxxxxx xxxxx'
+    },
+    {
+        img: 'stock-dish4.png',
+        date: 'до 25 января',
+        descr: 'xx xxxx xxxxx xxx xxxx xxxx xxxxxxxxxx xxxxxxxxxxxxx xxxxx xxxxxx xxxxxx xxxxxx'
+    }
+    ] %}
+<section class="stock">
+    <div class="stock__inner inner">
+        <div class="stock__header">
+            <h2 class="stock__title title">наши акции:</h2>
+            <a href="#" class="stock__btn btn btn_md"><span>все акции</span></a>
+        </div>
+    </div>
+    <div class="stock__inner inner-lg">
+        <ul class="stock__list">
+            {% for item in stock %}
+                <a href="#" class="stock__link">
+                    <li class="stock-item">
+                        <div class="stock-item__img-wrap">
+                            <img src="img/{{item.img}}" alt="dish name">
+                        </div>
+                        <div class="stock-item__text">
+                            <div class="stock-item__date">{{item.date}}</div>
+                            <p>{{item.descr}}</p>
+                        </div>
+                    </li>
+                </a>
+            {% endfor %}
+        </ul>
+    </div>
+</section>

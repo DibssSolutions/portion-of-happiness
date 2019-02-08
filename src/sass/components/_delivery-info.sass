@@ -1,0 +1,47 @@
+.delivery-info
+    text-align: center
+    padding: 64px 0 32px
+    color: $brown
+    &__title.title
+        color: $green
+    &__wrap
+        margin: 25px -45px 0
+        display: flex
+        justify-content: center
+        +lg
+            margin: 25px -25px 0
+        // +sm
+        //     flex-wrap: wrap
+    &__item
+        padding: 0 45px
+        max-width: 400px
+        width: 33.3%
+        +lg
+            padding: 0 25px
+        // +sm
+        //     width: 100%
+        //     &:not(:first-child)
+        //         margin-top: 20px
+    &__btn
+        text-align: center
+        margin-top: 30px
+        a
+            min-width: 170px
+
+
+.delivery-item
+    text-align: center
+    width: 100%
+    &__img-wrap
+        display: flex
+        justify-content: center
+        align-items: flex-end
+        min-height: 200px
+    &__text
+        margin-top: 30px
+        +f(27px, 700)
+        +lg
+            font-size: 20px
+        span
+            text-transform: uppercase
+            display: block

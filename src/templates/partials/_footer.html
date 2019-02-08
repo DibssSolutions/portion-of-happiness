@@ -1,0 +1,96 @@
+<footer class="footer">
+    <div class="footer__inner inner">
+        <div class="footer__top">
+            <div class="footer__logo">
+                <div class="footer-logo">
+                    {{ mixins.icon('logo') }}
+                </div>
+                <div class="footer-slogan">ДОСТАВЛЯЕМ<br> В КАЖДЫЙ ДОМ!</div>
+            </div>
+            <div class="footer__menu-wrap">
+                <div class="footer__menu-title">меню:</div>
+                <div class="footer__menu">
+                    {% for items in [
+                        {
+                            menuLinks: [
+                                'домашнее меню',
+                                'шеф-меню',
+                                'легкое меню',
+                                'блюда на выбор'
+                            ]
+                        },
+                        {
+                            menuLinks: [
+                                'лавка',
+                                'акции',
+                                'блог',
+                                'отзывы'
+                            ]
+                        },
+                        {
+                            menuLinks: [
+                                'как это работает',
+                                'доставка и оплата',
+                                'частые вопросы',
+                                'поставщики'
+                            ]
+                        },
+                        {
+                            menuLinks: [
+                                'о сервисе',
+                                'наша команда',
+                                'вакансии',
+                                'контакты'
+                            ]
+                        }
+                    ] %}
+                        <ul class="footer__menu-block">
+                            {% for item in items.menuLinks %}
+                                <li class="footer__menu-item"><a href="#" class="footer__menu-link">{{ item }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="footer__contacts">
+                <div class="footer__contacts-item">
+                    <div class="footer__contacts-city">cанкт-петербург</div>
+                    <a href="tel:+78129991929" class="footer__contacts-phone">+7 812 <span>999 1929</span></a>
+                </div>
+                <div class="footer__contacts-item">
+                    <div class="footer__contacts-city">москва</div>
+                    <a href="tel:+78129991929" class="footer__contacts-phone">+7 812 <span>999 1929</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="footer__bottom-wrap inner">
+            <div class="footer__copyright">
+                © ПОРЦИЯ СЧАСТЬЯ 2019
+            </div>
+            <div class="footer__social">
+                <ul class="social">
+                    <li class="social__item">
+                        <a href="#">{{ mixins.icon('instagram') }}</a>
+                    </li>
+                    <li class="social__item">
+                        <a href="#">{{ mixins.icon('vk') }}</a>
+                    </li>
+                    <li class="social__item">
+                        <a href="#">{{ mixins.icon('facebook') }}</a>
+                    </li>
+                </ul>
+                <a href="#" class="footer__subscribe">ПОДПИСАТЬСЯ НА НОВОСТИ</a>
+            </div>
+            <div class="footer__stores stores">
+                <div class="stores__item">
+                    <a href="#"><img src="./img/appstore.svg" alt=""></a>
+                </div>
+                <div class="stores__item">
+                    <a href="#"><img src="./img/googleplay.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
