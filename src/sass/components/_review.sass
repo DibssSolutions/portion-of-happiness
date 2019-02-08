@@ -20,19 +20,24 @@
 .review-item
     width: 100%
     font-size: 25px
-    word-break: break-word
     +lg
         font-size: 20px
     &__img-wrap
-        display: inline-block
+        display: block
         border: 10px solid $coffee
-        overflow: hidden
         height: 0
         padding-bottom: 94%
-        img
-            width: 100%
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: 50% 50%
     &__text
         margin-top: 25px
+    &__link-wrap
+        line-height: 1.2
+        &:not(:first-child)
+            margin-top: 5px
+        &:last-child
+            margin-top: 10px
     &__link
         &_name
             font-weight: 500
