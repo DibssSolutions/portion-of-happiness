@@ -1,6 +1,8 @@
 .form
     &__btn
         margin-top: 10px
+        .form_main &
+            margin-top: 35px
 .form-group
     margin-top: 15px
     input, textarea
@@ -21,3 +23,9 @@
         resize: none
         min-height: 180px
         height: 100%
+        border: none
+    .form_main &
+        input, textarea
+            color: $black
+            +placeholder
+                color: $black

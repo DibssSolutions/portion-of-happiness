@@ -38,6 +38,8 @@
         background-color: $blue
     &_pink
         background-color: $pink
+    &_green
+        background-color: $green
 
 .btn-close
     display: inline-block
@@ -49,7 +51,7 @@
     outline: none
     +pseudo
     &:before, &:after
-        width: 20px
+        width: 18px
         height: 2px
         background-color: $white
         color: $white
@@ -59,3 +61,11 @@
         transform: translate(-50%, -50%) rotate(45deg)
     &:after
         transform: translate(-50%, -50%) rotate(-45deg)
+    &_l
+        width: 40px
+        height: 40px
+        border-color: $brown
+        &:before, &:after
+            background-color: $brown
+            color: $brown
+            width: 25px
