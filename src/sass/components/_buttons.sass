@@ -38,3 +38,24 @@
         background-color: $blue
     &_pink
         background-color: $pink
+
+.btn-close
+    display: inline-block
+    width: 28px
+    height: 28px
+    border-radius: 50%
+    border: 1px solid $white
+    background-color: transparent
+    outline: none
+    +pseudo
+    &:before, &:after
+        width: 20px
+        height: 2px
+        background-color: $white
+        color: $white
+        top: 50%
+        left: 50%
+    &:before
+        transform: translate(-50%, -50%) rotate(45deg)
+    &:after
+        transform: translate(-50%, -50%) rotate(-45deg)
