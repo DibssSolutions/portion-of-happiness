@@ -8,7 +8,7 @@ function help() {
 }
 
 btnClose.on('click', function(e) {
-  e.preventDefault;
+  e.preventDefault();
   formSM.removeClass(ACTIVE);
 });
 
