@@ -30,15 +30,15 @@
     <div class="stock__inner inner-lg">
         <ul class="stock__list">
             {% for item in stock %}
-                <a href="#" class="stock__link">
-                    <li class="stock-item">
+                <li href="#" class="stock__link">
+                    <a class="stock-item">
                         <div class="stock-item__img" style="background-image: url(img/{{item.img}})"></div>
                         <div class="stock-item__text">
                             <div class="stock-item__date">{{item.date}}</div>
                             <p>{{item.descr}}</p>
                         </div>
-                    </li>
-                </a>
+                    </a>
+                </li>
             {% endfor %}
         </ul>
     </div>
