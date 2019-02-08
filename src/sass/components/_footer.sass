@@ -1,4 +1,5 @@
 .footer
+    padding-top: 53px
     &__inner
     &__top
         display: flex
@@ -9,8 +10,11 @@
         flex-direction: column
         justify-content: center
         align-items: center
+        flex-shrink: 0
     &-logo
         font-size: 196px
+        +lg
+            font-size: 130px
         .icon
             display: block
             max-width: 100%
@@ -18,6 +22,46 @@
         margin-top: 29px
         text-align: center
         font-size: 19px
+        +circe
+        +lg
+            font-size: 16px
+    &__menu
+        display: flex
+        &-wrap
+            text-transform: uppercase
+            padding-top: 44px
+            margin: 0 20px
+            display: flex
+            +lg
+                padding-top: 24px
+        &-title
+            font-weight: 700
+        &-block
+            padding: 0 30px
+            margin: -13px 0
+            +r(1350)
+                padding: 0 15px
+        &-item
+            padding: 13px 0
+            transition: color .3s
+            +hover
+                color: $green
+    &__contacts
+        text-transform: uppercase
+        padding-top: 44px
+        flex-shrink: 0
+        +lg
+            padding-top: 24px
+        &-item
+            &:not(:first-child)
+                margin-top: 50px
+            span
+                font-size: 32px
+                +r(1502)
+                    font-size: 24px
+                +lg
+                    font-size: 20px
+
     &__bottom
         padding: 19px 0 26px
         background-color: $brown
