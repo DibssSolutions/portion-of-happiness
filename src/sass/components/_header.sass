@@ -31,6 +31,8 @@
         img
             display: block
             max-width: 100%
+        a
+            display: block
     &__phone
         margin-left: 15px
         display: flex
@@ -60,6 +62,9 @@
         align-items: center
         line-height: 1
         white-space: nowrap
+        transition: color .3s
+        +hover
+            color: $orange
         +lg
             padding: 18px 0 8px
         &:not(:first-child)
@@ -175,12 +180,17 @@
         a
             display: block
 .account
-    padding: 25px 27px
+    padding: 0 27px
     display: flex
     align-items: center
-    background-color: $pink
     +lg
-        padding: 15px
+        padding: 0 15px
+    &-wrap
+        padding: 25px 0
+        +lg
+            padding: 15px 0
+        &_bg
+            background-color: $pink
     &__icon
         margin-right: 20px
         font-size: 40px

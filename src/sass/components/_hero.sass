@@ -11,6 +11,10 @@
         z-index: 2
         cursor: pointer
         user-select: none
+        border-radius: 50%
+        transition: background-color .3s
+        +hover
+            background-color: rgba($black, .2)
         .icon
             display: block
             font-size: 57px
@@ -64,6 +68,13 @@
         background-repeat: no-repeat
         background-position: center
         background-size: cover
+    &__text
+        opacity: 0
+        visibility: hidden
+        transition: opacity .3s, visibility .3s
+        .slick-active &
+            opacity: 1
+            visibility: visible
     &__title
         padding: 27px 106px 21px 98px
         background-color: rgba($white, .6)

@@ -5,7 +5,7 @@ title: Index page
 
 {% block content %}
 	
-{{header.header()}}
+{{header.header({login:true})}}
 {% include "partials/_hero.html" %}
 {% include "partials/_delivery-info.html"%}
 {% include "partials/_menu.html"%}
