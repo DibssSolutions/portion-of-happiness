@@ -191,7 +191,7 @@
                     <div class="menu-slider__title">МЕНЮ на <span>30 января - 5 февраля</span></div>
                     <div class="menu-slider__subtitle">Доставка возможна с 30 января по 5 февраля – вы сами выбираете время</div>
                   </div>
-                  <div class="menu-slider__btn"><a href="№" class="btn btn_green btn_xl"><span>быстрый заказ</span></a></div>
+                  <div class="menu-slider__btn"><a href="#" data-modal-control="modalform" class="btn btn_green btn_xl"><span>быстрый заказ</span></a></div>
                 </div>
                 <div class="menu-slider__bottom">
                   <ul class="menu-slider__list menu-list">
@@ -245,7 +245,7 @@
                     <div class="menu-slider__title">МЕНЮ на <span>30 января - 5 февраля</span></div>
                     <div class="menu-slider__subtitle">Доставка возможна с 30 января по 5 февраля – вы сами выбираете время</div>
                   </div>
-                  <div class="menu-slider__btn"><a href="№" class="btn btn_green btn_xl"><span>быстрый заказ</span></a></div>
+                  <div class="menu-slider__btn"><a href="#" data-modal-control="modalform" class="btn btn_green btn_xl"><span>быстрый заказ</span></a></div>
                 </div>
                 <div class="menu-slider__bottom">
                   <ul class="menu-slider__list menu-list">
@@ -293,7 +293,7 @@
                     <div class="menu-slider__title">МЕНЮ на <span>30 января - 5 февраля</span></div>
                     <div class="menu-slider__subtitle">Доставка возможна с 30 января по 5 февраля – вы сами выбираете время</div>
                   </div>
-                  <div class="menu-slider__btn"><a href="№" class="btn btn_green btn_xl"><span>быстрый заказ</span></a></div>
+                  <div class="menu-slider__btn"><a href="#" data-modal-control="modalform" class="btn btn_green btn_xl"><span>быстрый заказ</span></a></div>
                 </div>
                 <div class="menu-slider__bottom">
                   <ul class="menu-slider__list menu-list">
@@ -508,26 +508,6 @@
           <button type="button" class="btn-close"></button>
         </div>
       </div>
-      <div class="form-main">
-        <h3 class="form-main__title title title_m">Спасибо, что обратились в наш сервис. <br>Оставьте свои данные, и наш менеджер свяжется с вами в ближайшее время</h3>
-        <form action="/" class="form form_main">
-          <div class="form-group">
-            <input type="text" class="form__input" placeholder="Ваше имя">
-          </div>
-          <div class="form-group">
-            <input type="text" class="form__input" placeholder="Контактный телефон">
-          </div>
-          <div class="form-group">
-            <textarea class="form__textarea" name="help" placeholder="Ваши коментарии"></textarea>
-          </div>
-          <div class="form__btn">
-            <button type="submit" class="btn btn_md btn_green"><span>отправить</span></button>
-          </div>
-        </form>
-        <div class="form-sm__btn">
-          <button type="button" class="btn-close btn-close_l"></button>
-        </div>
-      </div>
       <footer class="footer">
         <div class="footer__inner inner">
           <div class="footer__top">
@@ -622,6 +602,29 @@
       </footer>
     </div>
     <!-- END content -->
+    <div class="modal" data-modal="modalform">
+      <div class="modal__container" data-modal-container>
+        <div class="modal__inner">
+          <div class="form-main">
+            <h3 class="form-main__title title title_m">Спасибо, что обратились в наш сервис. <br>Оставьте свои данные, и наш менеджер свяжется с вами в ближайшее время</h3>
+            <form action="/" class="form form_main">
+              <div class="form-group">
+                <input type="text" class="form__input" placeholder="Ваше имя">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form__input" placeholder="Контактный телефон">
+              </div>
+              <div class="form-group">
+                <textarea class="form__textarea" name="help" placeholder="Ваши коментарии"></textarea>
+              </div>
+              <div class="form__btn">
+                <button type="submit" class="btn btn_md btn_green"><span>отправить</span></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->
