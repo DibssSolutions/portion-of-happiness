@@ -9,6 +9,10 @@
     max-width: 416px
     width: 100%
     transition: visibility 0.3s, opacity 0.3s
+    +lg
+        border: 10px solid $coffee
+        padding: 30px
+        max-width: 325px
     &__title
         margin-bottom: 30px
     &__descr
@@ -17,6 +21,9 @@
         position: absolute
         top: 25px
         right: 25px
+        +lg
+            top: 10px
+            right: 10px
     &.is-active
         position: fixed
         bottom: 83px
