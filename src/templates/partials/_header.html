@@ -23,6 +23,7 @@
                 </a>
             </div>
             <div class="header__right">
+				{% if props.login %}{% else %}
 				<div class="header__social">
 					<a href="#" class="subscribe">ПОДПИСАТЬСЯ НА НОВОСТИ</a>
 					<ul class="social">
@@ -37,6 +38,7 @@
 						</li>
 					</ul>
 				</div>
+				{% endif %}
                 {% if props.login %}
                     <div class="account-wrap account-wrap_bg">
                         <a href="#" class="account">
