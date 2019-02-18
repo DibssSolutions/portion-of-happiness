@@ -8,6 +8,7 @@ burger.on('click', function(e) {
   e.preventDefault();
   icon.addClass(OPEN);
   menuMob.addClass(OPEN);
+  BODY.addClass(OVERFLOW_HIDDEN);
   e.stopPropagation();
 });
 
@@ -18,6 +19,7 @@ menuMob.on('click', function(e) {
 BODY.on('click', () => {
   icon.removeClass(OPEN);
   menuMob.removeClass(OPEN);
+  BODY.removeClass(OVERFLOW_HIDDEN);
 });
 
 // const menuItem = menuMob.find('.mob-menu__item');
