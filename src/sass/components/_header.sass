@@ -1,53 +1,66 @@
 .header
-    &__top
-        background-color: $green
-        color: $white
-    &__inner
-        position: relative
-        display: flex
-    &__left,
-    &__right
-        width: 50%
-        display: flex
-    &__left
-        padding-right: 100px
-        +lg
-            padding-right: 80px
-    &__right
-        padding-left: 100px
-        justify-content: flex-end
-        +lg
-            padding-left: 80px
-    &__logo
-        position: absolute
-        top: 0
-        left: 50%
-        transform: translateX(-50%)
-        background-color: $white
-        width: 200px
-        padding: 10px 30px
-        +lg
-            width: 150px
-        img
-            display: block
-            max-width: 100%
-        a
-            display: block
-    &__phone
-        margin-left: 15px
-        display: flex
-        align-items: center
-        span
-            font-size: 30px
-            +xxl
-                font-size: 25px
-    &__city
-        height: 100%
-    &__bottom
-        padding: 73px 0 31px
-        color: $green
-        +lg
-            padding: 40px 0 15px
+	&__top
+		background-color: $green
+		color: $white
+	&__inner
+		position: relative
+		display: flex
+	&__left,
+	&__right
+		width: 50%
+		display: flex
+	&__left
+		padding-right: 100px
+		+lg
+			padding-right: 80px
+	&__right
+		padding-left: 100px
+		justify-content: flex-end
+		+lg
+			padding-left: 80px
+	&__logo
+		position: absolute
+		top: 0
+		left: 50%
+		transform: translateX(-50%)
+		background-color: $white
+		width: 200px
+		padding: 10px 30px
+		z-index: 1 // нижнюю часть ссылки перекрывает меню без z-index
+		+lg
+			width: 150px
+		img
+			display: block
+			max-width: 100%
+		a
+			display: block
+	&__phone
+		margin-left: 15px
+		display: flex
+		align-items: center
+		span
+			font-size: 30px
+			+xxl
+				font-size: 25px
+	&__city
+		height: 100%
+	&__bottom
+		padding: 73px 0 31px
+		color: $green
+		+lg
+			padding: 40px 0 15px
+	&__social
+		width: 100%
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 0 40px
+		+xxl
+			flex-wrap: wrap
+			justify-content: center
+			padding: 0 20px
+		+lg
+			padding: 0 10px
 
 .main-menu
     display: flex

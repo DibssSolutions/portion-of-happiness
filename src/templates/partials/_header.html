@@ -23,6 +23,20 @@
                 </a>
             </div>
             <div class="header__right">
+				<div class="header__social">
+					<a href="#" class="subscribe">ПОДПИСАТЬСЯ НА НОВОСТИ</a>
+					<ul class="social">
+						<li class="social__item">
+							<a href="#">{{ mixins.icon('insta') }}</a>
+						</li>
+						<li class="social__item">
+							<a href="#">{{ mixins.icon('vk') }}</a>
+						</li>
+						<li class="social__item">
+							<a href="#">{{ mixins.icon('facebook') }}</a>
+						</li>
+					</ul>
+				</div>
                 {% if props.login %}
                     <div class="account-wrap account-wrap_bg">
                         <a href="#" class="account">
