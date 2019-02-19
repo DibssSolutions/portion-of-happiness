@@ -19,6 +19,12 @@
 			display: block
 			position: relative
 			padding-bottom: 50px
+		+xs
+			max-width: 270px
+			margin: 35px auto 0
+		.slick-list
+			+xs
+				overflow: visible
 		.slick-dots
 			display: flex
 			position: absolute
@@ -28,9 +34,7 @@
 			li
 				&:not(:first-child)
 					margin-left: 20px
-		.slick-slide
-			+xs
-				max-width: 270px
+					
 	&__item-wrap
 		padding: 0 40px
 		width: 25%

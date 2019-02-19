@@ -1,37 +1,21 @@
-import {OPEN, ACTIVE, BODY, OVERFLOW_HIDDEN} from './../constants';
+import { ACTIVE } from './../constants';
 
-const burger = $('.js-toggle');
-const menuMob = $('.js-mob-menu');
-const icon = $('.js-toggle-icon');
 
-burger.on('click', function(e) {
-  e.preventDefault();
-  icon.addClass(OPEN);
-  menuMob.addClass(OPEN);
-  BODY.addClass(OVERFLOW_HIDDEN);
-  e.stopPropagation();
+const menuTrigger = $('.js-menu-list-item');
+const menuTarget = $('.js-menu-list-target');
+menuTrigger.each(function() {
+  let this_ = $(this);
+  let target = this_.find(menuTarget);
+  this_.on('click', (e) => {
+    e.preventDefault();
+    if (this_.hasClass(ACTIVE)) {
+      this_.removeClass(ACTIVE);
+	  menuTarget.removeClass(ACTIVE);
+    } else {
+      menuTrigger.removeClass(ACTIVE);
+      menuTarget.removeClass(ACTIVE);
+      this_.addClass(ACTIVE);
+      target.addClass(ACTIVE);
+    }
+  });
 });
-
-menuMob.on('click', function(e) {
-  e.stopPropagation();
-});
-
-BODY.on('click', () => {
-  icon.removeClass(OPEN);
-  menuMob.removeClass(OPEN);
-  BODY.removeClass(OVERFLOW_HIDDEN);
-});
-
-// const menuItem = menuMob.find('.mob-menu__item');
-// menuItem.each((i, item) => {
-//   item = $(item);
-//   item.on('click', function() {
-// 	  if (item.hasClass(OPEN)) {
-// 		  item.removeClass(OPEN);
-// 	  } else {
-// 		  menuItem.removeClass(OPEN);
-// 		  item.addClass(OPEN);
-// 	  }
-//   });
-// });
-
