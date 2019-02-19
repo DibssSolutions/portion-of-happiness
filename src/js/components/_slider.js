@@ -12,7 +12,15 @@ heroSlider.slick({
   nextArrow: heroNext,
   customPaging: (slider, pageIndex) => {
     return $('<button class="hero__dot"></button>');
-  }
+  },
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        veriableWidth: true,
+		  arrows: false
+      }
+	  }]
 });
 
 const menuSlider = $('.js-menu-slider');
