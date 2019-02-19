@@ -1,4 +1,6 @@
 import slick from 'slick-carousel';
+import { mediaWidth } from '../utils';
+import { WIN } from '../constants';
 
 const heroSlider = $('.js-hero-slider');
 const heroParent = heroSlider.parents('.js-hero-slider-wrap');
@@ -34,3 +36,51 @@ menuSlider.slick({
   prevArrow: menuPrev,
   nextArrow: menuNext
 });
+
+
+
+const stockSlider = $('.js-stock-slider');
+const options = {
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  infinite: true,
+  dots: true,
+  arrows: false,
+  customPaging: (slider, pageIndex) => {
+    return $('<button class="hero__dot"></button>');
+  },
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+      }
+	  },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+      }
+	  }]
+};
+
+const detectWindowWidth = () => {
+  const initSlider = $('.js-stock-slider.slick-slider');
+  if (mediaWidth(1023)) {
+    if (initSlider.length) return;
+	   stockSlider.slick(options);
+  }
+  else {
+    if (!initSlider.length) return;
+    stockSlider.slick('unslick');
+  }
+}; 
+detectWindowWidth();
+
+let timeout; //= undefined;
+
+WIN.resize(() => {
+  clearTimeout(timeout);
+  timeout = setTimeout(detectWindowWidth, 100);
+});
+
