@@ -144,7 +144,7 @@
 			+md
 				display: block
 				text-align: center
-				padding-top: 35px
+				padding-top: 175px
 	&__list
 
 
@@ -155,6 +155,8 @@
 	+sm
 		flex-wrap: wrap
 		// background-color: rgba($gray, .4)
+		position: relative
+		top: 140px
 	&__item
 		width: 33.33%
 		position: relative
@@ -168,6 +170,7 @@
 				visibility: visible
 		+sm
 			width: 100%
+			position: static
 		.icon
 			display: block
 			margin-left: 35px
@@ -186,19 +189,19 @@
 		&_green
 			+hover
 				background-color: rgba($green, .35)
-			+sm
+			+md
 				&.is-active
 					background-color: rgba($green, .4)
 		&_orange
 			+hover
 				background-color: rgba($orange, .35)
-			+sm
+			+md
 				&.is-active
 					background-color: rgba($orange, .4)
 		&_pink
 			+hover
 				background-color: rgba($pink, .35)
-			+sm
+			+md
 				&.is-active
 					background-color: rgba($pink, .4)
 	&__link
@@ -269,7 +272,7 @@
 			+hover
 				color: $orange
 	&.is-active
-		+sm
+		+md
 			opacity: 1
 			visibility: visible
 

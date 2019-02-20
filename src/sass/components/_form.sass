@@ -4,35 +4,39 @@
         .form_main &
             margin-top: 35px
 .form-group
-    margin-top: 15px
-    input, textarea
-        width: 100%
-        +roboto
-        +f(20px, 400)
-        color: $black-opa
-        padding: 16px 20px
-        border-radius: 5px
-        +placeholder
-            +roboto
-            +f(20px, 400)
-            color: $black-opa
-            +lg
-                font-size: 14px
-        +lg
-            font-size: 14px
-            padding: 10px
-        &:focus
-            +placeholder
-                font-size: 0
-    textarea
-        resize: none
-        min-height: 180px
-        height: 100%
-        border: none
-        +lg
-            min-height: 100px
-    .form_main &
-        input, textarea
-            color: $black
-            +placeholder
-                color: $black
+	margin-top: 15px
+	input, textarea
+		width: 100%
+		+roboto
+		+f(20px, 400)
+		color: $black-opa
+		padding: 16px 20px
+		border-radius: 5px
+		+placeholder
+			+roboto
+			+f(20px, 400)
+			color: $black-opa
+			+lg
+				font-size: 14px
+			+sm
+				font-size: 12px
+		+lg
+			font-size: 14px
+			padding: 10px
+		+sm
+			font-size: 12px
+		&:focus
+			+placeholder
+				font-size: 0
+	textarea
+		resize: none
+		min-height: 180px
+		height: 100%
+		border: none
+		+lg
+			min-height: 100px
+	.form_main &
+		input, textarea
+			color: $black
+			+placeholder
+				color: $black
