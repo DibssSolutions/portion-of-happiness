@@ -7,3 +7,5 @@ PageList:
   ready: 50
 - file: page-anonymous.html
   ready: 50
+- file: card.html
+  ready: 50

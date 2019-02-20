@@ -1,0 +1,16 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+{{header.block()}}
+{% include "partials/_card-item.html"%}
+{% include "partials/_form-sm.html"%}
+{# {% include "partials/_form-main.html"%} #}
+{% include "partials/_footer.html"%}
+{# {% include "partials/_mob-menu.html"%} #}
+{# {{mob_menu.mob_block()}} #}
+
+{% endblock %}

@@ -1,0 +1,43 @@
+<section class="card">
+	<div class="card__inner inner">
+		<div class="card__img" style="background-image: url(./img/card_big.png)"></div>
+		<div class="card__description">
+			<div class="card__left">
+				<div class="card__title-wrap">
+					<h2 class="card__menu title title_m">шеф-меню</h2>
+					<h3 class="card__name title title_lg">СОЧНАЯ ГОВЯДИНА<br>с паровыми овощами</h3>
+				</div>
+			</div>
+			<div class="card__right">
+				<ul class="card__specifications">
+					{% for item in [
+						{
+							icon: 'spec1',
+							main: '1 порция',
+							aside: '250 гр'
+						},
+						{
+							icon: 'spec2',
+							main: '35 мин',
+							aside: 'готовить не сложно'
+						},
+						{
+							icon: 'spec3',
+							main: 'на 100 г блюда:',
+							aside: '164 кКал, 10.0 | 2.0 | 26.0 БЖУ',
+							wide: true
+						}
+						] %}
+						<li class="card__specification specification {% if item.wide %}specification_wide{% endif %}">
+							<div class="specification__icon" style="background-image: url(./img/{{item.icon}}.png)"></div>
+							<div class="specification__text">
+								<div class="specification__main">{{item.main}}</div>
+								<div class="specification__aside">{{item.aside}}</div>
+							</div>
+						</li>
+						{% endfor %}
+					</ul>
+			</div>
+		</div>
+	</div>
+</section>
