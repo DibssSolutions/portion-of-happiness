@@ -41,12 +41,13 @@
 		display: none
 		+md
 			display: block
-			width: 115px
+			font-size: 43px
+			// width: 115px
 			a
-				display: block
-			img
-				display: block
-				width: 100%
+				display: flex
+			// img
+			// 	display: block
+			// 	width: 100%
 	&__logo
 		position: absolute
 		top: 0
@@ -359,6 +360,8 @@
 	padding: 15px 0
 	z-index: 15
 	transition: visibility .3s, opacity .3s
+	+ms
+		top: 72px
 	&__list
 		text-transform: uppercase
 		border-bottom: 1px solid $mob-border
