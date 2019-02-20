@@ -61,6 +61,8 @@
                     lightMenu: [
                         'филе индейки с тыквой и ананасом',
                         'филе индейки с тыквой и ананасом',
+                        'филе индейки с тыквой и ананасом',
+                        'филе индейки с тыквой и ананасом',
                         'филе индейки с тыквой и ананасом'
                     ]
                 },
@@ -118,29 +120,35 @@
                         </div>
                         <div class="menu-slider__bottom">
                             <ul class="menu-slider__list menu-list">
-                                <li class="menu-list__item menu-list__item_orange js-menu-list-item is-active">
-                                    <a href="#" class="menu-list__link">Домашнее меню{{ mixins.icon('arrow-right') }}</a>
-                                    <ul class="menu-list__ingredients menu-ingredients js-menu-list-target is-active">
-                                        {% for item in slide.homeMenu %}
-                                            <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">{{ item }}</a></li>
-                                        {% endfor %}
-                                    </ul>
+                                <li class="menu-list__item menu-list__item_orange">
+                                    <a href="#" class="menu-list__link js-menu-list-item is-active">Домашнее меню{{ mixins.icon('arrow-right') }}</a>
+									<div class="menu-list__ingredients-wrap js-menu-list-target-wrap is-active">
+										<ul class="menu-list__ingredients menu-ingredients is-active js-menu-list-slider">
+											{% for item in slide.homeMenu %}
+												<li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">{{ item }}</a></li>
+											{% endfor %}
+										</ul>
+									</div>
                                 </li>
-                                <li class="menu-list__item menu-list__item_green js-menu-list-item">
-                                    <a href="#" class="menu-list__link">Шеф-меню{{ mixins.icon('arrow-right') }}</a>
-                                    <ul class="menu-list__ingredients menu-ingredients js-menu-list-target">
-                                        {% for item in slide.chefMenu %}
-                                            <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">{{ item }}</a></li>
-                                        {% endfor %}
-                                    </ul>
+                                <li class="menu-list__item menu-list__item_green">
+                                    <a href="#" class="menu-list__link js-menu-list-item">Шеф-меню{{ mixins.icon('arrow-right') }}</a>
+									<div class="menu-list__ingredients-wrap js-menu-list-target-wrap">
+										<ul class="menu-list__ingredients menu-ingredients js-menu-list-slider">
+											{% for item in slide.chefMenu %}
+												<li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">{{ item }}</a></li>
+											{% endfor %}
+										</ul>
+									</div>
                                 </li>
-                                <li class="menu-list__item menu-list__item_pink js-menu-list-item">
-                                    <a href="#" class="menu-list__link">Легкое меню{{ mixins.icon('arrow-right') }}</a>
-                                    <ul class="menu-list__ingredients menu-ingredients js-menu-list-target">
-                                        {% for item in slide.lightMenu %}
-                                            <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">{{ item }}</a></li>
-                                        {% endfor %}
-                                    </ul>
+                                <li class="menu-list__item menu-list__item_pink">
+                                    <a href="#" class="menu-list__link js-menu-list-item">Легкое меню{{ mixins.icon('arrow-right') }}</a>
+									<div class="menu-list__ingredients-wrap js-menu-list-target-wrap">
+										<ul class="menu-list__ingredients menu-ingredients js-menu-list-slider">
+											{% for item in slide.lightMenu %}
+												<li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">{{ item }}</a></li>
+											{% endfor %}
+										</ul>
+									</div>
                                 </li>
                             </ul>
                         </div>

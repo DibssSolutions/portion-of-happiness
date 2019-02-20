@@ -80,10 +80,43 @@ const detectWindowWidth = () => {
 }; 
 detectWindowWidth();
 
-let timeout; //= undefined;
+let timeout;
 
 WIN.resize(() => {
   clearTimeout(timeout);
   timeout = setTimeout(detectWindowWidth, 100);
 });
 
+// SUBMENU
+
+const submenuSlickOptions = {
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  infinite: true,
+  dots: true,
+  arrows: false,
+  customPaging: (slider, pageIndex) => {
+    return $('<button class="hero__dot"></button>');
+  }
+};
+
+const sliderSubmenu = $('.js-menu-list-slider');
+const detectWindowWidthSubmenu = () => {
+  const sliderSubmenuReady = $('.js-menu-list-slider.slick-slider');
+  if (mediaWidth(767)) {
+	  if (sliderSubmenuReady.length) return;
+		 sliderSubmenu.slick(submenuSlickOptions);
+  }
+  else {
+	  if (!sliderSubmenuReady.length) return;
+	  sliderSubmenu.slick('unslick');
+  }
+}; 
+detectWindowWidthSubmenu();
+  
+let timeoutSmall;
+  
+WIN.resize(() => {
+  clearTimeout(timeoutSmall);
+  timeoutSmall = setTimeout(detectWindowWidthSubmenu, 100);
+});
