@@ -10,7 +10,7 @@
 			padding-bottom: 20px
 		+md
 			flex-wrap: wrap
-			justify-content: center
+			// justify-content: center
 	&__logo
 		// max-width: 156px
 		display: flex
@@ -37,6 +37,12 @@
 			font-size: 16px
 	&__menu
 		display: flex
+		+sm
+			display: inline-block
+			column-count: 2
+			column-gap: 68px
+		+ms
+			column-gap: 20px
 		&-wrap
 			text-transform: uppercase
 			padding-top: 44px
@@ -46,9 +52,14 @@
 				padding-top: 24px
 			+md
 				width: 100%
-				justify-content: center
+				// justify-content: center
+			+sm
+				display: block
+				margin: 0
 		&-title
 			font-weight: 700
+			// +sm
+			// 	margin-left: 15px
 		&-block
 			padding: 0 30px
 			margin: -13px 0
@@ -56,6 +67,7 @@
 				padding: 0 15px
 			+sm
 				margin: 0
+				padding: 0
 		&-item
 			padding: 13px 0
 			transition: color .3s
@@ -74,12 +86,19 @@
 			display: flex
 			font-size: 18px
 			padding-top: 40px
+		+ms
+			flex-wrap: wrap
 		&-item
+			+ms
+				width: 100%
 			&:not(:first-child)
 				margin-top: 50px
 				+md
 					margin-top: 0
 					margin-left: 50px
+				+ms
+					margin-left: 0
+					margin-top: 20px
 			span
 				font-size: 32px
 				+r(1502)
