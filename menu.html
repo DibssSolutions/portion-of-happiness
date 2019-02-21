@@ -209,263 +209,774 @@
             </a>
           </div>
         </div>
-        <div class="dishful__choice choice">
+        <div class="dishful__choice choice" data-tabs>
           <div class="choice__header">
             <div class="inner">
-              <h2 class="choice__title title title_m bg_pow is-active">Домашнее меню</h2>
-              <h2 class="choice__title title title_m bg_pink">Шеф-меню</h2>
-              <h2 class="choice__title title title_m bg_green">Легкое меню</h2>
+              <div class="choice__current" data-tabs-current></div>
+              <ul class="choice__list">
+                <li class="choice__title title title_m bg_pow" data-tabs-control='home'>Домашнее меню</li>
+                <li class="choice__title title title_m bg_pink" data-tabs-control='chef'>Шеф-меню</li>
+                <li class="choice__title title title_m bg_green" data-tabs-control='light'>Легкое меню</li>
+              </ul>
             </div>
           </div>
-          <div class="choice__body bg_pow is-active">
-            <div class="inner">
-              <div class="choice__info">
-                <div class="choice__conditions">
-                  <div class="choice__select">
-                    <div class="select">
-                      <svg class="icon icon-arrow-down">
-                        <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
-                      </svg>
-                      <select name="days">
-                        <option value="3 дня">3 дня</option>
-                        <option value="5 дней">5 дней</option>
-                        <option value="7 дней">7 дней</option>
-                      </select>
+          <div class="" data-tabs-wrapper>
+            <div class="choice__body bg_pow" data-tabs-container='home'>
+              <div class="inner">
+                <div class="choice__info">
+                  <div class="choice__conditions">
+                    <div class="choice__select">
+                      <div class="select">
+                        <svg class="icon icon-arrow-down">
+                          <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+                        </svg>
+                        <select name="days">
+                          <option value="0">3 дня</option>
+                          <option value="1">5 дней</option>
+                          <option value="2">7 дней</option>
+                        </select>
+                      </div>
+                      <div class="select">
+                        <svg class="icon icon-arrow-down">
+                          <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+                        </svg>
+                        <select name="persons">
+                          <option value="0">1 персона</option>
+                          <option value="1">2 персоны</option>
+                          <option value="2">3 персоны</option>
+                        </select>
+                      </div>
                     </div>
-                    <div class="select">
-                      <svg class="icon icon-arrow-down">
-                        <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
-                      </svg>
-                      <select name="persons">
-                        <option value="1 персона">1 персона</option>
-                        <option value="2 персоны">2 персоны</option>
-                        <option value="3 персоны">3 персоны</option>
-                      </select>
+                    <div class="choice__text">Выбирайте 5 блюд из 6 возможных:</div>
+                  </div>
+                  <div class="choice__basket basket">
+                    <div class="basket__text">
+                      <div class="basket__title">мой заказ:</div>
+                      <div class="basket__sum">3750</div>
+                      <div class="basket__currency">руб.</div>
                     </div>
+                    <div class="basket__btn"><a href="#" class="btn btn_green btn_sm"><span>оформить заказ</span></a></div>
                   </div>
-                  <div class="choice__text">Выбирайте 5 блюд из 6 возможных:</div>
                 </div>
-                <div class="choice__basket basket">
-                  <div class="basket__text">
-                    <div class="basket__title">мой заказ:</div>
-                    <div class="basket__sum">3750</div>
-                    <div class="basket__currency">руб.</div>
-                  </div>
-                  <div class="basket__btn"><a href="#" class="btn btn_green btn_sm"><span>оформить заказ</span></a></div>
-                </div>
+                <ul class="choice__dishes">
+                  <li class="choice__item">
+                    <a href="#" class="choice__link">
+                      <div class="main-dish">
+                        <div class="main-dish__img" style="background-image: url(./img/choice-dish.png)"></div>
+                        <h3 class="main-dish__title title title_m">СОЧНАЯ ГОВЯДИНА с паровыми овощами</h3>
+                        <div class="main-dish__specification">
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec1.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">250 гр</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec2.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">35 мин</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec3.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">165 калл</div>
+                              <div class="specification__aside">/100гр</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="main-dish__check check">
+                          <label class="check__container">
+                            <input type="checkbox">
+                            <span class="check__checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="choice__item">
+                    <a href="#" class="choice__link">
+                      <div class="main-dish">
+                        <div class="main-dish__img" style="background-image: url(./img/choice-dish.png)"></div>
+                        <h3 class="main-dish__title title title_m">СОЧНАЯ ГОВЯДИНА с паровыми овощами</h3>
+                        <div class="main-dish__specification">
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec1.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">250 гр</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec2.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">35 мин</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec3.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">165 калл</div>
+                              <div class="specification__aside">/100гр</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="main-dish__check check">
+                          <label class="check__container">
+                            <input type="checkbox">
+                            <span class="check__checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="choice__item">
+                    <a href="#" class="choice__link">
+                      <div class="main-dish">
+                        <div class="main-dish__img" style="background-image: url(./img/choice-dish.png)"></div>
+                        <h3 class="main-dish__title title title_m">СОЧНАЯ ГОВЯДИНА с паровыми овощами</h3>
+                        <div class="main-dish__specification">
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec1.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">250 гр</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec2.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">35 мин</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec3.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">165 калл</div>
+                              <div class="specification__aside">/100гр</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="main-dish__check check">
+                          <label class="check__container">
+                            <input type="checkbox">
+                            <span class="check__checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="choice__item">
+                    <a href="#" class="choice__link">
+                      <div class="main-dish">
+                        <div class="main-dish__img" style="background-image: url(./img/choice-dish.png)"></div>
+                        <h3 class="main-dish__title title title_m">СОЧНАЯ ГОВЯДИНА с паровыми овощами</h3>
+                        <div class="main-dish__specification">
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec1.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">250 гр</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec2.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">35 мин</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec3.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">165 калл</div>
+                              <div class="specification__aside">/100гр</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="main-dish__check check">
+                          <label class="check__container">
+                            <input type="checkbox">
+                            <span class="check__checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="choice__item">
+                    <a href="#" class="choice__link">
+                      <div class="main-dish">
+                        <div class="main-dish__img" style="background-image: url(./img/choice-dish.png)"></div>
+                        <h3 class="main-dish__title title title_m">СОЧНАЯ ГОВЯДИНА с паровыми овощами</h3>
+                        <div class="main-dish__specification">
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec1.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">250 гр</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec2.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">35 мин</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec3.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">165 калл</div>
+                              <div class="specification__aside">/100гр</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="main-dish__check check">
+                          <label class="check__container">
+                            <input type="checkbox">
+                            <span class="check__checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="choice__item">
+                    <a href="#" class="choice__link">
+                      <div class="main-dish">
+                        <div class="main-dish__img" style="background-image: url(./img/choice-dish.png)"></div>
+                        <h3 class="main-dish__title title title_m">СОЧНАЯ ГОВЯДИНА с паровыми овощами</h3>
+                        <div class="main-dish__specification">
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec1.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">250 гр</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec2.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">35 мин</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec3.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">165 калл</div>
+                              <div class="specification__aside">/100гр</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="main-dish__check check">
+                          <label class="check__container">
+                            <input type="checkbox">
+                            <span class="check__checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
               </div>
-              <ul class="choice__dishes">
-                <li class="choice__item">
-                  <a href="#" class="choice__link">
-                    <div class="main-dish">
-                      <div class="main-dish__img" style="background-image: url(./img/choice-dish.png)"></div>
-                      <h3 class="main-dish__title title title_m">СОЧНАЯ ГОВЯДИНА с паровыми овощами</h3>
-                      <div class="main-dish__specification">
-                        <div class="specification">
-                          <div class="specification__icon" style="background-image: url(./img/spec1.png)"></div>
-                          <div class="specification__text">
-                            <div class="specification__main">250 гр</div>
-                          </div>
-                        </div>
-                        <div class="specification">
-                          <div class="specification__icon" style="background-image: url(./img/spec2.png)"></div>
-                          <div class="specification__text">
-                            <div class="specification__main">35 мин</div>
-                          </div>
-                        </div>
-                        <div class="specification">
-                          <div class="specification__icon" style="background-image: url(./img/spec3.png)"></div>
-                          <div class="specification__text">
-                            <div class="specification__main">165 калл</div>
-                            <div class="specification__aside">/100гр</div>
-                          </div>
-                        </div>
+            </div>
+          </div>
+          <div class="" data-tabs-wrapper>
+            <div class="choice__body bg_pink" data-tabs-container='chef'>
+              <div class="inner">
+                <div class="choice__info">
+                  <div class="choice__conditions">
+                    <div class="choice__select">
+                      <div class="select">
+                        <svg class="icon icon-arrow-down">
+                          <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+                        </svg>
+                        <select name="days">
+                          <option value="3 дня">3 дня</option>
+                          <option value="5 дней">5 дней</option>
+                          <option value="7 дней">7 дней</option>
+                        </select>
                       </div>
-                      <div class="main-dish__check check">
-                        <label class="check__container">
-                          <input type="checkbox">
-                          <span class="check__checkmark"></span>
-                        </label>
+                      <div class="select">
+                        <svg class="icon icon-arrow-down">
+                          <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+                        </svg>
+                        <select name="persons">
+                          <option value="1 персона">1 персона</option>
+                          <option value="2 персоны">2 персоны</option>
+                          <option value="3 персоны">3 персоны</option>
+                        </select>
                       </div>
                     </div>
-                  </a>
-                </li>
-                <li class="choice__item">
-                  <a href="#" class="choice__link">
-                    <div class="main-dish">
-                      <div class="main-dish__img" style="background-image: url(./img/choice-dish.png)"></div>
-                      <h3 class="main-dish__title title title_m">СОЧНАЯ ГОВЯДИНА с паровыми овощами</h3>
-                      <div class="main-dish__specification">
-                        <div class="specification">
-                          <div class="specification__icon" style="background-image: url(./img/spec1.png)"></div>
-                          <div class="specification__text">
-                            <div class="specification__main">250 гр</div>
+                    <div class="choice__text">Выбирайте 5 блюд из 6 возможных:</div>
+                  </div>
+                  <div class="choice__basket basket">
+                    <div class="basket__text">
+                      <div class="basket__title">мой заказ:</div>
+                      <div class="basket__sum">3750</div>
+                      <div class="basket__currency">руб.</div>
+                    </div>
+                    <div class="basket__btn"><a href="#" class="btn btn_green btn_sm"><span>оформить заказ</span></a></div>
+                  </div>
+                </div>
+                <ul class="choice__dishes">
+                  <li class="choice__item">
+                    <a href="#" class="choice__link">
+                      <div class="main-dish">
+                        <div class="main-dish__img" style="background-image: url(./img/choice-dish.png)"></div>
+                        <h3 class="main-dish__title title title_m">СОЧНАЯ ГОВЯДИНА с паровыми овощами</h3>
+                        <div class="main-dish__specification">
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec1.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">250 гр</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec2.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">35 мин</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec3.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">165 калл</div>
+                              <div class="specification__aside">/100гр</div>
+                            </div>
                           </div>
                         </div>
-                        <div class="specification">
-                          <div class="specification__icon" style="background-image: url(./img/spec2.png)"></div>
-                          <div class="specification__text">
-                            <div class="specification__main">35 мин</div>
-                          </div>
-                        </div>
-                        <div class="specification">
-                          <div class="specification__icon" style="background-image: url(./img/spec3.png)"></div>
-                          <div class="specification__text">
-                            <div class="specification__main">165 калл</div>
-                            <div class="specification__aside">/100гр</div>
-                          </div>
+                        <div class="main-dish__check check">
+                          <label class="check__container">
+                            <input type="checkbox">
+                            <span class="check__checkmark"></span>
+                          </label>
                         </div>
                       </div>
-                      <div class="main-dish__check check">
-                        <label class="check__container">
-                          <input type="checkbox">
-                          <span class="check__checkmark"></span>
-                        </label>
+                    </a>
+                  </li>
+                  <li class="choice__item">
+                    <a href="#" class="choice__link">
+                      <div class="main-dish">
+                        <div class="main-dish__img" style="background-image: url(./img/choice-dish.png)"></div>
+                        <h3 class="main-dish__title title title_m">СОЧНАЯ ГОВЯДИНА с паровыми овощами</h3>
+                        <div class="main-dish__specification">
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec1.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">250 гр</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec2.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">35 мин</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec3.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">165 калл</div>
+                              <div class="specification__aside">/100гр</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="main-dish__check check">
+                          <label class="check__container">
+                            <input type="checkbox">
+                            <span class="check__checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="choice__item">
+                    <a href="#" class="choice__link">
+                      <div class="main-dish">
+                        <div class="main-dish__img" style="background-image: url(./img/choice-dish.png)"></div>
+                        <h3 class="main-dish__title title title_m">СОЧНАЯ ГОВЯДИНА с паровыми овощами</h3>
+                        <div class="main-dish__specification">
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec1.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">250 гр</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec2.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">35 мин</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec3.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">165 калл</div>
+                              <div class="specification__aside">/100гр</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="main-dish__check check">
+                          <label class="check__container">
+                            <input type="checkbox">
+                            <span class="check__checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="choice__item">
+                    <a href="#" class="choice__link">
+                      <div class="main-dish">
+                        <div class="main-dish__img" style="background-image: url(./img/choice-dish.png)"></div>
+                        <h3 class="main-dish__title title title_m">СОЧНАЯ ГОВЯДИНА с паровыми овощами</h3>
+                        <div class="main-dish__specification">
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec1.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">250 гр</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec2.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">35 мин</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec3.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">165 калл</div>
+                              <div class="specification__aside">/100гр</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="main-dish__check check">
+                          <label class="check__container">
+                            <input type="checkbox">
+                            <span class="check__checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="choice__item">
+                    <a href="#" class="choice__link">
+                      <div class="main-dish">
+                        <div class="main-dish__img" style="background-image: url(./img/choice-dish.png)"></div>
+                        <h3 class="main-dish__title title title_m">СОЧНАЯ ГОВЯДИНА с паровыми овощами</h3>
+                        <div class="main-dish__specification">
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec1.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">250 гр</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec2.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">35 мин</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec3.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">165 калл</div>
+                              <div class="specification__aside">/100гр</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="main-dish__check check">
+                          <label class="check__container">
+                            <input type="checkbox">
+                            <span class="check__checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="choice__item">
+                    <a href="#" class="choice__link">
+                      <div class="main-dish">
+                        <div class="main-dish__img" style="background-image: url(./img/choice-dish.png)"></div>
+                        <h3 class="main-dish__title title title_m">СОЧНАЯ ГОВЯДИНА с паровыми овощами</h3>
+                        <div class="main-dish__specification">
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec1.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">250 гр</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec2.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">35 мин</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec3.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">165 калл</div>
+                              <div class="specification__aside">/100гр</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="main-dish__check check">
+                          <label class="check__container">
+                            <input type="checkbox">
+                            <span class="check__checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="" data-tabs-wrapper>
+            <div class="choice__body bg_green" data-tabs-container='light'>
+              <div class="inner">
+                <div class="choice__info">
+                  <div class="choice__conditions">
+                    <div class="choice__select">
+                      <div class="select">
+                        <svg class="icon icon-arrow-down">
+                          <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+                        </svg>
+                        <select name="days">
+                          <option value="3 дня">3 дня</option>
+                          <option value="5 дней">5 дней</option>
+                          <option value="7 дней">7 дней</option>
+                        </select>
+                      </div>
+                      <div class="select">
+                        <svg class="icon icon-arrow-down">
+                          <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+                        </svg>
+                        <select name="persons">
+                          <option value="1 персона">1 персона</option>
+                          <option value="2 персоны">2 персоны</option>
+                          <option value="3 персоны">3 персоны</option>
+                        </select>
                       </div>
                     </div>
-                  </a>
-                </li>
-                <li class="choice__item">
-                  <a href="#" class="choice__link">
-                    <div class="main-dish">
-                      <div class="main-dish__img" style="background-image: url(./img/choice-dish.png)"></div>
-                      <h3 class="main-dish__title title title_m">СОЧНАЯ ГОВЯДИНА с паровыми овощами</h3>
-                      <div class="main-dish__specification">
-                        <div class="specification">
-                          <div class="specification__icon" style="background-image: url(./img/spec1.png)"></div>
-                          <div class="specification__text">
-                            <div class="specification__main">250 гр</div>
-                          </div>
-                        </div>
-                        <div class="specification">
-                          <div class="specification__icon" style="background-image: url(./img/spec2.png)"></div>
-                          <div class="specification__text">
-                            <div class="specification__main">35 мин</div>
-                          </div>
-                        </div>
-                        <div class="specification">
-                          <div class="specification__icon" style="background-image: url(./img/spec3.png)"></div>
-                          <div class="specification__text">
-                            <div class="specification__main">165 калл</div>
-                            <div class="specification__aside">/100гр</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="main-dish__check check">
-                        <label class="check__container">
-                          <input type="checkbox">
-                          <span class="check__checkmark"></span>
-                        </label>
-                      </div>
+                    <div class="choice__text">Выбирайте 5 блюд из 6 возможных:</div>
+                  </div>
+                  <div class="choice__basket basket">
+                    <div class="basket__text">
+                      <div class="basket__title">мой заказ:</div>
+                      <div class="basket__sum">3750</div>
+                      <div class="basket__currency">руб.</div>
                     </div>
-                  </a>
-                </li>
-                <li class="choice__item">
-                  <a href="#" class="choice__link">
-                    <div class="main-dish">
-                      <div class="main-dish__img" style="background-image: url(./img/choice-dish.png)"></div>
-                      <h3 class="main-dish__title title title_m">СОЧНАЯ ГОВЯДИНА с паровыми овощами</h3>
-                      <div class="main-dish__specification">
-                        <div class="specification">
-                          <div class="specification__icon" style="background-image: url(./img/spec1.png)"></div>
-                          <div class="specification__text">
-                            <div class="specification__main">250 гр</div>
+                    <div class="basket__btn"><a href="#" class="btn btn_green btn_sm"><span>оформить заказ</span></a></div>
+                  </div>
+                </div>
+                <ul class="choice__dishes">
+                  <li class="choice__item">
+                    <a href="#" class="choice__link">
+                      <div class="main-dish">
+                        <div class="main-dish__img" style="background-image: url(./img/choice-dish.png)"></div>
+                        <h3 class="main-dish__title title title_m">СОЧНАЯ ГОВЯДИНА с паровыми овощами</h3>
+                        <div class="main-dish__specification">
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec1.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">250 гр</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec2.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">35 мин</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec3.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">165 калл</div>
+                              <div class="specification__aside">/100гр</div>
+                            </div>
                           </div>
                         </div>
-                        <div class="specification">
-                          <div class="specification__icon" style="background-image: url(./img/spec2.png)"></div>
-                          <div class="specification__text">
-                            <div class="specification__main">35 мин</div>
-                          </div>
-                        </div>
-                        <div class="specification">
-                          <div class="specification__icon" style="background-image: url(./img/spec3.png)"></div>
-                          <div class="specification__text">
-                            <div class="specification__main">165 калл</div>
-                            <div class="specification__aside">/100гр</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="main-dish__check check">
-                        <label class="check__container">
-                          <input type="checkbox">
-                          <span class="check__checkmark"></span>
-                        </label>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="choice__item">
-                  <a href="#" class="choice__link">
-                    <div class="main-dish">
-                      <div class="main-dish__img" style="background-image: url(./img/choice-dish.png)"></div>
-                      <h3 class="main-dish__title title title_m">СОЧНАЯ ГОВЯДИНА с паровыми овощами</h3>
-                      <div class="main-dish__specification">
-                        <div class="specification">
-                          <div class="specification__icon" style="background-image: url(./img/spec1.png)"></div>
-                          <div class="specification__text">
-                            <div class="specification__main">250 гр</div>
-                          </div>
-                        </div>
-                        <div class="specification">
-                          <div class="specification__icon" style="background-image: url(./img/spec2.png)"></div>
-                          <div class="specification__text">
-                            <div class="specification__main">35 мин</div>
-                          </div>
-                        </div>
-                        <div class="specification">
-                          <div class="specification__icon" style="background-image: url(./img/spec3.png)"></div>
-                          <div class="specification__text">
-                            <div class="specification__main">165 калл</div>
-                            <div class="specification__aside">/100гр</div>
-                          </div>
+                        <div class="main-dish__check check">
+                          <label class="check__container">
+                            <input type="checkbox">
+                            <span class="check__checkmark"></span>
+                          </label>
                         </div>
                       </div>
-                      <div class="main-dish__check check">
-                        <label class="check__container">
-                          <input type="checkbox">
-                          <span class="check__checkmark"></span>
-                        </label>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="choice__item">
-                  <a href="#" class="choice__link">
-                    <div class="main-dish">
-                      <div class="main-dish__img" style="background-image: url(./img/choice-dish.png)"></div>
-                      <h3 class="main-dish__title title title_m">СОЧНАЯ ГОВЯДИНА с паровыми овощами</h3>
-                      <div class="main-dish__specification">
-                        <div class="specification">
-                          <div class="specification__icon" style="background-image: url(./img/spec1.png)"></div>
-                          <div class="specification__text">
-                            <div class="specification__main">250 гр</div>
+                    </a>
+                  </li>
+                  <li class="choice__item">
+                    <a href="#" class="choice__link">
+                      <div class="main-dish">
+                        <div class="main-dish__img" style="background-image: url(./img/choice-dish.png)"></div>
+                        <h3 class="main-dish__title title title_m">СОЧНАЯ ГОВЯДИНА с паровыми овощами</h3>
+                        <div class="main-dish__specification">
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec1.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">250 гр</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec2.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">35 мин</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec3.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">165 калл</div>
+                              <div class="specification__aside">/100гр</div>
+                            </div>
                           </div>
                         </div>
-                        <div class="specification">
-                          <div class="specification__icon" style="background-image: url(./img/spec2.png)"></div>
-                          <div class="specification__text">
-                            <div class="specification__main">35 мин</div>
-                          </div>
-                        </div>
-                        <div class="specification">
-                          <div class="specification__icon" style="background-image: url(./img/spec3.png)"></div>
-                          <div class="specification__text">
-                            <div class="specification__main">165 калл</div>
-                            <div class="specification__aside">/100гр</div>
-                          </div>
+                        <div class="main-dish__check check">
+                          <label class="check__container">
+                            <input type="checkbox">
+                            <span class="check__checkmark"></span>
+                          </label>
                         </div>
                       </div>
-                      <div class="main-dish__check check">
-                        <label class="check__container">
-                          <input type="checkbox">
-                          <span class="check__checkmark"></span>
-                        </label>
+                    </a>
+                  </li>
+                  <li class="choice__item">
+                    <a href="#" class="choice__link">
+                      <div class="main-dish">
+                        <div class="main-dish__img" style="background-image: url(./img/choice-dish.png)"></div>
+                        <h3 class="main-dish__title title title_m">СОЧНАЯ ГОВЯДИНА с паровыми овощами</h3>
+                        <div class="main-dish__specification">
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec1.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">250 гр</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec2.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">35 мин</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec3.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">165 калл</div>
+                              <div class="specification__aside">/100гр</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="main-dish__check check">
+                          <label class="check__container">
+                            <input type="checkbox">
+                            <span class="check__checkmark"></span>
+                          </label>
+                        </div>
                       </div>
-                    </div>
-                  </a>
-                </li>
-              </ul>
+                    </a>
+                  </li>
+                  <li class="choice__item">
+                    <a href="#" class="choice__link">
+                      <div class="main-dish">
+                        <div class="main-dish__img" style="background-image: url(./img/choice-dish.png)"></div>
+                        <h3 class="main-dish__title title title_m">СОЧНАЯ ГОВЯДИНА с паровыми овощами</h3>
+                        <div class="main-dish__specification">
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec1.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">250 гр</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec2.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">35 мин</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec3.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">165 калл</div>
+                              <div class="specification__aside">/100гр</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="main-dish__check check">
+                          <label class="check__container">
+                            <input type="checkbox">
+                            <span class="check__checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="choice__item">
+                    <a href="#" class="choice__link">
+                      <div class="main-dish">
+                        <div class="main-dish__img" style="background-image: url(./img/choice-dish.png)"></div>
+                        <h3 class="main-dish__title title title_m">СОЧНАЯ ГОВЯДИНА с паровыми овощами</h3>
+                        <div class="main-dish__specification">
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec1.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">250 гр</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec2.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">35 мин</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec3.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">165 калл</div>
+                              <div class="specification__aside">/100гр</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="main-dish__check check">
+                          <label class="check__container">
+                            <input type="checkbox">
+                            <span class="check__checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="choice__item">
+                    <a href="#" class="choice__link">
+                      <div class="main-dish">
+                        <div class="main-dish__img" style="background-image: url(./img/choice-dish.png)"></div>
+                        <h3 class="main-dish__title title title_m">СОЧНАЯ ГОВЯДИНА с паровыми овощами</h3>
+                        <div class="main-dish__specification">
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec1.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">250 гр</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec2.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">35 мин</div>
+                            </div>
+                          </div>
+                          <div class="specification">
+                            <div class="specification__icon" style="background-image: url(./img/spec3.png)"></div>
+                            <div class="specification__text">
+                              <div class="specification__main">165 калл</div>
+                              <div class="specification__aside">/100гр</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="main-dish__check check">
+                          <label class="check__container">
+                            <input type="checkbox">
+                            <span class="check__checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
