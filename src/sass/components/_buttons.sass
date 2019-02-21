@@ -26,7 +26,6 @@
 	span
 		position: relative
 		z-index: 2
-		position: relative
 	+hover
 		&:before
 			opacity: 0.2
@@ -66,6 +65,19 @@
 		+ms
 			min-width: auto
 			font-size: 20px
+	&_plus
+		padding-left: 70px
+		min-width: 284px
+		+lg
+			min-width: 230px
+			padding-left: 50px
+		svg
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			left: 22px
+			font-size: 1.5em
+			
 
 .btn-close
     display: inline-block
@@ -95,3 +107,26 @@
     //         background-color: $brown
     //         color: $brown
     //         width: 25px
+.btn-border
+	padding: 9px 40px 9px 70px
+	+roboto 
+	color: $brown
+	+f(18px,500,1)
+	letter-spacing: 0.005em
+	text-transform: uppercase
+	text-align: center
+	text-decoration: none
+	display: inline-block
+	border-radius: 30px
+	background-color: transparent
+	position: relative
+	overflow: hidden
+	border: 1px solid $brown
+	transition: background-color .3s, color .3s
+	min-width: 284px
+	svg
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		left: 22px
+		font-size: 1.1em

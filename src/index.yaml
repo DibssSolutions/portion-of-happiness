@@ -9,3 +9,5 @@ PageList:
   ready: 50
 - file: card.html
   ready: 50
+- file: menu.html
+  ready: 50

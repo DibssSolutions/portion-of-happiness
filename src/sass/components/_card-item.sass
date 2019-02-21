@@ -1,20 +1,31 @@
 .card
-	background-color: $pinkLight
+	padding-bottom: 120px
+	+md
+		padding-top: 131px
 	&__inner
 	&__img
 		+cover
 		height: 872px
+		&-bg
+			background-color: $pinkLight
 	&__description
 		display: flex
+		&-bg
+			background-color: rgba($pinkLight, .3)			
 	&__left
 		max-width: 920px
-		// width: 65%
 		width: 100%
 	&__right
-		width: 50%
+		width: 100%
+		max-width: 600px
+		&_single
+			display: flex
+			align-items: center
+			justify-content: flex-end
+			width: 100%
 	&__title-wrap
 		padding: 50px 20px 30px 0
-	&__menu
+	&__title
 	&__name
 		padding-top: 15px
 		&.title
@@ -29,6 +40,7 @@
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-between
+		align-items: flex-start
 		+lg
 			padding: 30px 20px
 	&__specification
@@ -37,6 +49,15 @@
 			margin-bottom: 20px
 		&.specification_wide
 			// width: 100%
+	&__recipe
+		padding: 30px 0 80px
+	&__basket
+		justify-content: space-between
+		padding-bottom: 30px
+		padding-right: 35px
+	&__btn
+		&_padding
+			padding-top: 50px
 
 .specification
 	display: flex
@@ -52,5 +73,24 @@
 		+lg
 			width: 35px
 			height: 35px
+		.main-dish__specification &
+			margin-right: 10px
+	&__aside
+		font-size: 14px
+		text-align: center
 	+lg
 		font-size: 16px
+
+.recipe
+	display: flex
+	&__header
+		background-color: $lightGray
+		padding: 10px 40px
+		.card__right &
+			background-color: $grayMid
+	&__body
+		margin-top: 35px
+		display: flex
+	&__list
+		padding-left: 40px
+		min-width: 275px

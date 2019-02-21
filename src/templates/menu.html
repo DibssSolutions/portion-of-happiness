@@ -6,8 +6,10 @@ title: Index page
 {% block content %}
 	
 {{header.block()}}
-{{card_item.card({full:true})}}
+{% include "partials/_hero.html" %}
+{% include "partials/_dishful.html" %}
 {# {% include "partials/_form-sm.html"%} #}
+{# {% include "partials/_form-main.html"%} #}
 {% include "partials/_footer.html"%}
 {# {% include "partials/_mob-menu.html"%} #}
 {{mob_menu.mob_block()}}

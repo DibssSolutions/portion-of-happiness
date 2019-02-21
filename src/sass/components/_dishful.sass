@@ -1,0 +1,138 @@
+.dishful
+	&__inner
+		position: relative
+	.icon
+		color: $brown
+	.menu-slider__text
+		max-width: none
+		padding: 0 50px
+		text-align: center
+	.menu__next-arrow
+		right: 71px
+	
+.choice
+	&__header
+		background-color: $powder
+		& .inner
+			display: flex
+			justify-content: center
+			align-items: center
+	&__title
+		width: 33.3%
+		text-align: center
+		padding: 13px 20px
+		cursor: pointer
+	&__info
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		padding-top: 45px
+		padding-bottom: 25px
+	&__select
+		display: flex
+		padding-bottom: 30px
+	&__basket
+		color: $brown
+	&__dishes
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -10px
+	&__item
+		width: 33.3%
+		padding: 0 10px 40px 10px
+	&__link
+		display: block
+
+
+.main-dish
+	background-color: $white
+	position: relative
+	&__img
+		width: 100%
+		height: 0
+		padding-bottom: 74.5%
+		+cover
+	&__title
+		padding: 40px 30px
+		&.title
+			color: $black
+	&__specification
+		display: flex
+		justify-content: space-between
+		padding: 20px
+	&__check
+		// position: absolute
+
+
+
+.check
+	position: absolute
+	top: calc(50% + 40px)
+	right: 98px
+	z-index: 2
+	&__container
+		display: block
+		position: relative
+		// cursor: pointer
+		font-size: 22px
+		user-select: none
+	input
+		position: absolute
+		opacity: 0
+		cursor: pointer
+		height: 0
+		width: 0
+		&:checked
+			+ .check__checkmark
+		&:checked
+			+ .check__checkmark:after
+				background-color: $green
+	&__checkmark
+		position: absolute
+		top: 0
+		left: 0
+		+circle(73)
+		background-color: $white
+		border: 1px solid $brown
+		&:after
+			content: ""
+			position: absolute
+			+vcenter
+			+circle(52)
+			background-color: $grayMid
+			transition: background-color .2s
+
+
+.select
+	position: relative
+	&:not(:first-child)
+		margin-left: 40px
+	select
+		+roboto
+		+f(18px, 500)
+		color: $brown
+		text-transform: uppercase
+		padding: 8px 40px 8px 20px
+		min-width: 186px
+		background-color: transparent
+		border: 1px solid $brown
+		border-radius: 20.5em
+		appearance: none
+	option
+
+	svg
+		position: absolute
+		top: 50%
+		right: 20px
+		transform: translateY(-50%)
+		font-size: 0.5em
+
+
+		
+.bg_pow.is-active
+	background-color: $powderDark
+.bg_pink.is-active
+	background-color: $pinkLight
+.bg_green.is-active
+	background-color: $greenLight
+	
