@@ -13,10 +13,12 @@
 .choice
 	&__header
 		background-color: $powder
-		& .inner
-			display: flex
-			justify-content: center
-			align-items: center
+	&__current
+		display: none
+	&__list
+		display: flex
+		justify-content: center
+		align-items: center
 	&__title
 		width: 33.3%
 		text-align: center
@@ -42,6 +44,22 @@
 		padding: 0 10px 40px 10px
 	&__link
 		display: block
+		cursor: default
+		position: relative
+		+hover
+			&:before
+				opacity: 1
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-color: rgba($black, .2)
+			z-index: 1
+			opacity: 0
+			transition: opacity .3s
 
 
 .main-dish
@@ -61,7 +79,6 @@
 		justify-content: space-between
 		padding: 20px
 	&__check
-		// position: absolute
 
 
 
@@ -73,13 +90,12 @@
 	&__container
 		display: block
 		position: relative
-		// cursor: pointer
+		cursor: pointer
 		font-size: 22px
 		user-select: none
 	input
 		position: absolute
 		opacity: 0
-		cursor: pointer
 		height: 0
 		width: 0
 		&:checked
@@ -119,7 +135,6 @@
 		border-radius: 20.5em
 		appearance: none
 	option
-
 	svg
 		position: absolute
 		top: 50%
@@ -129,10 +144,10 @@
 
 
 		
-.bg_pow.is-active
+.bg_pow.is-active, .bg_pow.is-open
 	background-color: $powderDark
-.bg_pink.is-active
+.bg_pink.is-active, .bg_pink.is-open
 	background-color: $pinkLight
-.bg_green.is-active
+.bg_green.is-active, .bg_green.is-open
 	background-color: $greenLight
 	
