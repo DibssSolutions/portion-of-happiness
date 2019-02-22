@@ -6,8 +6,8 @@ title: Index page
 {% block content %}
 	
 {{header.block()}}
-{{card_item.card({bg: 'bg_pink'})}}
-{# {% include "partials/_form-sm.html"%} #}
+{{card_item.card({full:true, bg: 'bg_pow'})}}
+{% include "partials/_form-sm.html"%}
 {% include "partials/_footer.html"%}
 {# {% include "partials/_mob-menu.html"%} #}
 {{mob_menu.mob_block()}}

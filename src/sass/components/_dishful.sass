@@ -24,6 +24,23 @@
 		text-align: center
 		padding: 13px 20px
 		cursor: pointer
+		transition: background-color .3s
+		// [data-tabs="home"] &
+		// 	&.is-active
+		// 		background-color: $powderDark
+		// [data-tabs="chef"] &
+		// 	&.is-active
+		// 		background-color: $pinkLight
+		// [data-tabs="light"] &
+		// 	&.is-active
+		// 		background-color: $greenLight
+	&__body
+		[data-tabs="home"] &
+			background-color: $powderDark
+		[data-tabs="chef"] &
+			background-color: $pinkLight
+		[data-tabs="light"] &
+			background-color: $greenLight
 	&__info
 		display: flex
 		justify-content: space-between
@@ -44,7 +61,6 @@
 		padding: 0 10px 40px 10px
 	&__link
 		display: block
-		cursor: default
 		position: relative
 		+hover
 			&:before
@@ -79,20 +95,22 @@
 		justify-content: space-between
 		padding: 20px
 	&__check
+		// padding-top: 70%
+		top: 0
+		right: 26px
+		z-index: 2
+		&.check
+			position: absolute
 
 
 
 .check
-	position: absolute
-	top: calc(50% + 40px)
-	right: 98px
-	z-index: 2
-	&__container
-		display: block
-		position: relative
-		cursor: pointer
-		font-size: 22px
-		user-select: none
+	+circle(73)
+	display: block
+	position: relative
+	cursor: pointer
+	font-size: 22px
+	user-select: none
 	input
 		position: absolute
 		opacity: 0
@@ -142,12 +160,4 @@
 		transform: translateY(-50%)
 		font-size: 0.5em
 
-
-		
-.bg_pow.is-active, .bg_pow.is-open
-	background-color: $powderDark
-.bg_pink.is-active, .bg_pink.is-open
-	background-color: $pinkLight
-.bg_green.is-active, .bg_green.is-open
-	background-color: $greenLight
 	

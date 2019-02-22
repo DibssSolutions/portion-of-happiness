@@ -119,12 +119,12 @@
         </div>
       </header>
       <section class="card">
-        <div class="card__img-bg bg_pink">
+        <div class="card__img-bg bg_green">
           <div class="card__inner inner">
             <div class="card__img" style="background-image: url(./img/card_big.png)"></div>
           </div>
         </div>
-        <div class="card__description-bg bg_pink">
+        <div class="card__description-bg bg_green">
           <div class="card__inner inner">
             <div class="card__description">
               <div class="card__left">
@@ -132,85 +132,26 @@
                   <h2 class="card__title title title_m">шеф-меню</h2>
                   <h3 class="card__name title title_lg">СОЧНАЯ ГОВЯДИНА<br>с паровыми овощами</h3>
                 </div>
+                <div class="card__basket basket">
+                  <div class="basket__text">
+                    <div class="basket__sum">525</div>
+                    <div class="basket__currency">руб.</div>
+                    <div class="basket__weight">250 гр</div>
+                  </div>
+                </div>
               </div>
-              <div class="card__right">
-                <ul class="card__specifications">
-                  <li class="card__specification specification ">
-                    <div class="specification__icon" style="background-image: url(./img/spec1.png)"></div>
-                    <div class="specification__text">
-                      <div class="specification__main">1 порция</div>
-                      <div class="specification__aside">250 гр</div>
-                    </div>
-                  </li>
-                  <li class="card__specification specification ">
-                    <div class="specification__icon" style="background-image: url(./img/spec2.png)"></div>
-                    <div class="specification__text">
-                      <div class="specification__main">35 мин</div>
-                      <div class="specification__aside">готовить не сложно</div>
-                    </div>
-                  </li>
-                  <li class="card__specification specification specification_wide">
-                    <div class="specification__icon" style="background-image: url(./img/spec3.png)"></div>
-                    <div class="specification__text">
-                      <div class="specification__main">на 100 г блюда:</div>
-                      <div class="specification__aside">164 кКал, 10.0 | 2.0 | 26.0 БЖУ</div>
-                    </div>
-                  </li>
-                </ul>
+              <div class="card__right card__right_single">
+                <div class="card__btn"><a href="#" class="btn btn_green btn_plus">
+                    <svg class="icon icon-plus">
+                      <use xlink:href="img/sprite.svg#icon-plus"></use>
+                    </svg>
+                    <span>добавить в заказ</span></a></div>
               </div>
             </div>
           </div>
         </div>
         <div class="card__inner inner">
-          <div class="card__recipe recipe">
-            <div class="card__left">
-              <div class="recipe__header">
-                <h2 class="recipe__title title title_m">что привезем</h2>
-              </div>
-              <div class="recipe__body">
-                <ul class="recipe__list">
-                  <li class="recipe__item">200г</li>
-                  <li class="recipe__item">50г</li>
-                  <li class="recipe__item">50г</li>
-                  <li class="recipe__item">50г</li>
-                  <li class="recipe__item">50г</li>
-                  <li class="recipe__item">50 мл</li>
-                  <li class="recipe__item">200г</li>
-                  <li class="recipe__item">1 шт.</li>
-                  <li class="recipe__item">30 мл</li>
-                  <li class="recipe__item">веточка</li>
-                </ul>
-                <ul class="recipe__list">
-                  <li class="recipe__item">Лингвини черные</li>
-                  <li class="recipe__item">Кальмар филе</li>
-                  <li class="recipe__item">Горбуша</li>
-                  <li class="recipe__item">Мидии</li>
-                  <li class="recipe__item">Филе Сайда</li>
-                  <li class="recipe__item">Соус Песто</li>
-                  <li class="recipe__item">Сливки 22%</li>
-                  <li class="recipe__item">Лимон</li>
-                  <li class="recipe__item">Соус устричный</li>
-                  <li class="recipe__item">Тимьян</li>
-                </ul>
-              </div>
-            </div>
-            <div class="card__right">
-              <div class="recipe__header">
-                <h2 class="recipe__title title title_m">должно быть дома</h2>
-              </div>
-              <div class="recipe__body">
-                <ul class="recipe__list">
-                  <li class="recipe__item">кастрюля 2л</li>
-                  <li class="recipe__item">сковородка</li>
-                  <li class="recipe__item">разделочная доска</li>
-                  <li class="recipe__item">мелкая терка</li>
-                  <li class="recipe__item">кулинарная лопатка</li>
-                  <li class="recipe__item">ножницы</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="card__btn">
+          <div class="card__btn card__btn_padding">
             <a href="#" class="btn-border">
               <svg class="icon icon-arr-left">
                 <use xlink:href="img/sprite.svg#icon-arr-left"></use>
@@ -220,6 +161,25 @@
           </div>
         </div>
       </section>
+      <div class="form-sm js-form-sm">
+        <h3 class="form-sm__title title title_s">Здраствуйте! <br>Я могу вам помочь?</h3>
+        <p>Напишите нам:</p>
+        <div class="form-sm__descr description">Представьтесь, пожалуйста:</div>
+        <form action="/" class="form">
+          <div class="form-group">
+            <input type="text" class="form__input" placeholder="Ваше имя">
+          </div>
+          <div class="form-group">
+            <textarea class="form__textarea" name="help" placeholder="Ваше сообщение"></textarea>
+          </div>
+          <div class="form__btn">
+            <button type="submit" class="btn btn_md"><span>отправить</span></button>
+          </div>
+        </form>
+        <div class="form-sm__btn">
+          <button type="button" class="btn-close js-btn-close"></button>
+        </div>
+      </div>
       <footer class="footer">
         <div class="footer__inner inner">
           <div class="footer__top">

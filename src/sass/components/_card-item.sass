@@ -6,18 +6,24 @@
 	&__img
 		+cover
 		height: 872px
-		&-bg
+		&-bg.bg_pink
 			background-color: $pinkLight
+		&-bg.bg_pow
+			background-color: $powderDark
+		&-bg.bg_green
+			background-color: $greenLight
 	&__description
 		display: flex
-		&-bg
+		&-bg.bg_pink
 			background-color: rgba($pinkLight, .3)			
+		&-bg.bg_pow
+			background-color: rgba($powderDark, .3)			
+		&-bg.bg_green
+			background-color: rgba($greenLight, .3)			
 	&__left
-		max-width: 920px
-		width: 100%
+		+flex-size(60%)
 	&__right
-		width: 100%
-		max-width: 600px
+		+flex-size(40%)
 		&_single
 			display: flex
 			align-items: center

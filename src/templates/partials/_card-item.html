@@ -1,12 +1,12 @@
 {% import "partials/_mixins.html" as mixins %}
 {% macro card(props) %}
 <section class="card">
-	<div class="card__img-bg">
+	<div class="card__img-bg {% if props.bg %}{{props.bg}}{% endif %}">
 		<div class="card__inner inner">
 			<div class="card__img" style="background-image: url(./img/card_big.png)"></div>
 		</div>
 	</div>
-	<div class="card__description-bg">
+	<div class="card__description-bg {% if props.bg %}{{props.bg}}{% endif %}">
 		<div class="card__inner inner">
 			<div class="card__description">
 				<div class="card__left">
