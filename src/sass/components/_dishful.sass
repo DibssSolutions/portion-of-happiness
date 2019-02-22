@@ -1,4 +1,5 @@
 .dishful
+	margin-bottom: 57px
 	&__inner
 		position: relative
 	.icon
@@ -83,16 +84,24 @@
 		padding: 40px 30px
 		&.title
 			color: $black
+		+lg
+			padding: 30px 20px
 	&__specification
 		display: flex
 		justify-content: space-between
-		padding: 20px
+		padding: 10px 20px
+		+xxl
+			flex-wrap: wrap
+			justify-content: flex-start
 	&__check
-		padding-top: 68%
+		margin-top: 65%
 		top: 0
 		right: 36px
 		z-index: 2
 		position: absolute
+		+lg
+			margin-top: 58%
+			right: 20px
 
 
 
@@ -104,6 +113,8 @@
 	cursor: pointer
 	font-size: 22px
 	user-select: none
+	+lg
+		+circle(55)
 	input
 		position: absolute
 		opacity: 0
@@ -121,6 +132,8 @@
 		+circle(73)
 		background-color: $white
 		border: 1px solid $brown
+		+lg
+			+circle(55)
 		&:after
 			content: ""
 			position: absolute
@@ -128,6 +141,8 @@
 			+circle(52)
 			background-color: $grayMid
 			transition: background-color .2s
+			+lg
+				+circle(40)
 
 
 // .select

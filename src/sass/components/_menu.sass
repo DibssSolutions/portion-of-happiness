@@ -25,7 +25,7 @@
 			+xs
 				font-size: 30px
 		.dishes-menu &
-			top: 25px
+			top: 0px
 			color: $brown
 	&__prev-arrow
 		left: 71px
@@ -59,6 +59,11 @@
 	visibility: hidden
 	transition: opacity .3s, visibility .3s
 	&.slick-initialized
+		white-space: normal
+		// overflow: visible
+		opacity: 1
+		visibility: visible
+	.dishful &
 		white-space: normal
 		// overflow: visible
 		opacity: 1

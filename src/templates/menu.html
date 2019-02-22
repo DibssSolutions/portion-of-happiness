@@ -8,7 +8,9 @@ title: Index page
 {{header.block()}}
 {% include "partials/_hero.html" %}
 {% include "partials/_dishful.html" %}
-{{dishes_slider.dish_select({bg: 'bg_orange'})}}
+{{dishes_slider.dish_select({bg: 'bg_orange', btn_mod: 'btn_green'})}}
+{{dishes_slider.dish_select({bg: 'bg_orange', btn_mod: 'btn_orange'})}}
+{{dishes_slider.dish_select({bg: 'bg_pink', btn_mod: 'btn_pink'})}}
 {# {% include "partials/_form-sm.html"%} #}
 {# {% include "partials/_form-main.html"%} #}
 {% include "partials/_footer.html"%}
