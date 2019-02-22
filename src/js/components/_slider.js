@@ -124,14 +124,17 @@ WIN.resize(() => {
 
 // DISH SLIDER
 
-const dishSlider = $('.js-dishes-slider');
-const dishParent = dishSlider.parents('.js-dishes-slider-wrap');
-let dishPrev = $('.js-menu-prev', dishParent);
-let dishNext = $('.js-menu-next', dishParent);
-dishSlider.slick({
-  dots: false,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  prevArrow: dishPrev,
-  nextArrow: dishNext
+const dishSliders = $('.js-dishes-slider');
+
+dishSliders.each((i, el) => {
+  const dishParent = $(el).parents('.js-dishes-slider-wrap');
+  let dishPrev = $('.js-menu-prev', dishParent);
+  let dishNext = $('.js-menu-next', dishParent);
+  $(el).slick({
+    dots: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow: dishPrev,
+    nextArrow: dishNext
+  });
 });
