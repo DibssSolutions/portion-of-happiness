@@ -24,12 +24,17 @@
 				font-size: 40px
 			+xs
 				font-size: 30px
+		.dishes-menu &
+			top: 25px
+			color: $brown
 	&__prev-arrow
 		left: 71px
 		+sm
 			left: 34px
 		+xs
 			left: 10px
+		.dishes-menu &
+			left: 75px
 	&__next-arrow
 		right: 550px
 		+xxl
@@ -42,10 +47,22 @@
 			right: 34px
 		+xs
 			right: 10px
+		.dishes-menu &
+			right: 75px
 	.slick-list
 		overflow: visible
 
 .menu-slider
+	white-space: nowrap
+	// overflow: hidden
+	opacity: 0
+	visibility: hidden
+	transition: opacity .3s, visibility .3s
+	&.slick-initialized
+		white-space: normal
+		// overflow: visible
+		opacity: 1
+		visibility: visible
 	&:before,
 	&:after
 		content: ''
@@ -339,11 +356,3 @@
 			line-height: 0
 			&:not(:first-child)
 				margin-left: 18px
-
-.slick-slider
-    opacity: 0
-    visibility: hidden
-    transition: opacity .2s, visibility .2s
-    &.slick-initialized
-        visibility: visible
-        opacity: 1

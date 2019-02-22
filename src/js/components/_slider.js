@@ -120,3 +120,18 @@ WIN.resize(() => {
   clearTimeout(timeoutSmall);
   timeoutSmall = setTimeout(detectWindowWidthSubmenu, 100);
 });
+
+
+// DISH SLIDER
+
+const dishSlider = $('.js-dishes-slider');
+const dishParent = dishSlider.parents('.js-dishes-slider-wrap');
+let dishPrev = $('.js-menu-prev', dishParent);
+let dishNext = $('.js-menu-next', dishParent);
+dishSlider.slick({
+  dots: false,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  prevArrow: dishPrev,
+  nextArrow: dishNext
+});

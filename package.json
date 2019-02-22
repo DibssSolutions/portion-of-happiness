@@ -65,5 +65,10 @@
     "through2": "^2.0.1",
     "webpack": "^2.2.1",
     "webpack-bundle-analyzer": "^1.5.3"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "bootstrap-select": "^1.13.2",
+    "popper.js": "^1.14.4"
   }
 }

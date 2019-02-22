@@ -1,0 +1,73 @@
+.dishes-menu
+	margin-top: 30px
+	&.bg_orange
+		background-color: $orange-bg
+	&.bg_pink
+		background-color: $pinkLight
+	&.bg_green
+		background-color: $greenLight
+	&__inner
+		position: relative
+	&__title
+		text-align: center
+		padding-top: 30px
+
+.dishes-slider
+	padding-top: 30px
+	white-space: nowrap
+	overflow: hidden
+	opacity: 0
+	visibility: hidden
+	transition: opacity .3s, visibility .3s
+	&.slick-initialized
+		white-space: normal
+		opacity: 1
+		visibility: visible
+	&__slide
+		max-width: 350px
+		width: 100%
+
+.dish-item
+	display: block
+	background-color: $white
+	position: relative
+	+hover
+		&:before
+			opacity: 1
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-color: rgba($black, .2)
+		z-index: 1
+		opacity: 0
+		transition: opacity .3s
+	&__img
+		+cover
+		height: 0
+		padding-bottom: 65%
+	&__title
+		&.title
+			font-weight: 400
+			color: $black
+	&__text
+		padding: 50px 30px 20px
+		// position: relative
+	&__bottom
+		padding-top: 30px
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__weight
+	&__price
+		&.title
+			text-transform: none
+			line-height: 1
+	&__btn
+		position: absolute
+		right: 30px
+		top: 0
+		z-index: 2

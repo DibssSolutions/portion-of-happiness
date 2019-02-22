@@ -25,15 +25,6 @@
 		padding: 13px 20px
 		cursor: pointer
 		transition: background-color .3s
-		// [data-tabs="home"] &
-		// 	&.is-active
-		// 		background-color: $powderDark
-		// [data-tabs="chef"] &
-		// 	&.is-active
-		// 		background-color: $pinkLight
-		// [data-tabs="light"] &
-		// 	&.is-active
-		// 		background-color: $greenLight
 	&__body
 		[data-tabs="home"] &
 			background-color: $powderDark
@@ -59,8 +50,10 @@
 	&__item
 		width: 33.3%
 		padding: 0 10px 40px 10px
+		position: relative
 	&__link
 		display: block
+		overflow: hidden
 		position: relative
 		+hover
 			&:before
@@ -95,18 +88,18 @@
 		justify-content: space-between
 		padding: 20px
 	&__check
-		// padding-top: 70%
+		padding-top: 68%
 		top: 0
-		right: 26px
+		right: 36px
 		z-index: 2
-		&.check
-			position: absolute
+		position: absolute
 
 
 
 .check
 	+circle(73)
-	display: block
+	display: inline-block
+	vertical-align: top
 	position: relative
 	cursor: pointer
 	font-size: 22px
@@ -137,27 +130,39 @@
 			transition: background-color .2s
 
 
-.select
-	position: relative
-	&:not(:first-child)
-		margin-left: 40px
-	select
-		+roboto
-		+f(18px, 500)
-		color: $brown
-		text-transform: uppercase
-		padding: 8px 40px 8px 20px
-		min-width: 186px
-		background-color: transparent
-		border: 1px solid $brown
-		border-radius: 20.5em
-		appearance: none
-	option
-	svg
-		position: absolute
-		top: 50%
-		right: 20px
-		transform: translateY(-50%)
-		font-size: 0.5em
+// .select
+// 	position: relative
+// 	&:not(:first-child)
+// 		margin-left: 40px
+// 	select
+// 		+roboto
+// 		+f(18px, 500)
+// 		color: $brown
+// 		text-transform: uppercase
+// 		padding: 8px 40px 8px 20px
+// 		min-width: 186px
+// 		background-color: transparent
+// 		border: 1px solid $brown
+// 		border-radius: 20.5em
+// 		appearance: none
+// 	option
+// 	svg
+// 		position: absolute
+// 		top: 50%
+// 		right: 20px
+// 		transform: translateY(-50%)
+// 		font-size: 0.5em
 
-	
+
+.bg_pow
+	// transition: background-color .3s
+	&.is-active
+		background-color: $powderDark
+.bg_pink
+	// transition: background-color .3s
+	&.is-active
+		background-color: $pinkLight
+.bg_green
+	// transition: background-color .3s
+	&.is-active
+		background-color: $greenLight

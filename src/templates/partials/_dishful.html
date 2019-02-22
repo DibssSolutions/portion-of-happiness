@@ -16,9 +16,9 @@
 			<div class="inner">
 				<div class="choice__current" data-tabs-current></div>
 				<ul class="choice__list">
-					<li class="choice__title title title_m" data-tabs-control='home'>Домашнее меню</li>
-					<li class="choice__title title title_m" data-tabs-control='chef'>Шеф-меню</li>
-					<li class="choice__title title title_m" data-tabs-control='light'>Легкое меню</li>
+					<li class="choice__title title title_m bg_pow" data-tabs-control='home'>Домашнее меню</li>
+					<li class="choice__title title title_m bg_pink" data-tabs-control='chef'>Шеф-меню</li>
+					<li class="choice__title title title_m bg_green" data-tabs-control='light'>Легкое меню</li>
 				</ul>
 			</div>
 		</div>
@@ -30,7 +30,7 @@
 							<div class="choice__select">
 								<div class="select">
 									{{mixins.icon('arrow-down')}}
-									<select name="days">
+									<select name="days" class="js-select">
 										<option value="0">3 дня</option>
 										<option value="1">5 дней</option>
 										<option value="2">7 дней</option>
@@ -38,7 +38,7 @@
 								</div>
 								<div class="select">
 									{{mixins.icon('arrow-down')}}
-									<select name="persons">
+									<select name="persons" class="js-select">
 										<option value="0">1 персона</option>
 										<option value="1">2 персоны</option>
 										<option value="2">3 персоны</option>
@@ -115,12 +115,14 @@
 											</div>
 										{% endfor %}
 										</div>
-										<label class="main-dish__check check">
-											<input type="checkbox">
-											<span class="check__checkmark"></span>
-										</label>
 									</div>
 								</a>
+								<div class="main-dish__check ">
+									<label class="check">
+										<input type="checkbox">
+										<span class="check__checkmark"></span>
+									</label>
+								</div>
 							</li>
 						{% endfor %}
 					</ul>
@@ -133,7 +135,7 @@
 							<div class="choice__select">
 								<div class="select">
 									{{mixins.icon('arrow-down')}}
-									<select name="days">
+									<select name="days" class="js-select">
 										<option value="3 дня">3 дня</option>
 										<option value="5 дней">5 дней</option>
 										<option value="7 дней">7 дней</option>
@@ -141,7 +143,7 @@
 								</div>
 								<div class="select">
 									{{mixins.icon('arrow-down')}}
-									<select name="persons">
+									<select name="persons" class="js-select">
 										<option value="1 персона">1 персона</option>
 										<option value="2 персоны">2 персоны</option>
 										<option value="3 персоны">3 персоны</option>
@@ -238,7 +240,7 @@
 							<div class="choice__select">
 								<div class="select">
 									{{mixins.icon('arrow-down')}}
-									<select name="days">
+									<select name="days" class="js-select">
 										<option value="3 дня">3 дня</option>
 										<option value="5 дней">5 дней</option>
 										<option value="7 дней">7 дней</option>
@@ -246,7 +248,7 @@
 								</div>
 								<div class="select">
 									{{mixins.icon('arrow-down')}}
-									<select name="persons">
+									<select name="persons" class="js-select">
 										<option value="1 персона">1 персона</option>
 										<option value="2 персоны">2 персоны</option>
 										<option value="3 персоны">3 персоны</option>
