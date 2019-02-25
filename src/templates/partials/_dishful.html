@@ -55,72 +55,13 @@
 						</div>
 					</div>
 					<ul class="choice__dishes">
-						{% for item in [
-							{
-								img: 'choice-dish.png',
-								title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами'
-							},
-							{
-								img: 'choice-dish.png',
-								title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами'
-							},
-							{
-								img: 'choice-dish.png',
-								title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами'
-							},
-							{
-								img: 'choice-dish.png',
-								title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами'
-							},
-							{
-								img: 'choice-dish.png',
-								title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами'
-							},
-							{
-								img: 'choice-dish.png',
-								title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами'
-							}
-							] %}
+						{% for item in range(0, 6) %}
 							<li class="choice__item">
-								<a href="#" class="choice__link">
-									<div class="main-dish">
-										<div class="main-dish__img" style="background-image: url(./img/{{item.img}})"></div>
-										<h3 class="main-dish__title title title_m">{{item.title}}</h3>
-										<div class="main-dish__specification">
-										{% for spec in [
-											{
-												icon: 'spec1',
-												text: '250 гр'
-											},
-											{
-												icon: 'spec2',
-												text: '35 мин'
-											},
-											{
-												icon: 'spec3',
-												text: '165 калл',
-												aside: '/100гр'
-											}
-											] %}
-											<div class="specification">
-												<div class="specification__icon" style="background-image: url(./img/{{spec.icon}}.png)"></div>
-												<div class="specification__text">
-													<div class="specification__main">{{spec.text}}</div>
-													{% if spec.aside %}
-													<div class="specification__aside">{{spec.aside}}</div>
-													{% endif %}
-												</div>
-											</div>
-										{% endfor %}
-										</div>
-									</div>
-								</a>
-								<div class="main-dish__check ">
-									<label class="check">
-										<input type="checkbox">
-										<span class="check__checkmark"></span>
-									</label>
-								</div>
+								{{ mixins.dishCard(
+									{
+										img: 'choice-dish.png',
+										title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами'
+									}) }}
 							</li>
 						{% endfor %}
 					</ul>
@@ -157,73 +98,13 @@
 							<div class="basket__btn"><a href="#" class="btn btn_green btn_sm"><span>оформить заказ</span></a></div>
 						</div>
 					</div>
-					<ul class="choice__dishes">
-						{% for item in [
-							{
-								img: 'choice-dish.png',
-								title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами'
-							},
-							{
-								img: 'choice-dish.png',
-								title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами'
-							},
-							{
-								img: 'choice-dish.png',
-								title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами'
-							},
-							{
-								img: 'choice-dish.png',
-								title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами'
-							},
-							{
-								img: 'choice-dish.png',
-								title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами'
-							},
-							{
-								img: 'choice-dish.png',
-								title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами'
-							}
-							] %}
+					<ul class="choice__dishes">{% for item in range(0, 6) %}
 							<li class="choice__item">
-								<a href="#" class="choice__link">
-									<div class="main-dish">
-										<div class="main-dish__img" style="background-image: url(./img/{{item.img}})"></div>
-										<h3 class="main-dish__title title title_m">{{item.title}}</h3>
-										<div class="main-dish__specification">
-										{% for spec in [
-											{
-												icon: 'spec1',
-												text: '250 гр'
-											},
-											{
-												icon: 'spec2',
-												text: '35 мин'
-											},
-											{
-												icon: 'spec3',
-												text: '165 калл',
-												aside: '/100гр'
-											}
-											] %}
-											<div class="specification">
-												<div class="specification__icon" style="background-image: url(./img/{{spec.icon}}.png)"></div>
-												<div class="specification__text">
-													<div class="specification__main">{{spec.text}}</div>
-													{% if spec.aside %}
-													<div class="specification__aside">{{spec.aside}}</div>
-													{% endif %}
-												</div>
-											</div>
-										{% endfor %}
-										</div>
-										<div class="main-dish__check check">
-											<label class="check__container">
-												<input type="checkbox">
-												<span class="check__checkmark"></span>
-											  </label>
-										</div>
-									</div>
-								</a>
+								{{ mixins.dishCard(
+									{
+										img: 'choice-dish.png',
+										title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами'
+									}) }}
 							</li>
 						{% endfor %}
 					</ul>
@@ -260,73 +141,13 @@
 							<div class="basket__btn"><a href="#" class="btn btn_green btn_sm"><span>оформить заказ</span></a></div>
 						</div>
 					</div>
-					<ul class="choice__dishes">
-						{% for item in [
-							{
-								img: 'choice-dish.png',
-								title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами'
-							},
-							{
-								img: 'choice-dish.png',
-								title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами'
-							},
-							{
-								img: 'choice-dish.png',
-								title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами'
-							},
-							{
-								img: 'choice-dish.png',
-								title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами'
-							},
-							{
-								img: 'choice-dish.png',
-								title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами'
-							},
-							{
-								img: 'choice-dish.png',
-								title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами'
-							}
-							] %}
+					<ul class="choice__dishes">{% for item in range(0, 6) %}
 							<li class="choice__item">
-								<a href="#" class="choice__link">
-									<div class="main-dish">
-										<div class="main-dish__img" style="background-image: url(./img/{{item.img}})"></div>
-										<h3 class="main-dish__title title title_m">{{item.title}}</h3>
-										<div class="main-dish__specification">
-										{% for spec in [
-											{
-												icon: 'spec1',
-												text: '250 гр'
-											},
-											{
-												icon: 'spec2',
-												text: '35 мин'
-											},
-											{
-												icon: 'spec3',
-												text: '165 калл',
-												aside: '/100гр'
-											}
-											] %}
-											<div class="specification">
-												<div class="specification__icon" style="background-image: url(./img/{{spec.icon}}.png)"></div>
-												<div class="specification__text">
-													<div class="specification__main">{{spec.text}}</div>
-													{% if spec.aside %}
-													<div class="specification__aside">{{spec.aside}}</div>
-													{% endif %}
-												</div>
-											</div>
-										{% endfor %}
-										</div>
-										<div class="main-dish__check check">
-											<label class="check__container">
-												<input type="checkbox">
-												<span class="check__checkmark"></span>
-											  </label>
-										</div>
-									</div>
-								</a>
+								{{ mixins.dishCard(
+									{
+										img: 'choice-dish.png',
+										title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами'
+									}) }}
 							</li>
 						{% endfor %}
 					</ul>
