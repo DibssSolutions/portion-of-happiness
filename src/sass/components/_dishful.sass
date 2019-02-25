@@ -161,6 +161,8 @@
 		background-color: transparent
 		border: 1px solid $brown
 		border-radius: 20.5px
+		&:focus
+			outline: none!important
 	.dropdown
 		max-width: 186px
 		&-toggle
@@ -190,6 +192,12 @@
 		border-radius: 20.5px 20.5px 0 0
 		&.inner
 			background-color: transparent
+		&[x-placement="top-start"]
+			margin-top: auto
+			margin-bottom: -37px
+			padding-top: 10px
+			padding-bottom: 40px
+			border-radius: 0 0 20.5px 20.5px
 	.inner
 		padding: 0
 	.dropdown-item
