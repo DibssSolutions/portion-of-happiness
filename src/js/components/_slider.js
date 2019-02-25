@@ -133,7 +133,7 @@ dishSliders.each((i, el) => {
   $(el).slick({
     dots: false,
     slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToScroll: 4,
     prevArrow: dishPrev,
     nextArrow: dishNext
   });
