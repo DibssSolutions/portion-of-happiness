@@ -1,13 +1,15 @@
 .delivery-info
 	text-align: center
-	padding: 64px 0 32px
+	padding: 53px 0 32px
 	color: $brown
 	+md
 		padding: 10px 0 36px
+	&__inner
+		max-width: 1200px
 	&__title.title
 		color: $green
 	&__wrap
-		margin: 25px -45px 0
+		margin: 15px -45px 0
 		display: flex
 		justify-content: center
 		+lg
@@ -17,7 +19,7 @@
 			margin: 25px 0 0
 	&__item
 		padding: 0 45px
-		max-width: 400px
+		// max-width: 400px
 		width: 33.3%
 		+lg
 			padding: 0 25px
@@ -40,14 +42,19 @@
 .delivery-item
 	text-align: center
 	width: 100%
-	// &__img-wrap
-	//     display: flex
-	//     justify-content: center
-	//     align-items: flex-end
-	//     min-height: 200px
+	&__img
+		min-height: 194px
+		display: flex
+		justify-content: center
+		align-items: flex-end
+		img
+			display: block
+			max-width: 100%
 	&__text
-		margin-top: 30px
+		margin-top: 27px
 		+f(27px, 700)
+		+circe
+		line-height: 1.2
 		+lg
 			font-size: 20px
 		+ms
@@ -61,31 +68,6 @@
 			max-width: 300px
 		+ms
 			max-width: 250px
-	& .icon
-		font-size: 11em
-		+md
-			flex-shrink: 0
-			min-width: 165px
-		+ms
-			min-width: 135px
-	& .icon-info-menu
-		color: $orange
-		+md
-			font-size: 10em
-		+ms
-			font-size: 9em
-	& .icon-info-box
-		color: $green
-		+md
-			font-size: 11em
-		+ms
-			font-size: 9em
-	& .icon-info-dish
-		color: $pink
-		+md
-			font-size: 9em
-		+ms
-			font-size: 7em
 	+md
 		display: flex
 		justify-content: center

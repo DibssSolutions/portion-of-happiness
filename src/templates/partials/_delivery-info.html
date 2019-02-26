@@ -20,7 +20,9 @@
             {% for item in delivery %}
             <div class="delivery-info__item">
                 <div class="delivery-item {% if item.class %}{{item.class}}{% endif %}">
-                        {{ mixins.icon(item.img) }}
+					<div class="delivery-item__img">
+                        <img src="./img/{{item.img}}.svg" alt="" >
+					</div>
                     <div class="delivery-item__text">
                         <p>{{item.text | safe}}</p>
                     </div>
