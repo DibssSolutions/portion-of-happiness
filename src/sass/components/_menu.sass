@@ -172,7 +172,7 @@
 			+sm
 				padding-top: 175px
 			+ms
-				padding-top: 140px
+				padding-top: 160px
 	&__list
 
 
@@ -185,8 +185,6 @@
 		// background-color: rgba($gray, .4)
 		position: relative
 		top: 140px
-	+ms
-		top: 118px
 	&__item
 		width: 33.33%
 		position: relative
@@ -246,13 +244,10 @@
 					&.is-active
 						background-color: rgba($pink, .4)
 	&__link
-		padding: 42px 140px 42px 30px
-		display: block
-		text-align: center
-		// display: flex
-		// align-items: center
-		// justify-content: flex-start
-		// justify-content: center
+		padding: 45px 40px 44px
+		display: flex
+		justify-content: center
+		align-items: center
 		text-transform: uppercase
 		font-size: 30px
 		font-weight: 700
@@ -261,16 +256,48 @@
 			font-size: 25px
 		+lg
 			font-size: 18px
-			padding: 25px 75px 25px 25px
+			padding: 25px
 		+md
-			padding: 15px 60px 15px 15px
+			padding: 15px
 			font-size: 16px
 		+sm
 			font-size: 28px
 			position: relative
-			padding-right: 70px
+			padding-right: 35px
+			padding-left: 40px
 		+ms
 			font-size: 20px
+		span
+			position: relative
+			display: block
+			padding-right: 86px
+			+lg
+				padding-right: 70px
+			+md
+				padding-right: 40px
+			+sm
+				// padding-right: 70px
+				display: flex
+				align-items: center
+				padding-right: 0
+				justify-content: space-between
+				width: 100%
+			.icon
+				content: ''
+				position: absolute
+				font-size: 55px
+				top: 50%
+				transform: translateY(-50%)
+				right: 0
+				border-radius: 50%
+				+lg
+					font-size: 40px
+				+md
+					font-size: 25px
+				+sm
+					font-size: 40px
+					position: static
+					transform: none
 
 .menu-ingredients
 	padding: 46px 45px 41px 76px
