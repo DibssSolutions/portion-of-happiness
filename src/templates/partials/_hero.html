@@ -1,4 +1,6 @@
-<div class="hero">
+{% import "partials/_mixins.html" as mixins %}
+{% macro block(props) %}	
+<div class="hero {% if props.class %}{{props.class}}{% endif %}">
     <div class="hero__inner inner-lg js-hero-slider-wrap">
         <div class="hero__prev-arrow js-hero-prev">
             {{ mixins.icon('arrow-left') }}
@@ -60,3 +62,4 @@
         </div>
     </div>
 </div>
+{% endmacro %}

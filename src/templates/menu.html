@@ -6,7 +6,7 @@ title: Index page
 {% block content %}
 	
 {{header.block()}}
-{% include "partials/_hero.html" %}
+{{hero.block({class: 'hero_small'})}}
 {% include "partials/_dishful.html" %}
 {{dishes_slider.dish_select({bg: 'bg_orange', btn_mod: 'btn_green'})}}
 {{dishes_slider.dish_select({bg: 'bg_orange', btn_mod: 'btn_orange'})}}
