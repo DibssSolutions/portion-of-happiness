@@ -87,24 +87,21 @@
 		right: 100%
 	&__slide
 		height: 850px
-		background-repeat: no-repeat
-		background-position: center
-		background-size: cover
 		+lg
 			height: 700px
 		+sm
 			height: 580px
 		&-wrap
+			background-repeat: no-repeat
+			background-position: center
+			background-size: cover
 			height: 100%
 			display: flex
 			flex-direction: column
 			justify-content: space-between
-			opacity: 0
-			visibility: hidden
+			opacity: 1
+			visibility: visible
 			transition: opacity .3s, visibility .3s
-			.slick-active &
-				opacity: 1
-				visibility: visible
 	&__top
 		padding: 51px 43px
 		display: flex
@@ -175,79 +172,68 @@
 				text-align: center
 				padding-top: 35px
 			+sm
-				padding-top: 175px
+				padding-top: 210px
 			+ms
-				padding-top: 160px
-	&__list
-
+				padding-top: 190px
+	.slick-dots
+		display: flex
+		position: absolute
+		bottom: 120px
+		left: 50%
+		transform: translateX(-50%)
+		li
+			padding: 0 10px
+		+ms
+			bottom: 95px
+		.hero__dot
+			&:before
+				content: ''
+				position: absolute
+				+vcenter
+				width: 200%
+				height: 200%
 
 .menu-list
 	display: flex
-	// align-items: center
 	background-color: rgba($black, .35)
 	+sm
 		flex-wrap: wrap
-		// background-color: rgba($gray, .4)
 		position: relative
+		top: 180px
+	+ms
 		top: 140px
 	&__item
 		width: 33.33%
 		position: relative
 		color: $white
-		transition: background-color .3s
-		+hover
-			.icon
-				background-color: rgba($black, .2)
-			.menu-ingredients
-				opacity: 1
-				visibility: visible
-			.menu-list__ingredients-wrap
-				opacity: 1
-				visibility: visible
+		// +hover
+			// .menu-ingredients
+			// 	opacity: 1
+			// 	visibility: visible
+			// .menu-list__ingredients-wrap
+			// 	opacity: 1
+			// 	visibility: visible
 		+sm
 			width: 100%
 			position: static
-		// .icon
-		// 	display: block
-		// 	margin-left: 35px
-		// 	font-size: 55px
-		// 	border-radius: 50%
-		// 	transition: background-color .3s
-		// 	position: absolute
-		// 	right: 83px
-		// 	top: 50%
-		// 	transform: translateY(-50%)
-		// 	+lg
-		// 		font-size: 42px
-		// 		margin-left: 20px
-		// 	+md
-		// 		font-size: 25px
-		// 		right: 10px
-		// 	+sm
-		// 		font-size: 40px
-			// +xxl
-			//     margin-left: 25px
 		&_green
-			+hover
-				background-color: rgba($green, .5)
-			+md
-				a
-					&.is-active
-						background-color: rgba($green, .4)
+			.menu-list__link
+				// +hover
+					background-color: rgba($green, .5)
+				&.is-active
+					background-color: rgba($green, .5)
 		&_orange
-			+hover
-				background-color: rgba($orange, .5)
-			+md
-				a
-					&.is-active
-						background-color: rgba($orange, .4)
+			.menu-list__link
+				// +hover
+					background-color: rgba($orange, .5)
+				&.is-active
+					background-color: rgba($orange, .5)
 		&_pink
-			+hover
-				background-color: rgba($pink, .5)
-			+md
-				a
-					&.is-active
-						background-color: rgba($pink, .4)
+			.menu-list__link
+				// +hover
+					background-color: rgba($pink, .5)
+				&.is-active
+					background-color: rgba($pink, .5)
 	&__link
 		padding: 45px 40px 44px
 		display: flex
@@ -257,6 +243,13 @@
 		font-size: 30px
 		font-weight: 700
 		+circe
+		transition: background-color .3s
+		// +hover
+		// 	.icon
+		// 		background-color: rgba($black, .2)
+		&.is-active
+			.icon
+				background-color: rgba($black, .2)
 		+xxl
 			font-size: 25px
 		+lg
@@ -268,10 +261,11 @@
 		+sm
 			font-size: 28px
 			position: relative
-			padding-right: 35px
+			padding: 25px
 			padding-left: 40px
 		+ms
 			font-size: 20px
+			padding: 15px
 		span
 			position: relative
 			display: block
@@ -305,7 +299,7 @@
 					transform: none
 
 .menu-ingredients
-	padding: 46px 45px 41px 76px
+	padding: 1.7em 1.7em 1.7em 3em
 	overflow: auto
 	color: $brown
 	font-size: 32px
@@ -321,7 +315,9 @@
 	+lg
 		font-size: 20px
 	+md
-		padding: 25px 40px 70px 25px 
+		padding: 2em 1.5em
+	+sm
+		padding: 1.3em 2.2em 3.5em
 	&::-webkit-scrollbar 
 		width: 6px
 		height: 6px
@@ -376,12 +372,9 @@
 	// z-index: -5
 	// transform: translateX(-100%)
 	&.is-active
-		+md
-			opacity: 1
-			visibility: visible
-			z-index: 2
-			// transform: translateX(0)
-			
+		opacity: 1
+		visibility: visible
+		z-index: 2
 	.slick-list
 		overflow: hidden
 	.slick-dots

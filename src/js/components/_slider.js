@@ -34,7 +34,21 @@ menuSlider.slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   prevArrow: menuPrev,
-  nextArrow: menuNext
+  nextArrow: menuNext,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        customPaging: (slider, pageIndex) => {
+          return $('<button class="hero__dot"></button>');
+		  }
+      }}]
+});
+$('.js-menu-list-item').click(function(e) {
+  e.preventDefault();
 });
 
 
@@ -89,37 +103,37 @@ WIN.resize(() => {
 
 // SUBMENU
 
-const submenuSlickOptions = {
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  infinite: true,
-  dots: true,
-  arrows: false,
-  customPaging: (slider, pageIndex) => {
-    return $('<button class="hero__dot"></button>');
-  }
-};
+// const submenuSlickOptions = {
+//   slidesToShow: 1,
+//   slidesToScroll: 1,
+//   infinite: true,
+//   dots: true,
+//   arrows: false,
+//   customPaging: (slider, pageIndex) => {
+//     return $('<button class="hero__dot"></button>');
+//   }
+// };
 
-const sliderSubmenu = $('.js-menu-list-slider');
-const detectWindowWidthSubmenu = () => {
-  const sliderSubmenuReady = $('.js-menu-list-slider.slick-slider');
-  if (mediaWidth(767)) {
-	  if (sliderSubmenuReady.length) return;
-		 sliderSubmenu.slick(submenuSlickOptions);
-  }
-  else {
-	  if (!sliderSubmenuReady.length) return;
-	  sliderSubmenu.slick('unslick');
-  }
-}; 
-detectWindowWidthSubmenu();
+// const sliderSubmenu = $('.js-menu-list-slider');
+// const detectWindowWidthSubmenu = () => {
+//   const sliderSubmenuReady = $('.js-menu-list-slider.slick-slider');
+//   if (mediaWidth(767)) {
+// 	  if (sliderSubmenuReady.length) return;
+// 		 sliderSubmenu.slick(submenuSlickOptions);
+//   }
+//   else {
+// 	  if (!sliderSubmenuReady.length) return;
+// 	  sliderSubmenu.slick('unslick');
+//   }
+// }; 
+// detectWindowWidthSubmenu();
   
-let timeoutSmall;
+// let timeoutSmall;
   
-WIN.resize(() => {
-  clearTimeout(timeoutSmall);
-  timeoutSmall = setTimeout(detectWindowWidthSubmenu, 100);
-});
+// WIN.resize(() => {
+//   clearTimeout(timeoutSmall);
+//   timeoutSmall = setTimeout(detectWindowWidthSubmenu, 100);
+// });
 
 
 // DISH SLIDER
@@ -132,8 +146,8 @@ dishSliders.each((i, el) => {
   let dishNext = $('.js-menu-next', dishParent);
   $(el).slick({
     dots: false,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 3,
+    slidesToScroll: 1,
     prevArrow: dishPrev,
     nextArrow: dishNext
   });

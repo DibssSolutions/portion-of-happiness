@@ -11,8 +11,19 @@
 		position: relative
 	&__title
 		text-align: center
+	&__slider-wrap
+		display: flex
+		align-items: center
+	&__btn
+		margin-left: 80px
+		// text-align: center
+		// position: absolute
+		// top: 190px
+		// left: 50%
+		// transform: translateX(-50%)
 
 .dishes-slider
+	max-width: 77%
 	padding-top: 30px
 	white-space: nowrap
 	overflow: hidden
@@ -25,7 +36,7 @@
 		opacity: 1
 		visibility: visible
 	&__slide
-		max-width: 390px
+		max-width: 420px
 		width: 100%
 		position: relative
 		padding: 0 20px
@@ -38,12 +49,6 @@
 		+lg
 			margin-top: 45%
 			right: 30px
-	&__btn
-		text-align: center
-		position: absolute
-		top: 190px
-		left: 50%
-		transform: translateX(-50%)
 .dish-item
 	display: block
 	background-color: $white
