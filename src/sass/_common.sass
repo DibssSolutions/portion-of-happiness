@@ -3,7 +3,7 @@ body
 	line-height: 1.4
 	+roboto
 	font-size: 22px
-	min-width: 1024px
+	min-width: 320px
 	+xxl
 		font-size: 18px
 	+lg
@@ -14,7 +14,37 @@ body
 	// 		left: 0
 	// 		top: 0
 	// 		width: 100%
+	&.is-overflow-hidden
+		overflow: hidden
 
 a
 	text-decoration: none
 	color: currentColor
+
+
+[data-tabs]
+	// overflow: hidden
+	[data-tabs-control]
+		cursor: pointer
+		user-select: none
+		&[disabled],
+		&.is-disabled
+			cursor: not-allowed
+			+nosel
+	[data-tabs-wrapper]
+		position: relative
+	[data-tabs-container]
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		// display: none
+		opacity: 0
+		visibility: hidden
+		transition: opacity 0.3s, visibility 0.3s
+		&.is-open
+			position: relative
+			opacity: 1
+			visibility: visible
+			// display: block

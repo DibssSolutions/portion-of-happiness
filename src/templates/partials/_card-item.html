@@ -1,0 +1,129 @@
+{% import "partials/_mixins.html" as mixins %}
+{% macro card(props) %}
+<section class="card">
+	<div class="card__img-bg {% if props.bg %}{{props.bg}}{% endif %}">
+		<div class="card__inner inner">
+			<div class="card__img" style="background-image: url(./img/card_big.png)"></div>
+		</div>
+	</div>
+	<div class="card__description-bg {% if props.bg %}{{props.bg}}{% endif %}">
+		<div class="card__inner inner">
+			<div class="card__description">
+				<div class="card__left">
+					<div class="card__title-wrap">
+						<h2 class="card__title title title_m">шеф-меню</h2>
+						<h3 class="card__name title title_lg">СОЧНАЯ ГОВЯДИНА<br>с паровыми овощами</h3>
+					</div>
+					{% if props.full %}
+						<div class="card__basket basket">
+							<div class="basket__text">
+								<div class="basket__sum">525</div>
+								<div class="basket__currency">руб.</div>
+							</div>
+							<div class="basket__btn"><a href="#" class="btn btn_green btn_plus">{{mixins.icon('plus')}}<span>добавить в заказ</span></a></div>
+						</div>
+						{% elseif props.single %}
+							<div class="card__basket basket">
+								<div class="basket__text">
+									<div class="basket__sum">525</div>
+									<div class="basket__currency">руб.</div>
+									<div class="basket__weight">250 гр</div>
+								</div>
+							</div>
+					{% endif %}
+				</div>
+				{% if props.single %}
+				<div class="card__right card__right_single">
+					<div class="card__btn"><a href="#" class="btn btn_green btn_plus">{{mixins.icon('plus')}}<span>добавить в заказ</span></a></div>					
+				</div>
+					{% else %}
+				<div class="card__right">
+					<ul class="card__specifications">
+						{% for item in [
+							{
+								icon: 'spec1',
+								main: '1 порция',
+								aside: '250 гр'
+							},
+							{
+								icon: 'spec2',
+								main: '35 мин',
+								aside: 'готовить не сложно'
+							},
+							{
+								icon: 'spec3',
+								main: 'на 100 г блюда:',
+								aside: '164 кКал, 10.0 | 2.0 | 26.0 БЖУ',
+								wide: true
+							}
+							] %}
+							<li class="card__specification specification {% if item.wide %}specification_wide{% endif %}">
+								<div class="specification__icon" style="background-image: url(./img/{{item.icon}}.png)"></div>
+								<div class="specification__text">
+									<div class="specification__main">{{item.main}}</div>
+									<div class="specification__aside">{{item.aside}}</div>
+								</div>
+							</li>
+							{% endfor %}
+						</ul>
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	{% if props.single %}
+		<div class="card__inner inner">
+			<div class="card__btn card__btn_padding">
+				<a href="#" class="btn-border">
+					{{mixins.icon('arr-left')}}
+					<span>вернутся в меню</span>
+				</a>
+			</div>
+		</div>
+	{% else %}
+	<div class="card__inner inner">
+		<div class="card__recipe recipe">
+			<div class="card__left">
+				<div class="recipe__header">
+					<h2 class="recipe__title title title_m">что привезем</h2>
+				</div>
+				<div class="recipe__body">
+					{% for col in [
+						{
+							list: ['200г','50г','50г','50г','50г','50 мл','200г','1 шт.','30 мл','веточка']
+						},
+						{
+							list: ['Лингвини черные', 'Кальмар филе', 'Горбуша', 'Мидии', 'Филе Сайда', 'Соус Песто', 'Сливки 22%', 'Лимон', 'Соус устричный', 'Тимьян']
+						}
+						] %}
+						<ul class="recipe__list">
+							{% for item in col.list %}
+								<li class="recipe__item">{{item}}</li>
+							{% endfor %}
+						</ul>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="card__right">
+				<div class="recipe__header">
+					<h2 class="recipe__title title title_m">должно быть дома</h2>
+				</div>
+				<div class="recipe__body">
+					<ul class="recipe__list">
+						{% for item in ['кастрюля 2л', 'сковородка', 'разделочная доска', 'мелкая терка', 'кулинарная лопатка', 'ножницы'] %}
+							<li class="recipe__item">{{item}}</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="card__btn">
+			<a href="#" class="btn btn-border">
+				{{mixins.icon('arr-left')}}
+				<span>вернутся в меню</span>
+			</a>
+		</div>
+	</div>
+	{% endif %}
+</section>
+{% endmacro %}

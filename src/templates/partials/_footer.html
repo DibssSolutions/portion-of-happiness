@@ -1,3 +1,5 @@
+{% import "partials/_mixins.html" as mixins %}
+{% macro block(props) %}
 <footer class="footer">
     <div class="footer__inner inner">
         <div class="footer__top">
@@ -61,10 +63,13 @@
                     <div class="footer__contacts-city">москва</div>
                     <a href="tel:+78129991929" class="footer__contacts-phone">+7 812 <span>999 1929</span></a>
                 </div>
-            </div>
+			</div>
+			<div class="footer__agree">
+				<a href="#" class="footer__agree-link">Пользовательское соглашение</a>
+			</div>
         </div>
     </div>
-    <div class="footer__bottom">
+    <div class="footer__bottom {% if props.footerBottom %}{{props.footerBottom}}{% endif %}">
         <div class="footer__bottom-wrap inner">
             <div class="footer__copyright">
                 © ПОРЦИЯ СЧАСТЬЯ 2019
@@ -72,7 +77,7 @@
             <div class="footer__social">
                 <ul class="social">
                     <li class="social__item">
-                        <a href="#">{{ mixins.icon('instagram') }}</a>
+                        <a href="#">{{ mixins.icon('insta') }}</a>
                     </li>
                     <li class="social__item">
                         <a href="#">{{ mixins.icon('vk') }}</a>
@@ -81,16 +86,17 @@
                         <a href="#">{{ mixins.icon('facebook') }}</a>
                     </li>
                 </ul>
-                <a href="#" class="footer__subscribe">ПОДПИСАТЬСЯ НА НОВОСТИ</a>
+                <a href="#" class="subscribe">ПОДПИСАТЬСЯ НА НОВОСТИ</a>
             </div>
             <div class="footer__stores stores">
                 <div class="stores__item">
-                    <a href="#"><img src="./img/appstore.svg" alt=""></a>
+                    <a href="#"><img src="./img/apple.svg" alt=""></a>
                 </div>
                 <div class="stores__item">
-                    <a href="#"><img src="./img/googleplay.svg" alt=""></a>
+                    <a href="#"><img src="./img/google-play.svg" alt=""></a>
                 </div>
             </div>
         </div>
     </div>
 </footer>
+{% endmacro %}

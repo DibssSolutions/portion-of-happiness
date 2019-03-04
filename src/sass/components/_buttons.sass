@@ -1,55 +1,87 @@
 .btn
-    padding: 12px 28px
-    +roboto 
-    color: $white
-    +f(18px,500,1)
-    text-transform: uppercase
-    text-align: center
-    text-decoration: none
-    vertical-align: top
-    display: inline-block
-    border-radius: 20.5px
-    background-color: $orange
-    position: relative
-    overflow: hidden
-    transition: background-color .3s, color .3s
-    &:before
-        content: ''
-        position: absolute
-        top: 0
-        right: 0
-        bottom: 0
-        left: 0
-        background-color: $black
-        opacity: 0
-        transition: opacity .3s
-    span
-        position: relative
-        z-index: 2
-        position: relative
-    +hover
-        &:before
-            opacity: 0.2
-    &_sm
-        min-width: 148px
-    &_md
-        min-width: 170px
-    &_l
-        min-width: 200px
-    &_blue
-        background-color: $blue
-    &_pink
-        background-color: $pink
-    &_green
-        background-color: $green
-    &_xl
-        font-size: 32px
-        padding: 18px 45px
-        border-radius: 34px
-        +xxl
-            font-size: 26px
-        +lg
-            font-size: 20px
+	padding: 12px 28px
+	+roboto 
+	color: $white
+	+f(18px,500,1)
+	text-transform: uppercase
+	text-align: center
+	text-decoration: none
+	vertical-align: top
+	display: inline-block
+	border-radius: 20.5px
+	background-color: $orange
+	position: relative
+	overflow: hidden
+	transition: background-color .3s, color .3s
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background-color: $black
+		opacity: 0
+		transition: opacity .3s
+	span
+		position: relative
+		z-index: 2
+	+hover
+		&:before
+			opacity: 0.2
+	+lg
+		padding: 10px 22px
+		font-size: 14px
+	&_sm
+		min-width: 148px
+		+lg
+			min-width: 120px
+	&_md
+		min-width: 170px
+		+lg
+			min-width: 166px
+	&_l
+		min-width: 200px
+		+lg
+			min-width: 170px
+	&_lg
+		min-width: 240px
+		+lg
+			min-width: 200px
+	&_blue
+		background-color: $blue
+	&_pink
+		background-color: $pink
+	&_green
+		background-color: $green
+	&_xl
+		font-size: 32px
+		padding: 18px 45px
+		border-radius: 34px
+		+xxl
+			font-size: 26px
+		+lg
+			font-size: 20px
+		+md
+			min-width: 270px
+			font-size: 24px
+			padding: 15px 25px
+		+ms
+			min-width: auto
+			font-size: 20px
+	&_plus
+		padding-left: 70px
+		min-width: 284px
+		+lg
+			min-width: 230px
+			padding-left: 50px
+		svg
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			left: 22px
+			font-size: 1.5em
+			
 
 .btn-close
     display: inline-block
@@ -79,3 +111,37 @@
     //         background-color: $brown
     //         color: $brown
     //         width: 25px
+.btn-border
+	padding: 10px 40px 10px 70px
+	+roboto 
+	color: $brown
+	+f(18px,500,1)
+	letter-spacing: 0.005em
+	text-transform: uppercase
+	text-align: center
+	text-decoration: none
+	display: inline-block
+	border-radius: 30px
+	background-color: transparent
+	position: relative
+	overflow: hidden
+	border: 1px solid $brown
+	transition: background-color .3s, color .3s
+	min-width: 284px
+	svg
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		left: 22px
+		font-size: 1.1em
+	
+.btn-plus
+	padding: 0
+	font-size: 34px
+	+circle(60)
+	svg
+		position: absolute
+		+vcenter
+	+lg
+		+circle(45)
+		font-size: 26px

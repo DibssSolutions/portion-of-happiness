@@ -1,90 +1,166 @@
 .hero
-    overflow: hidden
-    &__inner
-        position: relative
-    &__prev-arrow,
-    &__next-arrow
-        position: absolute
-        top: 50%
-        transform: translateY(-50%)
-        color: $white
-        z-index: 2
-        cursor: pointer
-        user-select: none
-        border-radius: 50%
-        transition: background-color .3s
-        +hover
-            background-color: rgba($black, .2)
-        .icon
-            display: block
-            font-size: 57px
-    &__prev-arrow
-        left: -36px
-        +r(1760)
-            left: 5px
-    &__next-arrow
-        right: -36px
-        +r(1760)
-            right: 5px
-    &__dot
-        width: 10px
-        height: 10px
-        border-radius: 50%
-        background-color: $white
-        transition: background-color .3s
-        .slick-initialized li.slick-active &
-            background-color: $green
-    .slick-list
-        overflow: visible
-    .slick-dots
-        position: absolute
-        left: 50%
-        transform: translateX(-50%)
-        bottom: 26px
-        display: flex
-        justify-content: space-between
-        align-items: center
-        li
-            line-height: 0
-            &:not(:first-child)
-                margin-left: 18px
+	overflow: hidden
+	+md
+		padding-bottom: 50px
+		padding-top: 136px
+	+ms
+		padding-top: 182px
+	&__inner
+		position: relative
+		+md
+			padding: 0
+	&__prev-arrow,
+	&__next-arrow
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		color: $white
+		z-index: 2
+		cursor: pointer
+		user-select: none
+		border-radius: 50%
+		transition: background-color .3s
+		+hover
+			background-color: rgba($black, .2)
+		+md
+			display: none
+		.icon
+			display: block
+			font-size: 57px
+	&__prev-arrow
+		left: -36px
+		+r(1760)
+			left: 5px
+	&__next-arrow
+		right: -36px
+		+r(1760)
+			right: 5px
+	&__dot
+		width: 10px
+		height: 10px
+		border-radius: 50%
+		background-color: $white
+		transition: background-color .3s
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			+vcenter
+			width: 200%
+			height: 200%
+		+md
+			background-color: $gray
+		.slick-initialized li.slick-active &
+			background-color: $green
+	.slick-list
+		overflow: visible
+		+md
+			overflow: hidden
+	.slick-dots
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		bottom: 26px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		li
+			line-height: 0
+			&:not(:first-child)
+				margin-left: 18px
+		+md
+			bottom: -30px
 
 .hero-slider
-    &:before,
-    &:after
-        content: ''
-        position: absolute
-        top: 0
-        width: 100%
-        height: 100%
-        background-color: rgba($brown, .6)
-        z-index: 1
-    &:before
-        left: 100%
-    &:after
-        right: 100%
-    &__slide
-        padding: 109px 0 88px
-        background-repeat: no-repeat
-        background-position: center
-        background-size: cover
-    &__text
-        opacity: 0
-        visibility: hidden
-        transition: opacity .3s, visibility .3s
-        .slick-active &
-            opacity: 1
-            visibility: visible
-    &__title
-        padding: 27px 106px 21px 98px
-        background-color: rgba($white, .6)
-        max-width: 1032px
-    &__content
-        padding: 25px 122px 30px 102px
-        max-width: 535px
-        background-color: rgba($brown, .6)
-        font-size: 22px
-        font-weight: 500
-        color: $white
-    &__btn
-        margin-top: 30px
+	white-space: nowrap
+	// overflow: hidden
+	opacity: 0
+	visibility: hidden
+	transition: opacity .3s, visibility .3s
+	&.slick-initialized
+		white-space: normal
+		// overflow: visible
+		opacity: 1
+		visibility: visible
+	&:before,
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		width: 100%
+		height: 100%
+		background-color: rgba($brown, .6)
+		z-index: 1
+		+md
+			display: none
+	&:before
+		left: 100%
+	&:after
+		right: 100%
+	&__slide
+		display: inline-block
+		vertical-align: top
+	&__bg
+		padding: 109px 0 88px
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+		+md
+			padding: 0 0 230px 0
+		+ms
+			padding-bottom: 150px
+		.hero_small &
+			padding: 130px 0 40px
+			background-position: 50% 100%
+	&__text
+		opacity: 0
+		visibility: hidden
+		transition: opacity .3s, visibility .3s
+		+md
+			text-align: center
+		.slick-active &
+			opacity: 1
+			visibility: visible
+	&__title
+		padding: 27px 106px 21px 98px
+		background-color: rgba($white, .6)
+		max-width: 1032px
+		.hero_small &
+			max-width: 828px
+			padding: 24px 20px 21px 98px
+			.title
+				font-size: 42px
+				line-height: 1.3
+		+md
+			padding: 36px 20px 23px
+		.hero-slider__btn
+			display: none
+			+md
+				display: block
+			.btn
+				min-width: 195px
+	&__content
+		padding: 25px 122px 30px 102px
+		max-width: 535px
+		background-color: rgba($brown, .6)
+		font-size: 22px
+		font-weight: 500
+		color: $white
+		+md
+			display: none
+		.hero_small &
+			padding: 0
+			max-width: none
+			background-color: transparent
+			p
+				display: none
+	&__btn
+		margin-top: 30px
+		+md
+			margin-top: 20px
+		.hero_small &
+			margin-top: 44px
+			margin-left: 100px
+			.btn
+				min-width: 240px
+

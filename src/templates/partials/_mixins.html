@@ -28,3 +28,47 @@
 </label>
 <!-- end input -->
 {% endmacro %}
+
+{% macro dishCard(props) %}
+<div class="main-dish">
+		<a href="#" class="main-dish__link">
+			<div class="main-dish__inner">
+				<div class="main-dish__img" style="background-image: url(./img/{{props.img}})"></div>
+				<h3 class="main-dish__title title title_m">{{props.title}}</h3>
+				<div class="main-dish__specification">
+				{% for spec in [
+					{
+						icon: 'spec1',
+						text: '250 гр'
+					},
+					{
+						icon: 'spec2',
+						text: '35 мин'
+					},
+					{
+						icon: 'spec3',
+						text: '165 калл',
+						aside: '/100гр'
+					}
+					] %}
+					<div class="specification">
+						<div class="specification__icon" style="background-image: url(./img/{{spec.icon}}.png)"></div>
+						<div class="specification__text">
+							<div class="specification__main">{{spec.text}}</div>
+							{% if spec.aside %}
+							<div class="specification__aside">{{spec.aside}}</div>
+							{% endif %}
+						</div>
+					</div>
+				{% endfor %}
+				</div>
+			</div>
+		</a>
+		<div class="main-dish__check ">
+			<label class="check">
+				<input type="checkbox">
+				<span class="check__checkmark"></span>
+			</label>
+		</div>
+	</div>
+{% endmacro %}

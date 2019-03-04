@@ -1,4 +1,6 @@
-<div class="hero">
+{% import "partials/_mixins.html" as mixins %}
+{% macro block(props) %}	
+<div class="hero {% if props.class %}{{props.class}}{% endif %}">
     <div class="hero__inner inner-lg js-hero-slider-wrap">
         <div class="hero__prev-arrow js-hero-prev">
             {{ mixins.icon('arrow-left') }}
@@ -36,20 +38,28 @@
                     img: 'slide1'
                 }
             ] %}
-                <div class="hero-slider__slide" style="background-image: url(./img/{{ slide.img }}.jpg)">
-                    <div class="hero-slider__text">
-                        <h2 class="hero-slider__title title title_lg">{{ slide.title }}</h2>
-                        <div class="hero-slider__content">
-                            <p>
-                                {{ slide.text }}
-                            </p>
-                            <div class="hero-slider__btn">
-                                <a href="#" class="btn btn_pink"><span>выбрать меню</span></a>
-                            </div>
-                        </div>
-                    </div>
+				<div class="hero-slider__slide">
+					<div class="hero-slider__bg" style="background-image: url(./img/{{slide.img}}.jpg)">
+						<div class="hero-slider__text">
+							<div class="hero-slider__title">
+								<h2 class="title title_lg">{{ slide.title }}</h2>
+								<div class="hero-slider__btn">
+									<a href="#" class="btn btn_pink"><span>выбрать меню</span></a>
+								</div>
+							</div>
+							<div class="hero-slider__content">
+								<p>
+									{{ slide.text }}
+								</p>
+								<div class="hero-slider__btn">
+									<a href="#" class="btn btn_pink"><span>выбрать меню</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
                 </div>
             {% endfor %}
         </div>
     </div>
 </div>
+{% endmacro %}

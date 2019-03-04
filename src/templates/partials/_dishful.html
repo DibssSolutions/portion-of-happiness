@@ -1,0 +1,158 @@
+<section class="dishful">
+	<div class="dishful__inner inner">
+		<div class="menu-slider">
+			<div class="menu-slider__top">
+				<div class="menu-slider__text">
+					<div class="menu-slider__title">МЕНЮ на<span> 30 января - 5 февраля</span></div>
+					<div class="menu-slider__subtitle">Доставка возможна с 30 января по 5 февраля – вы сами выбираете время</div>
+				</div>
+			</div>
+			<a href="#" class="menu__prev-arrow ">{{ mixins.icon('arrow-left') }}</a>
+			<a href="#" class="menu__next-arrow ">{{ mixins.icon('arrow-right') }}</a>
+		</div>
+	</div>
+	<div class="dishful__choice choice" data-tabs>
+		<div class="choice__header">
+			<div class="inner">
+				<div class="choice__current" data-tabs-current></div>
+				<ul class="choice__list">
+					<li class="choice__title title title_m bg_pow" data-tabs-control='home'>Домашнее меню</li>
+					<li class="choice__title title title_m bg_pink" data-tabs-control='chef'>Шеф-меню</li>
+					<li class="choice__title title title_m bg_green" data-tabs-control='light'>Легкое меню</li>
+				</ul>
+			</div>
+		</div>
+		<div data-tabs-wrapper>
+			<div class="choice__body" data-tabs-container='home'>
+				<div class="inner">
+					<div class="choice__info">
+						<div class="choice__conditions">
+							<div class="choice__select">
+								<div class="select">
+									<select name="days" class="js-select">
+										<option value="0">3 дня</option>
+										<option value="1">5 дней</option>
+										<option value="2">7 дней</option>
+									</select>
+								</div>
+								<div class="select">
+									<select name="persons" class="js-select">
+										<option value="0">1 персона</option>
+										<option value="1">2 персоны</option>
+										<option value="2">3 персоны</option>
+									</select>
+								</div>
+							</div>
+							<div class="choice__text">Выбирайте 5 блюд из 6 возможных:</div>
+						</div>
+						<div class="choice__basket basket">
+							<div class="basket__text">
+								<div class="basket__title">мой заказ:</div>
+								<div class="basket__sum">3750</div>
+								<div class="basket__currency">руб.</div>
+							</div>
+							<div class="basket__btn"><a href="#" class="btn btn_green btn_sm"><span>оформить заказ</span></a></div>
+						</div>
+					</div>
+					<ul class="choice__dishes">
+						{% for item in range(0, 6) %}
+							<li class="choice__item">
+								{{ mixins.dishCard(
+									{
+										img: 'choice-dish.png',
+										title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами'
+									}) }}
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+			<div class="choice__body bg_pink" data-tabs-container='chef'>
+				<div class="inner">
+					<div class="choice__info">
+						<div class="choice__conditions">
+							<div class="choice__select">
+								<div class="select">
+									<select name="days" class="js-select">
+										<option value="3 дня">3 дня</option>
+										<option value="5 дней">5 дней</option>
+										<option value="7 дней">7 дней</option>
+									</select>
+								</div>
+								<div class="select">
+									<select name="persons" class="js-select">
+										<option value="1 персона">1 персона</option>
+										<option value="2 персоны">2 персоны</option>
+										<option value="3 персоны">3 персоны</option>
+									</select>
+								</div>
+							</div>
+							<div class="choice__text">Выбирайте 5 блюд из 6 возможных:</div>
+						</div>
+						<div class="choice__basket basket">
+							<div class="basket__text">
+								<div class="basket__title">мой заказ:</div>
+								<div class="basket__sum">3750</div>
+								<div class="basket__currency">руб.</div>
+							</div>
+							<div class="basket__btn"><a href="#" class="btn btn_green btn_sm"><span>оформить заказ</span></a></div>
+						</div>
+					</div>
+					<ul class="choice__dishes">{% for item in range(0, 6) %}
+							<li class="choice__item">
+								{{ mixins.dishCard(
+									{
+										img: 'choice-dish.png',
+										title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами'
+									}) }}
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+			<div class="choice__body bg_green" data-tabs-container='light'>
+				<div class="inner">
+					<div class="choice__info">
+						<div class="choice__conditions">
+							<div class="choice__select">
+								<div class="select">
+									<select name="days" class="js-select">
+										<option value="3 дня">3 дня</option>
+										<option value="5 дней">5 дней</option>
+										<option value="7 дней">7 дней</option>
+									</select>
+								</div>
+								<div class="select">
+									<select name="persons" class="js-select">
+										<option value="1 персона">1 персона</option>
+										<option value="2 персоны">2 персоны</option>
+										<option value="3 персоны">3 персоны</option>
+									</select>
+								</div>
+							</div>
+							<div class="choice__text">Выбирайте 5 блюд из 6 возможных:</div>
+						</div>
+						<div class="choice__basket basket">
+							<div class="basket__text">
+								<div class="basket__title">мой заказ:</div>
+								<div class="basket__sum">3750</div>
+								<div class="basket__currency">руб.</div>
+							</div>
+							<div class="basket__btn"><a href="#" class="btn btn_green btn_sm"><span>оформить заказ</span></a></div>
+						</div>
+					</div>
+					<ul class="choice__dishes">{% for item in range(0, 6) %}
+							<li class="choice__item">
+								{{ mixins.dishCard(
+									{
+										img: 'choice-dish.png',
+										title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами'
+									}) }}
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -4,7 +4,7 @@
             <h2 class="review__title title">что говорят:</h2>
             <a href="#" class="review__btn btn btn_l btn_blue"><span>все отзывы</span></a>
         </div>
-        <ul class="review__list">
+        <ul class="review__list js-stock-slider">
             {% for item in range(0, 4) %}
             <li class="review__item-wrap">
                 <div class="review-item">
@@ -23,6 +23,9 @@
                 </div>
             </li>
             {% endfor %}
-        </ul>
+		</ul>
+		<div class="review__btn_mob">
+			<a href="#" class="btn btn_l btn_blue"><span>все отзывы</span></a>		
+		</div>
     </div>
 </section>

@@ -14,9 +14,12 @@
   <body>
     <!-- BEGIN content -->
     <div class="out">
-      <header class="header">
+      <header class="header js-header">
         <div class="header__top">
           <div class="header__inner inner">
+            <div class="header__toggle js-toggle">
+              <div class="header__toggle-icon js-toggle-icon"></div>
+            </div>
             <div class="header__left">
               <div class="header__city">
                 <div class="city">
@@ -35,10 +38,44 @@
             </div>
             <div class="header__logo">
               <a href="#">
-                <img src="./img/logo.png" alt="logotype">
+                <img src="./img/logo.svg" alt="logotype">
               </a>
             </div>
             <div class="header__right">
+              <h1 class="header__title">
+                <a href="#">
+                  <svg class="icon icon-logo-mob">
+                    <use xlink:href="img/sprite.svg#icon-logo-mob"></use>
+                  </svg>
+                  <!-- <img src="./img/logo-1.png" alt="logo"> -->
+                </a>
+              </h1>
+              <div class="header__social">
+                <a href="#" class="subscribe">ПОДПИСАТЬСЯ НА НОВОСТИ</a>
+                <ul class="social">
+                  <li class="social__item">
+                    <a href="#">
+                      <svg class="icon icon-insta">
+                        <use xlink:href="img/sprite.svg#icon-insta"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a href="#">
+                      <svg class="icon icon-vk">
+                        <use xlink:href="img/sprite.svg#icon-vk"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a href="#">
+                      <svg class="icon icon-facebook">
+                        <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
               <div class="account-wrap account-wrap_bg">
                 <a href="#" class="account">
                   <div class="account__icon">
@@ -91,7 +128,7 @@
           </div>
         </div>
       </header>
-      <div class="hero">
+      <div class="hero ">
         <div class="hero__inner inner-lg js-hero-slider-wrap">
           <div class="hero__prev-arrow js-hero-prev">
             <svg class="icon icon-arrow-left">
@@ -104,35 +141,56 @@
             </svg>
           </div>
           <div class="hero__slider hero-slider js-hero-slider">
-            <div class="hero-slider__slide" style="background-image: url(./img/slide1.jpg)">
-              <div class="hero-slider__text">
-                <h2 class="hero-slider__title title title_lg">ПРАЗДНИЧНОЕ ПРЕДЛОЖЕНИЕ: “НЕДЕЛЯ ДЛЯ ДВОИХ”</h2>
-                <div class="hero-slider__content">
-                  <p> РЕКЛАМНЫЙ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТИК РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТИК </p>
-                  <div class="hero-slider__btn">
-                    <a href="#" class="btn btn_pink"><span>выбрать меню</span></a>
+            <div class="hero-slider__slide">
+              <div class="hero-slider__bg" style="background-image: url(./img/slide1.jpg)">
+                <div class="hero-slider__text">
+                  <div class="hero-slider__title">
+                    <h2 class="title title_lg">ПРАЗДНИЧНОЕ ПРЕДЛОЖЕНИЕ: “НЕДЕЛЯ ДЛЯ ДВОИХ”</h2>
+                    <div class="hero-slider__btn">
+                      <a href="#" class="btn btn_pink"><span>выбрать меню</span></a>
+                    </div>
+                  </div>
+                  <div class="hero-slider__content">
+                    <p> РЕКЛАМНЫЙ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТИК РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТИК </p>
+                    <div class="hero-slider__btn">
+                      <a href="#" class="btn btn_pink"><span>выбрать меню</span></a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="hero-slider__slide" style="background-image: url(./img/slide1.jpg)">
-              <div class="hero-slider__text">
-                <h2 class="hero-slider__title title title_lg">ПРАЗДНИЧНОЕ ПРЕДЛОЖЕНИЕ: “НЕДЕЛЯ ДЛЯ ДВОИХ”</h2>
-                <div class="hero-slider__content">
-                  <p> РЕКЛАМНЫЙ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТИК РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТИК </p>
-                  <div class="hero-slider__btn">
-                    <a href="#" class="btn btn_pink"><span>выбрать меню</span></a>
+            <div class="hero-slider__slide">
+              <div class="hero-slider__bg" style="background-image: url(./img/slide1.jpg)">
+                <div class="hero-slider__text">
+                  <div class="hero-slider__title">
+                    <h2 class="title title_lg">ПРАЗДНИЧНОЕ ПРЕДЛОЖЕНИЕ: “НЕДЕЛЯ ДЛЯ ДВОИХ”</h2>
+                    <div class="hero-slider__btn">
+                      <a href="#" class="btn btn_pink"><span>выбрать меню</span></a>
+                    </div>
+                  </div>
+                  <div class="hero-slider__content">
+                    <p> РЕКЛАМНЫЙ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТИК РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТИК </p>
+                    <div class="hero-slider__btn">
+                      <a href="#" class="btn btn_pink"><span>выбрать меню</span></a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="hero-slider__slide" style="background-image: url(./img/slide1.jpg)">
-              <div class="hero-slider__text">
-                <h2 class="hero-slider__title title title_lg">ПРАЗДНИЧНОЕ ПРЕДЛОЖЕНИЕ: “НЕДЕЛЯ ДЛЯ ДВОИХ”</h2>
-                <div class="hero-slider__content">
-                  <p> РЕКЛАМНЫЙ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТИК РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТИК </p>
-                  <div class="hero-slider__btn">
-                    <a href="#" class="btn btn_pink"><span>выбрать меню</span></a>
+            <div class="hero-slider__slide">
+              <div class="hero-slider__bg" style="background-image: url(./img/slide1.jpg)">
+                <div class="hero-slider__text">
+                  <div class="hero-slider__title">
+                    <h2 class="title title_lg">ПРАЗДНИЧНОЕ ПРЕДЛОЖЕНИЕ: “НЕДЕЛЯ ДЛЯ ДВОИХ”</h2>
+                    <div class="hero-slider__btn">
+                      <a href="#" class="btn btn_pink"><span>выбрать меню</span></a>
+                    </div>
+                  </div>
+                  <div class="hero-slider__content">
+                    <p> РЕКЛАМНЫЙ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТИК РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТИК </p>
+                    <div class="hero-slider__btn">
+                      <a href="#" class="btn btn_pink"><span>выбрать меню</span></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -146,8 +204,8 @@
           <div class="delivery-info__wrap">
             <div class="delivery-info__item">
               <div class="delivery-item ">
-                <div class="delivery-item__img-wrap">
-                  <img src="img/menu-sm.png" alt="delivery" class="delivery-item__img">
+                <div class="delivery-item__img">
+                  <img src="./img/info-menu.svg" alt="">
                 </div>
                 <div class="delivery-item__text">
                   <p><span>выбираете</span> меню и удобное время доставки</p>
@@ -156,8 +214,8 @@
             </div>
             <div class="delivery-info__item">
               <div class="delivery-item delivery-item_big">
-                <div class="delivery-item__img-wrap">
-                  <img src="img/box-sm.png" alt="delivery" class="delivery-item__img">
+                <div class="delivery-item__img">
+                  <img src="./img/info-box.svg" alt="">
                 </div>
                 <div class="delivery-item__text">
                   <p><span>Мы доставляем</span> свежие продукты с подробными рецептами</p>
@@ -166,8 +224,8 @@
             </div>
             <div class="delivery-info__item">
               <div class="delivery-item ">
-                <div class="delivery-item__img-wrap">
-                  <img src="img/dish-sm.png" alt="delivery" class="delivery-item__img">
+                <div class="delivery-item__img">
+                  <img src="./img/info-dish.svg" alt="">
                 </div>
                 <div class="delivery-item__text">
                   <p><span>вы готовите</span> и наслаждаетесь ужином дома</p>
@@ -193,8 +251,8 @@
             </svg>
           </div>
           <div class="menu__slider menu-slider js-menu-slider">
-            <div class="menu-slider__slide" style="background-image: url(./img/menu-slide1.jpg)">
-              <div class="menu-slider__slide-wrap">
+            <div class="menu-slider__slide">
+              <div class="menu-slider__slide-wrap" style="background-image: url(./img/menu-slide1.jpg)">
                 <div class="menu-slider__top">
                   <div class="menu-slider__text">
                     <div class="menu-slider__title">МЕНЮ на <span>30 января - 5 февраля</span></div>
@@ -205,50 +263,42 @@
                 <div class="menu-slider__bottom">
                   <ul class="menu-slider__list menu-list">
                     <li class="menu-list__item menu-list__item_green">
-                      <a href="#" class="menu-list__link">Домашнее меню <svg class="icon icon-arrow-right">
-                          <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
-                        </svg>
-                      </a>
-                      <ul class="menu-list__ingredients menu-ingredients">
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                      </ul>
+                      <a href="#" class="menu-list__link js-menu-list-item "><span>Домашнее меню <svg class="icon icon-arrow-right">
+                            <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                          </svg>
+                        </span></a>
+                      <div class="menu-list__ingredients-wrap js-menu-list-target-wrap ">
+                        <ul class="menu-list__ingredients menu-ingredients ">
+                        </ul>
+                      </div>
                     </li>
                     <li class="menu-list__item menu-list__item_orange">
-                      <a href="#" class="menu-list__link">Шеф-меню <svg class="icon icon-arrow-right">
-                          <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
-                        </svg>
-                      </a>
-                      <ul class="menu-list__ingredients menu-ingredients">
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                      </ul>
+                      <a href="#" class="menu-list__link js-menu-list-item is-active"><span>Шеф-меню <svg class="icon icon-arrow-right">
+                            <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                          </svg>
+                        </span></a>
+                      <div class="menu-list__ingredients-wrap js-menu-list-target-wrap is-active">
+                        <ul class="menu-list__ingredients menu-ingredients is-active">
+                          <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
+                        </ul>
+                      </div>
                     </li>
                     <li class="menu-list__item menu-list__item_pink">
-                      <a href="#" class="menu-list__link">Легкое меню <svg class="icon icon-arrow-right">
-                          <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
-                        </svg>
-                      </a>
-                      <ul class="menu-list__ingredients menu-ingredients">
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                      </ul>
+                      <a href="#" class="menu-list__link js-menu-list-item "><span>Легкое меню <svg class="icon icon-arrow-right">
+                            <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                          </svg>
+                        </span></a>
+                      <div class="menu-list__ingredients-wrap js-menu-list-target-wrap ">
+                        <ul class="menu-list__ingredients menu-ingredients ">
+                        </ul>
+                      </div>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="menu-slider__slide" style="background-image: url(./img/menu-slide1.jpg)">
-              <div class="menu-slider__slide-wrap">
+            <div class="menu-slider__slide">
+              <div class="menu-slider__slide-wrap" style="background-image: url(./img/menu-slide1.jpg)">
                 <div class="menu-slider__top">
                   <div class="menu-slider__text">
                     <div class="menu-slider__title">МЕНЮ на <span>30 января - 5 февраля</span></div>
@@ -259,44 +309,42 @@
                 <div class="menu-slider__bottom">
                   <ul class="menu-slider__list menu-list">
                     <li class="menu-list__item menu-list__item_green">
-                      <a href="#" class="menu-list__link">Домашнее меню <svg class="icon icon-arrow-right">
-                          <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
-                        </svg>
-                      </a>
-                      <ul class="menu-list__ingredients menu-ingredients">
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                      </ul>
+                      <a href="#" class="menu-list__link js-menu-list-item "><span>Домашнее меню <svg class="icon icon-arrow-right">
+                            <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                          </svg>
+                        </span></a>
+                      <div class="menu-list__ingredients-wrap js-menu-list-target-wrap ">
+                        <ul class="menu-list__ingredients menu-ingredients ">
+                        </ul>
+                      </div>
                     </li>
                     <li class="menu-list__item menu-list__item_orange">
-                      <a href="#" class="menu-list__link">Шеф-меню <svg class="icon icon-arrow-right">
-                          <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
-                        </svg>
-                      </a>
-                      <ul class="menu-list__ingredients menu-ingredients">
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                      </ul>
+                      <a href="#" class="menu-list__link js-menu-list-item "><span>Шеф-меню <svg class="icon icon-arrow-right">
+                            <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                          </svg>
+                        </span></a>
+                      <div class="menu-list__ingredients-wrap js-menu-list-target-wrap ">
+                        <ul class="menu-list__ingredients menu-ingredients ">
+                        </ul>
+                      </div>
                     </li>
                     <li class="menu-list__item menu-list__item_pink">
-                      <a href="#" class="menu-list__link">Легкое меню <svg class="icon icon-arrow-right">
-                          <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
-                        </svg>
-                      </a>
-                      <ul class="menu-list__ingredients menu-ingredients">
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                      </ul>
+                      <a href="#" class="menu-list__link js-menu-list-item is-active"><span>Легкое меню <svg class="icon icon-arrow-right">
+                            <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                          </svg>
+                        </span></a>
+                      <div class="menu-list__ingredients-wrap js-menu-list-target-wrap is-active">
+                        <ul class="menu-list__ingredients menu-ingredients is-active">
+                          <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
+                        </ul>
+                      </div>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="menu-slider__slide" style="background-image: url(./img/menu-slide1.jpg)">
-              <div class="menu-slider__slide-wrap">
+            <div class="menu-slider__slide">
+              <div class="menu-slider__slide-wrap" style="background-image: url(./img/menu-slide1.jpg)">
                 <div class="menu-slider__top">
                   <div class="menu-slider__text">
                     <div class="menu-slider__title">МЕНЮ на <span>30 января - 5 февраля</span></div>
@@ -307,42 +355,43 @@
                 <div class="menu-slider__bottom">
                   <ul class="menu-slider__list menu-list">
                     <li class="menu-list__item menu-list__item_green">
-                      <a href="#" class="menu-list__link">Домашнее меню <svg class="icon icon-arrow-right">
-                          <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
-                        </svg>
-                      </a>
-                      <ul class="menu-list__ingredients menu-ingredients">
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                      </ul>
+                      <a href="#" class="menu-list__link js-menu-list-item is-active"><span>Домашнее меню <svg class="icon icon-arrow-right">
+                            <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                          </svg>
+                        </span></a>
+                      <div class="menu-list__ingredients-wrap js-menu-list-target-wrap is-active">
+                        <ul class="menu-list__ingredients menu-ingredients is-active">
+                          <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
+                        </ul>
+                      </div>
                     </li>
                     <li class="menu-list__item menu-list__item_orange">
-                      <a href="#" class="menu-list__link">Шеф-меню <svg class="icon icon-arrow-right">
-                          <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
-                        </svg>
-                      </a>
-                      <ul class="menu-list__ingredients menu-ingredients">
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                      </ul>
+                      <a href="#" class="menu-list__link js-menu-list-item "><span>Шеф-меню <svg class="icon icon-arrow-right">
+                            <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                          </svg>
+                        </span></a>
+                      <div class="menu-list__ingredients-wrap js-menu-list-target-wrap ">
+                        <ul class="menu-list__ingredients menu-ingredients ">
+                        </ul>
+                      </div>
                     </li>
                     <li class="menu-list__item menu-list__item_pink">
-                      <a href="#" class="menu-list__link">Легкое меню <svg class="icon icon-arrow-right">
-                          <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
-                        </svg>
-                      </a>
-                      <ul class="menu-list__ingredients menu-ingredients">
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                        <li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">филе индейки с тыквой и ананасом</a></li>
-                      </ul>
+                      <a href="#" class="menu-list__link js-menu-list-item "><span>Легкое меню <svg class="icon icon-arrow-right">
+                            <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                          </svg>
+                        </span></a>
+                      <div class="menu-list__ingredients-wrap js-menu-list-target-wrap ">
+                        <ul class="menu-list__ingredients menu-ingredients ">
+                        </ul>
+                      </div>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="menu-slider__btn_mob">
+            <a href="#" data-modal-control="modalform" class="btn btn_green btn_xl"><span>быстрый заказ</span></a>
           </div>
         </div>
       </div>
@@ -362,7 +411,7 @@
             <div class="info-item__main">
               <h2 class="info-item__title title">Почему «порция счастья»?</h2>
               <div class="info-item__btn">
-                <a href="#" class="btn btn_md "><span>Подробнее</span></a>
+                <a href="#" class="btn btn_md btn_green"><span>Подробнее</span></a>
               </div>
             </div>
           </div>
@@ -376,22 +425,22 @@
           </div>
         </div>
         <div class="stock__inner inner-lg">
-          <ul class="stock__list">
+          <ul class="stock__list js-stock-slider">
+            <li href="#" class="stock__link">
+              <a class="stock-item">
+                <div class="stock-item__img" style="background-image: url(img/stock-dish2.png)"></div>
+                <div class="stock-item__text">
+                  <div class="stock-item__date">до 25 января</div>
+                  <p>Ххххххххх хххххххх хххххх хххххх хххххххххх хххххх ххххххххххх хххххх ххх</p>
+                </div>
+              </a>
+            </li>
             <li href="#" class="stock__link">
               <a class="stock-item">
                 <div class="stock-item__img" style="background-image: url(img/stock-dish1.png)"></div>
                 <div class="stock-item__text">
                   <div class="stock-item__date">до 25 января</div>
                   <p>xxxxx xxxx xxxxxxxxx xxxxxx xxxxxxxxxx</p>
-                </div>
-              </a>
-            </li>
-            <li href="#" class="stock__link">
-              <a class="stock-item">
-                <div class="stock-item__img" style="background-image: url(img/stock-dish2.png)"></div>
-                <div class="stock-item__text">
-                  <div class="stock-item__date">до 25 января</div>
-                  <p>Ххххххххх ххххххххх хх хххххх хххххх хххххххх хххххх хххххх хххххххххх ххх хххххх ххххххххххх хххххх хххххх </p>
                 </div>
               </a>
             </li>
@@ -414,6 +463,9 @@
               </a>
             </li>
           </ul>
+          <div class="stock__btn_mob">
+            <a href="#" class="btn btn_md"><span>все акции</span></a>
+          </div>
         </div>
       </section>
       <section class="review">
@@ -422,7 +474,7 @@
             <h2 class="review__title title">что говорят:</h2>
             <a href="#" class="review__btn btn btn_l btn_blue"><span>все отзывы</span></a>
           </div>
-          <ul class="review__list">
+          <ul class="review__list js-stock-slider">
             <li class="review__item-wrap">
               <div class="review-item">
                 <a href="#" class="review-item__img-wrap" style="background-image: url(img/review.png)"></a>
@@ -488,6 +540,9 @@
               </div>
             </li>
           </ul>
+          <div class="review__btn_mob">
+            <a href="#" class="btn btn_l btn_blue"><span>все отзывы</span></a>
+          </div>
         </div>
       </section>
       <div class="form-sm js-form-sm">
@@ -559,17 +614,20 @@
                 <a href="tel:+78129991929" class="footer__contacts-phone">+7 812 <span>999 1929</span></a>
               </div>
             </div>
+            <div class="footer__agree">
+              <a href="#" class="footer__agree-link">Пользовательское соглашение</a>
+            </div>
           </div>
         </div>
-        <div class="footer__bottom">
+        <div class="footer__bottom ">
           <div class="footer__bottom-wrap inner">
             <div class="footer__copyright"> © ПОРЦИЯ СЧАСТЬЯ 2019 </div>
             <div class="footer__social">
               <ul class="social">
                 <li class="social__item">
                   <a href="#">
-                    <svg class="icon icon-instagram">
-                      <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                    <svg class="icon icon-insta">
+                      <use xlink:href="img/sprite.svg#icon-insta"></use>
                     </svg>
                   </a>
                 </li>
@@ -588,19 +646,78 @@
                   </a>
                 </li>
               </ul>
-              <a href="#" class="footer__subscribe">ПОДПИСАТЬСЯ НА НОВОСТИ</a>
+              <a href="#" class="subscribe">ПОДПИСАТЬСЯ НА НОВОСТИ</a>
             </div>
             <div class="footer__stores stores">
               <div class="stores__item">
-                <a href="#"><img src="./img/appstore.svg" alt=""></a>
+                <a href="#"><img src="./img/apple.svg" alt=""></a>
               </div>
               <div class="stores__item">
-                <a href="#"><img src="./img/googleplay.svg" alt=""></a>
+                <a href="#"><img src="./img/google-play.svg" alt=""></a>
               </div>
             </div>
           </div>
         </div>
       </footer>
+      <div class="mob-menu js-mob-menu">
+        <ul class="mob-menu__list">
+          <li class="mob-menu__item is-active"><a href="#" class="mob-menu__link">Главная</a></li>
+          <li class="mob-menu__item mob-menu__item_submenu">
+            <a href="#" class="mob-menu__link">меню</a>
+            <ul class="mob-menu__submenu">
+              <li class="mob-menu__submenu-item"><a href="#" class="mob-menu__submenu-link">домашнее меню</a></li>
+              <li class="mob-menu__submenu-item"><a href="#" class="mob-menu__submenu-link">шеф-меню</a></li>
+              <li class="mob-menu__submenu-item"><a href="#" class="mob-menu__submenu-link">легкое меню</a></li>
+              <li class="mob-menu__submenu-item"><a href="#" class="mob-menu__submenu-link">блюда на выбор</a></li>
+            </ul>
+          </li>
+          <li class="mob-menu__item"><a href="#" class="mob-menu__link">лавка</a></li>
+          <li class="mob-menu__item"><a href="#" class="mob-menu__link">акции</a></li>
+          <li class="mob-menu__item"><a href="#" class="mob-menu__link">о сервисе</a></li>
+        </ul>
+        <div class="mob-menu__contacts">
+          <div class="mob-menu__contacts-wrap">
+            <div class="mob-menu__arr" style="background-image: url(./img/arrow-city.png)"></div>
+            <div class="mob-menu__city">Санкт-Петербург</div>
+          </div>
+          <div class="mob-menu__phone"><a href="tel:+78129991929">+7 812 <span>999 1929</span></a></div>
+        </div>
+        <div class="account-wrap account-wrap_bg">
+          <a href="#" class="account">
+            <div class="account__icon">
+              <svg class="icon icon-user">
+                <use xlink:href="img/sprite.svg#icon-user"></use>
+              </svg>
+            </div>
+            <div class="account__points">
+              <div class="account__points-number">2500</div>
+              <div class="account__points-text">баллов</div>
+            </div>
+          </a>
+        </div>
+        <div class="mob-menu__socials">
+          <a href="#" class="mob-menu__socials-icon">
+            <svg class="icon icon-instagram-m">
+              <use xlink:href="img/sprite.svg#icon-instagram-m"></use>
+            </svg>
+          </a>
+          <a href="#" class="mob-menu__socials-icon">
+            <svg class="icon icon-vk-m">
+              <use xlink:href="img/sprite.svg#icon-vk-m"></use>
+            </svg>
+          </a>
+          <a href="#" class="mob-menu__socials-icon">
+            <svg class="icon icon-facebook-m">
+              <use xlink:href="img/sprite.svg#icon-facebook-m"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="mob-menu__aside">
+          <a href="#">доставка и оплата</a>
+          <a href="#">частые вопросы</a>
+          <a href="#">контакты</a>
+        </div>
+      </div>
     </div>
     <!-- END content -->
     <div class="modal" data-modal="modalform">

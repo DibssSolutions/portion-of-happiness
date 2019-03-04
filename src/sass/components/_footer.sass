@@ -1,132 +1,234 @@
 .footer
-    padding-top: 53px
-    background-color: rgba($brown, .1)
-    &__inner
-    &__top
-        display: flex
-        justify-content: space-between
-        padding-bottom: 40px
-        +lg
-            padding-bottom: 20px
-    &__logo
-        // max-width: 156px
-        display: flex
-        flex-direction: column
-        justify-content: center
-        align-items: center
-        flex-shrink: 0
-    &-logo
-        font-size: 196px
-        +lg
-            font-size: 130px
-        .icon
-            display: block
-            max-width: 100%
-    &-slogan
-        margin-top: 29px
-        text-align: center
-        font-size: 19px
-        +circe
-        +lg
-            font-size: 16px
-    &__menu
-        display: flex
-        &-wrap
-            text-transform: uppercase
-            padding-top: 44px
-            margin: 0 20px
-            display: flex
-            +lg
-                padding-top: 24px
-        &-title
-            font-weight: 700
-        &-block
-            padding: 0 30px
-            margin: -13px 0
-            +r(1350)
-                padding: 0 15px
-        &-item
-            padding: 13px 0
-            transition: color .3s
-            +hover
-                color: $green
-    &__contacts
-        text-transform: uppercase
-        padding-top: 44px
-        flex-shrink: 0
-        +lg
-            padding-top: 24px
-        &-item
-            &:not(:first-child)
-                margin-top: 50px
-            span
-                font-size: 32px
-                +r(1502)
-                    font-size: 24px
-                +lg
-                    font-size: 20px
+	padding-top: 53px
+	background-color: rgba($brown, .1)
+	&__inner
+	&__top
+		display: flex
+		justify-content: space-between
+		padding-bottom: 40px
+		color: $brown
+		+lg
+			padding-bottom: 20px
+		+md
+			flex-wrap: wrap
+			// justify-content: center
+	&__logo
+		// max-width: 156px
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		flex-shrink: 0
+		+md
+			display: none
+	&-logo
+		font-size: 196px
+		+lg
+		    font-size: 130px
+		.icon
+			display: block
+			max-width: 100%
+			color: $brown
+	&-slogan
+		margin-top: 29px
+		text-align: center
+		font-size: 19px
+		font-weight: 700
+		+circe
+		+lg
+			font-size: 16px
+	&__menu
+		display: flex
+		+sm
+			display: inline-block
+			column-count: 2
+			column-gap: 68px
+			width: 100%
+		+ms
+			column-gap: 20px
+		&-wrap
+			text-transform: uppercase
+			padding-top: 44px
+			margin: 0 20px
+			display: flex
+			+lg
+				padding-top: 24px
+			+md
+				width: 100%
+				// justify-content: center
+			+sm
+				display: block
+				margin: 0
+		&-title
+			font-weight: 700
+			// +sm
+			// 	margin-left: 15px
+		&-block
+			padding: 0 30px
+			margin: -13px 0
+			+r(1350)
+				padding: 0 15px
+			+sm
+				margin: 0
+				padding: 0
+		&-item
+			padding: 13px 0
+			transition: color .3s
+			+hover
+				color: $green
+			+sm
+				padding: 5px 0
+	&__contacts
+		text-transform: uppercase
+		padding-top: 44px
+		flex-shrink: 0
+		color: $brown
+		+lg
+			padding-top: 24px
+		+md
+			display: flex
+			font-size: 18px
+			padding-top: 40px
+		+ms
+			flex-wrap: wrap
+		&-item
+			+ms
+				width: 100%
+			&:not(:first-child)
+				margin-top: 50px
+				+md
+					margin-top: 0
+					margin-left: 50px
+				+ms
+					margin-left: 0
+					margin-top: 20px
+			span
+				font-size: 32px
+				+r(1502)
+					font-size: 24px
+				+lg
+					font-size: 20px
+				+md
+					font-size: 25px
+	&__bottom
+		padding: 19px 0 26px
+		background-color: $brown
+		+md
+			padding: 40px 0
+		&-wrap
+			display: flex
+			justify-content: space-between
+			align-items: center
+			flex-wrap: wrap
+			+ms
+				justify-content: center
+		&_big
+			padding-bottom: 140px
+	&__copyright
+		color: $white
+		font-size: 18px
+		+md
+			display: none
+	&__social
+		display: flex
+		align-items: center
+		margin: 0 15px
+		+sm
+			flex-wrap: wrap
+			margin: 0
+			justify-content: center
+	&__stores
+		+r(847)
+			margin-top: 35px
+	&__agree
+		display: none
+		+md
+			display: block
+			width: 100%
+			margin-top: 30px
+		&-link
+			display: block
+			text-decoration: underline
+			color: $brown
+			font-size: 16px
 
-    &__bottom
-        padding: 19px 0 26px
-        background-color: $brown
-        &-wrap
-            display: flex
-            justify-content: space-between
-            align-items: center
-            flex-wrap: wrap
-    &__copyright
-        color: $white
-    &__social
-        display: flex
-        align-items: center
-        margin: 0 15px
-    &__subscribe
-        display: block
-        color: $white
-        text-decoration: none
-        text-transform: uppercase
-        transition: color .3s
-        font-size: 22px
-        +hover
-            color: $orange
-        +lg
-            font-size: 17px
-        &:not(:first-child)
-            margin-left: 41px
-            +lg
-                margin-left: 20px
+.subscribe
+	display: block
+	color: $white
+	text-decoration: none
+	text-transform: uppercase
+	transition: color .3s
+	font-size: 22px
+	+hover
+		color: $orange
+	+lg
+		font-size: 17px
+	+md
+		font-size: 18px
+	+r(489)
+		width: 100%
+		margin-top: 30px
+	&:not(:first-child)
+		margin-left: 41px
+		+lg
+			margin-left: 20px
+		+r(489)
+			margin-left: 0
+			text-align: center
+	.header__social &
+		+f(16px, 500)
+		margin-left: 12px
+		margin-top: 3px
+		letter-spacing: 0.62px
+		+lg
+			font-size: 12px
+			margin-right: 10px
 
 .social
-    display: flex
-    align-items: center
-    &__item
-        font-size: 35px
-        color: $white
-        transition: color .3s
-        +hover
-            color: $orange
-        +lg
-            font-size: 27px
-        &:not(:first-child)
-            margin-left: 32px
-            +lg
-                margin-left: 20px
-        svg
-            display: block
-            max-width: 100%
+	display: flex
+	align-items: center
+	&__item
+		font-size: 35px
+		color: $white
+		transition: color .3s
+		+hover
+			color: $orange
+		+lg
+			font-size: 27px
+		+md
+			font-size: 40px
+		&:not(:first-child)
+			margin-left: 32px
+			+lg
+				margin-left: 20px
+		svg
+			display: block
+			max-width: 100%
+		.header__social &
+			font-size: 27px
+			flex-shrink: 0
+			&:not(:first-child)
+				margin-left: 25px
+				+lg
+					margin-left: 10px
+			+lg
+				font-size: 18px
 
 .stores
-    display: flex
-    justify-content: space-between
-    align-items: center
-    &__item
-        max-width: 150px
-        +lg
-            max-width: 100px
-        &:not(:first-child)
-            margin-left: 60px
-            +lg
-                margin-left: 30px
-        img
-            display: block
-            max-width: 100%
+	display: flex
+	justify-content: space-between
+	align-items: center
+	&__item
+		max-width: 150px
+		+lg
+			max-width: 100px
+		+md
+			max-width: 160px
+		&:not(:first-child)
+			margin-left: 60px
+			+lg
+				margin-left: 30px
+		img
+			display: block
+			max-width: 100%
+			width: 100%

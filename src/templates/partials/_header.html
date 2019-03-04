@@ -1,8 +1,11 @@
 {% import "partials/_mixins.html" as mixins %}
 {% macro block(props) %}
-<header class="header">
+<header class="header js-header">
     <div class="header__top">
         <div class="header__inner inner">
+			<div class="header__toggle js-toggle">
+				<div class="header__toggle-icon js-toggle-icon"></div>
+			</div>
             <div class="header__left">
                 <div class="header__city">
                     <div class="city">
@@ -19,10 +22,32 @@
             </div>
             <div class="header__logo">
                 <a href="#">
-                    <img src="./img/logo.png" alt="logotype">
+                    <img src="./img/logo.svg" alt="logotype">
                 </a>
             </div>
             <div class="header__right">
+				<h1 class="header__title">
+					<a href="#">
+							{{ mixins.icon('logo-mob') }}
+						<!-- <img src="./img/logo-1.png" alt="logo"> -->
+					</a>
+				</h1>
+				{% if props.login %}{% else %}
+				<div class="header__social">
+					<a href="#" class="subscribe">ПОДПИСАТЬСЯ НА НОВОСТИ</a>
+					<ul class="social">
+						<li class="social__item">
+							<a href="#">{{ mixins.icon('insta') }}</a>
+						</li>
+						<li class="social__item">
+							<a href="#">{{ mixins.icon('vk') }}</a>
+						</li>
+						<li class="social__item">
+							<a href="#">{{ mixins.icon('facebook') }}</a>
+						</li>
+					</ul>
+				</div>
+				{% endif %}
                 {% if props.login %}
                     <div class="account-wrap account-wrap_bg">
                         <a href="#" class="account">

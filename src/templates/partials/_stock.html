@@ -1,13 +1,13 @@
 {% set stock = [
+	{
+		img: 'stock-dish2.png',
+		date: 'до 25 января',
+		descr: 'Ххххххххх хххххххх хххххх хххххх хххххххххх хххххх ххххххххххх хххххх ххх'
+	},
     {
         img: 'stock-dish1.png',
         date: 'до 25 января',
         descr: 'xxxxx xxxx xxxxxxxxx xxxxxx xxxxxxxxxx'
-    },
-    {
-        img: 'stock-dish2.png',
-        date: 'до 25 января',
-        descr: 'Ххххххххх ххххххххх хх хххххх хххххх хххххххх хххххх хххххх хххххххххх ххх хххххх ххххххххххх хххххх хххххх '
     },
     {
         img: 'stock-dish3.png',
@@ -28,7 +28,7 @@
         </div>
     </div>
     <div class="stock__inner inner-lg">
-        <ul class="stock__list">
+        <ul class="stock__list js-stock-slider">
             {% for item in stock %}
                 <li href="#" class="stock__link">
                     <a class="stock-item">
@@ -40,6 +40,9 @@
                     </a>
                 </li>
             {% endfor %}
-        </ul>
+		</ul>
+		<div class="stock__btn_mob">
+			<a href="#" class="btn btn_md"><span>все акции</span></a>		
+		</div>
     </div>
 </section>

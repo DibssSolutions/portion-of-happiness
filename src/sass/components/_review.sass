@@ -1,49 +1,83 @@
 .review
-    padding: 40px 0
-    &__header
-        display: flex
-        align-items: center
-        justify-content: space-between
-    &__list
-        display: flex
-        margin: 35px -40px 0
-        +lg
-            margin: 35px -20px 0
-    &__item-wrap
-        padding: 0 40px
-        width: 25%
-        max-width: 400px
-        +lg
-            padding: 0 20px
-        
+	padding: 40px 0
+	&__inner
+		+md
+			padding: 0
+	&__header
+		display: flex
+		align-items: center
+		justify-content: space-between
+		+md
+			justify-content: center
+	&__list
+		display: flex
+		margin: 35px -40px 0
+		+lg
+			margin: 35px -20px 0
+		+md
+			margin: 35px 0 0
+			display: block
+			position: relative
+			padding-bottom: 50px
+		+xs
+			max-width: 270px
+			margin: 35px auto 0
+		.slick-list
+			+xs
+				overflow: visible
+		.slick-dots
+			display: flex
+			position: absolute
+			bottom: 0px
+			left: 50%
+			transform: translateX(-50%)
+			li
+				&:not(:first-child)
+					margin-left: 20px
+					
+	&__item-wrap
+		padding: 0 40px
+		width: 25%
+		max-width: 400px
+		+lg
+			padding: 0 20px
+	&__btn
+		+md
+			display: none
+		&_mob
+			display: none
+			+md
+				display: block
+				text-align: center
+				padding-top: 30px
 
 .review-item
-    width: 100%
-    font-size: 25px
-    +lg
-        font-size: 20px
-    &__img-wrap
-        display: block
-        border: 10px solid $coffee
-        height: 0
-        padding-bottom: 94%
-        background-repeat: no-repeat
-        background-size: cover
-        background-position: 50% 50%
-    &__text
-        margin-top: 25px
-    &__link-wrap
-        line-height: 1.2
-        &:not(:first-child)
-            margin-top: 5px
-        &:last-child
-            margin-top: 10px
-    &__link
-        transition: color .3s
-        +hover
-            color: $orange
-        &_name
-            font-weight: 500
-        &_insta
-            color: $blue
-            text-decoration: none
+	width: 100%
+	font-size: 25px
+	+lg
+		font-size: 20px
+	&__img-wrap
+		display: block
+		border: 10px solid $coffee
+		height: 0
+		padding-bottom: 94%
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: 50% 50%
+	&__text
+		margin-top: 25px
+	&__link-wrap
+		line-height: 1.2
+		&:not(:first-child)
+			margin-top: 5px
+		&:last-child
+			margin-top: 10px
+	&__link
+		transition: color .3s
+		+hover
+			color: $orange
+		&_name
+			font-weight: 500
+		&_insta
+			color: $blue
+			text-decoration: none
