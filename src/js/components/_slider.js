@@ -27,6 +27,7 @@ heroSlider.slick({
 
 const menuSlider = $('.js-menu-slider');
 const menuParent = menuSlider.parents('.js-menu-slider-wrap');
+const menuSliderNav = $('.js-menu-slider-nav');
 let menuPrev = $('.js-menu-prev', menuParent);
 let menuNext = $('.js-menu-next', menuParent);
 menuSlider.slick({
@@ -35,6 +36,7 @@ menuSlider.slick({
   slidesToScroll: 1,
   prevArrow: menuPrev,
   nextArrow: menuNext,
+  asNavFor: menuSliderNav,
   responsive: [
     {
       breakpoint: 768,
@@ -47,9 +49,23 @@ menuSlider.slick({
 		  }
       }}]
 });
-$('.js-menu-list-item').click(function(e) {
-  e.preventDefault();
+menuSliderNav.slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: menuSlider,
+  arrows: false,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        vertical: true
+      }}]
 });
+// $('.js-menu-list-item').click(function(e) {
+//   e.preventDefault();
+// });
 
 
 
