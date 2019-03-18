@@ -26,18 +26,14 @@
 			display: none
 		.icon
 			display: block
-			font-size: 57px
+			font-size: 42px
 	&__prev-arrow
-		left: 365px
-		+r(1760)
-			left: 5px
+		left: 21.5%
 	&__next-arrow
-		right: 390px
-		+r(1760)
-			right: 5px
+		right: 19%
 	&__dot
-		width: 10px
-		height: 10px
+		width: 8px
+		height: 8px
 		border-radius: 50%
 		background-color: $white
 		transition: background-color .3s
@@ -52,41 +48,35 @@
 			background-color: $gray
 		.slick-initialized li.slick-active &
 			background-color: $green
-	// .slick-list
-	// 	overflow: visible
-	// 	+md
-	// 		overflow: hidden
 	.slick-dots
 		position: absolute
 		left: 50%
 		transform: translateX(-50%)
-		bottom: 26px
+		bottom: 74px
 		display: flex
 		justify-content: space-between
 		align-items: center
 		li
 			line-height: 0
 			&:not(:first-child)
-				margin-left: 18px
+				margin-left: 13px
 		+md
 			bottom: -30px
 
 .hero-slider
 	white-space: nowrap
-	// overflow: hidden
 	opacity: 0
 	visibility: hidden
 	transition: opacity .3s, visibility .3s
 	&.slick-initialized
 		white-space: normal
-		// overflow: visible
 		opacity: 1
 		visibility: visible
 	&__slide
 		display: inline-block
 		vertical-align: top
 	&__bg
-		padding: 40px 0 164px
+		padding: 40px 0 163px
 		background-repeat: no-repeat
 		background-position: center
 		background-size: cover
@@ -107,9 +97,19 @@
 			opacity: 1
 			visibility: visible
 	&__title
-		padding: 27px 106px 21px 30%
+		padding: 27px 14px 27px 102px
 		background-color: rgba($white, .6)
-		max-width: 1032px
+		max-width: 645px
+		line-height: 1.25
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			height: 100%
+			width: 200%
+			background-color: rgba($white, .6)
+			top: 0
+			left: -200%
 		.hero_small &
 			max-width: 828px
 			padding: 24px 20px 21px 98px
@@ -125,12 +125,23 @@
 			.btn
 				min-width: 195px
 	&__content
-		padding: 25px 122px 30px 30%
-		max-width: 807px
+		padding: 20px 100px 21px 102px
+		max-width: 417px
 		background-color: rgba($brown, .6)
-		font-size: 22px
 		font-weight: 500
 		color: $white
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			height: 100%
+			width: 200%
+			background-color: rgba($brown, .6)
+			top: 0
+			left: -200%
+		p
+			line-height: 1.25
+			letter-spacing: 0.013em
 		+md
 			display: none
 		.hero_small &
@@ -140,7 +151,7 @@
 			p
 				display: none
 	&__btn
-		margin-top: 30px
+		margin-top: 26px
 		+md
 			margin-top: 20px
 		.hero_small &

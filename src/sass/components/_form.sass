@@ -1,10 +1,33 @@
 .form
-    &__btn
-        margin-top: 10px
-        .form_main &
-            margin-top: 35px
+	&__row
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		margin: 0 -15px
+	&__col
+		padding: 0 15px
+		+flex-size(40%)
+		&-md
+			+flex-size(58%)
+	&__btn
+		margin-top: 10px
+		.subscription &
+			margin-top: 0
+			margin-left: 65px
+		.form_main &
+			margin-top: 35px
+		.person &
+			
+	.subscription &
+		display: flex
+		align-items: center
+		
 .form-group
 	margin-top: 15px
+	.subscription &
+		max-width: 427px
+		width: 100%
+		margin-top: 0
 	input, textarea
 		width: 100%
 		+roboto
@@ -20,6 +43,8 @@
 				font-size: 14px
 			+sm
 				font-size: 12px
+			.person &
+				color: $brown
 		+lg
 			font-size: 14px
 			padding: 10px
@@ -40,3 +65,46 @@
 			color: $black
 			+placeholder
 				color: $black
+
+.modal
+	border: 15px solid $coffee-opa
+	padding: 60px 80px 40px 70px
+	background-color: $white-opa
+	max-width: 1120px
+	width: 100%
+	position: relative
+	+lg
+		padding: 40px
+		max-width: 780px
+	+sm
+		border: 5px solid $coffee-opa
+		padding: 20px
+	.subscription &
+		max-width: 840px
+	&__title
+		margin-bottom: 45px
+		.subscription &, .person &
+			text-align: left
+	&__descr
+		margin-top: 10px
+	&__btn
+		position: absolute
+		top: 25px
+		right: 25px
+		.subscription &
+			color: $brown
+	&__confirm
+		margin-top: 90px
+		text-align: left
+		max-width: 600px
+	&__check-wrap
+		display: flex
+	&__check
+		&:not(:first-child)
+			margin-left: 26px
+
+.confirm
+	&__link
+		text-decoration: underline
+		&_block
+			display: block

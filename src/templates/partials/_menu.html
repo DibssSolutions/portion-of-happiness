@@ -1,17 +1,17 @@
 {% set info =
 	{
-		title: 'МЕНЮ на',
-		titleDate: '30 января - 5 февраля',
+		title: 'МЕНЮ',
+		titleDate: 'на 30 января - 5 февраля',
 		subtitle: 'Доставка возможна с 30 января по 5 февраля – вы сами выбираете время',
 		img: 'menu-slide1.jpg',
 		homeMenu: [
-			'филе индейки с тыквой и ананасом'
+			'филе индейки<br> с тыквой и ананасом'
 		],
 		chefMenu: [
-			'филе индейки с тыквой и ананасом'
+			'филе индейки<br> с тыквой и ананасом'
 		],
 		lightMenu: [
-			'филе индейки с тыквой и ананасом'
+			'филе индейки<br> с тыквой и ананасом'
 		]
 	}
 %}
@@ -26,10 +26,10 @@
 		<div class="menu__slider-wrap">
 			<div class="menu-slider__top">
 					<div class="menu-slider__text">
-						<div class="menu-slider__title">{{info.title}} <span>{{info.titleDate}}</span></div>
+						<div class="menu-slider__title title">{{info.title}} <span>{{info.titleDate}}</span></div>
 						<div class="menu-slider__subtitle">{{info.subtitle}}</div>
 					</div>
-					<div class="menu-slider__btn"><a href="#" data-modal-control="modalform" class="btn btn_green btn_xl"><span>быстрый заказ</span></a></div>
+					<div class="menu-slider__btn"><a href="#" data-modal-control="person" class="btn btn_green btn_xl"><span>быстрый заказ</span></a></div>
 				</div>
 			<div class="menu__slider menu-slider js-menu-slider">
 				{% for slide in [
@@ -71,31 +71,52 @@
 				<div class="menu-slider__bottom">
 					<ul class="menu-slider__list menu-list js-menu-slider-nav">
 						<li class="menu-list__item menu-list__item_green">
-							<a href="#" class="menu-list__link js-menu-list-item"><span>Домашнее меню{{ mixins.icon('arrow-right') }}</span></a>
+							<a href="#" class="menu-list__link js-menu-list-item">
+								<span>
+									Домашнее меню
+									<div class="menu-list__icon js-menu-list-icon">
+										{{ mixins.icon('arrow-right') }}
+									</div>
+								</span>
+							</a>
 							<div class="menu-list__ingredients-wrap js-menu-list-target-wrap">
 								<ul class="menu-list__ingredients menu-ingredients">
 									{% for item in info.homeMenu %}
-										<li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">{{ item }}</a></li>
+										<li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">{{ item | safe }}</a></li>
 									{% endfor %}
 								</ul>
 							</div>
 						</li>
 						<li class="menu-list__item menu-list__item_orange">
-							<a href="#" class="menu-list__link js-menu-list-item"><span>Шеф-меню{{ mixins.icon('arrow-right') }}</span></a>
+							<a href="#" class="menu-list__link js-menu-list-item">
+								<span>
+									Шеф-меню
+									<div class="menu-list__icon js-menu-list-icon">
+										{{ mixins.icon('arrow-right') }}
+									</div>
+								</span>
+							</a>
 							<div class="menu-list__ingredients-wrap js-menu-list-target-wrap">
 								<ul class="menu-list__ingredients menu-ingredients">
 									{% for item in info.chefMenu %}
-										<li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">{{ item }}</a></li>
+										<li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">{{ item | safe }}</a></li>
 									{% endfor %}
 								</ul>
 							</div>
 						</li>
 						<li class="menu-list__item menu-list__item_pink">
-							<a href="#" class="menu-list__link js-menu-list-item"><span>Легкое меню{{ mixins.icon('arrow-right') }}</span></a>
+							<a href="#" class="menu-list__link js-menu-list-item">
+								<span>
+									Легкое меню
+									<div class="menu-list__icon js-menu-list-icon">
+										{{ mixins.icon('arrow-right') }}
+									</div>
+								</span>
+							</a>
 							<div class="menu-list__ingredients-wrap js-menu-list-target-wrap">
 								<ul class="menu-list__ingredients menu-ingredients">
 									{% for item in info.lightMenu %}
-										<li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">{{ item }}</a></li>
+										<li class="menu-ingredients__item"><a href="#" class="menu-ingredients__link">{{ item | safe }}</a></li>
 									{% endfor %}
 								</ul>
 							</div>

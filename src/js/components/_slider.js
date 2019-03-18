@@ -63,9 +63,12 @@ menuSliderNav.slick({
         vertical: true
       }}]
 });
-// $('.js-menu-list-item').click(function(e) {
-//   e.preventDefault();
-// });
+const menuIcon = $('.js-menu-list-icon');
+menuIcon.on('click', function(e) {
+  e.preventDefault();
+  const id = $(this).parents('.slick-slide').index();
+  menuSlider.slick('slickGoTo', id);
+});
 
 
 

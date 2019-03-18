@@ -47,7 +47,6 @@
                   <svg class="icon icon-logo-mob">
                     <use xlink:href="img/sprite.svg#icon-logo-mob"></use>
                   </svg>
-                  <!-- <img src="./img/logo-1.png" alt="logo"> -->
                 </a>
               </h1>
               <div class="header__social">
@@ -102,6 +101,7 @@
                 </li>
                 <li class="main-menu__item"><a href="#" class="main-menu__link">лавка</a></li>
                 <li class="main-menu__item"><a href="#" class="main-menu__link">акции</a></li>
+                <li class="main-menu__item"><a href="#" class="main-menu__link">блог</a></li>
                 <li class="main-menu__item"><a href="#" class="main-menu__link">о сервисе</a></li>
               </ul>
             </div>
@@ -112,7 +112,7 @@
                   <div class="basket__sum">3750</div>
                   <div class="basket__currency">руб.</div>
                 </div>
-                <div class="basket__btn"><a href="#" class="btn btn_orange btn_sm"><span>заказать</span></a></div>
+                <div class="basket__btn"><a href="#" class="btn btn_orange"><span>заказать</span></a></div>
               </div>
             </div>
           </div>
@@ -387,6 +387,82 @@
               </div>
             </form>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="subscription" data-modal="subscription">
+      <div class="modal" data-modal-container>
+        <div class="modal__inner">
+          <h3 class="modal__title title title_m">подписка на новости<br>и специальные предложения</h3>
+          <form action="/" class="form">
+            <div class="form-group">
+              <input type="text" class="form__input" placeholder="e-mail">
+            </div>
+            <div class="form__btn">
+              <button type="submit" class="btn btn_md btn_green"><span>отправить</span></button>
+            </div>
+          </form>
+          <div class="modal__confirm confirm"> Нажимая кнопку «Подписаться», я подтверждаю свою дееспособность и даю согласие <a href="#" class="confirm__link">по установленной форме </a> на обработку своих персональных данных <a href="#" class="confirm__link confirm__link_block">Политика защиты и обработки персональных данных</a>
+          </div>
+          <div class="modal__btn">
+            <button type="button" class="btn-close btn-close_brown" data-modal-close></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="person" data-modal="person">
+      <div class="modal" data-modal-container>
+        <div class="modal__inner">
+          <h3 class="modal__title title title_m">регистрация</h3>
+          <form action="/" class="form">
+            <div class="form-group">
+              <input type="text" class="form__input" placeholder="Имя">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form__input" placeholder="Фамилия">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form__input" placeholder="Отчество">
+            </div>
+            <div class="form__row">
+              <div class="form__col">
+                <div class="form-group">
+                  <input type="text" class="form__input" placeholder="+ 7 921 882-45-25">
+                </div>
+              </div>
+              <div class="form__col-md">
+                <div class="form-group">
+                  <input type="text" class="form__input" placeholder="e-mail">
+                </div>
+              </div>
+              <div class="form__col">
+                <div class="form-group">
+                  <input type="text" class="form__input" placeholder="Дата рождения">
+                </div>
+              </div>
+              <div class="form__col-md">
+                <div class="modal__check-wrap">
+                  <div class="modal__check ">
+                    <label class="check">
+                      <span class="check__text">Мужской</span>
+                      <input type="checkbox">
+                      <span class="check__checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="modal__check ">
+                    <label class="check">
+                      <span class="check__text">Женский</span>
+                      <input type="checkbox">
+                      <span class="check__checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form__btn">
+              <button type="submit" class="btn btn_md btn_green"><span>сохранить</span></button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

@@ -1,8 +1,8 @@
 .btn
-	padding: 12px 28px
+	padding: 9px 21px
 	+roboto 
 	color: $white
-	+f(18px,500,1)
+	+f(14px,500,1)
 	text-transform: uppercase
 	text-align: center
 	text-decoration: none
@@ -33,21 +33,15 @@
 		padding: 10px 22px
 		font-size: 14px
 	&_sm
-		min-width: 148px
-		+lg
-			min-width: 120px
+		min-width: 112px
 	&_md
-		min-width: 170px
+		min-width: 180px
 		+lg
 			min-width: 166px
 	&_l
-		min-width: 200px
-		+lg
-			min-width: 170px
+		min-width: 150px
 	&_lg
 		min-width: 240px
-		+lg
-			min-width: 200px
 	&_blue
 		background-color: $blue
 	&_pink
@@ -55,11 +49,9 @@
 	&_green
 		background-color: $green
 	&_xl
-		font-size: 32px
-		padding: 18px 45px
-		border-radius: 34px
-		+xxl
-			font-size: 26px
+		font-size: 20px
+		padding: 16px 52px
+		border-radius: 26px
 		+lg
 			font-size: 20px
 		+md
@@ -84,33 +76,40 @@
 			
 
 .btn-close
-    display: inline-block
-    width: 28px
-    height: 28px
-    border-radius: 50%
-    border: 1px solid $white
-    background-color: transparent
-    outline: none
-    +pseudo
-    &:before, &:after
-        width: 18px
-        height: 2px
-        background-color: $white
-        color: $white
-        top: 50%
-        left: 50%
-    &:before
-        transform: translate(-50%, -50%) rotate(45deg)
-    &:after
-        transform: translate(-50%, -50%) rotate(-45deg)
-    // &_l
-    //     width: 40px
-    //     height: 40px
-    //     border-color: $brown
-    //     &:before, &:after
-    //         background-color: $brown
-    //         color: $brown
-    //         width: 25px
+	display: inline-block
+	width: 28px
+	height: 28px
+	border-radius: 50%
+	border: 1px solid $white
+	background-color: transparent
+	outline: none
+	position: relative
+	&:before, &:after
+		content: ' '
+		position: absolute
+		width: 18px
+		height: 2px
+		background-color: $white
+		color: $white
+		top: 50%
+		left: 50%
+	&:before
+		transform: translate(-50%, -50%) rotate(45deg)
+	&:after
+		transform: translate(-50%, -50%) rotate(-45deg)
+	&_brown
+		border-color: $brown
+		&:before, &:after
+			background-color: $brown
+	// &_l
+	//     width: 40px
+	//     height: 40px
+	//     border-color: $brown
+	//     &:before, &:after
+	//         background-color: $brown
+	//         color: $brown
+	//         width: 25px
+
 .btn-border
 	padding: 10px 40px 10px 70px
 	+roboto 

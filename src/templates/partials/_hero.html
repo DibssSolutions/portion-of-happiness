@@ -11,7 +11,7 @@
         <div class="hero__slider hero-slider js-hero-slider">
             {% for slide in [
                 {
-                    title: 'ПРАЗДНИЧНОЕ  ПРЕДЛОЖЕНИЕ: “НЕДЕЛЯ  ДЛЯ  ДВОИХ”',
+                    title: 'ПРАЗДНИЧНОЕ  ПРЕДЛОЖЕНИЕ:<br> “НЕДЕЛЯ  ДЛЯ  ДВОИХ”',
                     text: 'РЕКЛАМНЫЙ ТЕКСТ 
                     РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ 
                     РЕКЛАМНЫЙ  ТЕКСТИК 
@@ -40,19 +40,21 @@
             ] %}
 				<div class="hero-slider__slide">
 					<div class="hero-slider__bg" style="background-image: url(./img/{{slide.img}}.jpg)">
-						<div class="hero-slider__text">
-							<div class="hero-slider__title">
-								<h2 class="title title_lg">{{ slide.title }}</h2>
-								<div class="hero-slider__btn">
-									<a href="#" class="btn btn_pink"><span>выбрать меню</span></a>
+						<div class="hero-slider__inner inner">
+							<div class="hero-slider__text">
+								<div class="hero-slider__title">
+									<h2 class="title title_lg">{{ slide.title | safe }}</h2>
+									<div class="hero-slider__btn">
+										<a href="#" class="btn btn_pink"><span>выбрать меню</span></a>
+									</div>
 								</div>
-							</div>
-							<div class="hero-slider__content">
-								<p>
-									{{ slide.text }}
-								</p>
-								<div class="hero-slider__btn">
-									<a href="#" class="btn btn_pink"><span>выбрать меню</span></a>
+								<div class="hero-slider__content">
+									<p>
+										{{ slide.text }}
+									</p>
+									<div class="hero-slider__btn">
+										<a href="#" class="btn btn_pink btn_md"><span>выбрать меню</span></a>
+									</div>
 								</div>
 							</div>
 						</div>

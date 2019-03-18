@@ -1,5 +1,5 @@
 .info
-	padding: 32px 0
+	padding: 25px 0
 	&__inner
 		+md
 			padding: 0
@@ -21,19 +21,20 @@
 		+md
 			left: 30%
 	&:not(:last-child)
-		margin-bottom: 27px
+		margin-bottom: 20px
 	&__img
-		max-width: 1065px
-		width: 66.5%
+		// max-width: 1065px
+		// width: 66.5%
+		+flex-size(67%)
 		height: 0
-		padding-bottom: 29.5%
+		padding-bottom: 31%
 		+cover
 		.info-item_order &
 			order: 2
 		+md
 			min-height: 276px
 	&__main
-		max-width: 330px
+		// max-width: 330px
 		margin: 0 auto
 		padding: 0 35px
 		// padding: 0 0 0 40px
@@ -47,9 +48,9 @@
 		+ms
 			font-size: 18px
 	&__btn
-		margin-top: 40px
-		+lg
-			margin-top: 20px
+		margin-top: 30px
+		// +lg
+		// 	margin-top: 20px
 		+ms
 			.btn_md
 				min-width: auto

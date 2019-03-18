@@ -1,12 +1,12 @@
 {% set info = [
     {
-        img: 'info1.jpg',
+        img: 'info1.png',
         title: 'А что<br> в коробке?',
         btn_mod: 'btn_pink'
     },
     {
-        img: 'info2.jpg',
-        title: 'Почему «порция  счастья»?',
+        img: 'info2.png',
+        title: 'Почему<br> «порция счастья»?',
         btn_mod: 'btn_green',
         order: 'info-item_order'
     }
@@ -19,7 +19,7 @@
                 <div class="info-item__main">
                     <h2 class="info-item__title title">{{item.title | safe}}</h2>
                     <div class="info-item__btn">
-                        <a href="#" class="btn btn_md {{item.btn_mod}}"><span>Подробнее</span></a>
+                        <a href="#" class="btn {{item.btn_mod}}"><span>Подробнее</span></a>
                     </div>
                 </div>
             </div>
