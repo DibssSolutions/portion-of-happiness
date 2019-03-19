@@ -9,11 +9,9 @@
 		justify-content: space-between
 		padding-bottom: 36px
 		color: $brown
+		flex-wrap: wrap
 		+lg
 			padding-bottom: 13px
-		+md
-			flex-wrap: wrap
-			// justify-content: center
 	&__logo
 		display: flex
 		flex-direction: column
@@ -38,7 +36,7 @@
 	&__menu
 		display: flex
 		+sm
-			display: inline-block
+			display: block
 			column-count: 2
 			column-gap: 68px
 			width: 100%
@@ -133,16 +131,17 @@
 		+r(864)
 			margin-top: 35px
 	&__agree
-		display: none
+		width: 100%
+		margin-left: 240px
+		margin-top: -20px
 		+md
-			display: block
-			width: 100%
 			margin-top: 23px
+			margin-left: 0
 		&-link
-			display: block
+			display: inline-block
 			text-decoration: underline
 			color: $brown
-			font-size: 16px
+			font-size: 11px
 
 .subscribe
 	display: block
