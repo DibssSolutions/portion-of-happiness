@@ -7,8 +7,6 @@
 		padding-top: 182px
 	&__inner
 		position: relative
-		+md
-			padding: 0
 	&__prev-arrow,
 	&__next-arrow
 		position: absolute
@@ -46,6 +44,8 @@
 			height: 200%
 		+md
 			background-color: $gray
+			width: 11px
+			height: 11px
 		.slick-initialized li.slick-active &
 			background-color: $green
 	.slick-dots
@@ -68,6 +68,11 @@
 	opacity: 0
 	visibility: hidden
 	transition: opacity .3s, visibility .3s
+	&__inner
+		+md
+			padding: 0
+		+ms
+			padding: 0
 	&.slick-initialized
 		white-space: normal
 		opacity: 1
@@ -81,9 +86,7 @@
 		background-position: center
 		background-size: cover
 		+md
-			padding: 0 0 230px 0
-		+ms
-			padding-bottom: 150px
+			padding: 0 0 154px
 		.hero_small &
 			padding: 130px 0 40px
 			background-position: 50% 100%
@@ -102,6 +105,10 @@
 		max-width: 645px
 		line-height: 1.25
 		position: relative
+		+md
+			padding: 32px 20px 22px
+			max-width: none
+			font-size: 30px
 		&:before
 			content: ''
 			position: absolute
@@ -116,8 +123,6 @@
 			.title
 				font-size: 42px
 				line-height: 1.3
-		+md
-			padding: 36px 20px 23px
 		.hero-slider__btn
 			display: none
 			+md
@@ -153,7 +158,7 @@
 	&__btn
 		margin-top: 26px
 		+md
-			margin-top: 20px
+			margin-top: 12px
 		.hero_small &
 			margin-top: 44px
 			margin-left: 100px

@@ -1,5 +1,7 @@
 .review
 	padding: 37px 0 20px
+	+sm
+		padding: 37px 0 42px
 	&__inner
 		+md
 			padding: 0
@@ -15,13 +17,13 @@
 		+lg
 			margin: 35px -20px 0
 		+md
-			margin: 35px 0 0
+			margin: 24px 0 0
 			display: block
 			position: relative
-			padding-bottom: 50px
+			padding-bottom: 25px
 		+xs
 			max-width: 270px
-			margin: 35px auto 0
+			margin: 24px auto 0
 		.slick-list
 			+xs
 				overflow: visible
@@ -34,7 +36,14 @@
 			li
 				&:not(:first-child)
 					margin-left: 20px
-					
+		.slick-track
+			+md
+				display: flex
+		.slick-slide
+			+md
+				height: auto
+				& > div
+					height: 100%
 	&__item-wrap
 		padding: 0 32px
 		width: 25%
@@ -50,7 +59,7 @@
 			+md
 				display: block
 				text-align: center
-				padding-top: 30px
+				padding-top: 24px
 
 .review-item
 	width: 100%

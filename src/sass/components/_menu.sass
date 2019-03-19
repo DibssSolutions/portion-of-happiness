@@ -82,7 +82,7 @@
 	&__slide
 		height: 637px
 		+sm
-			height: 580px
+			height: 500px
 		&-wrap
 			background-repeat: no-repeat
 			background-position: center
@@ -127,6 +127,9 @@
 			z-index: 1
 			+sm
 				position: static
+				margin-top: -89px
+			+ms
+				margin-top: -80px
 		&.menu-slider__bottom_display
 			display: none
 			+sm
@@ -137,18 +140,24 @@
 		+lg
 			padding: 0 70px 0 91px
 		+sm
-			padding: 0 80px
+			padding: 0 90px
 			text-align: center
 		+xs
-			padding: 0 30px
+			padding: 0 50px
 	&__title
 		+lg
 			font-size: 29px
 		span
 			text-transform: none
+			+sm
+				display: block
 	&__subtitle
 		margin-top: 8px
 		font-size: 16px
+		+sm
+			max-width: 66%
+			text-align: center
+			margin: 8px auto 0
 	&__btn
 		flex-shrink: 0
 		+md
@@ -160,14 +169,12 @@
 				text-align: center
 				padding-top: 35px
 			+sm
-				padding-top: 210px
-			+ms
-				padding-top: 190px
+				padding-top: 30px
 	.slick-dots
 		z-index: 2
 		display: flex
 		position: absolute
-		bottom: 40px
+		bottom: 125px
 		left: 50%
 		transform: translateX(-50%)
 		li
@@ -186,16 +193,8 @@
 	+sm
 		flex-wrap: wrap
 	&__item
-		// width: 33.33%
 		position: relative
 		color: $white
-		// +hover
-			// .menu-ingredients
-			// 	opacity: 1
-			// 	visibility: visible
-			// .menu-list__ingredients-wrap
-			// 	opacity: 1
-			// 	visibility: visible
 		+sm
 			width: 100%
 			position: static
@@ -240,7 +239,7 @@
 		+sm
 			font-size: 28px
 			position: relative
-			padding: 25px
+			padding: 18px
 			padding-left: 40px
 		+ms
 			font-size: 20px
@@ -287,7 +286,7 @@
 	scrollbar-color: #c7c7cc #efeff4
 	scrollbar-width: thin
 	+sm
-		padding: 34px 58px 90px
+		padding: 29px 43px 63px
 	&::-webkit-scrollbar 
 		width: 6px
 		height: 6px

@@ -17,6 +17,8 @@
 		+md
 			flex-wrap: wrap
 			margin: 25px 0 0
+		+sm
+			padding: 0 30px
 	&__item
 		padding: 0 35px
 		width: 33.3%
@@ -39,13 +41,28 @@
 .delivery-item
 	text-align: center
 	width: 100%
+	+md
+		display: flex
+		justify-content: center
+		align-items: center
+	+ms
+		&.delivery-item_sm
+			justify-content: space-between
 	&__img
 		min-height: 165px
 		display: flex
-		justify-content: center
+		justify-content: space-between
 		align-items: flex-end
 		+md
 			min-height: auto
+		+sm
+			max-width: 166px
+			.delivery-item_sm &
+				max-width: 87px
+				margin-left: 35px
+		+ms
+			.delivery-item_sm &
+				margin-left: auto
 		img
 			display: block
 			max-width: 100%
@@ -57,12 +74,10 @@
 		span
 			text-transform: uppercase
 		+md
-			margin-left: 30px
+			margin-left: 20px
 			margin-top: 0
 			max-width: 300px
-		+ms
-			max-width: 250px
-	+md
-		display: flex
-		justify-content: center
-		align-items: center
+		+sm
+			max-width: 200px
+			.delivery-item_sm &
+				margin-left: 50px

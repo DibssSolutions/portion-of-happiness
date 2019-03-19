@@ -9,7 +9,7 @@
 		background-color: $green
 		color: $white
 		+md
-			padding: 12px 0
+			padding: 12px 0 14px
 	&__inner
 		position: relative
 		display: flex
@@ -23,16 +23,12 @@
 		+md
 			width: auto
 	&__left
-		padding-right: 100px
-		+lg
-			padding-right: 80px
+		padding-right: 80px
 		+md
 			display: none
 	&__right
-		padding-left: 100px
 		justify-content: flex-end
-		+lg
-			padding-left: 80px
+		padding-left: 80px
 		+md
 			padding: 0
 			// justify-content: center
@@ -52,9 +48,7 @@
 		background-color: $white
 		width: 150px
 		padding: 10px 22px
-		z-index: 1 // нижнюю часть ссылки перекрывает меню без z-index
-		+lg
-			width: 150px
+		z-index: 1
 		img
 			display: block
 			max-width: 100%
@@ -247,11 +241,9 @@
 		a
 			display: block
 .account
-	padding: 0 27px
+	padding: 0 15px
 	display: flex
 	align-items: center
-	+lg
-		padding: 0 15px
 	+md
 		flex-wrap: wrap
 		justify-content: center
@@ -278,9 +270,7 @@
 	&__text
 		width: 310px
 		padding-right: 20px
-		font-size: 20px
 		+lg
-			font-size: 16px
 			width: 250px
 		+md
 			width: 100%
@@ -292,14 +282,10 @@
 		align-items: center
 		line-height: 1
 		&-number
-			font-size: 30px
+			font-size: 24px
 			font-weight: 700
-			+lg
-				font-size: 24px
 		&-text
-			font-size: 16px
-			+lg
-				font-size: 14px
+			font-size: 11px
 
 
 				// SMALL DEVICES

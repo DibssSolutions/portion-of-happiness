@@ -1,6 +1,8 @@
 .footer
 	padding-top: 33px
 	background-color: rgba($brown, .1)
+	+sm
+		padding-top: 6px
 	&__inner
 	&__top
 		display: flex
@@ -8,7 +10,7 @@
 		padding-bottom: 36px
 		color: $brown
 		+lg
-			padding-bottom: 20px
+			padding-bottom: 13px
 		+md
 			flex-wrap: wrap
 			// justify-content: center
@@ -78,7 +80,7 @@
 		+md
 			display: flex
 			font-size: 18px
-			padding-top: 40px
+			padding-top: 20px
 		+ms
 			flex-wrap: wrap
 		&-item
@@ -110,7 +112,7 @@
 			justify-content: space-between
 			align-items: center
 			flex-wrap: wrap
-			+ms
+			+sm
 				justify-content: center
 		&_big
 			padding-bottom: 140px
@@ -135,7 +137,7 @@
 		+md
 			display: block
 			width: 100%
-			margin-top: 30px
+			margin-top: 23px
 		&-link
 			display: block
 			text-decoration: underline
@@ -186,8 +188,6 @@
 			font-size: 40px
 		&:not(:first-child)
 			margin-left: 24px
-			// +lg
-			// 	margin-left: 20px
 		svg
 			display: block
 			max-width: 100%
