@@ -7,15 +7,23 @@
 		padding-top: 182px
 	&__inner
 		position: relative
+	&__arrows
+		position: absolute
+		left: 0
+		top: 50%
+		width: 100%
+		margin-top: -21px
+		pointer-events: none
+		&_inner
+			display: flex
+			justify-content: space-between
 	&__prev-arrow,
 	&__next-arrow
-		position: absolute
-		top: 50%
-		transform: translateY(-50%)
 		color: $white
 		z-index: 2
 		cursor: pointer
 		user-select: none
+		pointer-events: initial
 		border-radius: 50%
 		transition: background-color .3s
 		+hover
@@ -26,9 +34,9 @@
 			display: block
 			font-size: 42px
 	&__prev-arrow
-		left: 21.5%
+		left: 0
 	&__next-arrow
-		right: 19%
+		right: 0
 	&__dot
 		width: 8px
 		height: 8px

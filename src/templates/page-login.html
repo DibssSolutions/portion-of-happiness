@@ -17,4 +17,25 @@ title: Index page
 {{footer.block()}}
 {{mob_menu.mob_block({login:true})}}
 
+<div class="enter is-open" data-modal="enter">
+		<div class="modal" data-modal-container>
+			<div class="modal__inner">
+				<h3 class="modal__title title title_m">ВВедите код из СМС.<br> мы отправили его на номер <span>+7 921 882-45-24</span> для подтверждения</h3>
+					<form action="/" class="form">
+						<div class="form-group">
+							<input type="text" class="form__input" placeholder="код подтверждения">
+						</div>
+						<div class="form__btn">
+							<button type="submit" class="btn btn_md btn_green"><span>подтвердить</span></button>
+						</div>
+					</form>
+				<div class="enter__bottom">
+					<a href="#" class="enter__link">Отправить код повторно</a>
+				</div>
+				<div class="modal__btn">
+					<button type="button" class="btn-close btn-close_brown" data-modal-close></button>
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}

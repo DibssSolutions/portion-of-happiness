@@ -3,15 +3,22 @@ import { mediaWidth } from '../utils';
 import { WIN } from '../constants';
 
 const heroSlider = $('.js-hero-slider');
-const heroParent = heroSlider.parents('.js-hero-slider-wrap');
-let heroPrev = $('.js-hero-prev', heroParent);
-let heroNext = $('.js-hero-next', heroParent);
+const arrowParent = $('.js-arrow-parent');
+// arrowParent.each(function() {
+//   const this_ = $(this);
+//   let arrPrev = this_.find($('.js-hero-prev'));
+//   let arrNext = this_.find($('.js-hero-next'));
+// });
+let heroPrev = $('.js-hero-prev', arrowParent);
+let heroNext = $('.js-hero-next', arrowParent);
 heroSlider.slick({
   dots: true,
   slidesToShow: 1,
   slidesToScroll: 1,
   prevArrow: heroPrev,
   nextArrow: heroNext,
+  fade: true,
+  cssEase: 'linear',
   customPaging: (slider, pageIndex) => {
     return $('<button class="hero__dot"></button>');
   },
@@ -120,39 +127,6 @@ WIN.resize(() => {
   timeout = setTimeout(detectWindowWidth, 100);
 });
 
-// SUBMENU
-
-// const submenuSlickOptions = {
-//   slidesToShow: 1,
-//   slidesToScroll: 1,
-//   infinite: true,
-//   dots: true,
-//   arrows: false,
-//   customPaging: (slider, pageIndex) => {
-//     return $('<button class="hero__dot"></button>');
-//   }
-// };
-
-// const sliderSubmenu = $('.js-menu-list-slider');
-// const detectWindowWidthSubmenu = () => {
-//   const sliderSubmenuReady = $('.js-menu-list-slider.slick-slider');
-//   if (mediaWidth(767)) {
-// 	  if (sliderSubmenuReady.length) return;
-// 		 sliderSubmenu.slick(submenuSlickOptions);
-//   }
-//   else {
-// 	  if (!sliderSubmenuReady.length) return;
-// 	  sliderSubmenu.slick('unslick');
-//   }
-// }; 
-// detectWindowWidthSubmenu();
-  
-// let timeoutSmall;
-  
-// WIN.resize(() => {
-//   clearTimeout(timeoutSmall);
-//   timeoutSmall = setTimeout(detectWindowWidthSubmenu, 100);
-// });
 
 
 // DISH SLIDER

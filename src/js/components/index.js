@@ -5,3 +5,4 @@ import './_menu-mob';
 import './_menu';
 import './_tabs';
 import './_select';
+import './_validation';

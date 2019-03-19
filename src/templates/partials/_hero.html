@@ -2,12 +2,16 @@
 {% macro block(props) %}	
 <div class="hero {% if props.class %}{{props.class}}{% endif %}">
     <div class="hero__inner js-hero-slider-wrap">
-        <div class="hero__prev-arrow js-hero-prev">
-            {{ mixins.icon('arrow-left') }}
-        </div>
-        <div class="hero__next-arrow js-hero-next">
-            {{ mixins.icon('arrow-right') }}
-        </div>
+		<div class="hero__arrows js-arrow-parent">
+			<div class="hero__arrows_inner inner">
+				<div class="hero__prev-arrow js-hero-prev">
+					{{ mixins.icon('arrow-left') }}
+				</div>
+				<div class="hero__next-arrow js-hero-next">
+					{{ mixins.icon('arrow-right') }}
+				</div>
+			</div>
+		</div>
         <div class="hero__slider hero-slider js-hero-slider">
             {% for slide in [
                 {
@@ -20,7 +24,7 @@
                     img: 'slide1'
                 },
                 {
-                    title: 'ПРАЗДНИЧНОЕ  ПРЕДЛОЖЕНИЕ: “НЕДЕЛЯ  ДЛЯ  ДВОИХ”',
+                    title: '2ПРАЗДНИЧНОЕ  ПРЕДЛОЖЕНИЕ: “НЕДЕЛЯ  ДЛЯ  ДВОИХ”',
                     text: 'РЕКЛАМНЫЙ ТЕКСТ 
                     РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ 
                     РЕКЛАМНЫЙ  ТЕКСТИК 
@@ -29,7 +33,7 @@
                     img: 'slide1'
                 },
                 {
-                    title: 'ПРАЗДНИЧНОЕ  ПРЕДЛОЖЕНИЕ: “НЕДЕЛЯ  ДЛЯ  ДВОИХ”',
+                    title: '3ПРАЗДНИЧНОЕ  ПРЕДЛОЖЕНИЕ: “НЕДЕЛЯ  ДЛЯ  ДВОИХ”',
                     text: 'РЕКЛАМНЫЙ ТЕКСТ 
                     РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ 
                     РЕКЛАМНЫЙ  ТЕКСТИК 

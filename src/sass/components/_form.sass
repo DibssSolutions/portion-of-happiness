@@ -8,22 +8,30 @@
 		padding: 0 15px
 		+flex-size(40%)
 		&-md
-			+flex-size(58%)
+			padding: 0 15px
+			+flex-size(60%)
 	&__btn
 		margin-top: 10px
+		.thanks &
+			text-align: left
 		.subscription &
 			margin-top: 0
 			margin-left: 65px
 		.form_main &
 			margin-top: 35px
 		.person &
-			
+			margin-top: 40px
+			text-align: left
+		.enter &
+			margin-top: 32px
+			text-align: left
 	.subscription &
 		display: flex
 		align-items: center
 		
 .form-group
-	margin-top: 15px
+	position: relative
+	margin-top: 10px
 	.subscription &
 		max-width: 427px
 		width: 100%
@@ -31,20 +39,18 @@
 	input, textarea
 		width: 100%
 		+roboto
-		+f(20px, 400)
-		color: $black-opa
-		padding: 16px 20px
+		+f(15px, 400)
+		color: $brown
+		padding: 13px 12px
 		border-radius: 5px
 		+placeholder
 			+roboto
-			+f(20px, 400)
-			color: $black-opa
+			+f(15px, 400)
+			color: $brown
 			+lg
 				font-size: 14px
 			+sm
 				font-size: 12px
-			.person &
-				color: $brown
 		+lg
 			font-size: 14px
 			padding: 10px
@@ -55,11 +61,9 @@
 				font-size: 0
 	textarea
 		resize: none
-		min-height: 180px
+		min-height: 100px
 		height: 100%
 		border: none
-		+lg
-			min-height: 100px
 	.form_main &
 		input, textarea
 			color: $black
@@ -67,10 +71,10 @@
 				color: $black
 
 .modal
-	border: 15px solid $coffee-opa
-	padding: 60px 80px 40px 70px
+	border: 10px solid $coffee-opa
+	padding: 38px 50px 35px
 	background-color: $white-opa
-	max-width: 1120px
+	max-width: 840px
 	width: 100%
 	position: relative
 	+lg
@@ -79,12 +83,16 @@
 	+sm
 		border: 5px solid $coffee-opa
 		padding: 20px
-	.subscription &
-		max-width: 840px
 	&__title
-		margin-bottom: 45px
-		.subscription &, .person &
-			text-align: left
+		margin-bottom: 16px
+		text-align: left
+		.enter &
+			max-width: 530px
+			margin-bottom: 50px
+		.subscription &
+			margin-bottom: 40px
+		span
+			color: $green
 	&__descr
 		margin-top: 10px
 	&__btn
@@ -99,12 +107,34 @@
 		max-width: 600px
 	&__check-wrap
 		display: flex
+		margin-top: 10px
 	&__check
+		line-height: 46px
 		&:not(:first-child)
 			margin-left: 26px
 
+.subscription
+	.help-block.form-error
+		position: absolute
+		top: calc(100% + 20px)
+		left: 0
 .confirm
+	font-size: 11px
 	&__link
 		text-decoration: underline
 		&_block
 			display: block
+.enter
+	&__form
+		padding-top: 35px
+	&__bottom
+		text-align: left
+		margin-top: 110px
+		font-size: 11px
+	&__link
+		text-decoration: underline
+
+
+.help-block.form-error
+	font-size: 15px
+	color: $red

@@ -125,7 +125,29 @@
 	+lg
 		+circle(55)
 	.person &
-		+circle(26)
+		width: 100%
+		height: 100%
+	&__text
+		position: relative
+		padding-left: 40px
+		font-size: 15px
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			left: 0
+			+circle(26)
+			background-color: $white
+		&:after
+			content: ''
+			position: absolute
+			top: calc(50%)
+			transform: translateY(-50%)
+			left: 3px
+			+circle(20)
+			background-color: transparent
+			transition: background-color .2s
 	input
 		position: absolute
 		opacity: 0
@@ -133,6 +155,8 @@
 		width: 0
 		&:checked
 			+ .check__checkmark
+			+ .check__text:after
+				background-color: $green
 		&:checked
 			+ .check__checkmark:after
 				background-color: $green
@@ -145,9 +169,6 @@
 		border: 1px solid $brown
 		+lg
 			+circle(55)
-		.person &
-			+circle(26)
-			border: none
 		&:after
 			content: ""
 			position: absolute
@@ -157,9 +178,6 @@
 			transition: background-color .2s
 			+lg
 				+circle(40)
-			.person &
-				+circle(20)
-				background-color: transparent
 	&__text
 		display: inline-block
 
