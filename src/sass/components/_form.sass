@@ -78,11 +78,11 @@
 	width: 100%
 	position: relative
 	+lg
-		padding: 40px
-		max-width: 780px
+		padding: 30px
 	+sm
 		border: 5px solid $coffee-opa
 		padding: 20px
+		max-width: 600px
 	&__title
 		margin-bottom: 16px
 		text-align: left
@@ -99,6 +99,9 @@
 		position: absolute
 		top: 25px
 		right: 25px
+		+sm
+			top: 5px
+			right: 5px
 		.subscription &
 			color: $brown
 	&__confirm

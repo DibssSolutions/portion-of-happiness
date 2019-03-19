@@ -2,34 +2,32 @@ import slick from 'slick-carousel';
 import { mediaWidth } from '../utils';
 import { WIN } from '../constants';
 
-const heroSlider = $('.js-hero-slider');
-const arrowParent = $('.js-arrow-parent');
-// arrowParent.each(function() {
-//   const this_ = $(this);
-//   let arrPrev = this_.find($('.js-hero-prev'));
-//   let arrNext = this_.find($('.js-hero-next'));
-// });
-let heroPrev = $('.js-hero-prev', arrowParent);
-let heroNext = $('.js-hero-next', arrowParent);
-heroSlider.slick({
-  dots: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  prevArrow: heroPrev,
-  nextArrow: heroNext,
-  fade: true,
-  cssEase: 'linear',
-  customPaging: (slider, pageIndex) => {
-    return $('<button class="hero__dot"></button>');
-  },
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        veriableWidth: true,
+const sliderParent = $('.js-hero-slider-wrap');
+sliderParent.each(function() {
+  const this_ = $(this);
+  const heroSlider = this_.find('.js-hero-slider');
+  let arrPrev = this_.find($('.js-hero-prev'));
+  let arrNext = this_.find($('.js-hero-next'));
+  heroSlider.slick({
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: arrPrev,
+    nextArrow: arrNext,
+    fade: true,
+    cssEase: 'linear',
+    customPaging: (slider, pageIndex) => {
+      return $('<button class="hero__dot"></button>');
+    },
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          veriableWidth: true,
 		  arrows: false
-      }
+        }
 	  }]
+  });
 });
 
 const menuSlider = $('.js-menu-slider');

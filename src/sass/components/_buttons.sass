@@ -84,6 +84,9 @@
 	background-color: transparent
 	outline: none
 	position: relative
+	+sm
+		width: 25px
+		height: 25px
 	&:before, &:after
 		content: ''
 		position: absolute
@@ -93,6 +96,8 @@
 		color: $white
 		top: 50%
 		left: 50%
+		+sm
+			width: 16px
 	&:before
 		transform: translate(-50%, -50%) rotate(45deg)
 	&:after
@@ -101,14 +106,6 @@
 		border-color: $brown
 		&:before, &:after
 			background-color: $brown
-	// &_l
-	//     width: 40px
-	//     height: 40px
-	//     border-color: $brown
-	//     &:before, &:after
-	//         background-color: $brown
-	//         color: $brown
-	//         width: 25px
 
 .btn-border
 	padding: 10px 40px 10px 70px
