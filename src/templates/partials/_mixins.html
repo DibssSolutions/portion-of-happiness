@@ -75,17 +75,22 @@
 
 {# OFFER #}
 {% macro offer(props) %}
-	<div class="offer">
+	<div class="offer{% if props.class %} {{props.class}}{% endif %}">
 		<div class="offer__img">
 			<img src="./img/{{props.img}}" alt="">
 		</div>
 		<div class="offer__content">
+			{% if props.link %}
+			<a href="#" class="offer__link">{{props.link}}</a>
+			{% endif %}
 			<div class="offer__date title-s">{{props.date}}</div>
 			<h3 class="offer__title title-s">{{props.title | safe}}</h3>
 			<p>{{props.text}}</p>
+			{% if props.btn %}
 			<div class="offer__btn">
 				<a href="#" class="btn btn_pink"><span>{{props.btn}}</span></a>
 			</div>
+			{% endif %}
 		</div>
 	</div>
 {% endmacro %}

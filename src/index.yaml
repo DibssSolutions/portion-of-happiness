@@ -16,4 +16,6 @@ PageList:
 - file: menu.html
   ready: 50
 - file: stock.html
+  ready: 100
+- file: blog.html
   ready: 50
