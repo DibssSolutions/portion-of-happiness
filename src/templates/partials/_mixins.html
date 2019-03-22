@@ -72,3 +72,21 @@
 		</div>
 	</div>
 {% endmacro %}
+
+{# OFFER #}
+{% macro offer(props) %}
+	<div class="offer">
+		<div class="offer__img">
+			<img src="./img/{{props.img}}" alt="">
+		</div>
+		<div class="offer__content">
+			<div class="offer__date title-s">{{props.date}}</div>
+			<h3 class="offer__title title-s">{{props.title | safe}}</h3>
+			<p>{{props.text}}</p>
+			<div class="offer__btn">
+				<a href="#" class="btn btn_pink"><span>{{props.btn}}</span></a>
+			</div>
+		</div>
+	</div>
+{% endmacro %}
+{# OFFER #}

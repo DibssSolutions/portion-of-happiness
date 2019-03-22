@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg"><defs>
         <style>
+            .cls-1{fill:#fff;fill-opacity:0;stroke:#fff;stroke-linejoin:round;stroke-width:3px}
+        </style>
+    
+        <style>
+            .cls-1{fill:#fff;fill-opacity:0;stroke:#fff;stroke-linejoin:round;stroke-width:3px}
+        </style>
+    
+        <style>
             .cls-1,.cls-2{fill:#fff}.cls-1{fill-rule:evenodd}
         </style>
     
@@ -18,8 +26,28 @@
         <style>
             .cls-1{fill:#fff}
         </style>
-    </defs><symbol id="icon-arr-left" viewBox="0 0 451.847 451.847">
-    <path d="M97.141 225.92c0-8.095 3.091-16.192 9.259-22.366L300.689 9.27c12.359-12.359 32.397-12.359 44.751 0 12.354 12.354 12.354 32.388 0 44.748L173.525 225.92l171.903 171.909c12.354 12.354 12.354 32.391 0 44.744-12.354 12.365-32.386 12.365-44.745 0l-194.29-194.281c-6.167-6.177-9.252-14.274-9.252-22.372z"/>
+    </defs><symbol id="icon-arr-left" viewBox="0 0 13.95 25.09">
+    
+    <title>
+        arr-left
+    </title>
+    <g id="&#x421;&#x43B;&#x43E;&#x439;_2" data-name="&#x421;&#x43B;&#x43E;&#x439; 2">
+        <g id="&#x421;&#x43B;&#x43E;&#x439;_1-2" data-name="&#x421;&#x43B;&#x43E;&#x439; 1">
+            <path id="ts85a" class="cls-1" d="M12.45 2.11l-.61-.61L1.5 11.81l.61.61z"/>
+            <path id="ts85b" class="cls-1" d="M12.45 23l-.61.61L1.5 13.28l.61-.61z"/>
+        </g>
+    </g>
+</symbol><symbol id="icon-arr-right" viewBox="0 0 24.91 47.18">
+    
+    <title>
+        arr-right
+    </title>
+    <g id="&#x421;&#x43B;&#x43E;&#x439;_2" data-name="&#x421;&#x43B;&#x43E;&#x439; 2">
+        <g id="&#x421;&#x43B;&#x43E;&#x439;_1-2" data-name="&#x421;&#x43B;&#x43E;&#x439; 1">
+            <path id="wrv1a" class="cls-1" d="M1.5 2.71L2.72 1.5l20.69 20.63-1.22 1.21z"/>
+            <path id="wrv1b" class="cls-1" d="M1.5 44.47l1.22 1.21 20.69-20.62-1.22-1.22z"/>
+        </g>
+    </g>
 </symbol><symbol id="icon-arrow-down" viewBox="0 0 20.018 10.991">
     <g stroke-linecap="round" stroke-linejoin="round">
         <path d="M9.756 10.718l-.384-.365L.655 2.048l-.342-.326.306-.36.583-.686.343-.403.383.365 8.717 8.305.342.326-.306.36-.583.686-.342.403z"/>
