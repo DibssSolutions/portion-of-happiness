@@ -1,12 +1,12 @@
 .dishful
-	margin-bottom: 57px
+	margin-bottom: 42px
 	&__inner
 		position: relative
 	.icon
 		color: $brown
 	.menu-slider__text
 		max-width: none
-		padding: 0 50px
+		padding: 0 100px
 		text-align: center
 	.menu__next-arrow
 		right: 71px
@@ -23,7 +23,7 @@
 	&__title
 		width: 33.3%
 		text-align: center
-		padding: 13px 20px
+		padding: 10px 20px
 		cursor: pointer
 		transition: background-color .3s
 	&__body
@@ -38,15 +38,15 @@
 		display: flex
 		justify-content: space-between
 		align-items: flex-start
-		padding-top: 45px
-		padding-bottom: 25px
+		padding-top: 32px
+		padding-bottom: 19px
 	&__select
 		display: flex
-		padding-bottom: 28px
+		padding-bottom: 17px
 		padding-top: 10px
 	&__text
-		font-size: 27px
-		letter-spacing: .053em
+		font-size: 20px
+		letter-spacing: .06em
 	&__basket
 		color: $brown
 	&__dishes
@@ -55,7 +55,7 @@
 		margin: 0 -10px
 	&__item
 		width: 33.3%
-		padding: 0 10px 40px 10px
+		padding: 0 10px 30px 10px
 		position: relative
 
 
@@ -87,43 +87,40 @@
 		padding-bottom: 74.5%
 		+cover
 	&__title
-		padding: 44px 30px
-		&.title
-			color: $black
-			+roboto
-			line-height: 1.2
-			font-weight: 400
+		+roboto
+		+f(22px, 400)
+		letter-spacing: normal
+		text-transform: uppercase
+		color: $cardTitle
+		padding: 31px 23px 10px
 		+lg
-			padding: 30px 20px
+			padding: 31px 18px 10px
 	&__specification
 		display: flex
 		justify-content: space-between
-		padding: 5px 20px 15px
-		// +xxl
-		// 	flex-wrap: wrap
-		// 	justify-content: flex-start
+		padding: 25px 16px 15px
+		+lg
+			padding: 25px 11px 15px
 	&__check
 		margin-top: 71%
 		top: 0
-		right: 27px
+		right: 16px
 		z-index: 2
 		position: absolute
 		+lg
-			margin-top: 58%
-			right: 20px
+			margin-top: 65%
 
 
 
 .check
-	+circle(73)
+	width: 55px
+	height: 55px
 	display: inline-block
 	vertical-align: top
 	position: relative
 	cursor: pointer
 	font-size: 22px
 	user-select: none
-	+lg
-		+circle(55)
 	.person &
 		width: 100%
 		height: 100%
@@ -164,20 +161,16 @@
 		position: absolute
 		top: 0
 		left: 0
-		+circle(73)
+		+circle(55)
 		background-color: $white
 		border: 1px solid $brown
-		+lg
-			+circle(55)
 		&:after
 			content: ""
 			position: absolute
 			+vcenter
-			+circle(52)
+			+circle(40)
 			background-color: $grayMid
 			transition: background-color .2s
-			+lg
-				+circle(40)
 	&__text
 		display: inline-block
 
@@ -186,21 +179,21 @@
 	user-select: none
 	position: relative
 	&:not(:first-child)
-		margin-left: 40px
+		margin-left: 31px
 	.btn
 		+roboto
-		+f(18px, 500)
+		+f(14px, 500)
 		color: $brown
 		text-transform: uppercase
-		padding: 10px 45px 10px 20px
-		max-width: 186px
+		padding: 8px 45px 8px 12px
+		max-width: 138px
 		background-color: transparent
 		border: 1px solid $brown
 		border-radius: 20.5px
 		&:focus
 			outline: none!important
 	.dropdown
-		max-width: 186px
+		max-width: 138px
 		&-toggle
 			&:after
 				content: ''
@@ -210,10 +203,10 @@
 				border: none
 				background-image: url(../img/arrow-down.svg)
 				+cover
-				width: 21px
-				height: 11px
+				width: 16px
+				height: 8px
 				top: 9px
-				right: 20px
+				right: 15px
 	.bootstrap-select .dropdown-toggle .filter-option
 		position: relative
 		padding: 0

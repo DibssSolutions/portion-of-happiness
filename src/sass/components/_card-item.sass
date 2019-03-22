@@ -79,20 +79,22 @@
 		margin-right: 18px
 		margin-top: 6px
 		.main-dish__specification &
-			background-size: contain
 			margin-right: 10px
-			+r(1526)
-				width: 35px
-				height: 35px
+			width: 35px
+			height: 29px
+			+lg
+				width: 30px
+				height: 25px
 	.main-dish__specification &
-		padding: 10px
+		padding: 7px
 		align-items: flex-end
-		// +xxl
-		// 	font-size: 18px
+		+lg
+			font-size: 12px
+			align-items: center
 	&__aside
 		line-height: 1
 		.main-dish__specification &
-			font-size: 14px
+			font-size: 10px
 			text-align: center
 
 .recipe
