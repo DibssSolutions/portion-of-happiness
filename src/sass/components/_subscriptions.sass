@@ -1,0 +1,72 @@
+.subscriptions
+	&__title
+		padding-top: 50px
+	&__item
+		padding-top: 40px
+	&__bonus
+		padding-top: 65px
+
+.subscription-item
+	color: $cardTitle
+	padding: 34px 34px 22px
+	display: flex
+	justify-content: space-between
+	&__wrap
+		// max-width: 890px
+		// width: 100%
+		+flex-size(83.2%)
+	&__title
+		color: $green
+		font-size: 18px
+		text-transform: uppercase
+	&__main
+		padding-top: 8px
+	&__col
+		display: flex
+		&:not(:last-child)
+			padding-bottom: 10px
+			&.subscription-item__col_sm
+				padding-bottom: 3px
+	&__left
+		font-size: 18px
+		padding-right: 20px
+		// max-width: 687px
+		// width: 100%
+		+flex-size(79.3%)
+		span
+			font-weight: 700
+			text-transform: uppercase
+		+lg
+			max-width: 630px
+		.subscription-item__col_sm &
+			font-size: 15px
+		&_lg
+			font-size: 25px
+			span
+				text-transform: none
+	&__text-wrap
+		padding: 16px 0 30px
+	&__link
+		text-decoration: underline
+		display: block
+		font-size: 15px
+		opacity: 0.6
+		transition: opacity .3s
+		+hover
+			opacity: 1
+		&_unavailable
+			text-decoration: none
+			+hover
+				opacity: 0.6
+	&__right
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		margin-bottom: 15px
+	&__sum
+		text-align: right
+		font-size: 18px
+		span
+			display: block
+			font-size: 25px
+			font-weight: 700

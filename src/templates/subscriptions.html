@@ -1,0 +1,158 @@
+---
+title: Subscriptions
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+{{header.block()}}
+{{hero.block({class: 'hero_small'})}}
+{# {% include "partials/_form-main.html"%} #}
+<div class="cabinet">
+	<div class="cabinet__inner inner">
+		<div class="cabinet__user">
+			<div class="user">
+				<div class="user__person">
+					<div class="user__icon">{{mixins.icon('user')}}</div>
+					<div class="user__name">Анжелика Владимировна Августовская</div>
+				</div>
+				<div class="user__btn">
+					<a href="#" class="btn btn_green btn_square"><span><span class="user__points">2500</span> баллов</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="options">
+		<div class="options__inner inner">
+			<ul class="options__list">
+				<li class="options__item title-s">
+					<a href="#">личные данные</a>
+				</li>
+				<li class="options__item bg-powder-dark title-s">
+					<a href="#">Меню</a>
+				</li>
+				<li class="options__item title-s is-active">
+					<a href="#">Подписки</a>
+				</li>
+				<li class="options__item bg-powder-dark title-s">
+					<a href="#">Заказы</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="cabinet__inner inner">
+		<div class="subscriptions">
+			<h2 class="subscriptions__title title">ваши подписки:</h2>
+			<div class="subscriptions__item">
+				<div class="subscription-item bg-powder">
+					<div class="subscription-item__wrap">
+						<h3 class="subscription-item__title">Подписка № 1</h3>
+						<div class="subscription-item__main">
+							<div class="subscription-item__col">
+								<div class="subscription-item__left">Состав: <span>название меню</span></div>
+								<a href="#" class="subscription-item__link">Изменить</a>
+							</div>
+							<div class="subscription-item__col">
+								<div class="subscription-item__left">Количество: <span>5 ужинов</span></div>
+								<a href="#" class="subscription-item__link">Изменить</a>
+							</div>
+							<div class="subscription-item__col">
+								<div class="subscription-item__left"><span>на 2 персоны</span></div>
+								<a href="#" class="subscription-item__link">Изменить</a>
+							</div>
+							<div class="subscription-item__text-wrap">
+								<div class="subscription-item__col subscription-item__col_sm">
+									<div class="subscription-item__left">Адрес: Санкт-Петербург, Учительская ул., 15, корп, 2, кв, 19</div>
+									<a href="#" class="subscription-item__link">Изменить</a>
+								</div>
+								<div class="subscription-item__col subscription-item__col_sm">
+									<div class="subscription-item__left">Получатель: Анжелика Иванова, +7 921 882-45-24, хххххххх@mail.ru</div>
+									<a href="#" class="subscription-item__link">Изменить</a>
+								</div>
+								<div class="subscription-item__col subscription-item__col_sm">
+									<div class="subscription-item__left">Способ оплаты: банковская карта ХХХХ, предоплата</div>
+									<a href="#" class="subscription-item__link">Изменить</a>
+								</div>
+							</div>
+							<div class="subscription-item__col">
+								<div class="subscription-item__left subscription-item__left_lg">Доставка <span>по понедельникам, с 9.00 до 12.00</span></div>
+								<a href="#" class="subscription-item__link">Изменить</a>
+							</div>
+						</div>
+					</div>
+					<div class="subscription-item__right">
+						<div class="subscription-item__sum"><span>2500 руб. </span>ваш кешбэк:<br>25 бонусов</div>
+						<a href="#" class="subscription-item__link">Отменить подписку</a>
+					</div>
+				</div>
+			</div>
+			<div class="subscriptions__item">
+				<div class="subscription-item bg-powder">
+					<div class="subscription-item__wrap">
+						<h3 class="subscription-item__title">Подписка № 1</h3>
+						<div class="subscription-item__main">
+							<div class="subscription-item__col">
+								<div class="subscription-item__left">Состав: <span>название меню</span></div>
+								<div class="subscription-item__link subscription-item__link_unavailable">Недоступно для изменения</div>
+							</div>
+							<div class="subscription-item__col">
+								<div class="subscription-item__left">Количество: <span>5 ужинов</span></div>
+							</div>
+							<div class="subscription-item__col">
+								<div class="subscription-item__left"><span>на 2 персоны</span></div>
+							</div>
+							<div class="subscription-item__text-wrap">
+								<div class="subscription-item__col subscription-item__col_sm">
+									<div class="subscription-item__left">Адрес: Санкт-Петербург, Учительская ул., 15, корп, 2, кв, 19</div>
+									<a href="#" class="subscription-item__link">Изменить</a>
+								</div>
+								<div class="subscription-item__col subscription-item__col_sm">
+									<div class="subscription-item__left">Получатель: Анжелика Иванова, +7 921 882-45-24, хххххххх@mail.ru</div>
+									<a href="#" class="subscription-item__link">Изменить</a>
+								</div>
+								<div class="subscription-item__col subscription-item__col_sm">
+									<div class="subscription-item__left">Способ оплаты: банковская карта ХХХХ, предоплата</div>
+									<a href="#" class="subscription-item__link">Изменить</a>
+								</div>
+							</div>
+							<div class="subscription-item__col">
+								<div class="subscription-item__left subscription-item__left_lg">Доставка <span>по понедельникам, с 9.00 до 12.00</span></div>
+								<a href="#" class="subscription-item__link">Изменить</a>
+							</div>
+						</div>
+					</div>
+					<div class="subscription-item__right">
+						<div class="subscription-item__sum"><span>2500 руб. </span>ваш кешбэк:<br>25 бонусов</div>
+						<a href="#" class="subscription-item__link">Отменить подписку</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="subscriptions__bonus bonus">
+			<div class="bonus__share bg-green">
+				<div class="bonus__share-left">
+					<p>Поделись с другом промо-кодом и получи <span class="bonus__share-accent"><span>500 </span>бонусных рублей </span>на свой счет, после того как друг совершит свой первый заказ с твоим промо-кодом.</p>
+					<p class="bold">Ваш друг тоже получает 500 бонусных рублей на свой счет!</p>
+					<div class="bonus__promo">
+						<input type="text" class="bonus__promocode" value="123456" readonly>
+						<div class="bonus__social">
+							<span>Поделись промокодом:</span>
+							<ul class="bonus__social-list">
+								<li class="bonus__social-item"><a href="#">{{mixins.icon('vk')}}</a></li>
+								<li class="bonus__social-item"><a href="#">{{mixins.icon('facebook')}}</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="bonus__share-img">
+					<img src="./img/info-box.svg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{{footer.block({footerBottom: 'footer__bottom_big'})}}
+{{mob_menu.mob_block()}}
+{# {% include "partials/_form-sm.html"%} #}
+
+{% endblock %}
