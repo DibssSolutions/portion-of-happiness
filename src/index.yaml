@@ -25,3 +25,5 @@ PageList:
   ready: 100
 - file: order.html
   ready: 100
+- file: about.html
+  ready: 50
