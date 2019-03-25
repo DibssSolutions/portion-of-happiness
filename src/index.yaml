@@ -23,3 +23,5 @@ PageList:
   ready: 100
 - file: subscriptions.html
   ready: 100
+- file: order.html
+  ready: 100

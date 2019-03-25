@@ -14,7 +14,7 @@
 	&__wrap
 		// max-width: 890px
 		// width: 100%
-		+flex-size(83.2%)
+		+flex-size(81%)
 	&__title
 		color: $green
 		font-size: 18px
@@ -59,14 +59,33 @@
 			+hover
 				opacity: 0.6
 	&__right
-		display: flex
-		flex-direction: column
-		justify-content: space-between
 		margin-bottom: 15px
+.total
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	text-align: right
 	&__sum
-		text-align: right
 		font-size: 18px
 		span
 			display: block
 			font-size: 25px
 			font-weight: 700
+	&__link
+		text-decoration: underline
+		display: block
+		font-size: 15px
+		opacity: 0.6
+		transition: opacity .3s
+		+hover
+			opacity: 1
+		&_unavailable
+			text-decoration: none
+			+hover
+				opacity: 0.6
+	&__unavailable
+		font-size: 18px
+		opacity: 0.6
+	&__btn
+		.btn
+			font-size: 13px
