@@ -141,3 +141,23 @@
 </div>
 {% endmacro %}
 {# FAQ #}
+
+{# DELIVERY #}
+{% macro deliveryOptions(props) %}
+<div class="options options_delivery">
+	<div class="options__inner inner">
+		<ul class="options__list">
+			<li class="options__item bg-powder-dark title-s{% if props.first %} is-active{% endif %}">
+				<a href="#">москва</a>
+			</li>
+			<li class="options__item title-s{% if props.second %} is-active{% endif %}">
+				<a href="#">санкт-петербург</a>
+			</li>
+			<li class="options__item bg-powder-dark title-s{% if props.third %} is-active{% endif %}">
+				<a href="#">выбор</a>
+			</li>
+		</ul>
+	</div>
+</div>
+{% endmacro %}
+{# DELIVERY #}

@@ -113,8 +113,6 @@
 
 
 .check
-	width: 55px
-	height: 55px
 	display: inline-block
 	vertical-align: top
 	position: relative
@@ -124,10 +122,18 @@
 	.person &
 		width: 100%
 		height: 100%
+	.main-dish &
+		width: 55px
+		height: 55px
 	&__text
 		position: relative
 		padding-left: 40px
 		font-size: 15px
+		.delivery__day-check &
+			font-size: 18px
+			font-weight: 700
+			text-transform: uppercase
+			padding: 0
 		&:before
 			content: ''
 			position: absolute
@@ -136,15 +142,23 @@
 			left: 0
 			+circle(26)
 			background-color: $white
+			.delivery__day-check &
+				+circle(50)
+				background-color: $powder
+				top: -40px
 		&:after
 			content: ''
 			position: absolute
-			top: calc(50%)
+			top: 50%
 			transform: translateY(-50%)
 			left: 3px
 			+circle(20)
 			background-color: transparent
 			transition: background-color .2s
+			.delivery__day-check &
+				+circle(35)
+				top: -40px
+				left: 7.5px
 	input
 		position: absolute
 		opacity: 0

@@ -1,0 +1,91 @@
+---
+title: delivery
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+{{header.block()}}
+{{hero.block({class: 'hero_small'})}}
+{# {% include "partials/_form-main.html"%} #}
+<div class="about">
+	<div class="about__inner inner">
+		<h2 class="about__title title">Доставка и оплата</h2>
+	</div>
+	<div class="about__options">
+		{{mixins.deliveryOptions({first: true})}}
+	</div>
+</div>
+<div class="delivery">
+	<div class="delivery__inner inner">
+		<div class="delivery__top">
+			{% for item in [
+				{
+					title: 'Бесплатная доставкА ',
+					first: 'Бесплатная доставка по Москве + 30 км от МКАД при минимальной сумме заказа 2000 руб. Промо меню 1500 руб. для первого знакомства – исключение.',
+					second: 'Оплата возможна наличными курьеру при получении заказа или банковской картой он-лайн на сайте.'
+				},
+				{
+					title: 'платная доставкА ',
+					first: 'Если сумма заказа составляет менее 2000 руб. – стоимость доставки 500 руб.',
+					second: 'Оплата возможна наличными курьеру при получении заказа или банковской картой он-лайн на сайте.'
+				}
+				] %}
+				<div class="delivery__option">
+					<h3 class="delivery__option-title title-rob-xs">{{item.title}}</h3>
+					<p>{{item.first}}</p>
+					<p>{{item.second}}</p>
+				</div>
+			{% endfor %}
+		</div>
+		<div class="delivery__map-wrap">
+			<div class="delivery__map" style="background-image: url(./img/map.png)"></div>
+		</div>
+		<div class="delivery__day">
+			<div class="delivery__day-left">
+				<h4 class="delivery__day-title title-rob-xxs">день доставки</h4>
+				<div class="delivery__day-text">Выбирете день доставки</div>
+			</div>
+			<div class="delivery__day-right">
+				<div class="delivery__day-check">
+					<label class="check">
+						<input type="checkbox" checked>
+						<span class="check__text">понедельник</span>
+					</label>
+				</div>
+				<div class="delivery__day-check">
+					<label class="check">
+						<input type="checkbox">
+						<span class="check__text">воскресенье</span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="delivery__interval">
+			<div class="delivery__day-left">
+				<h4 class="delivery__day-title title-rob-xxs">Интервалы доставки</h4>
+				<div class="delivery__day-text">Доставка с 10:00 до 22:00 часов.<br>Вы сами выбираете удобный<br>для вас интервал доставки.</div>
+			</div>
+			<div class="delivery__interval-right">
+				<ul class="interval">
+					{% for item in [
+						'10.00',
+						'14.00',
+						'18.00',
+						'22.00'
+						] %}
+						<li class="interval__item">
+							<div class="interval__circle"></div>
+							<div class="interval__time">{{item}}</div>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+{{footer.block({footerBottom: 'footer__bottom_big'})}}
+{{mob_menu.mob_block()}}
+{# {% include "partials/_form-sm.html"%} #}
+
+{% endblock %}
