@@ -8,6 +8,8 @@
 		p
 			&:not(:last-child)
 				padding-bottom: 10px
+	&__gallery
+		padding: 40px 0
 
 .about-item
 	padding-top: 40px
@@ -15,12 +17,99 @@
 		padding-top: 35px
 
 .gallery
-	display: flex
+	// display: flex
+	margin: -4px
 	&__item
+		width: 25%
 		height: 360px
-		padding: 0 4px
+		padding: 4px
 		img
 			width: 100%
 			height: 100%
 			object-fit: cover
 			object-position: center
+		&_lg
+			width: 35%
+		&_sm
+			width: 20%
+
+.suppliers
+	&__title
+		padding-bottom: 35px
+	&__companies
+		margin-top: 45px
+		padding: 40px 0
+	&__list
+		margin: -18px -13px
+		display: flex
+		// flex-wrap: wrap
+	&__item
+		margin: 18px 13px
+		+cover
+		width: 12%
+		height: 0
+		padding-bottom: 12%
+	&__text
+		padding-top: 40px
+
+.vacancies
+	&__item
+		padding-top: 50px
+	&__join
+		padding: 60px 0
+		font-weight: 700
+		a
+			text-decoration: underline
+			font-size: 22px
+			font-weight: 400
+			color: #1761b4
+	&__photo
+		padding-bottom: 40px
+.vacancies-item
+	&__title
+		padding: 13px 20px
+		color: $brown
+	p
+		padding-top: 20px
+		font-size: 12px
+	&__params
+		padding-top: 10px
+		font-weight: 700
+
+.contacts
+	&__main
+		padding-top: 75px
+		display: flex
+	&__left
+		width: 35%
+		padding-right: 38px
+	&__right
+		width: 65%
+	&__map
+		height: 366px
+	&__item
+		&:not(:first-child)
+			padding-top: 75px
+	&__form
+		padding: 40px 0
+		margin: 70px 0 40px
+		&-title
+			color: $brown
+		.form
+			padding-top: 20px
+		&-btn
+			padding-top: 20px
+
+.contacts-item
+	&__title
+		color: $brown
+		padding: 13px 20px
+	&__list
+		padding-top: 20px
+	&__item
+		font-weight: 700
+		&:not(:first-child)
+			padding-top: 4px
+	&__link
+		&_underline
+			text-decoration: underline

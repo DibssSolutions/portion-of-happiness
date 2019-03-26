@@ -118,3 +118,26 @@
 </div>
 {% endmacro %}
 {# MENU #}
+
+{# FAQ #}
+{% macro faqOptions(props) %}
+<div class="options">
+	<div class="options__inner inner">
+		<ul class="options__list">
+			<li class="options__item title-s{% if props.first %} is-active{% endif %}">
+				<a href="#">доставка</a>
+			</li>
+			<li class="options__item bg-powder-dark title-s{% if props.second %} is-active{% endif %}">
+				<a href="#">оплата и цены</a>
+			</li>
+			<li class="options__item title-s{% if props.third %} is-active{% endif %}">
+				<a href="#">подписка</a>
+			</li>
+			<li class="options__item bg-powder-dark title-s{% if props.fourth %} is-active{% endif %}">
+				<a href="#">баллы</a>
+			</li>
+		</ul>
+	</div>
+</div>
+{% endmacro %}
+{# FAQ #}
