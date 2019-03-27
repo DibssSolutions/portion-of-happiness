@@ -44,3 +44,49 @@
 	color: $black
 	+lg
 		font-size: 14px
+
+.article,
+article
+	p
+		line-height: 1.4
+		&:not(:first-child)
+			margin-top: 10px
+		&:not(:last-child)
+			margin-bottom: 10px
+	ol
+		font-size: 12px
+		line-height: 1.68
+		counter-reset: num
+		list-style-type: none
+		padding-left: 30px
+		li
+			padding-left: 25px
+			position: relative
+			&:before
+				counter-increment: num
+				content: counter(num)
+				position: absolute
+				left: 0
+				top: 0
+				// height: 1px
+				// width: 15px
+	ul
+		font-size: 12px
+		line-height: 1.68
+		li
+	&__title,
+	h1
+		@extend .title
+		&:not(:last-child)
+			margin-bottom: 52px
+			margin-top: 50px
+	h2, h3, h4
+		@extend .title-s
+		color: $brown
+		&:not(:last-child)
+			margin-bottom: 20px
+			margin-top: 40px
+	h3
+		font-size: 18px
+	h4
+		font-size: 16px

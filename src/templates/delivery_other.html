@@ -13,7 +13,7 @@ title: delivery
 		<h2 class="about__title title">Доставка и оплата</h2>
 	</div>
 	<div class="about__options">
-		{{mixins.deliveryOptions({first: true})}}
+		{{mixins.deliveryOptions({third: true})}}
 	</div>
 </div>
 <div class="delivery">
@@ -39,7 +39,7 @@ title: delivery
 			{% endfor %}
 		</div>
 		<div class="delivery__map-wrap">
-			<div class="delivery__map" style="background-image: url(./img/map.png)"></div>
+			<div class="delivery__map" style="background-image: url(./img/map_other.png)"></div>
 		</div>
 		<div class="delivery__day">
 			<div class="delivery__day-left">
@@ -53,12 +53,6 @@ title: delivery
 						<span class="check__text">понедельник</span>
 					</label>
 				</div>
-				<div class="delivery__day-check">
-					<label class="check">
-						<input type="checkbox">
-						<span class="check__text">воскресенье</span>
-					</label>
-				</div>
 			</div>
 		</div>
 		<div class="delivery__interval">
@@ -69,10 +63,8 @@ title: delivery
 			<div class="delivery__interval-right">
 				<ul class="interval">
 					{% for item in [
-						'10.00',
-						'14.00',
-						'18.00',
-						'22.00'
+						'12.00',
+						'17.00'
 						] %}
 						<li class="interval__item">
 							<div class="interval__circle"></div>

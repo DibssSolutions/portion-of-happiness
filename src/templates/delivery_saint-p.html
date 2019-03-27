@@ -13,7 +13,7 @@ title: delivery
 		<h2 class="about__title title">Доставка и оплата</h2>
 	</div>
 	<div class="about__options">
-		{{mixins.deliveryOptions({first: true})}}
+		{{mixins.deliveryOptions({second: true})}}
 	</div>
 </div>
 <div class="delivery">
@@ -22,7 +22,7 @@ title: delivery
 			{% for item in [
 				{
 					title: 'Бесплатная доставкА ',
-					first: 'Бесплатная доставка по Москве + 30 км от МКАД при минимальной сумме заказа 2000 руб. Промо меню 1500 руб. для первого знакомства – исключение.',
+					first: 'Бесплатная доставка по Санкт-Петербургу + 50 км от КАД при минимальной сумме заказа 2000 руб. Промо меню 1500 руб. для первого знакомства – исключение.',
 					second: 'Оплата возможна наличными курьеру при получении заказа или банковской картой он-лайн на сайте.'
 				},
 				{
@@ -39,7 +39,7 @@ title: delivery
 			{% endfor %}
 		</div>
 		<div class="delivery__map-wrap">
-			<div class="delivery__map" style="background-image: url(./img/map.png)"></div>
+			<div class="delivery__map" style="background-image: url(./img/map_sp.png)"></div>
 		</div>
 		<div class="delivery__day">
 			<div class="delivery__day-left">
@@ -51,6 +51,18 @@ title: delivery
 					<label class="check">
 						<input type="checkbox" checked>
 						<span class="check__text">понедельник</span>
+					</label>
+				</div>
+				<div class="delivery__day-check">
+					<label class="check">
+						<input type="checkbox">
+						<span class="check__text">пятница</span>
+					</label>
+				</div>
+				<div class="delivery__day-check">
+					<label class="check">
+						<input type="checkbox">
+						<span class="check__text">суббота</span>
 					</label>
 				</div>
 				<div class="delivery__day-check">
