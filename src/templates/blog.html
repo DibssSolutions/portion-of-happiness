@@ -25,6 +25,43 @@ title: Blog
 				{{mixins.offer(item)}}
 			</div>
 		{% endfor %}
+		<div class="inner">
+			<div class="blog__grid">
+				{% for item in [
+					{
+						class: 'blog-item_first',
+						img: 'blogItem.png',
+						link: 'Наши новости',
+						date: '01.03.2019',
+						title: 'название тема сообщения. Название Название Название'
+					},
+					{
+						class: 'blog-item_second',
+						img: 'blogItem.png',
+						link: 'Все о еде',
+						date: '01.03.2019',
+						title: 'название тема сообщения. Название Название Название'
+					},
+					{
+						class: 'blog-item_third',
+						img: 'blogItem.png',
+						link: 'Рецепт на заметку',
+						date: '01.03.2019',
+						title: 'название тема сообщения. Название Название Название Название',
+						vertical: true
+					},
+					{
+						class: 'blog-item_fourth',
+						img: 'blogItem.png',
+						link: 'Наши новости',
+						date: '01.03.2019',
+						title: 'название тема сообщения. Название Название Название'
+					}
+				] %}
+					{{ mixins.blogItem(item) }}
+				{% endfor %}
+			</div>
+		</div>
 	</div>
 </div>
 {{footer.block({footerBottom: 'footer__bottom_big'})}}

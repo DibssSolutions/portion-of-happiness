@@ -170,3 +170,15 @@
 </div>
 {% endmacro %}
 {# PROPOSAL #}
+
+{# BLOG #}
+{% macro blogItem(props) %}
+<div class="blog-item{% if props.vertical %} blog-item_vertical{% endif %}{% if props.class %} {{props.class}}{% endif %}" style="background-image: url(./img/{{props.img}})">
+	<div class="blog-item__content">
+		<a href="#" class="blog-item__link">{{props.link}}</a>
+		<div class="blog-item__date">{{props.date}}</div>
+		<h3 class="blog-item__title title-xs">{{props.title}}</h3>
+	</div>
+</div>
+{% endmacro %}
+{# BLOG #}
