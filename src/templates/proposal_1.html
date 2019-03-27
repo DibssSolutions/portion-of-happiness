@@ -1,0 +1,95 @@
+---
+title: proposal
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+{{header.block()}}
+<div class="proposal">
+	<div class="proposal__inner inner">
+		<div class="proposal__top">
+			{% for item in [{
+				title: 'акция 1 <br> «Название название Название название товары из лавки, отдельные позиции»',
+				subtitle: 'с 1 марта до 1 апреля 2019 г.',
+				btn: 'быстрый заказ'
+			}] %}
+				{{ mixins.proposalTop(item) }}
+			{% endfor %}
+		</div>
+	</div>
+	<div class="proposal__content bg-green">
+		<div class="inner">
+			<div class="proposal__main">
+				<div class="proposal__main-left">
+					<div class="proposal__main-text">Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню под</div>
+					<p>разделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном </p>
+					<p>в левом дополнительном блоке и статичный текст о компании.  меню подразделов в левом дополнительном рневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном бл оке и статичный текст о компании. </p>
+				</div>
+				<div class="proposal__main-img" style="background-image: url(./img/info1.png)"></div>
+			</div>
+			<div class="proposal__choice">
+				<h2 class="proposal__choice-title title">Сделай свой выбор:</h2>
+				<div class="proposal__choice-row">
+					{% for item in [
+						{
+							img: 'desert.png',
+							title: 'Фермерский творог Фермерский творог Фермерский творог',
+							specification: [
+								{
+									icon: 'spec3',
+									text: '165 калл',
+									aside: '/100гр'
+								}
+							],
+							aside: '525'
+						},
+						{
+							img: 'desert.png',
+							title: 'Брокколи',
+							specification: [
+								{
+									icon: 'spec3',
+									text: '165 калл',
+									aside: '/100гр'
+								}
+							],
+							aside: '525'
+						},
+						{
+							img: 'desert.png',
+							title: 'Фермерский творог Фермерский творог Фермерский творог',
+							specification: [
+								{
+									icon: 'spec3',
+									text: '165 калл',
+									aside: '/100гр'
+								}
+							],
+							aside: '525'
+						}
+					] %}
+					<div class="proposal__choice-col">
+						{{ mixins.dishCard(item) }}
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="inner">
+		<div class="proposal__btn">
+			<a href="#" class="btn btn-border">
+				{{mixins.icon('arr-left')}}
+				<span>вернутся в акции</span>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="footer-wrap">
+	{{footer.block({footerBottom: 'footer__bottom_big'})}}
+</div>
+{{mob_menu.mob_block()}}
+{# {% include "partials/_form-sm.html"%} #}
+
+{% endblock %}

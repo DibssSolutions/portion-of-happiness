@@ -31,26 +31,15 @@
 
 {% macro dishCard(props) %}
 <div class="main-dish">
-		<a href="#" class="main-dish__link">
-			<div class="main-dish__inner">
+	<a href="#" class="main-dish__link">
+		<div class="main-dish__inner">
+			<div class="main-dish__wrap">
 				<div class="main-dish__img" style="background-image: url(./img/{{props.img}})"></div>
 				<h3 class="main-dish__title">{{props.title}}</h3>
+			</div>
+			<div class="main-dish__wrap-bot">
 				<div class="main-dish__specification">
-				{% for spec in [
-					{
-						icon: 'spec1',
-						text: '250 гр'
-					},
-					{
-						icon: 'spec2',
-						text: '35 мин'
-					},
-					{
-						icon: 'spec3',
-						text: '165 калл',
-						aside: '/100гр'
-					}
-					] %}
+				{% for spec in props.specification %}
 					<div class="specification">
 						<div class="specification__icon" style="background-image: url(./img/{{spec.icon}}.png)"></div>
 						<div class="specification__text">
@@ -62,15 +51,19 @@
 					</div>
 				{% endfor %}
 				</div>
+				{% if props.aside %}
+				<div class="main-dish__aside"><span>{{props.aside}}</span> руб.</div>
+				{% endif %}
 			</div>
-		</a>
-		<div class="main-dish__check ">
-			<label class="check">
-				<input type="checkbox">
-				<span class="check__checkmark"></span>
-			</label>
 		</div>
+	</a>
+	<div class="main-dish__check ">
+		<label class="check">
+			<input type="checkbox">
+			<span class="check__checkmark"></span>
+		</label>
 	</div>
+</div>
 {% endmacro %}
 
 {# OFFER #}
@@ -161,3 +154,19 @@
 </div>
 {% endmacro %}
 {# DELIVERY #}
+
+{# PROPOSAL #}
+{% macro proposalTop(props) %}
+<div class="proposal-top">
+	<h2 class="proposal-top__title title">{{props.title | safe}}</h2>
+	<div class="proposal-top__footer">
+		<h3 class="proposal-top__subtitle title-s">{{props.subtitle}}</h3>
+		{% if props.btn %}
+		<div class="proposal-top__btn">
+			<a href="#" class="btn btn_green btn_xl"><span>{{props.btn}}</span></a>
+		</div>
+		{% endif %}
+	</div>
+</div>
+{% endmacro %}
+{# PROPOSAL #}

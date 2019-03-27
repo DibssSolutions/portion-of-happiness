@@ -15,6 +15,9 @@
 	display: flex
 	justify-content: space-between
 	font-size: 18px
+	&.order_empty
+		display: block
+		padding: 75px 0 108px
 	&__main
 		padding-right: 40px
 	&__header
@@ -28,3 +31,11 @@
 			font-size: 20px
 			font-weight: 700
 			text-transform: uppercase
+	&__message
+		font-size: 27px
+		color: $green
+		text-align: center
+	&__btn
+		.order_empty &
+			max-width: 200px
+			margin: 25px auto 0

@@ -11,6 +11,9 @@
 	padding: 34px 34px 22px
 	display: flex
 	justify-content: space-between
+	&.subscription-item_empty
+		display: block
+		padding: 75px 0 108px
 	&__wrap
 		// max-width: 890px
 		// width: 100%
@@ -60,6 +63,14 @@
 				opacity: 0.6
 	&__right
 		margin-bottom: 15px
+	&__message
+		font-size: 27px
+		color: $green
+		text-align: center
+	&__btn
+		.subscription-item_empty &
+			max-width: 200px
+			margin: 25px auto 0
 .total
 	display: flex
 	flex-direction: column

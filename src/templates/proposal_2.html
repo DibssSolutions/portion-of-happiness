@@ -1,0 +1,69 @@
+---
+title: proposal
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+{{header.block()}}
+<div class="proposal">
+	<div class="proposal__inner inner">
+		<div class="proposal__top">
+			{% for item in [{
+				title: 'акция 2 <br>«специальное меню»',
+				subtitle: 'с 1 марта до 1 апреля 2019 г.',
+				btn: 'быстрый заказ'
+			}] %}
+				{{ mixins.proposalTop(item) }}
+			{% endfor %}
+		</div>
+	</div>
+	<div class="proposal__content bg-powder">
+		<div class="inner">
+			<div class="proposal__choice">
+				<h2 class="proposal__choice-title title">Сделай свой выбор:</h2>
+				<div class="proposal__choice-row">
+					{% for item in range(0, 5) %}
+						<div class="proposal__choice-col">
+							{{ mixins.dishCard(
+								{
+									img: 'choice-dish.png',
+									title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами СОЧНАЯ ГОВЯДИНА',
+									specification: [
+										{
+											icon: 'spec1',
+											text: '250 гр'
+										},
+										{
+											icon: 'spec2',
+											text: '35 мин'
+										},
+										{
+											icon: 'spec3',
+											text: '165 калл',
+											aside: '/100гр'
+										}
+									],
+									aside: '525'
+								}) }}
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="inner">
+		<div class="proposal__btn">
+			<a href="#" class="btn btn-border">
+				{{mixins.icon('arr-left')}}
+				<span>вернутся в акции</span>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="footer-wrap">
+	{{footer.block({footerBottom: 'footer__bottom_big'})}}
+</div>
+{{mob_menu.mob_block()}}
+{# {% include "partials/_form-sm.html"%} #}
+
+{% endblock %}

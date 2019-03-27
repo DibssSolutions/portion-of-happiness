@@ -60,7 +60,22 @@
 								{{ mixins.dishCard(
 									{
 										img: 'choice-dish.png',
-										title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами'
+										title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами',
+										specification: [
+											{
+												icon: 'spec1',
+												text: '250 гр'
+											},
+											{
+												icon: 'spec2',
+												text: '35 мин'
+											},
+											{
+												icon: 'spec3',
+												text: '165 калл',
+												aside: '/100гр'
+											}
+										]
 									}) }}
 							</li>
 						{% endfor %}
@@ -103,7 +118,22 @@
 								{{ mixins.dishCard(
 									{
 										img: 'choice-dish.png',
-										title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами'
+										title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами',
+										specification: [
+											{
+												icon: 'spec1',
+												text: '250 гр'
+											},
+											{
+												icon: 'spec2',
+												text: '35 мин'
+											},
+											{
+												icon: 'spec3',
+												text: '165 калл',
+												aside: '/100гр'
+											}
+										]
 									}) }}
 							</li>
 						{% endfor %}
@@ -141,12 +171,28 @@
 							<div class="basket__btn"><a href="#" class="btn btn_green btn_sm"><span>оформить заказ</span></a></div>
 						</div>
 					</div>
-					<ul class="choice__dishes">{% for item in range(0, 6) %}
+					<ul class="choice__dishes">
+						{% for item in range(0, 6) %}
 							<li class="choice__item">
 								{{ mixins.dishCard(
 									{
 										img: 'choice-dish.png',
-										title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами'
+										title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами',
+										specification: [
+											{
+												icon: 'spec1',
+												text: '250 гр'
+											},
+											{
+												icon: 'spec2',
+												text: '35 мин'
+											},
+											{
+												icon: 'spec3',
+												text: '165 калл',
+												aside: '/100гр'
+											}
+										]
 									}) }}
 							</li>
 						{% endfor %}

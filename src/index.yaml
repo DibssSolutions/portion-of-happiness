@@ -17,13 +17,23 @@ PageList:
   ready: 50
 - file: stock.html
   ready: 100
+- file: proposal_1.html
+  ready: 50
+- file: proposal_2.html
+  ready: 50
+- file: proposal_3.html
+  ready: 50
 - file: blog.html
   ready: 50
 - file: cabinet.html
   ready: 100
 - file: subscriptions.html
   ready: 100
+- file: subscriptions_none.html
+  ready: 100
 - file: order.html
+  ready: 100
+- file: order_none.html
   ready: 100
 - file: about.html
   ready: 100
