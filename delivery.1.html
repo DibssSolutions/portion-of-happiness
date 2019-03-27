@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>contacts</title>
+    <title>delivery</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -200,106 +200,108 @@
       </div>
       <div class="about">
         <div class="about__inner inner">
-          <h2 class="about__title title">О сервисе</h2>
+          <h2 class="about__title title">Доставка и оплата</h2>
         </div>
         <div class="about__options">
-          <div class="options">
+          <div class="options options_delivery">
             <div class="options__inner inner">
               <ul class="options__list">
+                <li class="options__item bg-powder-dark title-s is-active">
+                  <a href="#">москва</a>
+                </li>
                 <li class="options__item title-s">
-                  <a href="#">наша команда</a>
+                  <a href="#">санкт-петербург</a>
                 </li>
                 <li class="options__item bg-powder-dark title-s">
-                  <a href="#">Поставщики</a>
-                </li>
-                <li class="options__item title-s">
-                  <a href="#">Вакансии</a>
-                </li>
-                <li class="options__item bg-powder-dark title-s is-active">
-                  <a href="#">Контакты</a>
+                  <a href="#">выбор</a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <div class="contacts">
-          <div class="contacts__inner inner">
-            <div class="contacts__main">
-              <div class="contacts__left">
-                <div class="contacts__item contacts-item">
-                  <h3 class="contacts-item__title title-s bg-gray">санкт-петербург</h3>
-                  <ul class="contacts-item__list">
-                    <li class="contacts-item__item">
-                      <a href="tel:+78126404911 ">+ 7 (812) 640 4 911</a>
-                    </li>
-                    <li class="contacts-item__item">
-                      <div>пер. Челиева, 13 А</div>
-                    </li>
-                    <li class="contacts-item__item">
-                      <a href="mailto:info@ps.delivery" class="contacts-item__link contacts-item__link_underline">info@ps.delivery</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="contacts__item contacts-item">
-                  <h3 class="contacts-item__title title-s bg-gray">Москва</h3>
-                  <ul class="contacts-item__list">
-                    <li class="contacts-item__item">
-                      <a href="tel:+78126404911 ">+ 7 (812) 640 4 911</a>
-                    </li>
-                    <li class="contacts-item__item">
-                      <a href="#">WhatsApp: 89992415985</a>
-                    </li>
-                    <li class="contacts-item__item">
-                      <a href="mailto:info@ps.delivery">info@ps.delivery</a>
-                    </li>
-                  </ul>
-                </div>
+      </div>
+      <div class="delivery">
+        <div class="delivery__inner inner">
+          <div class="delivery__top">
+            <div class="delivery__option">
+              <h3 class="delivery__option-title title-rob-xs">Бесплатная доставкА </h3>
+              <p>Бесплатная доставка по Москве + 30 км от МКАД при минимальной сумме заказа 2000 руб. Промо меню 1500 руб. для первого знакомства – исключение.</p>
+              <p>Оплата возможна наличными курьеру при получении заказа или банковской картой он-лайн на сайте.</p>
+            </div>
+            <div class="delivery__option">
+              <h3 class="delivery__option-title title-rob-xs">платная доставкА </h3>
+              <p>Если сумма заказа составляет менее 2000 руб. – стоимость доставки 500 руб.</p>
+              <p>Оплата возможна наличными курьеру при получении заказа или банковской картой он-лайн на сайте.</p>
+            </div>
+          </div>
+          <div class="delivery__map-wrap">
+            <div class="delivery__map" style="background-image: url(./img/map.png)"></div>
+          </div>
+          <div class="delivery__day">
+            <div class="delivery__day-left">
+              <h4 class="delivery__day-title title-rob-xxs">день доставки</h4>
+              <div class="delivery__day-text">Выбирете день доставки</div>
+            </div>
+            <div class="delivery__day-right">
+              <div class="delivery__day-check">
+                <label class="check">
+                  <input type="checkbox" checked>
+                  <span class="check__text">понедельник</span>
+                </label>
               </div>
-              <div class="contacts__right">
-                <div class="contacts__map map"></div>
+              <div class="delivery__day-check">
+                <label class="check">
+                  <input type="checkbox">
+                  <span class="check__text">воскресенье</span>
+                </label>
               </div>
             </div>
           </div>
-          <div class="contacts__form bg-green">
-            <div class="inner">
-              <h3 class="contacts__form-title title-s">обратная связь</h3>
-              <form action="/" class="form">
-                <div class="form__contacts-input">
-                  <div class="form-group">
-                    <input type="text" placeholder="Имя">
-                  </div>
-                  <div class="form-group">
-                    <input type="text" placeholder="Фамилия">
-                  </div>
-                  <div class="form__row">
-                    <div class="form__col">
-                      <div class="form-group">
-                        <input type="text" placeholder="ваш телефон">
-                      </div>
-                    </div>
-                    <div class="form__col-md">
-                      <div class="form-group">
-                        <input type="text" placeholder="ваш e-mail">
-                      </div>
-                    </div>
-                  </div>
+          <div class="delivery__interval">
+            <div class="delivery__day-left">
+              <h4 class="delivery__day-title title-rob-xxs">Интервалы доставки</h4>
+              <div class="delivery__day-text">Доставка с 10:00 до 22:00 часов.<br>Вы сами выбираете удобный<br>для вас интервал доставки.</div>
+            </div>
+            <div class="delivery__interval-right">
+              <ul class="interval">
+                <li class="interval__item">
+                  <div class="interval__circle"></div>
+                  <div class="interval__time">10.00</div>
+                </li>
+                <li class="interval__item">
+                  <div class="interval__circle"></div>
+                  <div class="interval__time">14.00</div>
+                </li>
+                <li class="interval__item">
+                  <div class="interval__circle"></div>
+                  <div class="interval__time">18.00</div>
+                </li>
+                <li class="interval__item">
+                  <div class="interval__circle"></div>
+                  <div class="interval__time">22.00</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="delivery__pay">
+            <h4 class="delivery__pay-title title-rob-xxs">варианты оплаты</h4>
+            <div class="delivery__pay-content">
+              <div class="delivery__pay-items">
+                <div class="pay-item">
+                  <div class="pay-item__icon" style="background-image: url(./img/by_courier.png)"></div>
+                  <div class="pay-item__text">Оплата наличными <br>курьеру</div>
                 </div>
-                <div class="form__contacts-text">Кому вы хотите написать:</div>
-                <div class="form__select">
-                  <select name="persons" class="js-select">
-                    <option value="">Администратору сайта</option>
-                    <option value="">Генеральному директору</option>
-                  </select>
+                <div class="pay-item">
+                  <div class="pay-item__icon" style="background-image: url(./img/by_card.png)"></div>
+                  <div class="pay-item__text">Оплата банковской картой <br>Visa или Mastercard курьеру</div>
                 </div>
-                <div class="form__contacts-textarea">
-                  <div class="form-group">
-                    <textarea placeholder="ваше сообщение"></textarea>
-                  </div>
+                <div class="pay-item pay-item_icon-sm">
+                  <div class="pay-item__icon" style="background-image: url(./img/by_phone.png)"></div>
+                  <div class="pay-item__text">Оплата он-лайн <br>на сайте</div>
                 </div>
-                <div class="contacts__form-btn">
-                  <button type="submit" class="btn btn_green"><span>отправить сообщение</span></button>
-                </div>
-              </form>
+              </div>
+              <div class="delivery__pay-aside"> Подробные условия доставки и возврата денежных средств смотрите в <a href="#">договоре-оферте</a>
+              </div>
             </div>
           </div>
         </div>
