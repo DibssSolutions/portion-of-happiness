@@ -69,7 +69,8 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "bootstrap-select": "^1.13.2",
-    "popper.js": "^1.14.4",
-    "isotope-layout": "^3.0.6"
+    "isotope-layout": "^3.0.6",
+    "isotope-packery": "^2.0.1",
+    "popper.js": "^1.14.4"
   }
 }

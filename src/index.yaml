@@ -25,6 +25,8 @@ PageList:
   ready: 50
 - file: blog.html
   ready: 50
+- file: blog-item.html
+  ready: 50
 - file: cabinet.html
   ready: 100
 - file: subscriptions.html
