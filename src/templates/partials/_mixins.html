@@ -182,3 +182,46 @@
 </div>
 {% endmacro %}
 {# BLOG #}
+
+{# RATING #}
+{% macro ratingItem(props) %}
+<div class="rating-item">
+	<div class="rating-item__inner">
+		<div class="rating-item__img" style="background-image: url(./img/{{props.img}})">
+			<div class="rating-item__mood-wrap">
+				{% for item in [
+					'ratingGood.png',
+					'ratingNormal.png',
+					'ratingBad.png'
+				] %}
+				<div class="rating-item__mood" style="background-image: url(./img/{{item}})"></div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="rating-item__content">
+			<h3 class="rating-item__title title-s">{{props.title}}</h3>
+			<div class="rating-item__subtitle">{{props.subtitle}}</div>
+		</div>
+	</div>
+</div>
+{% endmacro %}
+
+{% macro ratingEmpty(props) %}
+<div class="rating-item rating-item_empty">
+	<div class="rating-item__inner">
+		<h3 class="rating-item__title title-s">{{props.title}}</h3>
+		<div class="rating-item__icon" style="background-image: url(./img/ratingTruck.png)"></div>
+		<div class="rating-item__mood-wrap">
+			{% for item in [
+				'ratingGood.png',
+				'ratingNormal.png',
+				'ratingBad.png'
+			] %}
+			<div class="rating-item__mood" style="background-image: url(./img/{{item}})"></div>
+			{% endfor %}
+		</div>
+		</div>
+	</div>
+</div>
+{% endmacro %}
+{# RATING #}

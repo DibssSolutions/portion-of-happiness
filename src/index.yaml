@@ -49,6 +49,8 @@ PageList:
   ready: 100
 - file: reviews.html
   ready: 100
+- file: reviews_modal.html
+  ready: 100
 - file: delivery.html
   ready: 100
 - file: delivery_saint-p.html

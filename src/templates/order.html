@@ -179,4 +179,111 @@ title: Order
 {{mob_menu.mob_block()}}
 {# {% include "partials/_form-sm.html"%} #}
 
+<div class="modal" data-modal="rating">
+	<div class="modal__container" data-modal-container>
+		<div class="modal__inner">
+			<div class="rating">
+				<h3 class="modal__title title title_m">Нам очень важно ваше мнение!</h3>
+				<div class="rating__subtitle title-s">Оцените меню </div>
+				<div class="rating__list">
+					{% for item in [
+						{
+							img: 'menu-slide1.jpg',
+							title: 'СОЧНАЯ ГОВЯДИНА',
+							subtitle: 'Доставка 25.03.2018'
+						},
+						{
+							img: 'menu-slide1.jpg',
+							title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами с паровыми овощами',
+							subtitle: 'Доставка 25.03.2018'
+						},
+						{
+							img: 'menu-slide1.jpg',
+							title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами с паровыми овощами',
+							subtitle: 'Доставка 25.03.2018'
+						},
+						{
+							img: 'menu-slide1.jpg',
+							title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами с паровыми овощами',
+							subtitle: 'Доставка 25.03.2018'
+						},
+						{
+							img: 'menu-slide1.jpg',
+							title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами с паровыми овощами',
+							subtitle: 'Доставка 25.03.2018'
+						},
+						{
+							title: 'Оцените сервис доставки',
+							empty: true
+						}
+					] %}
+						{% if item.empty %}
+						{{mixins.ratingEmpty(item)}}
+						{% else %}
+						{{mixins.ratingItem(item)}}
+						{% endif %}
+					{% endfor %}
+				</div>
+				<div class="rating__shop">
+					<div class="rating__shop-left">
+						<h3 class="rating__shop-title title-s">Оцените товары из Лавки</h3>
+					</div>
+					<ol class="rating__shop-right">
+						{% for item in range(0, 3) %}
+						<li class="shop-good">
+							<div class="shop-good__name">Название товара</div>
+							<div class="shop-good__mood-wrap">
+								<div class="shop-good__mood" style="background-image: url(./img/ratingGood.png)"></div>
+								<div class="shop-good__mood" style="background-image: url(./img/ratingNormal.png)"></div>
+								<div class="shop-good__mood" style="background-image: url(./img/ratingBad.png)"></div>
+							</div>
+						</li>
+						{% endfor %}
+					</ol>
+				</div>
+				<form action="/" class="rating__form">
+					<div class="rating__form-textarea">
+						<div class="form-group">
+							<textarea placeholder="Коментарий"></textarea>
+						</div>
+					</div>
+					<div class="rating__form-btn">
+						<label class="check">
+							<input type="checkbox" checked>
+							<span class="check__text">Свяжитесь со мной по телефону</span>
+						</label>
+						<a href="#" class="btn btn_pink"><span>отправить отзыв</span></a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal is-open" data-modal="rating-sm">
+	<div class="modal__container" data-modal-container>
+		<div class="modal__inner">
+			<div class="rating-sm">
+				<div class="rating-sm__img" style="background-image: url(./img/ratingThx.png)">
+					<div class="rating-sm__text">
+						<h2 class="rating-sm__title title">большое спасибо!</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal" data-modal="rating-sm-manager">
+	<div class="modal__container" data-modal-container>
+		<div class="modal__inner">
+			<div class="rating-sm rating-sm_manager">
+				<div class="rating-sm__img" style="background-image: url(./img/ratingManager.png)">
+					<div class="rating-sm__text">
+						<h2 class="rating-sm__title title">большое спасибо!</h2>
+						<div class="rating-sm__aside">Наш менеджер перезвонит вам в течении часа</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 {% endblock %}

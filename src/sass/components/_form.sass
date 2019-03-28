@@ -103,6 +103,8 @@
 	.subscription &
 		display: flex
 		align-items: center
+	.review-form &
+		padding-top: 20px
 		
 .form-group
 	position: relative
@@ -128,6 +130,8 @@
 				font-size: 12px
 			.contacts__form &
 				color: rgba($black, .5)
+			.rating__form &
+				color: rgba($black, .5)
 		+lg
 			font-size: 14px
 			padding: 10px
@@ -143,78 +147,18 @@
 		border: none
 		.contacts__form &
 			min-height: 137px
+		.rating__form &
+			min-height: 156px
+			padding: 12px 18px
+		.review-form &
+			min-height: 145px
+
 	.form_main &
 		input, textarea
 			color: $black
 			+placeholder
 				color: $black
 
-.modal
-	border: 10px solid $coffee-opa
-	padding: 38px 50px 35px
-	background-color: $white-opa
-	max-width: 840px
-	width: 100%
-	position: relative
-	+lg
-		padding: 30px
-	+sm
-		border: 5px solid $coffee-opa
-		padding: 20px
-		max-width: 600px
-	&__title
-		margin-bottom: 16px
-		text-align: left
-		.enter &
-			max-width: 530px
-			margin-bottom: 50px
-		.subscription &
-			margin-bottom: 40px
-		span
-			color: $green
-	&__descr
-		margin-top: 10px
-	&__btn
-		position: absolute
-		top: 25px
-		right: 25px
-		+sm
-			top: 5px
-			right: 5px
-		.subscription &
-			color: $brown
-	&__confirm
-		margin-top: 90px
-		text-align: left
-		max-width: 600px
-	&__check-wrap
-		display: flex
-		margin-top: 10px
-	&__check
-		line-height: 46px
-		&:not(:first-child)
-			margin-left: 26px
-
-.subscription
-	.help-block.form-error
-		position: absolute
-		top: calc(100% + 20px)
-		left: 0
-.confirm
-	font-size: 11px
-	&__link
-		text-decoration: underline
-		&_block
-			display: block
-.enter
-	&__form
-		padding-top: 35px
-	&__bottom
-		text-align: left
-		margin-top: 110px
-		font-size: 11px
-	&__link
-		text-decoration: underline
 
 
 .help-block.form-error
