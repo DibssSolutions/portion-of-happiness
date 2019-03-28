@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg"><defs>
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
         <style>
             .cls-1{fill:#fff;fill-opacity:0;stroke:#fff;stroke-linejoin:round;stroke-width:3px}
         </style>
@@ -6,6 +6,9 @@
         <style>
             .cls-1{fill:#fff;fill-opacity:0;stroke:#fff;stroke-linejoin:round;stroke-width:3px}
         </style>
+    
+        <path id="a" d="M3152.54 6348.443l1.764-1.776-29.915-30.159-1.762 1.778z"/>
+        <path id="b" d="M3093.983 6348.443l-1.764-1.776 29.916-30.159 1.762 1.778z"/>
     
         <style>
             .cls-1,.cls-2{fill:#fff}.cls-1{fill-rule:evenodd}
@@ -48,6 +51,10 @@
             <path id="wrv1b" class="cls-1" d="M1.5 44.47l1.22 1.21 20.69-20.62-1.22-1.22z"/>
         </g>
     </g>
+</symbol><symbol id="icon-arr-to-top" viewBox="0 0 66 35">
+    
+    <use fill-opacity="0" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="3" xlink:href="#a" transform="translate(-3090 -6315)"/>
+    <use fill-opacity="0" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="3" xlink:href="#b" transform="translate(-3090 -6315)"/>
 </symbol><symbol id="icon-arrow-down" viewBox="0 0 20.018 10.991">
     <g stroke-linecap="round" stroke-linejoin="round">
         <path d="M9.756 10.718l-.384-.365L.655 2.048l-.342-.326.306-.36.583-.686.343-.403.383.365 8.717 8.305.342.326-.306.36-.583.686-.342.403z"/>
