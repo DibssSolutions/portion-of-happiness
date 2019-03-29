@@ -12,11 +12,7 @@
 	visibility: hidden
 	min-width: 320px
 	padding: 40px
-	// +vertical
-	display: flex
-	align-items: center
-	justify-content: center
-	+clr
+	+vertical
 	+gpu
 	overflow: auto
 	transition: opacity 0.3s, visibility 0.3s, z-index 0.3s
@@ -45,33 +41,28 @@
 		font-size: 16px
 
 .modal
+	&__container
+		max-width: 840px
+		width: 100%
+		text-align: left
+		+sm
+			max-width: 600px
 	&__inner
 		border: 10px solid $coffee-opa
 		padding: 38px 50px 35px
 		background-color: $white-opa
-		max-width: 840px
-		width: 100%
 		position: relative
 		+lg
 			padding: 30px
 		+sm
 			border: 5px solid $coffee-opa
 			padding: 20px
-			max-width: 600px
 		.rating &
 			max-width: 930px
 			padding: 32px 67px 35px
 			text-align: left
 		.rating-sm &
 			padding: 50px
-	&__title
-		margin-bottom: 16px
-		.review-form &
-			max-width: 500px
-			padding-right: 20px
-			color: $brown
-	&__descr
-		margin-top: 10px
 
 .modal-close
 	position: absolute
@@ -186,6 +177,9 @@
 	padding: 15px
 	&__inner
 		background-color: $white
+		display: flex
+		flex-direction: column
+		height: 100%
 		.rating-item_empty &
 			background-color: rgba($green, .1)
 			padding: 35px 40px
@@ -212,6 +206,7 @@
 	&__content
 		padding: 22px
 		color: $cardTitle
+		flex: 1 1 auto
 		display: flex
 		flex-direction: column
 		justify-content: space-between
@@ -230,9 +225,10 @@
 	&__img
 		+contain
 	&__text
-		padding: 12% 0
+		text-align: center
+		padding: 13% 0
 		.rating-sm_manager &
-			padding: 9% 0
+			padding: 10% 0
 	&__title
 		&.title
 			color: $green
@@ -242,10 +238,13 @@
 
 
 .review-form
-	&__inner
-		&.is-success
-			opacity: 0
-			visibility: hidden
+	&.is-success
+		opacity: 0
+		visibility: hidden
+	&__title
+		max-width: 500px
+		padding-right: 20px
+		color: $brown
 	&__head
 		display: flex
 		justify-content: space-between
@@ -284,6 +283,9 @@
 		max-width: 410px
 		margin: 0 auto
 		padding-top: 40px
+		+circe
+		+f(22px, 700)
+		text-transform: uppercase
 		color: $green
 		span
 			display: block

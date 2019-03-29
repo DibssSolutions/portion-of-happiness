@@ -7,3 +7,5 @@ import './_tabs';
 import './_select';
 import './_validation';
 import './_isotope';
+import './_scroll-top';
+import './_fancybox';

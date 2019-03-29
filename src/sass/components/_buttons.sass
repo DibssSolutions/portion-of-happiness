@@ -145,3 +145,24 @@
 		position: absolute
 		+vcenter
 
+.btn-top
+	opacity: 0
+	visibility: hidden
+	+circle(60)
+	background-color: transparent
+	display: flex
+	align-items: center
+	justify-content: center
+	border: 1px solid $brown
+	position: fixed
+	right: 40px
+	bottom: 70px
+	z-index: 5
+	color: $brown
+	font-size: 40px
+	transition: opacity .3s, visibility .3s
+	&.is-active
+		opacity: 1
+		visibility: visible
+	.icon
+		transform: rotate(-90deg)
