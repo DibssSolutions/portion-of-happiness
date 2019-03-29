@@ -15,8 +15,15 @@
 	width: 45.3%
 	float: left
 .blog-item
+	display: block
 	+cover
 	padding-left: 208px
+	+hover
+		.blog-item__content
+			background-color: rgba(#7d6a5b, .6)
+			color: $white
+		.blog-item__link
+			color: $white
 	&.blog-item_vertical
 		width: 32.5%
 		padding-left: 0
@@ -29,11 +36,6 @@
 		font-weight: 700
 		color: $brown
 		transition: background-color .5s, color .5s
-		+hover
-			background-color: rgba(#7d6a5b, .6)
-			color: $white
-			.blog-item__link
-				color: $white
 		.blog-item_vertical &
 			min-height: 236px
 			padding: 25px 40px

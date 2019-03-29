@@ -173,13 +173,13 @@
 
 {# BLOG #}
 {% macro blogItem(props) %}
-<div class="blog-item js-gallery-item{% if props.vertical %} blog-item_vertical{% endif %}{% if props.class %} {{props.class}}{% endif %}" style="background-image: url(./img/{{props.img}})">
+<a href="#" class="blog-item js-gallery-item{% if props.vertical %} blog-item_vertical{% endif %}{% if props.class %} {{props.class}}{% endif %}" style="background-image: url(./img/{{props.img}})">
 	<div class="blog-item__content">
-		<a href="#" class="blog-item__link">{{props.link}}</a>
+		<div class="blog-item__link">{{props.link}}</div>
 		<div class="blog-item__date">{{props.date}}</div>
 		<h3 class="blog-item__title title-xs">{{props.title}}</h3>
 	</div>
-</div>
+</a>
 {% endmacro %}
 {# BLOG #}
 
@@ -194,7 +194,12 @@
 					'ratingNormal.png',
 					'ratingBad.png'
 				] %}
-				<div class="rating-item__mood" style="background-image: url(./img/{{item}})"></div>
+				<!-- <div class="rating-item__mood" style="background-image: url(./img/{{item}})"></div> -->
+				<label class="rating-item__mood check">
+					<input type="checkbox">
+					<img src="./img/ratingGood.png" alt="" class="rating-item__mood-icon rating-item__mood-icon_checked">
+					<img src="./img/ratingNormal.png" alt="" class="rating-item__mood-icon rating-item__mood-icon_disabled">
+				</label>
 				{% endfor %}
 			</div>
 		</div>
@@ -217,7 +222,12 @@
 				'ratingNormal.png',
 				'ratingBad.png'
 			] %}
-			<div class="rating-item__mood" style="background-image: url(./img/{{item}})"></div>
+			<!-- <div class="rating-item__mood" style="background-image: url(./img/{{item}})"></div> -->
+			<label class="rating-item__mood check">
+				<input type="checkbox">
+				<img src="./img/ratingGood.png" alt="" class="rating-item__mood-icon rating-item__mood-icon_checked">
+				<img src="./img/ratingNormal.png" alt="" class="rating-item__mood-icon rating-item__mood-icon_disabled">
+			</label>
 			{% endfor %}
 		</div>
 		</div>

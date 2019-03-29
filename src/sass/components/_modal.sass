@@ -104,8 +104,11 @@
 	&__title
 		max-width: 530px
 		margin-bottom: 50px
-	&__form
-		padding-top: 35px
+		min-height: 102px
+		+lg
+			max-width: 500px
+		a
+			color: $green
 	&__bottom
 		text-align: left
 		margin-top: 110px
@@ -191,9 +194,9 @@
 	&__mood
 		width: 60px
 		height: 60px
-		+cover
 		margin: 0 10px
 		cursor: pointer
+		position: relative
 		&-wrap
 			background-color: rgba($white, .7)
 			padding: 25px 32px 15px
@@ -203,6 +206,20 @@
 				background-color: transparent
 				padding: 60px 0 20px
 				margin: 0 -10px
+		&-icon
+			position: absolute
+			top: 0
+			left: 0
+			right: 
+			bottom: 0
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: center
+			transition: opacity .3s, visibility .3s
+			&_checked
+				opacity: 0
+				visibility: hidden
 	&__content
 		padding: 22px
 		color: $cardTitle

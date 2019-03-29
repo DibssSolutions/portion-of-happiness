@@ -233,9 +233,21 @@ title: Order
 						<li class="shop-good">
 							<div class="shop-good__name">Название товара</div>
 							<div class="shop-good__mood-wrap">
-								<div class="shop-good__mood" style="background-image: url(./img/ratingGood.png)"></div>
-								<div class="shop-good__mood" style="background-image: url(./img/ratingNormal.png)"></div>
-								<div class="shop-good__mood" style="background-image: url(./img/ratingBad.png)"></div>
+								<label class="shop-good__mood check">
+									<input type="checkbox" checked>
+									<img src="./img/ratingGood.png" alt="" class="rating-item__mood-icon rating-item__mood-icon_checked">
+									<img src="./img/ratingNormal.png" alt="" class="rating-item__mood-icon rating-item__mood-icon_disabled">
+								</label>
+								<label class="shop-good__mood check">
+									<input type="checkbox">
+									<img src="./img/ratingGood.png" alt="" class="rating-item__mood-icon rating-item__mood-icon_checked">
+									<img src="./img/ratingNormal.png" alt="" class="rating-item__mood-icon rating-item__mood-icon_disabled">
+								</label>
+								<label class="shop-good__mood check">
+									<input type="checkbox">
+									<img src="./img/ratingGood.png" alt="" class="rating-item__mood-icon rating-item__mood-icon_checked">
+									<img src="./img/ratingBad.png" alt="" class="rating-item__mood-icon rating-item__mood-icon_disabled">
+								</label>
 							</div>
 						</li>
 						{% endfor %}

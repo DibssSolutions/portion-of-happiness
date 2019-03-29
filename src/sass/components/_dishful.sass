@@ -190,6 +190,12 @@
 			+ .check__checkmark
 			+ .check__text:after
 				background-color: $green
+			+ .rating-item__mood-icon_checked
+				opacity: 1
+				visibility: visible
+			~ .rating-item__mood-icon_disabled
+				opacity: 0
+				visibility: hidden
 		&:checked
 			+ .check__checkmark:after
 				background-color: $green
