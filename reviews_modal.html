@@ -469,33 +469,35 @@
         </div>
       </div>
       <div class="modal is-open" data-modal="review-form">
-        <div class="review-form modal-item modal__container" data-modal-container>
-          <div class="review-form modal__inner is-success">
-            <div class="review-form__head">
-              <h2 class="review-form__title title-s">Оставьте ваш отзыв о нашем сервисе Ваше мнение нам очень важно!</h2>
-              <div class="review-form__icon" style="background-image: url(./img/ratingGood.png)"></div>
+        <div class="modal__container" data-modal-container>
+          <div class="modal__inner">
+            <div class="review-form is-success">
+              <div class="review-form__head">
+                <h2 class="review-form__title title-s">Оставьте ваш отзыв о нашем сервисе Ваше мнение нам очень важно!</h2>
+                <div class="review-form__icon" style="background-image: url(./img/ratingGood.png)"></div>
+              </div>
+              <form action="/" class="review-form__form form is-success">
+                <div class="form-group">
+                  <input type="text" placeholder="Ваше имя">
+                </div>
+                <div class="form-group">
+                  <textarea placeholder="Ваши отзыв"></textarea>
+                </div>
+                <a href="#" class="review-form__form-link">
+                  <div class="review-form__photo" style="background-image: url(./img/formPhoto.png)"></div> Присоединить до 5 фото фото
+                </a>
+                <div class="review-form__btn">
+                  <button type="button" class="btn btn_green"><span>отправить</span></button>
+                </div>
+              </form>
             </div>
-            <form action="/" class="review-form__form form is-success">
-              <div class="form-group">
-                <input type="text" placeholder="Ваше имя">
-              </div>
-              <div class="form-group">
-                <textarea placeholder="Ваши отзыв"></textarea>
-              </div>
-              <a href="#" class="review-form__form-link">
-                <div class="review-form__photo" style="background-image: url(./img/formPhoto.png)"></div> Присоединить до 5 фото фото
-              </a>
-              <div class="review-form__btn">
-                <button type="button" class="btn btn_green"><span>отправить</span></button>
-              </div>
-            </form>
           </div>
           <div class="modal-close">
             <button type="button" class="btn-close btn-close_brown" data-modal-close></button>
           </div>
           <div class="success">
             <h2 class="success__title title-s">ваш отзыв успешно отправлен.</h2>
-            <div class="success__text title-s"><span>Спасибо за озыв. </span>Мы стараемся стать лучше, и ваше мнение о нашем сервисе помогает нам в этом! </div>
+            <div class="success__text"><span>Спасибо за озыв. </span>Мы стараемся стать лучше, и ваше мнение о нашем сервисе помогает нам в этом! </div>
             <div class="success__icon" style="background-image: url(./img/ratingGood.png)"></div>
           </div>
         </div>
