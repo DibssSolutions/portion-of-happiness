@@ -1,0 +1,467 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Subscriptions</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+
+  <body>
+    <!-- BEGIN content -->
+    <div class="out">
+      <header class="header js-header">
+        <div class="header__top">
+          <div class="header__inner inner">
+            <div class="header__toggle js-toggle">
+              <div class="header__toggle-icon js-toggle-icon"></div>
+            </div>
+            <div class="header__left">
+              <div class="header__city">
+                <div class="city">
+                  <div class="city__current">Санкт-Петербург</div>
+                  <div class="city__arrow">
+                    <svg class="icon icon-arrow-down">
+                      <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+                    </svg>
+                  </div>
+                  <ul class="city__list">
+                    <li class="city__item"><a href="#">Москва</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="header__phone"><a href="tel:+78129991929">+7 812 <span>999 1929</span></a></div>
+            </div>
+            <div class="header__logo">
+              <a href="#">
+                <img src="./img/logo.svg" alt="logotype">
+              </a>
+            </div>
+            <div class="header__right">
+              <h1 class="header__title">
+                <a href="#">
+                  <svg class="icon icon-logo-mob">
+                    <use xlink:href="img/sprite.svg#icon-logo-mob"></use>
+                  </svg>
+                </a>
+              </h1>
+              <div class="header__social">
+                <a href="#" class="subscribe">ПОДПИСАТЬСЯ НА НОВОСТИ</a>
+                <ul class="social">
+                  <li class="social__item">
+                    <a href="#">
+                      <svg class="icon icon-insta">
+                        <use xlink:href="img/sprite.svg#icon-insta"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a href="#">
+                      <svg class="icon icon-vk">
+                        <use xlink:href="img/sprite.svg#icon-vk"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a href="#">
+                      <svg class="icon icon-facebook">
+                        <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="account-wrap">
+                <a href="#" class="btn btn_pink btn_sm"><span>войти</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="header__inner inner">
+            <div class="header__left">
+              <ul class="main-menu">
+                <li class="main-menu__item main-menu__item_submenu">
+                  <a href="#" class="main-menu__link">меню <span class="main-menu__arrow">
+                      <svg class="icon icon-arrow-down">
+                        <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <ul class="main-menu__submenu">
+                    <li class="main-menu__submenu-item"><a href="#" class="main-menu__submenu-link">домашнее меню</a></li>
+                    <li class="main-menu__submenu-item"><a href="#" class="main-menu__submenu-link">шеф-меню</a></li>
+                    <li class="main-menu__submenu-item"><a href="#" class="main-menu__submenu-link">легкое меню</a></li>
+                    <li class="main-menu__submenu-item"><a href="#" class="main-menu__submenu-link">блюда на выбор</a></li>
+                  </ul>
+                </li>
+                <li class="main-menu__item"><a href="#" class="main-menu__link">лавка</a></li>
+                <li class="main-menu__item"><a href="#" class="main-menu__link">акции</a></li>
+                <li class="main-menu__item"><a href="#" class="main-menu__link">блог</a></li>
+                <li class="main-menu__item"><a href="#" class="main-menu__link">о сервисе</a></li>
+              </ul>
+            </div>
+            <div class="header__right">
+              <div class="header__basket basket">
+                <div class="basket__text">
+                  <div class="basket__title">моя покупка:</div>
+                  <div class="basket__sum">3750</div>
+                  <div class="basket__currency">руб.</div>
+                </div>
+                <div class="basket__btn"><a href="#" class="btn btn_orange"><span>заказать</span></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="hero hero_small">
+        <div class="hero__inner js-hero-slider-wrap">
+          <div class="hero__arrows">
+            <div class="hero__arrows_inner inner">
+              <div class="hero__prev-arrow js-hero-prev">
+                <svg class="icon icon-arrow-left">
+                  <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                </svg>
+              </div>
+              <div class="hero__next-arrow js-hero-next">
+                <svg class="icon icon-arrow-right">
+                  <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="hero__slider hero-slider js-hero-slider">
+            <div class="hero-slider__slide">
+              <div class="hero-slider__bg" style="background-image: url(./img/slide1.jpg)">
+                <div class="hero-slider__inner inner">
+                  <div class="hero-slider__text">
+                    <div class="hero-slider__title">
+                      <h2 class="title title_lg">ПРАЗДНИЧНОЕ ПРЕДЛОЖЕНИЕ:<br> “НЕДЕЛЯ ДЛЯ ДВОИХ”</h2>
+                      <div class="hero-slider__btn">
+                        <a href="#" class="btn btn_pink"><span>выбрать меню</span></a>
+                      </div>
+                    </div>
+                    <div class="hero-slider__content">
+                      <p> РЕКЛАМНЫЙ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТИК РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТИК </p>
+                      <div class="hero-slider__btn">
+                        <a href="#" class="btn btn_pink btn_md"><span>выбрать меню</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-slider__slide">
+              <div class="hero-slider__bg" style="background-image: url(./img/slide1.jpg)">
+                <div class="hero-slider__inner inner">
+                  <div class="hero-slider__text">
+                    <div class="hero-slider__title">
+                      <h2 class="title title_lg">2ПРАЗДНИЧНОЕ ПРЕДЛОЖЕНИЕ: “НЕДЕЛЯ ДЛЯ ДВОИХ”</h2>
+                      <div class="hero-slider__btn">
+                        <a href="#" class="btn btn_pink"><span>выбрать меню</span></a>
+                      </div>
+                    </div>
+                    <div class="hero-slider__content">
+                      <p> РЕКЛАМНЫЙ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТИК РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТИК </p>
+                      <div class="hero-slider__btn">
+                        <a href="#" class="btn btn_pink btn_md"><span>выбрать меню</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-slider__slide">
+              <div class="hero-slider__bg" style="background-image: url(./img/slide1.jpg)">
+                <div class="hero-slider__inner inner">
+                  <div class="hero-slider__text">
+                    <div class="hero-slider__title">
+                      <h2 class="title title_lg">3ПРАЗДНИЧНОЕ ПРЕДЛОЖЕНИЕ: “НЕДЕЛЯ ДЛЯ ДВОИХ”</h2>
+                      <div class="hero-slider__btn">
+                        <a href="#" class="btn btn_pink"><span>выбрать меню</span></a>
+                      </div>
+                    </div>
+                    <div class="hero-slider__content">
+                      <p> РЕКЛАМНЫЙ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТИК РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТИК </p>
+                      <div class="hero-slider__btn">
+                        <a href="#" class="btn btn_pink btn_md"><span>выбрать меню</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cabinet">
+        <div class="cabinet__inner inner">
+          <div class="cabinet__user">
+            <div class="user">
+              <div class="user__person">
+                <div class="user__icon">
+                  <svg class="icon icon-user">
+                    <use xlink:href="img/sprite.svg#icon-user"></use>
+                  </svg>
+                </div>
+                <div class="user__name">Анжелика Владимировна Августовская</div>
+              </div>
+              <div class="user__btn">
+                <a href="#" class="btn btn_green btn_square"><span><span class="user__points">2500</span> баллов</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="options">
+          <div class="options__inner inner">
+            <ul class="options__list">
+              <li class="options__item title-s">
+                <a href="#">личные данные</a>
+              </li>
+              <li class="options__item bg-powder-dark title-s">
+                <a href="#">Меню</a>
+              </li>
+              <li class="options__item title-s">
+                <a href="#">Подписки</a>
+              </li>
+              <li class="options__item bg-powder-dark title-s is-active">
+                <a href="#">Заказы</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="order-page">
+          <div class="order-page__inner inner">
+            <h2 class="order-page__title title">Запланированные заказы </h2>
+            <div class="order-page__order">
+              <div class="order order_empty bg-powder">
+                <div class="order__message">У вас пока нет запланированных заказов</div>
+                <div class="order__btn">
+                  <a href="#" class="btn btn_green btn_wide">создать</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer__inner inner">
+          <div class="footer__top">
+            <div class="footer__logo">
+              <div class="footer-logo">
+                <svg class="icon icon-logo">
+                  <use xlink:href="img/sprite.svg#icon-logo"></use>
+                </svg>
+              </div>
+              <div class="footer-slogan">ДОСТАВЛЯЕМ<br> В КАЖДЫЙ ДОМ!</div>
+            </div>
+            <div class="footer__menu-wrap">
+              <div class="footer__menu-title">меню:</div>
+              <div class="footer__menu">
+                <ul class="footer__menu-block">
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">домашнее меню</a></li>
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">шеф-меню</a></li>
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">легкое меню</a></li>
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">блюда на выбор</a></li>
+                </ul>
+                <ul class="footer__menu-block">
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">лавка</a></li>
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">акции</a></li>
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">блог</a></li>
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">отзывы</a></li>
+                </ul>
+                <ul class="footer__menu-block">
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">как это работает</a></li>
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">доставка и оплата</a></li>
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">частые вопросы</a></li>
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">поставщики</a></li>
+                </ul>
+                <ul class="footer__menu-block">
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">о сервисе</a></li>
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">наша команда</a></li>
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">вакансии</a></li>
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">контакты</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__contacts">
+              <div class="footer__contacts-item">
+                <div class="footer__contacts-city">cанкт-петербург</div>
+                <a href="tel:+78129991929" class="footer__contacts-phone">+7 812 <span>999 1929</span></a>
+              </div>
+              <div class="footer__contacts-item">
+                <div class="footer__contacts-city">москва</div>
+                <a href="tel:+78129991929" class="footer__contacts-phone">+7 812 <span>999 1929</span></a>
+              </div>
+            </div>
+            <div class="footer__agree">
+              <a href="#" class="footer__agree-link">Пользовательское соглашение</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom footer__bottom_big">
+          <div class="footer__bottom-wrap inner">
+            <div class="footer__copyright"> © ПОРЦИЯ СЧАСТЬЯ 2019 </div>
+            <div class="footer__social">
+              <ul class="social">
+                <li class="social__item">
+                  <a href="#">
+                    <svg class="icon icon-insta">
+                      <use xlink:href="img/sprite.svg#icon-insta"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#">
+                    <svg class="icon icon-vk">
+                      <use xlink:href="img/sprite.svg#icon-vk"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#">
+                    <svg class="icon icon-facebook">
+                      <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+              <a href="#" class="subscribe">ПОДПИСАТЬСЯ НА НОВОСТИ</a>
+            </div>
+            <div class="footer__stores stores">
+              <div class="stores__item">
+                <a href="#"><img src="./img/apple.svg" alt=""></a>
+              </div>
+              <div class="stores__item">
+                <a href="#"><img src="./img/google-play.svg" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="mob-menu js-mob-menu">
+        <ul class="mob-menu__list">
+          <li class="mob-menu__item is-active"><a href="#" class="mob-menu__link">Главная</a></li>
+          <li class="mob-menu__item mob-menu__item_submenu">
+            <a href="#" class="mob-menu__link">меню</a>
+            <ul class="mob-menu__submenu">
+              <li class="mob-menu__submenu-item"><a href="#" class="mob-menu__submenu-link">домашнее меню</a></li>
+              <li class="mob-menu__submenu-item"><a href="#" class="mob-menu__submenu-link">шеф-меню</a></li>
+              <li class="mob-menu__submenu-item"><a href="#" class="mob-menu__submenu-link">легкое меню</a></li>
+              <li class="mob-menu__submenu-item"><a href="#" class="mob-menu__submenu-link">блюда на выбор</a></li>
+            </ul>
+          </li>
+          <li class="mob-menu__item"><a href="#" class="mob-menu__link">лавка</a></li>
+          <li class="mob-menu__item"><a href="#" class="mob-menu__link">акции</a></li>
+          <li class="mob-menu__item"><a href="#" class="mob-menu__link">о сервисе</a></li>
+        </ul>
+        <div class="mob-menu__contacts">
+          <div class="mob-menu__contacts-wrap">
+            <div class="mob-menu__arr" style="background-image: url(./img/arrow-city.png)"></div>
+            <div class="mob-menu__city">Санкт-Петербург</div>
+          </div>
+          <div class="mob-menu__phone"><a href="tel:+78129991929">+7 812 <span>999 1929</span></a></div>
+        </div>
+        <div class="mob-menu__buttons">
+          <a href="#" class="btn btn_pink btn_sm"><span>войти</span></a>
+          <a href="#" class="btn btn_green btn_sm"><span>зарегистрироваться</span></a>
+        </div>
+        <div class="mob-menu__socials">
+          <a href="#" class="mob-menu__socials-icon">
+            <svg class="icon icon-instagram-m">
+              <use xlink:href="img/sprite.svg#icon-instagram-m"></use>
+            </svg>
+          </a>
+          <a href="#" class="mob-menu__socials-icon">
+            <svg class="icon icon-vk-m">
+              <use xlink:href="img/sprite.svg#icon-vk-m"></use>
+            </svg>
+          </a>
+          <a href="#" class="mob-menu__socials-icon">
+            <svg class="icon icon-facebook-m">
+              <use xlink:href="img/sprite.svg#icon-facebook-m"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="mob-menu__aside">
+          <a href="#">доставка и оплата</a>
+          <a href="#">частые вопросы</a>
+          <a href="#">контакты</a>
+        </div>
+      </div>
+    </div>
+    <!-- END content -->
+    <div class="modal" data-modal="modalform">
+      <div class="modal__container" data-modal-container>
+        <div class="modal__inner">
+          <div class="form-main">
+            <h3 class="form-main__title title title_m">Спасибо, что обратились в наш сервис. <br>Оставьте свои данные, и наш менеджер свяжется с вами в ближайшее время</h3>
+            <form action="/" class="form form_main">
+              <div class="form-group">
+                <input type="text" class="form__input" placeholder="Ваше имя">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form__input" placeholder="Контактный телефон">
+              </div>
+              <div class="form-group">
+                <textarea class="form__textarea" name="help" placeholder="Ваши коментарии"></textarea>
+              </div>
+              <div class="form__btn">
+                <button type="submit" class="btn btn_green"><span>отправить</span></button>
+              </div>
+            </form>
+            <div class="modal-close">
+              <button type="button" class="btn-close btn-close_brown" data-modal-close></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=7a9648bf-398b-4673-ad66-512ef28875ce&lang=ru_RU" type="text/javascript"></script> -->
+    <!-- <script>
+		const map = document.querySelectorAll('.map');
+		if (map) {
+      if(ymaps) {
+			map.forEach(function(el) {
+				ymaps.ready(function() {
+				  var map = new ymaps.Map(el, {
+					center: [55.76, 37.64], 
+					zoom: 10
+				  });
+				  map.behaviors.disable('scrollZoom');
+				  map.controls.remove('smallMapDefaultSet');
+				  map.controls.remove('trafficControl');
+				  map.controls.remove('rulerControl');
+				  map.container.fitToViewport();
+				  if (map) {
+					  ymaps.modules.require(['Placemark', 'Circle'], function(Placemark, Circle) {
+						var placemark = new Placemark([55.76, 37.64],{},{
+							iconLayout: 'default#image',
+							iconImageHref: './img/point.png',
+							// Размеры метки.
+							iconImageSize: [39, 64],
+							// Смещение левого верхнего угла иконки относительно
+							// её "ножки" (точки привязки).
+							iconImageOffset: [-15, -64]
+						});
+						map.geoObjects.add(placemark);
+						// Балун откроется в точке «привязки» балуна — т. е. над меткой.
+						//placemark.balloon.open();
+					  });
+				  }
+				});
+      });
+    }
+			}
+        
+    </script> -->
+    <!-- END scripts -->
+  </body>
+
+</html>
