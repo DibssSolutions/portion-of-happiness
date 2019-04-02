@@ -10,39 +10,31 @@
 		z-index: 2
 		cursor: pointer
 		user-select: none
-		top: 72px
+		top: 54px
 		border-radius: 50%
 		transition: background-color .3s
 		+hover
 			background-color: rgba($black, .2)
-		+lg
-			top: 40px
 		.icon
 			display: block
-			font-size: 57px
-			+lg
-				font-size: 40px
+			font-size: 42px
 			+xs
 				font-size: 30px
 		.dishes-menu &
 			top: 0px
 			color: $brown
 		.dishful &
-			top: 44px
+			top: 35px
 	&__prev-arrow
-		left: 71px
+		left: 57px
 		+sm
 			left: 34px
 		+xs
 			left: 10px
 		.dishes-menu &
-			left: 75px
+			left: 59px
 	&__next-arrow
-		right: 542px
-		+xxl
-			right: 470px
-		+lg
-			right: 400px
+		right: 32%
 		+md
 			right: 71px
 		+sm
@@ -50,24 +42,24 @@
 		+xs
 			right: 10px
 		.dishes-menu &
-			right: 75px
+			right: 59px
 	.slick-list
 		overflow: visible
+	&__slider-wrap
+		position: relative
 
 .menu-slider
+	font-size: 0
 	white-space: nowrap
-	// overflow: hidden
 	opacity: 0
 	visibility: hidden
 	transition: opacity .3s, visibility .3s
 	&.slick-initialized
 		white-space: normal
-		// overflow: visible
 		opacity: 1
 		visibility: visible
 	.dishful &
 		white-space: normal
-		// overflow: visible
 		opacity: 1
 		visibility: visible
 	&:before,
@@ -86,11 +78,9 @@
 	&:after
 		right: 100%
 	&__slide
-		height: 850px
-		+lg
-			height: 700px
+		height: 637px
 		+sm
-			height: 580px
+			height: 500px
 		&-wrap
 			background-repeat: no-repeat
 			background-position: center
@@ -103,64 +93,71 @@
 			visibility: visible
 			transition: opacity .3s, visibility .3s
 	&__top
-		padding: 51px 43px
+		padding: 40px 0
 		display: flex
 		align-items: center
 		justify-content: space-between
 		background-color: rgba($white, .5)
 		line-height: 1.1
 		color: $brown
-		+lg
-			padding: 30px
-		+sm
-			background-color: $powder
-			// display: none // !!!!!!!!!!!!!!!!!!!!!!!!!!
+		.menu &
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			z-index: 1
+			+sm
+				position: static
+				background-color: $powder
 		&.menu-slider__top_display
 			display: none
 			+sm
 				display: block
 		.dishful &
-			padding-top: 41px
-			padding-bottom: 60px
+			padding-top: 35px
+			padding-bottom: 47px
 	&__bottom
-		+sm
-			// display: none //!!!!!!!!!!!!!!!!!!!!!!
+		.menu &
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			z-index: 1
+			+sm
+				position: static
+				margin-top: -89px
+			+ms
+				margin-top: -80px
 		&.menu-slider__bottom_display
 			display: none
 			+sm
 				display: block
 	&__text
-		padding: 0 170px 0 73px
-		max-width: 1150px
+		padding: 0 140px 0 91px
 		width: 100%
-		+xxl
-			padding-right: 100px
 		+lg
-			padding-left: 50px
-			padding-right: 120px
+			padding: 0 70px 0 91px
 		+sm
-			padding: 0 80px
+			padding: 0 90px
 			text-align: center
 		+xs
-			padding: 0 30px
+			padding: 0 50px
 	&__title
-		font-size: 45px
-		font-weight: 700
-		+circe
-		+xxl
-			font-size: 37px
 		+lg
 			font-size: 29px
 		span
-			font-weight: 900
+			text-transform: none
+			+sm
+				display: block
 	&__subtitle
 		margin-top: 8px
-		font-weight: 500
-		font-size: 24px
-		+xxl
-			font-size: 20px
-		+lg
-			font-size: 16px
+		font-size: 16px
+		+sm
+			max-width: 66%
+			text-align: center
+			margin: 8px auto 0
+		+ms
+			max-width: none
 	&__btn
 		flex-shrink: 0
 		+md
@@ -172,19 +169,16 @@
 				text-align: center
 				padding-top: 35px
 			+sm
-				padding-top: 210px
-			+ms
-				padding-top: 190px
+				padding-top: 30px
 	.slick-dots
+		z-index: 2
 		display: flex
 		position: absolute
-		bottom: 120px
+		bottom: 125px
 		left: 50%
 		transform: translateX(-50%)
 		li
 			padding: 0 10px
-		+ms
-			bottom: 95px
 		.hero__dot
 			&:before
 				content: ''
@@ -194,64 +188,48 @@
 				height: 200%
 
 .menu-list
-	display: flex
+	// display: flex
 	background-color: rgba($black, .35)
 	+sm
 		flex-wrap: wrap
-		position: relative
-		top: 180px
-	+ms
-		top: 140px
 	&__item
-		width: 33.33%
 		position: relative
 		color: $white
-		// +hover
-			// .menu-ingredients
-			// 	opacity: 1
-			// 	visibility: visible
-			// .menu-list__ingredients-wrap
-			// 	opacity: 1
-			// 	visibility: visible
 		+sm
 			width: 100%
 			position: static
 		&_green
 			.menu-list__link
-				// +hover
+				+hover
 					background-color: rgba($green, .5)
-				&.is-active
+				.slick-current &
 					background-color: rgba($green, .5)
 		&_orange
 			.menu-list__link
-				// +hover
+				+hover
 					background-color: rgba($orange, .5)
-				&.is-active
+				.slick-current &
 					background-color: rgba($orange, .5)
 		&_pink
 			.menu-list__link
-				// +hover
+				+hover
 					background-color: rgba($pink, .5)
-				&.is-active
+				.slick-current &
 					background-color: rgba($pink, .5)
 	&__link
-		padding: 45px 40px 44px
+		padding: 35px
 		display: flex
 		justify-content: center
 		align-items: center
 		text-transform: uppercase
-		font-size: 30px
+		font-size: 20px
 		font-weight: 700
 		+circe
 		transition: background-color .3s
-		// +hover
-		// 	.icon
-		// 		background-color: rgba($black, .2)
-		&.is-active
-			.icon
-				background-color: rgba($black, .2)
-		+xxl
-			font-size: 25px
+		.icon
+			transition: background-color .3s
+			+hover
+				background-color: rgba($white, .4)
 		+lg
 			font-size: 18px
 			padding: 25px
@@ -261,7 +239,7 @@
 		+sm
 			font-size: 28px
 			position: relative
-			padding: 25px
+			padding: 18px
 			padding-left: 40px
 		+ms
 			font-size: 20px
@@ -284,13 +262,11 @@
 			.icon
 				content: ''
 				position: absolute
-				font-size: 55px
+				font-size: 42px
 				top: 50%
 				transform: translateY(-50%)
 				right: 0
 				border-radius: 50%
-				+lg
-					font-size: 40px
 				+md
 					font-size: 25px
 				+sm
@@ -299,25 +275,18 @@
 					transform: none
 
 .menu-ingredients
-	padding: 1.7em 1.7em 1.7em 3em
+	padding: 40px 30px 30px
 	overflow: auto
 	color: $brown
-	font-size: 32px
+	font-size: 20px
 	font-weight: 700
 	+circe
 	text-transform: uppercase
 	line-height: 1.1
 	scrollbar-color: #c7c7cc #efeff4
 	scrollbar-width: thin
-	+xxl
-		font-size: 26px
-		max-height: 450px
-	+lg
-		font-size: 20px
-	+md
-		padding: 2em 1.5em
 	+sm
-		padding: 1.3em 2.2em 3.5em
+		padding: 29px 43px 63px
 	&::-webkit-scrollbar 
 		width: 6px
 		height: 6px
@@ -371,7 +340,7 @@
 	// transition: opacity .2s, visibility .2s
 	// z-index: -5
 	// transform: translateX(-100%)
-	&.is-active
+	.slick-current &
 		opacity: 1
 		visibility: visible
 		z-index: 2

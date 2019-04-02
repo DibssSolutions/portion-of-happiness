@@ -1,15 +1,15 @@
 .stock
-	padding: 40px 0 0 0
+	padding: 28px 0 0 0
 	background-color: $green-bg
 	+md
-		padding: 28px 0 30px
+		padding: 18px 0 30px
 	&__inner
-		// &:not(:first-child)
-		// 	padding: 0
+		+sm
+			padding: 0
 		.slick-dots
 			display: flex
 			position: absolute
-			bottom: -24px
+			bottom: -28px
 			left: 50%
 			transform: translateX(-50%)
 			li
@@ -23,20 +23,26 @@
 			justify-content: center
 	&__list
 		display: flex
-		margin-top: 25px
+		margin-top: 16px
 		justify-content: center
 		+md
 			// margin-top: 25px
 			display: block
 			position: relative
+		.slick-track
+			+md
+				display: flex
+		.slick-slide
+			+md
+				height: auto
+				& > div
+					height: 100%
 	&__link
 		color: $black
 		width: 25%
-		// cursor: pointer
 		+md
 			width: 100%
-			padding: 0 20px
-		+xs
+			height: 100%
 			padding: 0
 	&__btn
 		+md
@@ -50,8 +56,6 @@
 
 .stock-item
 	display: block
-	// max-width: 400px
-	font-size: 25px
 	height: 100%
 	background-color: rgba(0, 0, 0, 0)
 	transition: background-color .3s
@@ -68,21 +72,27 @@
 	+xs
 		max-width: none
 	&__img
-		// max-width: 400px
 		width: 100%
 		height: 0
-		padding-bottom: 94%
+		padding-bottom: 96%
 		+cover
 		+md
 			max-width: none
+		+sm
+			padding-bottom: 65%
 	&__text
-		padding: 1em 2em 1.6em 2.4em
-		+md
-			padding: 20px 10px
-		+xs
-			padding: 20px 50px
+		font-size: 13px
+		padding: 18px 27px
+		// +md
+		// 	padding: 18px 10px
+		// +xs
+		// 	padding: 18px 50px
 	&__date
+		font-size: 15px
 		font-weight: 700
 		transition: color .3s
-		+md
-			font-size: 22px
+		&:not(:first-child)
+			margin-top: 2px
+			margin-bottom: 2px
+		// +md
+		// 	font-size: 22px

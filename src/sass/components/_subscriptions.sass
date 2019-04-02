@@ -1,0 +1,102 @@
+.subscriptions
+	&__title
+		padding-top: 50px
+	&__item
+		padding-top: 40px
+	&__bonus
+		padding-top: 65px
+
+.subscription-item
+	color: $cardTitle
+	padding: 34px 34px 22px
+	display: flex
+	justify-content: space-between
+	&.subscription-item_empty
+		display: block
+		padding: 75px 0 108px
+	&__wrap
+		// max-width: 890px
+		// width: 100%
+		+flex-size(81%)
+	&__title
+		color: $green
+		font-size: 18px
+		text-transform: uppercase
+	&__main
+		padding-top: 8px
+	&__col
+		display: flex
+		&:not(:last-child)
+			padding-bottom: 10px
+			&.subscription-item__col_sm
+				padding-bottom: 3px
+	&__left
+		font-size: 18px
+		padding-right: 20px
+		// max-width: 687px
+		// width: 100%
+		+flex-size(79.3%)
+		span
+			font-weight: 700
+			text-transform: uppercase
+		+lg
+			max-width: 630px
+		.subscription-item__col_sm &
+			font-size: 15px
+		&_lg
+			font-size: 25px
+			span
+				text-transform: none
+	&__text-wrap
+		padding: 16px 0 30px
+	&__link
+		text-decoration: underline
+		display: block
+		font-size: 15px
+		opacity: 0.6
+		transition: opacity .3s
+		+hover
+			opacity: 1
+		&_unavailable
+			text-decoration: none
+			+hover
+				opacity: 0.6
+	&__right
+		margin-bottom: 15px
+	&__message
+		font-size: 27px
+		color: $green
+		text-align: center
+	&__btn
+		.subscription-item_empty &
+			max-width: 200px
+			margin: 25px auto 0
+.total
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	text-align: right
+	&__sum
+		font-size: 18px
+		span
+			display: block
+			font-size: 25px
+			font-weight: 700
+	&__link
+		text-decoration: underline
+		display: block
+		font-size: 15px
+		opacity: 0.6
+		transition: opacity .3s
+		+hover
+			opacity: 1
+		&_unavailable
+			text-decoration: none
+			+hover
+				opacity: 0.6
+	&__unavailable
+		font-size: 18px
+		opacity: 0.6
+	&__btn
+		.btn
+			font-size: 13px

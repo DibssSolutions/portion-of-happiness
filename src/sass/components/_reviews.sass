@@ -1,0 +1,52 @@
+.reviews
+	padding: 40px 0
+	&__top
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding-top: 35px
+	&__btn
+		display: flex
+		align-items: center
+		&-text
+			padding-right: 35px
+	&__wrap
+		padding-top: 35px
+	&__pagination-bottom
+		display: flex
+		justify-content: flex-end
+
+.testimonial-item
+	padding: 25px 0
+	&:nth-child(odd)
+		background-color: $powder
+	&__content
+		display: flex
+	&__avatar
+		+circle(125)
+		overflow: hidden
+		flex-shrink: 0
+		margin-right: 35px
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: center
+	&__info
+		p
+			font-size: 12px
+	&__user
+		padding-bottom: 10px
+		span
+			font-weight: 700
+			text-transform: uppercase
+	&__gallery
+		padding-top: 35px
+		margin: 0 -4px
+		display: flex
+		&-item
+			+cover
+			margin: 0 4px
+			width: 20%
+			height: 0
+			padding-bottom: 14%

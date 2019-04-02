@@ -1,5 +1,5 @@
 .info
-	padding: 32px 0
+	padding: 25px 0
 	&__inner
 		+md
 			padding: 0
@@ -9,6 +9,8 @@
 	display: flex
 	align-items: center
 	position: relative
+	// .about &
+	// 	min-height: 350px
 	&:before
 		content: ''
 		position: absolute
@@ -21,35 +23,42 @@
 		+md
 			left: 30%
 	&:not(:last-child)
-		margin-bottom: 27px
+		margin-bottom: 20px
 	&__img
-		max-width: 1065px
-		width: 66.5%
+		// max-width: 1065px
+		// width: 66.5%
+		+flex-size(67%)
 		height: 0
-		padding-bottom: 29.5%
+		padding-bottom: 31%
 		+cover
 		.info-item_order &
 			order: 2
+		.about &
+			padding-bottom: 29.5%
 		+md
 			min-height: 276px
+		+sm
+			+flex-size(50%)
 	&__main
-		max-width: 330px
 		margin: 0 auto
 		padding: 0 35px
-		// padding: 0 0 0 40px
-		// .info-item_order &
-		//     padding: 0 40px 0 0
 		+ms
 			padding: 0 10px
+		.about-item &
+			max-width: 250px
+		.vacancies__photo &
+			padding: 0 0 0 85px
+			+lg
+				padding-left: 40px
 	&__title
 		+sm
 			font-size: 22px
 		+ms
 			font-size: 18px
 	&__btn
-		margin-top: 40px
-		+lg
-			margin-top: 20px
+		margin-top: 30px
+		// +lg
+		// 	margin-top: 20px
 		+ms
 			.btn_md
 				min-width: auto

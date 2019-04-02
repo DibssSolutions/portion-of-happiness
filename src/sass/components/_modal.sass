@@ -1,6 +1,7 @@
 
 
 [data-modal]
+	background-color: rgba($brown, .4)
 	position: fixed
 	z-index: -1
 	top: 0
@@ -10,18 +11,16 @@
 	opacity: 0
 	visibility: hidden
 	min-width: 320px
-	padding: 0 40px
+	padding: 40px
 	+vertical
-	+clr
 	+gpu
 	overflow: auto
 	transition: opacity 0.3s, visibility 0.3s, z-index 0.3s
 	+sm
 		padding: 0 10px
-		max-width: 600px
 		width: 100%
 		margin: 0 auto
-	&.is-open
+	&.is-open, .is-success
 		opacity: 1
 		visibility: visible
 		z-index: 100
@@ -34,8 +33,281 @@
 	vertical-align: middle
 	display: inline-block
 [data-modal-close]
-	position: absolute
+	// position: absolute
 	background-color: transparent
 	font-size: 0
+	z-index: 5
 	.icon
 		font-size: 16px
+
+.modal
+	&__container
+		max-width: 840px
+		width: 100%
+		text-align: left
+		+sm
+			max-width: 600px
+	&__inner
+		border: 10px solid $coffee-opa
+		padding: 38px 50px 35px
+		background-color: $white-opa
+		position: relative
+		+lg
+			padding: 30px
+		+sm
+			border: 5px solid $coffee-opa
+			padding: 20px
+		.rating &
+			max-width: 930px
+			padding: 32px 67px 35px
+			text-align: left
+		.rating-sm &
+			padding: 50px
+
+.modal-close
+	position: absolute
+	top: 25px
+	right: 25px
+	+sm
+		top: 5px
+		right: 5px
+
+.subscription
+	&__title
+		margin-bottom: 40px
+	&__confirm
+		margin-top: 90px
+		text-align: left
+		max-width: 600px
+	.help-block.form-error
+		position: absolute
+		top: calc(100% + 20px)
+		left: 0
+
+.confirm
+	font-size: 11px
+	&__link
+		text-decoration: underline
+		&_block
+			display: block
+
+.person
+	&__check-wrap
+		display: flex
+		margin-top: 10px
+	&__check
+		line-height: 46px
+		&:not(:first-child)
+			margin-left: 26px
+
+.enter
+	&__title
+		max-width: 530px
+		margin-bottom: 50px
+		min-height: 102px
+		+lg
+			max-width: 500px
+		a
+			color: $green
+	&__bottom
+		text-align: left
+		margin-top: 110px
+		font-size: 11px
+	&__link
+		text-decoration: underline
+
+.rating
+	&__subtitle
+		color: $green
+	&__list
+		padding-top: 10px
+		margin: -15px
+		display: flex
+		flex-wrap: wrap
+	&__shop
+		padding-top: 46px
+		display: flex
+		&-left
+			width: 20%
+			padding-right: 40px
+		&-title
+			color: $green
+			line-height: 1.2
+			padding-top: 14px
+		&-right
+			width: 80%
+			padding-left: 20px
+			counter-reset: good
+			list-style-type: none
+	&__form
+		padding-top: 19px
+		&-btn
+			padding-top: 30px
+			display: flex
+			justify-content: space-between
+			a
+				min-width: 200px
+
+.shop-good
+	display: flex
+	justify-content: space-between
+	&:not(:last-child)
+		padding-bottom: 25px
+	&__name
+		position: relative
+		padding-left: 15px
+		padding-right: 30px
+		margin-top: 14px
+		&:before
+			counter-increment: good
+			content: counter(good)'.'
+			position: absolute
+			top: 0
+			left: 0
+	&__mood
+		width: 60px
+		height: 60px
+		+cover
+		margin: 0 10px
+		cursor: pointer
+		&-wrap
+			width: 55%
+			padding-right: 20px
+			display: flex
+			justify-content: space-between
+
+.rating-item
+	padding: 15px
+	&__inner
+		background-color: $white
+		display: flex
+		flex-direction: column
+		height: 100%
+		.rating-item_empty &
+			background-color: rgba($green, .1)
+			padding: 35px 40px
+	.rating__list &
+		width: 50%
+	&__img
+		+cover
+		padding-top: 48%
+	&__mood
+		width: 60px
+		height: 60px
+		margin: 0 10px
+		cursor: pointer
+		position: relative
+		&-wrap
+			background-color: rgba($white, .7)
+			padding: 25px 32px 15px
+			display: flex
+			justify-content: space-between
+			.rating-item_empty &
+				background-color: transparent
+				padding: 60px 0 20px
+				margin: 0 -10px
+		&-icon
+			position: absolute
+			top: 0
+			left: 0
+			right: 
+			bottom: 0
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: center
+			transition: opacity .3s, visibility .3s
+			&_checked
+				opacity: 0
+				visibility: hidden
+	&__content
+		padding: 22px
+		color: $cardTitle
+		flex: 1 1 auto
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+	&__title
+		line-height: 1.2
+		.rating-item_empty &
+			color: $green
+			padding-bottom: 60px
+	&__subtitle
+		padding-top: 14px
+	&__icon
+		padding-bottom: 38%
+		+contain
+
+.rating-sm
+	&__img
+		+contain
+	&__text
+		text-align: center
+		padding: 13% 0
+		.rating-sm_manager &
+			padding: 10% 0
+	&__title
+		&.title
+			color: $green
+	&__aside
+		font-size: 18px
+		padding-top: 20px
+
+
+.review-form
+	&.is-success
+		opacity: 0
+		visibility: hidden
+	&__title
+		max-width: 500px
+		padding-right: 20px
+		color: $brown
+	&__head
+		display: flex
+		justify-content: space-between
+		padding-right: 80px
+	&__icon
+		width: 60px
+		height: 60px
+		+contain
+	&__form
+		&-link
+			margin-top: 25px
+			display: flex
+			align-items: center
+			text-decoration: underline
+			text-align: left
+	&__photo
+		+contain
+		width: 35px
+		height: 30px
+		margin-right: 20px
+	&__btn
+		text-align: left
+		padding-top: 30px
+
+.success
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	text-align: center
+	padding: 80px 50px 50px
+	&__title
+		color: $brown
+	&__text
+		max-width: 410px
+		margin: 0 auto
+		padding-top: 40px
+		+circe
+		+f(22px, 700)
+		text-transform: uppercase
+		color: $green
+		span
+			display: block
+	&__icon
+		width: 45px
+		height: 45px
+		+contain
+		margin: 40px auto 0

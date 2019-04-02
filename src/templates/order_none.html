@@ -1,0 +1,61 @@
+---
+title: Subscriptions
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+{{header.block()}}
+{{hero.block({class: 'hero_small'})}}
+{# {% include "partials/_form-main.html"%} #}
+<div class="cabinet">
+	<div class="cabinet__inner inner">
+		<div class="cabinet__user">
+			<div class="user">
+				<div class="user__person">
+					<div class="user__icon">{{mixins.icon('user')}}</div>
+					<div class="user__name">Анжелика Владимировна Августовская</div>
+				</div>
+				<div class="user__btn">
+					<a href="#" class="btn btn_green btn_square"><span><span class="user__points">2500</span> баллов</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="options">
+		<div class="options__inner inner">
+			<ul class="options__list">
+				<li class="options__item title-s">
+					<a href="#">личные данные</a>
+				</li>
+				<li class="options__item bg-powder-dark title-s">
+					<a href="#">Меню</a>
+				</li>
+				<li class="options__item title-s">
+					<a href="#">Подписки</a>
+				</li>
+				<li class="options__item bg-powder-dark title-s is-active">
+					<a href="#">Заказы</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="order-page">
+		<div class="order-page__inner inner">
+			<h2 class="order-page__title title">Запланированные заказы </h2>
+			<div class="order-page__order">
+				<div class="order order_empty bg-powder">
+					<div class="order__message">У вас пока нет запланированных заказов</div>
+					<div class="order__btn">
+						<a href="#" class="btn btn_green btn_wide">создать</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{{footer.block({footerBottom: 'footer__bottom_big'})}}
+{{mob_menu.mob_block()}}
+{# {% include "partials/_form-sm.html"%} #}
+
+{% endblock %}

@@ -1,0 +1,218 @@
+---
+title: Cabinet
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+{{header.block()}}
+{{hero.block({class: 'hero_small'})}}
+{# {% include "partials/_form-main.html"%} #}
+<div class="cabinet">
+	<div class="cabinet__inner inner">
+		<div class="cabinet__user">
+			<div class="user">
+				<div class="user__person">
+					<div class="user__icon">{{mixins.icon('user')}}</div>
+					<div class="user__name">Анжелика Владимировна Августовская</div>
+				</div>
+				<div class="user__btn">
+					<a href="#" class="btn btn_green btn_square"><span><span class="user__points">2500</span> баллов</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="options">
+		<div class="options__inner inner">
+			<ul class="options__list">
+				<li class="options__item title-s is-active">
+					<a href="#">личные данные</a>
+				</li>
+				<li class="options__item bg-powder-dark title-s">
+					<a href="#">Меню</a>
+				</li>
+				<li class="options__item title-s">
+					<a href="#">Подписки</a>
+				</li>
+				<li class="options__item bg-powder-dark title-s">
+					<a href="#">Заказы</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="cabinet__inner inner">
+		<div class="cabinet__bonus bonus">
+			<div class="bonus__top">
+				<div class="bonus__left">
+					<h2 class="bonus__title title">Бонусная программа</h2>
+				</div>
+				<p>Вы получаете кешбэк с каждого заказа <br>Чем больше заказов и чем чаще вы заказываете, тем больше ваш кешбэк</p>
+			</div>
+			<div class="bonus__cashback cashback bg-pink cashback_pink">
+				<div class="bonus__left">
+					<div class="cashback__percent">Кешбэк <span>5%</span></div>
+				</div>
+				<p>При колличестве заказов <span class="cashback__color">от 1 до 5 </span>включительно </p>
+			</div>
+			<div class="bonus__cashback cashback bg-orange cashback_orange">
+				<div class="bonus__left">
+					<div class="cashback__percent">Кешбэк <span>10%</span></div>
+				</div>
+				<p>При колличестве заказов <span class="cashback__color">свыше 6 </span>включительно </p>
+			</div>
+			<div class="bonus__control">
+				<div class="bonus__left">
+					<div class="bonus__btn">
+						<a href="#" class="btn btn_green btn_wide btn_bonus"><span>оформить заказ</span></a>
+					</div>
+				</div>
+				<a href="#" class="bonus__link">История начисления бонусов</a>
+			</div>
+			<div class="bonus__share bg-green">
+				<div class="bonus__share-left">
+					<p>Поделись с другом промо-кодом и получи <span class="bonus__share-accent"><span>500 </span>бонусных рублей </span>на свой счет, после того как друг совершит свой первый заказ с твоим промо-кодом.</p>
+					<p class="bold">Ваш друг тоже получает 500 бонусных рублей на свой счет!</p>
+					<div class="bonus__promo">
+						<input type="text" class="bonus__promocode bonus-promo" value="123456" readonly>
+						<div class="bonus__social">
+							<span>Поделись промокодом:</span>
+							<ul class="bonus__social-list">
+								<li class="bonus__social-item"><a href="#">{{mixins.icon('vk')}}</a></li>
+								<li class="bonus__social-item"><a href="#">{{mixins.icon('facebook')}}</a></li>
+								<li class="bonus__social-item"><a href="#">{{mixins.icon('insta')}}</a></li>
+								<li class="bonus__social-item"><a href="#">{{mixins.icon('whatsapp')}}</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="bonus__share-img">
+					<img src="./img/info-box.svg" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="cabinet__personal">
+			<h2 class="cabinet__personal-title title">Личные данные</h2>
+			<div class="cabinet__personal-info personal-info">
+				<div class="personal-info__name">Анжелика Владимировна Августовская</div>
+				<div class="personal-info__phone">+7 (921) 882-45-24</div>
+				<div class="personal-info__mail">dfjbg3463945@mail.ru</div>
+				<div class="personal-info__aside">11.02.1996</div>
+				<div class="personal-info__aside">женский</div>
+				<div class="personal-info__btn">
+					<a href="#" class="btn btn_green btn_wide"><span>изменить данные</span></a>
+				</div>
+			</div>
+		</div>
+		<div class="cabinet__address">
+			<h2 class="cabinet__address-title title">Адрес доставки</h2>
+			<div class="cabinet__address-content">
+				<div class="cabinet__address-map map"></div>
+				<div class="cabinet__address-main">
+					<div class="cabinet__address-main-wrap">
+						<div class="cabinet__address-city">Санкт-Петербург </div>
+						<div class="cabinet__address-street">Староандреевский 9, кв. 57</div>
+						<div class="cabinet__address-contact">Света</div>
+						<div class="cabinet__address-phone">+7 (921) 882-45-25</div>
+					</div>
+					<div class="cabinet__address-btn">
+						<a href="#" class="btn btn_green"><span>изменить адрес</span></a>
+						<a href="#" class="btn"><span>добавить еще один адрес</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cabinet__card">
+			<h2 class="cabinet__card-title title">Банковские карты</h2>
+			<div class="cabinet__card-content bg-gray">
+				<div class="cabinet__card-text">Ваша банковская карта:</div>
+				<div class="cabinet__card-number">хххх хххх хххх <span>1234</span></div>
+				<div class="cabinet__card-btn">
+					<a href="#" class="btn btn_green"><span>изменить  данные</span></a>
+					<a href="#" class="btn"><span>добавить еще одну карту</span></a>
+				</div>
+			</div>
+		</div>
+		<div class="cabinet__subscribe">
+			<h2 class="cabinet__subscribe-title title">подписка на новости</h2>
+			<div class="cabinet__subscribe-content bg-gray">
+				<p>Вы подписка на новости и специальные предложения «Порции счасть»</p>
+				<p>Раз в неделю вам приходит письмо на ваш почтовый адрес о всех наших вкусных  события, о специальных предложениях, о новом меню и новых блюдах, о новых товарах в лавке.</p>
+				<p>Если вам не нужна данная рассылка – вы можете <a href="#" class="cabinet__subscribe-unsubscribe">отписать </a>отписать от неё.</p>
+				<div class="cabinet__agreement agreement">
+					Нажимая кнопку «Подписаться», я подтверждаю свою дееспособность и даю согласие 
+					<a href="#">по установленной форме </a>на обработку своих персональных данных
+					<a href="#" class="agreement__policy">Политика защиты и обработки персональных данных</a>
+				</div>
+			</div>
+		</div>
+		<div class="cabinet__btn">
+			<a href="#" class="btn btn_green btn_xl"><span>выйти</span></a>
+		</div>
+	</div>
+</div>
+{{footer.block({footerBottom: 'footer__bottom_big'})}}
+{{mob_menu.mob_block()}}
+{# {% include "partials/_form-sm.html"%} #}
+<div class="modal is-open" data-modal="person">
+		<div class="modal__container" data-modal-container>
+			<div class="modal__inner">
+				<div class="person">
+					<h3 class="person__title title title_m">регистрация</h3>
+					<form action="/" class="form">
+						<div class="form-group">
+							<input type="text" class="form__input" placeholder="Имя">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form__input" placeholder="Фамилия">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form__input" placeholder="Отчество">
+						</div>
+						<div class="form__row">
+							<div class="form__col">
+								<div class="form-group">
+									<input type="text" class="form__input" placeholder="+ 7 921 882-45-25">
+								</div>
+							</div>
+							<div class="form__col-md">
+								<div class="form-group">
+									<input type="text" class="form__input" placeholder="e-mail">
+								</div>
+							</div>
+							<div class="form__col">
+								<div class="form-group">
+									<input type="text" class="form__input" placeholder="Дата рождения">
+								</div>
+							</div>
+							<div class="form__col-md">
+								<div class="person__check-wrap">
+									<div class="person__check">
+										<label class="check">
+											<input type="radio" name="gender">
+											<span class="check__text">Мужской</span>
+											<!-- <span class="check__checkmark"></span> -->
+										</label>
+									</div>
+									<div class="person__check">
+										<label class="check">
+											<input type="radio" name="gender">
+											<span class="check__text">Женский</span>
+											<!-- <span class="check__checkmark"></span> -->
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form__btn">
+							<button type="submit" class="btn btn_green"><span>сохранить</span></button>
+						</div>
+					</form>
+					<div class="modal-close">
+						<button type="button" class="btn-close btn-close_brown" data-modal-close></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

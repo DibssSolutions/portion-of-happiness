@@ -1,0 +1,89 @@
+---
+title: suppliers
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+{{header.block()}}
+{{hero.block({class: 'hero_small'})}}
+{# {% include "partials/_form-main.html"%} #}
+<div class="suppliers about">
+	<div class="about__inner inner">
+		<h2 class="about__title title">О сервисе</h2>
+	</div>
+	<div class="about__options">
+		{{mixins.aboutOptions({second: true})}}
+	</div>
+	<div class="inner">
+		<div class="about__main-wrap">
+			<p>Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном</p>
+			<p>Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании.</p>
+		</div>
+	</div>
+	<div class="suppliers__companies bg-powder">
+		<div class="suppliers__inner inner">
+			<h2 class="suppliers__title title">Только проверенные поставки:</h2>
+			<ul class="suppliers__list">
+				{% for item in range(0, 7) %}
+					<li class="suppliers__item" style="background-image: url(./img/logo.svg)"></li>
+				{% endfor %}
+			</ul>
+			<ul class="suppliers__list">
+				{% for item in range(0, 7) %}
+					<li class="suppliers__item" style="background-image: url(./img/logo.svg)"></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+	<div class="suppliers__text">
+		<div class="inner">
+			<p>Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании.  Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании.  Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании.  Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. </p>
+		</div>
+	</div>
+	<div class="about__gallery gallery js-gallery">
+		{% for item in [
+			{
+				img: 'info2.png',
+				class: 'gallery__item_20'
+			},
+			{
+				img: 'info1.png',
+				class: 'gallery__item_35'
+			},
+			{
+				img: 'info2.png',
+				class: 'gallery__item_26'
+			},
+			{
+				img: 'info1.png',
+				class: 'gallery__item_19'
+			},
+			{
+				img: 'info1.png',
+				class: 'gallery__item_29'
+			},
+			{
+				img: 'info2.png',
+				class: 'gallery__item_21'
+			},
+			{
+				img: 'info1.png',
+				class: 'gallery__item_26'
+			},
+			{
+				img: 'info2.png',
+				class: 'gallery__item_24'
+			}
+		] %}
+		<div class="gallery__item js-gallery-item{% if item.class %} {{item.class}}{% endif %}">
+			<img src="./img/{{item.img}}" alt="">
+		</div>
+		{% endfor %}
+	</div>
+</div>
+{{footer.block({footerBottom: 'footer__bottom_big'})}}
+{{mob_menu.mob_block()}}
+{# {% include "partials/_form-sm.html"%} #}
+
+{% endblock %}

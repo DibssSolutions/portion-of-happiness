@@ -11,5 +11,34 @@ title: Index page
 {{footer.block({footerBottom: 'footer__bottom_big'})}}
 {# {% include "partials/_mob-menu.html"%} #}
 {{mob_menu.mob_block()}}
-
+<div class="modal is-open" data-modal="subscription">
+		<div class="modal__container" data-modal-container>
+			<div class="modal__inner">
+				<div class="subscription">
+					<h3 class="subscription__title title title_m">подписка на новости<br>и специальные предложения</h3>
+					<form action="/" class="form js-validation">
+						<div class="form-group">
+							<input type="text"
+							placeholder="e-mail"
+							data-validation="email"
+							data-validation-error-msg="email обязательное поле">
+						</div>
+						<div class="form__btn">
+							<button type="submit" class="btn btn_md btn_green"><span>отправить</span></button>
+						</div>
+					</form>
+					<div class="subscription__confirm confirm">
+							Нажимая кнопку «Подписаться», я подтверждаю свою дееспособность и даю согласие 
+							<a href="#" class="confirm__link">по установленной форме </a> 
+							на обработку своих персональных данных
+							<a href="#" class="confirm__link confirm__link_block">Политика защиты и обработки персональных данных</a>
+					</div>
+					<div class="modal-close">
+						<button type="button" class="btn-close btn-close_brown" data-modal-close></button>
+					</div>
+				</div>
+			</div>
+		  </div>
+	</div>
+	
 {% endblock %}

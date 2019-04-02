@@ -1,19 +1,18 @@
 .footer
-	padding-top: 53px
+	padding-top: 33px
 	background-color: rgba($brown, .1)
+	+sm
+		padding-top: 6px
 	&__inner
 	&__top
 		display: flex
 		justify-content: space-between
-		padding-bottom: 40px
+		padding-bottom: 36px
 		color: $brown
+		flex-wrap: wrap
 		+lg
-			padding-bottom: 20px
-		+md
-			flex-wrap: wrap
-			// justify-content: center
+			padding-bottom: 13px
 	&__logo
-		// max-width: 156px
 		display: flex
 		flex-direction: column
 		justify-content: center
@@ -22,17 +21,14 @@
 		+md
 			display: none
 	&-logo
-		font-size: 196px
-		+lg
-		    font-size: 130px
+		font-size: 147px
 		.icon
 			display: block
 			max-width: 100%
 			color: $brown
 	&-slogan
-		margin-top: 29px
+		margin-top: 20px
 		text-align: center
-		font-size: 19px
 		font-weight: 700
 		+circe
 		+lg
@@ -40,7 +36,7 @@
 	&__menu
 		display: flex
 		+sm
-			display: inline-block
+			display: block
 			column-count: 2
 			column-gap: 68px
 			width: 100%
@@ -48,31 +44,27 @@
 			column-gap: 20px
 		&-wrap
 			text-transform: uppercase
-			padding-top: 44px
+			padding-top: 30px
 			margin: 0 20px
 			display: flex
-			+lg
-				padding-top: 24px
 			+md
 				width: 100%
-				// justify-content: center
+				margin: 0
 			+sm
 				display: block
 				margin: 0
 		&-title
 			font-weight: 700
-			// +sm
-			// 	margin-left: 15px
 		&-block
-			padding: 0 30px
-			margin: -13px 0
-			+r(1350)
+			padding: 0 35px
+			margin: -8px 0
+			+lg
 				padding: 0 15px
 			+sm
 				margin: 0
 				padding: 0
 		&-item
-			padding: 13px 0
+			padding: 8px 0
 			transition: color .3s
 			+hover
 				color: $green
@@ -80,15 +72,13 @@
 				padding: 5px 0
 	&__contacts
 		text-transform: uppercase
-		padding-top: 44px
+		padding-top: 30px
 		flex-shrink: 0
 		color: $brown
-		+lg
-			padding-top: 24px
 		+md
 			display: flex
 			font-size: 18px
-			padding-top: 40px
+			padding-top: 20px
 		+ms
 			flex-wrap: wrap
 		&-item
@@ -103,15 +93,13 @@
 					margin-left: 0
 					margin-top: 20px
 			span
-				font-size: 32px
-				+r(1502)
-					font-size: 24px
+				font-size: 24px
 				+lg
 					font-size: 20px
 				+md
 					font-size: 25px
 	&__bottom
-		padding: 19px 0 26px
+		padding: 15px 0 20px
 		background-color: $brown
 		+md
 			padding: 40px 0
@@ -120,13 +108,13 @@
 			justify-content: space-between
 			align-items: center
 			flex-wrap: wrap
-			+ms
+			+sm
 				justify-content: center
 		&_big
-			padding-bottom: 140px
+			padding-bottom: 17px
 	&__copyright
 		color: $white
-		font-size: 18px
+		font-size: 10px
 		+md
 			display: none
 	&__social
@@ -138,19 +126,22 @@
 			margin: 0
 			justify-content: center
 	&__stores
-		+r(847)
+		+r(864)
 			margin-top: 35px
 	&__agree
-		display: none
+		width: 100%
+		margin-left: 240px
+		margin-top: -20px
 		+md
-			display: block
-			width: 100%
-			margin-top: 30px
+			margin-top: 23px
+			margin-left: 0
 		&-link
-			display: block
+			display: inline-block
 			text-decoration: underline
 			color: $brown
-			font-size: 16px
+			font-size: 11px
+	&-wrap
+		margin-top: 40px
 
 .subscribe
 	display: block
@@ -158,26 +149,25 @@
 	text-decoration: none
 	text-transform: uppercase
 	transition: color .3s
-	font-size: 22px
+	font-size: 13px
 	+hover
 		color: $orange
 	+lg
 		font-size: 17px
 	+md
 		font-size: 18px
-	+r(489)
+	+r(497)
 		width: 100%
 		margin-top: 30px
 	&:not(:first-child)
 		margin-left: 41px
 		+lg
 			margin-left: 20px
-		+r(489)
+		+r(497)
 			margin-left: 0
 			text-align: center
 	.header__social &
-		+f(16px, 500)
-		margin-left: 12px
+		+f(12px, 500)
 		margin-top: 3px
 		letter-spacing: 0.62px
 		+lg
@@ -188,27 +178,23 @@
 	display: flex
 	align-items: center
 	&__item
-		font-size: 35px
+		font-size: 27px
 		color: $white
 		transition: color .3s
 		+hover
 			color: $orange
-		+lg
-			font-size: 27px
 		+md
 			font-size: 40px
 		&:not(:first-child)
-			margin-left: 32px
-			+lg
-				margin-left: 20px
+			margin-left: 24px
 		svg
 			display: block
 			max-width: 100%
 		.header__social &
-			font-size: 27px
+			font-size: 20px
 			flex-shrink: 0
 			&:not(:first-child)
-				margin-left: 25px
+				margin-left: 19px
 				+lg
 					margin-left: 10px
 			+lg
@@ -218,16 +204,16 @@
 	display: flex
 	justify-content: space-between
 	align-items: center
+	margin-right: 4px
 	&__item
-		max-width: 150px
-		+lg
-			max-width: 100px
+		max-width: 110px
 		+md
 			max-width: 160px
+			width: 100%
+		a
+			display: block
 		&:not(:first-child)
-			margin-left: 60px
-			+lg
-				margin-left: 30px
+			margin-left: 35px
 		img
 			display: block
 			max-width: 100%

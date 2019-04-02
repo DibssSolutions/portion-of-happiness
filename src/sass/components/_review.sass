@@ -1,5 +1,7 @@
 .review
-	padding: 40px 0
+	padding: 37px 0 20px
+	+sm
+		padding: 37px 0 42px
 	&__inner
 		+md
 			padding: 0
@@ -11,17 +13,17 @@
 			justify-content: center
 	&__list
 		display: flex
-		margin: 35px -40px 0
+		margin: 27px -32px 0
 		+lg
 			margin: 35px -20px 0
 		+md
-			margin: 35px 0 0
+			margin: 24px 0 0
 			display: block
 			position: relative
-			padding-bottom: 50px
+			padding-bottom: 25px
 		+xs
 			max-width: 270px
-			margin: 35px auto 0
+			margin: 24px auto 0
 		.slick-list
 			+xs
 				overflow: visible
@@ -34,13 +36,21 @@
 			li
 				&:not(:first-child)
 					margin-left: 20px
-					
+		.slick-track
+			+md
+				display: flex
+		.slick-slide
+			+md
+				height: auto
+				& > div
+					height: 100%
 	&__item-wrap
-		padding: 0 40px
+		padding: 0 32px
 		width: 25%
-		max-width: 400px
 		+lg
 			padding: 0 20px
+		+md
+			height: 100%
 	&__btn
 		+md
 			display: none
@@ -49,23 +59,22 @@
 			+md
 				display: block
 				text-align: center
-				padding-top: 30px
+				padding-top: 24px
 
 .review-item
 	width: 100%
 	font-size: 25px
-	+lg
-		font-size: 20px
 	&__img-wrap
 		display: block
 		border: 10px solid $coffee
 		height: 0
-		padding-bottom: 94%
+		padding-bottom: 91%
 		background-repeat: no-repeat
 		background-size: cover
 		background-position: 50% 50%
 	&__text
-		margin-top: 25px
+		padding: 26px 24px
+		font-size: 13px
 	&__link-wrap
 		line-height: 1.2
 		&:not(:first-child)
@@ -78,6 +87,8 @@
 			color: $orange
 		&_name
 			font-weight: 500
+			font-size: 15px
 		&_insta
 			color: $blue
 			text-decoration: none
+			font-size: 15px

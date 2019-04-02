@@ -1,0 +1,265 @@
+.cabinet
+	padding: 45px 0
+	&__user
+		padding-bottom: 35px
+	&__bonus
+		padding-top: 50px
+	&__personal
+		padding-top: 64px
+	&__personal-info
+		margin-top: 20px
+	&__address
+		padding-top: 40px
+		&-content
+			margin-top: 20px
+			padding: 40px 30px 44px 40px
+			background-color: $lightGray
+			display: flex
+		&-map
+			width: 51%
+			height: 450px
+		&-main
+			padding-left: 50px
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			font-size: 18px
+		&-street
+			padding-bottom: 27px
+		&-btn
+			.btn
+				min-width: 200px
+				+lg
+					&:not(:last-child)
+						margin-bottom: 20px
+				&:not(:last-child)
+					margin-right: 25px
+	&__card
+		padding-top: 39px
+		&-content
+			margin-top: 20px
+			padding: 45px 30px 20px 35px
+		&-text
+			font-size: 18px
+			padding-bottom: 33px
+		&-number
+			font-size: 25px
+			span
+				font-size: 30px
+		&-btn
+			text-align: right
+			.btn
+				min-width: 200px
+				&:not(:last-child)
+					margin-right: 25px
+	&__subscribe
+		padding-top: 40px
+		&-content
+			margin-top: 20px
+			padding: 30px 35px 35px
+			p
+				max-width: 790px
+				font-size: 18px
+				&:not(:last-child)
+					padding-bottom: 11px
+			a
+				text-decoration: underline
+	&__agreement
+		max-width: 500px
+		padding-top: 14px
+	&__btn
+		padding-top: 45px
+		.btn
+			min-width: 272px
+.agreement
+	font-size: 12px
+	a
+		text-decoration: underline
+	&__policy
+		display: block
+
+.user
+	display: flex
+	justify-content: space-between
+	align-items: center
+	&__person
+		display: flex
+		align-items: center
+	&__icon
+		display: inline-flex
+		font-size: 80px
+		padding-right: 20px
+		color: $brown
+		+lg
+			font-size: 60px
+	&__name
+		+circe
+		font-size: 30px
+		color: $cardTitle
+	&__points
+		font-size: 38px
+		font-weight: 700
+
+.options
+	background-color: $powder
+	&__list
+		display: flex
+	&__item
+		width: 25%
+		text-align: center
+		text-transform: uppercase
+		color: $brown
+		transition: background-color .3s
+		+hover
+			background-color: $greenActive
+		a
+			display: block
+			padding: 12px 0
+		.options_delivery &
+			width: 33.3%
+		&.is-active
+			background-color: $greenActive
+
+.bonus
+	&__top
+		display: flex
+		padding-bottom: 23px
+		p
+			padding-top: 17px
+	&__left
+		width: 25%
+		flex-shrink: 0
+		margin-right: 25px
+		+lg
+			width: 30%
+	p
+		font-size: 18px
+	&__control
+		display: flex
+		align-items: center
+		padding-top: 60px
+		padding-bottom: 55px
+	&__btn
+		padding-right: 13px
+	&__link
+		display: block
+		text-decoration: underline
+		font-size: 18px
+	&__share
+		position: relative
+		padding: 20px 30px 30px
+		&-img
+			position: absolute
+			top: -40px
+			right: 33px
+			img
+				width: 239px
+				+lg
+					width: 180px
+					right: 20px
+		&-left
+			width: 75%
+			padding-right: 30px
+			+lg
+				width: 80%
+			.bold
+				font-weight: 700
+		&-accent
+			+circe
+			+f(30px, 700, 1)
+			text-transform: uppercase
+			color: $green
+			span
+				font-size: 52px
+				line-height: 1
+	&__promo
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding-top: 25px
+		.subscriptions__bonus &, .order-page__bonus &
+			justify-content: flex-start
+	&__promocode
+		max-width: 210px
+		text-align: center
+	&__social
+		display: flex
+		align-items: center
+		margin-right: 64px
+		span
+			font-size: 19px
+		+lg
+			margin-right: 0
+		.subscriptions__bonus &, .order-page__bonus &
+			margin-right: 0
+			margin-left: 94px
+		&-list
+			display: flex
+			align-items: center
+		&-item
+			font-size: 27px
+			color: $brown
+			opacity: .8
+			transition: opacity .3s
+			margin-left: 24px
+			+hover
+				opacity: 1
+			a
+				display: block
+
+.cashback
+	display: flex
+	padding: 23px 35px 9px 0
+	&__percent
+		padding-left: 30px
+		+circe
+		+f(30px, 700, 1)
+		text-transform: uppercase
+		.cashback_pink &
+			color: $pink
+		.cashback_orange &
+			color: $orange
+		span
+			font-size: 52px
+			line-height: 1
+	&__color
+		.cashback_pink &
+			color: $pink
+		.cashback_orange &
+			color: $orange
+	p
+		padding-top: 18px
+
+.personal-info
+	position: relative
+	background-color: $lightGray
+	padding: 29px 34px
+	&__name
+		font-size: 25px
+		padding-bottom: 18px
+	&__phone
+		font-size: 25px
+		font-weight: 700
+		padding-bottom: 2px
+	&__mail
+		font-size: 18px
+		font-weight: 700
+		padding-bottom: 20px
+	&__aside
+		font-size: 18px
+	&__btn
+		position: absolute
+		bottom: 19px
+		right: 28px
+		min-width: 200px
+
+.bonus-promo
+	+circe
+	+f(38px, 700)
+	color: $grayInput
+	width: 100%
+	padding: 0 20px
+	.proposal__promo-input &
+		+f(30px, 400)
+		color: $green
+		padding: 10px 20px

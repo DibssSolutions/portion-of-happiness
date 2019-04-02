@@ -17,4 +17,30 @@ title: Index page
 {{footer.block()}}
 {{mob_menu.mob_block({anonymous:true})}}
 
+<div class="modal is-open" data-modal="enter-two">
+		<div class="modal__container" data-modal-container>
+			<div class="modal__inner">
+				<div class="enter">
+					<h3 class="enter__title title title_m">Добро пожаловать!<br> Введите номер вашего телефона:</h3>
+					<div class="enter__form">
+						<form action="/" class="form">
+							<div class="form-group">
+								<input type="text" class="form__input" placeholder="Телефон">
+							</div>
+							<div class="form__btn">
+								<button type="submit" class="btn btn_md btn_green"><span>получить код</span></button>
+							</div>
+						</form>
+					</div>
+					<div class="enter__bottom">
+							Нажимая «Получить код», вы даете согласие на получение sms и принимаете условия
+						<a href="#" class="enter__link">пользовательского соглашения</a>
+					</div>
+					<div class="modal-close">
+						<button type="button" class="btn-close btn-close_brown" data-modal-close></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}

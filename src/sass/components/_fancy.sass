@@ -1,0 +1,18 @@
+.fancybox-close
+	background-image: url(../img/close.svg)
+	+cover
+	width: 33px
+	height: 33px
+	top: 25px
+	right: 25px
+.fancybox-skin
+	background-color: $coffee
+	border-radius: 0
+	padding: 10px!important
+	.fancybox-opened &
+		box-shadow: none
+.fancybox-overlay
+	background-color: rgba($brown, .4)
+
+#fancybox-loading, .fancybox-prev span, .fancybox-next span
+	background-image: url(../img/fancybox_sprite.png)

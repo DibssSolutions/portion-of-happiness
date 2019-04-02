@@ -1,8 +1,8 @@
 .btn
-	padding: 12px 28px
+	padding: 9px 21px
 	+roboto 
 	color: $white
-	+f(18px,500,1)
+	+f(14px,500,1)
 	text-transform: uppercase
 	text-align: center
 	text-decoration: none
@@ -29,25 +29,18 @@
 	+hover
 		&:before
 			opacity: 0.2
-	+lg
-		padding: 10px 22px
-		font-size: 14px
 	&_sm
-		min-width: 148px
-		+lg
-			min-width: 120px
+		min-width: 112px
 	&_md
-		min-width: 170px
+		min-width: 180px
 		+lg
 			min-width: 166px
 	&_l
-		min-width: 200px
-		+lg
-			min-width: 170px
+		min-width: 150px
 	&_lg
 		min-width: 240px
-		+lg
-			min-width: 200px
+	&_wide
+		width: 100%
 	&_blue
 		background-color: $blue
 	&_pink
@@ -55,67 +48,74 @@
 	&_green
 		background-color: $green
 	&_xl
-		font-size: 32px
-		padding: 18px 45px
-		border-radius: 34px
-		+xxl
-			font-size: 26px
+		font-size: 20px
+		padding: 16px 52px
+		border-radius: 26px
 		+lg
 			font-size: 20px
+			padding: 16px 52px
 		+md
 			min-width: 270px
-			font-size: 24px
 			padding: 15px 25px
 		+ms
 			min-width: auto
-			font-size: 20px
 	&_plus
-		padding-left: 70px
-		min-width: 284px
-		+lg
-			min-width: 230px
-			padding-left: 50px
+		padding-left: 57px
 		svg
 			position: absolute
 			top: 50%
 			transform: translateY(-50%)
-			left: 22px
+			left: 15px
 			font-size: 1.5em
-			
-
+	&_square
+		padding: 10px 21px
+		border-radius: 0
+		+circe
+		font-size: 30px
+		font-weight: 400
+		text-transform: none
+		min-width: 333px
+	&_bonus
+		font-size: 20px
+		padding: 15px 21px
+		border-radius: 50px
 .btn-close
-    display: inline-block
-    width: 28px
-    height: 28px
-    border-radius: 50%
-    border: 1px solid $white
-    background-color: transparent
-    outline: none
-    +pseudo
-    &:before, &:after
-        width: 18px
-        height: 2px
-        background-color: $white
-        color: $white
-        top: 50%
-        left: 50%
-    &:before
-        transform: translate(-50%, -50%) rotate(45deg)
-    &:after
-        transform: translate(-50%, -50%) rotate(-45deg)
-    // &_l
-    //     width: 40px
-    //     height: 40px
-    //     border-color: $brown
-    //     &:before, &:after
-    //         background-color: $brown
-    //         color: $brown
-    //         width: 25px
+	display: inline-block
+	width: 32px
+	height: 32px
+	border-radius: 50%
+	border: 1px solid $white
+	background-color: transparent
+	outline: none
+	position: relative
+	+sm
+		width: 25px
+		height: 25px
+	&:before, &:after
+		content: ''
+		position: absolute
+		width: 20px
+		height: 2px
+		background-color: $white
+		color: $white
+		top: 50%
+		left: 50%
+		+sm
+			width: 16px
+	&:before
+		transform: translate(-50%, -50%) rotate(45deg)
+	&:after
+		transform: translate(-50%, -50%) rotate(-45deg)
+	&_brown
+		border-color: $brown
+		&:before, &:after
+			background-color: $brown
+
 .btn-border
-	padding: 10px 40px 10px 70px
+	padding: 8px 28px 8px 55px
 	+roboto 
 	color: $brown
-	+f(18px,500,1)
+	+f(14px,500,1)
 	letter-spacing: 0.005em
 	text-transform: uppercase
 	text-align: center
@@ -127,21 +127,39 @@
 	overflow: hidden
 	border: 1px solid $brown
 	transition: background-color .3s, color .3s
-	min-width: 284px
 	svg
 		position: absolute
 		top: 50%
 		transform: translateY(-50%)
-		left: 22px
+		left: 15px
 		font-size: 1.1em
 	
 .btn-plus
 	padding: 0
-	font-size: 34px
-	+circle(60)
+	font-size: 25px
+	+circle(46)
 	svg
 		position: absolute
 		+vcenter
-	+lg
-		+circle(45)
-		font-size: 26px
+
+.btn-top
+	opacity: 0
+	visibility: hidden
+	+circle(60)
+	background-color: transparent
+	display: flex
+	align-items: center
+	justify-content: center
+	border: 1px solid $brown
+	position: fixed
+	right: 40px
+	bottom: 70px
+	z-index: 5
+	color: $brown
+	font-size: 40px
+	transition: opacity .3s, visibility .3s
+	&.is-active
+		opacity: 1
+		visibility: visible
+	.icon
+		transform: rotate(-90deg)
