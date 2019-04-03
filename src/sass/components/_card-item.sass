@@ -21,8 +21,12 @@
 			background-color: rgba($greenLight, .3)
 	&__left
 		+flex-size(60.5%)
+		+md
+			+flex-size(100%)
 	&__right
 		+flex-size(39.5%)
+		+md
+			+flex-size(100%)
 		&_single
 			display: flex
 			align-items: center
@@ -30,7 +34,6 @@
 			width: 100%
 	&__title-wrap
 		padding: 40px 20px 30px 0
-	&__title
 	&__name
 		padding-top: 14px
 		&.title
@@ -57,6 +60,8 @@
 			// width: 100%
 	&__recipe
 		padding: 25px 0 73px
+		+md
+			flex-direction: column
 	&__basket
 		justify-content: space-between
 		padding-bottom: 24px
