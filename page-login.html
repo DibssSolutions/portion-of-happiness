@@ -37,7 +37,7 @@
               <div class="header__phone"><a href="tel:+78129991929">+7 812 <span>999 1929</span></a></div>
             </div>
             <div class="header__logo">
-              <a href="#">
+              <a href="/">
                 <img src="./img/logo.svg" alt="logotype">
               </a>
             </div>
@@ -693,44 +693,53 @@
     </div>
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
-    <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=7a9648bf-398b-4673-ad66-512ef28875ce&lang=ru_RU" type="text/javascript"></script> -->
-    <!-- <script>
-		const map = document.querySelectorAll('.map');
-		if (map) {
-      if(ymaps) {
-			map.forEach(function(el) {
-				ymaps.ready(function() {
-				  var map = new ymaps.Map(el, {
-					center: [55.76, 37.64], 
-					zoom: 10
-				  });
-				  map.behaviors.disable('scrollZoom');
-				  map.controls.remove('smallMapDefaultSet');
-				  map.controls.remove('trafficControl');
-				  map.controls.remove('rulerControl');
-				  map.container.fitToViewport();
-				  if (map) {
-					  ymaps.modules.require(['Placemark', 'Circle'], function(Placemark, Circle) {
-						var placemark = new Placemark([55.76, 37.64],{},{
-							iconLayout: 'default#image',
-							iconImageHref: './img/point.png',
-							// Размеры метки.
-							iconImageSize: [39, 64],
-							// Смещение левого верхнего угла иконки относительно
-							// её "ножки" (точки привязки).
-							iconImageOffset: [-15, -64]
-						});
-						map.geoObjects.add(placemark);
-						// Балун откроется в точке «привязки» балуна — т. е. над меткой.
-						//placemark.balloon.open();
-					  });
-				  }
-				});
-      });
-    }
-			}
-        
-    </script> -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=7a9648bf-398b-4673-ad66-512ef28875ce&lang=ru_RU" type="text/javascript"></script>
+    <script>
+      const map = document.querySelectorAll('.map');
+      if (map)
+      {
+        if (ymaps)
+        {
+          map.forEach(function(el)
+          {
+            ymaps.ready(function()
+            {
+              var map = new ymaps.Map(el,
+              {
+                center: [55.76, 37.64],
+                zoom: 10
+              });
+              map.behaviors.disable('scrollZoom');
+              map.controls.remove('smallMapDefaultSet');
+              map.controls.remove('trafficControl');
+              map.controls.remove('rulerControl');
+              map.container.fitToViewport();
+              if (map)
+              {
+                ymaps.modules.require(['Placemark', 'Circle'], function(Placemark, Circle)
+                {
+                  var placemark = new Placemark([55.76, 37.64],
+                  {},
+                  {
+                    iconLayout: 'default#image',
+                    iconImageHref: './img/point.png',
+                    // Размеры метки.
+                    iconImageSize: [39, 64],
+                    // Смещение левого верхнего угла иконки относительно
+                    // её "ножки" (точки привязки).
+                    iconImageOffset: [-15, -64]
+                  });
+                  map.geoObjects.add(placemark);
+                  // Балун откроется в точке «привязки» балуна — т. е. над меткой.
+                  //placemark.balloon.open();
+                });
+              }
+            });
+          });
+        }
+      }
+
+    </script>
     <!-- END scripts -->
   </body>
 
