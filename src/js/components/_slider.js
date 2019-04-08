@@ -140,6 +140,22 @@ dishSliders.each((i, el) => {
     slidesToShow: 3,
     slidesToScroll: 1,
     prevArrow: dishPrev,
-    nextArrow: dishNext
+    nextArrow: dishNext,
+    responsive: [
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          infinite: true,
+        }
+      }
+    ]
   });
 });

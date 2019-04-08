@@ -13,11 +13,24 @@
 		position: relative
 	&__title
 		text-align: center
+		padding: 0 100px
+		+md
+			padding: 0 60px
+		+sm
+			padding: 0 40px
 	&__slider-wrap
 		display: flex
 		align-items: center
+		+sm
+			padding: 0 10px
+			display: block
 	&__btn
 		margin-left: 69px
+		+md
+			margin-left: 25px
+		+sm
+			margin: 20px 0 0
+			text-align: center
 
 .dishes-slider
 	max-width: 77%
@@ -28,12 +41,14 @@
 	visibility: hidden
 	transition: opacity .3s, visibility .3s
 	margin: 0 -20px
+	+sm
+		max-width: 100vw
 	&.slick-initialized
 		white-space: normal
 		opacity: 1
 		visibility: visible
 	&__slide
-		max-width: 420px
+		max-width: 768px
 		width: 100%
 		position: relative
 		padding: 0 15px
@@ -79,6 +94,7 @@
 	&__bottom
 		padding-top: 30px
 		display: flex
+		flex-wrap: wrap
 		justify-content: space-between
 		align-items: center
 	&__weight
@@ -86,3 +102,5 @@
 		&.title
 			text-transform: none
 			line-height: 1
+			+md
+				font-size: 18px

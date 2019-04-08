@@ -79,6 +79,8 @@
 		margin-top: 90px
 		text-align: left
 		max-width: 600px
+		+md
+			margin-top: 45px
 	.help-block.form-error
 		position: absolute
 		top: calc(100% + 20px)
@@ -230,9 +232,14 @@
 		justify-content: space-between
 	&__title
 		line-height: 1.2
+		display: block
 		.rating-item_empty &
 			color: $green 
 			padding-bottom: 60px
+	a.rating-item__title
+		transition: color .3s
+		+hover
+			color: $green 
 	&__subtitle
 		padding-top: 14px
 	&__icon

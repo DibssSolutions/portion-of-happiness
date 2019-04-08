@@ -1,6 +1,5 @@
 .card
 	padding-bottom: 48px
-	&__inner
 	&__img
 		+cover
 		height: 0
@@ -13,6 +12,8 @@
 			background-color: $greenLight
 	&__description
 		display: flex
+		+md
+			flex-direction: column
 		&-bg.bg_pink
 			background-color: rgba($pinkLight, .3)
 		&-bg.bg_pow
@@ -26,14 +27,22 @@
 	&__right
 		+flex-size(39.5%)
 		+md
+			margin-top: 25px
 			+flex-size(100%)
 		&_single
 			display: flex
 			align-items: center
 			justify-content: flex-end
 			width: 100%
+			+md
+				padding-bottom: 30px
+				justify-content: flex-start
+			+xs
+				justify-content: center
 	&__title-wrap
 		padding: 40px 20px 30px 0
+		+md
+			padding: 25px 0 0 0
 	&__name
 		padding-top: 14px
 		&.title
@@ -48,24 +57,26 @@
 		padding: 48px 20px 53px 18px
 		display: flex
 		flex-wrap: wrap
-		// justify-content: space-between
 		align-items: flex-start
 		+lg
 			padding: 30px 20px
+		+sm
+			padding: 30px 20px 30px 0
 	&__specification
-		// width: 50%
 		&:not(:last-child)
 			margin-bottom: 1.8em
-		&.specification_wide
-			// width: 100%
 	&__recipe
 		padding: 25px 0 73px
 		+md
+			padding-bottom: 25px
 			flex-direction: column
 	&__basket
 		justify-content: space-between
 		padding-bottom: 24px
 		padding-right: 27px
+		+md
+			margin: 15px 0 0
+			padding: 0
 	&__btn
 		&_padding
 			padding-top: 43px
@@ -101,19 +112,3 @@
 		.main-dish__specification &
 			font-size: 10px
 			text-align: center
-
-.recipe
-	display: flex
-	&__header
-		background-color: $lightGray
-		padding: 14px 33px 7px
-		.card__right &
-			background-color: $grayMid
-			// padding: 18px 40px 10px 50px
-	&__body
-		margin-top: 25px
-		display: flex
-	&__list
-		padding-left: 33px
-		min-width: 202px
-		font-size: 20px

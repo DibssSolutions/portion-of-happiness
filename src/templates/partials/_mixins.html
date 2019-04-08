@@ -190,21 +190,21 @@
 		<div class="rating-item__img" style="background-image: url(./img/{{props.img}})">
 			<div class="rating-item__mood-wrap">
 				<label class="shop-good__mood check check_icon">
-					<input type="radio" name="{% if props.radioName %}{{props.radioName or rating}}{% endif %}" checked>
+					<input type="radio" name="{% if props.radioName %}{{props.radioName or 'rating'}}{% endif %}" checked>
 					{{ icon('good') }}
 				</label>
 				<label class="shop-good__mood check">
-					<input type="radio" name="{% if props.radioName %}{{props.radioName or rating}}{% endif %}">
+					<input type="radio" name="{% if props.radioName %}{{props.radioName or 'rating'}}{% endif %}">
 					{{ icon('middle') }}
 				</label>
 				<label class="shop-good__mood check">
-					<input type="radio" name="{% if props.radioName %}{{props.radioName or rating}}{% endif %}">
+					<input type="radio" name="{% if props.radioName %}{{props.radioName or 'rating'}}{% endif %}">
 					{{ icon('bad') }}
 				</label>
 			</div>
 		</div>
 		<div class="rating-item__content">
-			<h3 class="rating-item__title title-s">{{props.title}}</h3>
+			<a href="#" class="rating-item__title title-s">{{props.title}}</a>
 			<div class="rating-item__subtitle">{{props.subtitle}}</div>
 		</div>
 	</div>

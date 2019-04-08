@@ -150,25 +150,35 @@
 		line-height: .9
 		font-size: 16px
 		letter-spacing: 0.054em
-		+ms
-			width: 100%
-			padding-bottom: 20px
-			justify-content: center
+		+md
+			font-size: 15px
+		+sm
+			margin: 10px 10px 10px 0
+			font-size: 12px
+		// +ms
+		// 	width: 100%
+		// 	padding-bottom: 20px
+		// 	justify-content: center
 		.choice__basket &
 			font-size: 15px
 	&__title
 		text-transform: uppercase
-		+md
-			font-size: 15px
+		+sm
+			font-size: 10px
 	&__sum
 		margin-left: 10px
 		font-size: 30px
 		font-weight: 700
+		+sm
+			margin-left: 5px
+			font-size: 14px 
 		.card__basket &
 			font-size: 25px
 			margin: 0
 		.choice__basket &
 			font-size: 37px
+			+md
+				font-size: 24px
 	&__currency
 		margin-left: 2px
 		font-weight: 500
@@ -188,6 +198,8 @@
 			margin-left: 0
 		.choice__basket &
 			margin-left: 27px
+			+md
+				margin: 0 20px
 			.btn_sm
 				padding: 16px 45px
 				font-size: 20px
@@ -196,6 +208,8 @@
 				line-height: 1
 				text-transform: uppercase
 				letter-spacing: 0.002em
+				+md
+					font-size: 12px
 	+ms
 		flex-wrap: wrap
 		justify-content: center

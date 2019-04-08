@@ -5,11 +5,15 @@
 	color: $brown
 	+md
 		font-size: 26px
+	+sm
+		font-size: 21px
 	&_lg
 		font-size: 30px
 		letter-spacing: -0.015em
 		+md
 			font-size: 30px
+		+sm
+			font-size: 26px
 	&_m
 		font-size: 23px
 		line-height: 1.5
@@ -33,11 +37,15 @@
 	&:not([class*="text"])
 		.modal &
 			color: $brown
+	+sm
+		font-size: 18px 
 
 .title-xs
 	+circe
 	+f(20px, 700)
 	text-transform: uppercase
+	+sm
+		font-size: 16px
 
 .title-rob-xs
 	+roboto

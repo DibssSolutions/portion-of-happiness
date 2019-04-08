@@ -31,8 +31,16 @@
 			left: 34px
 		+xs
 			left: 10px
+		.dishful &
+			left: 34px
+			+ms
+				left: 10px
 		.dishes-menu &
 			left: 59px
+			+md
+				left: 34px
+			+sm
+				left: 10px
 	&__next-arrow
 		right: 32%
 		+md
@@ -41,8 +49,16 @@
 			right: 34px
 		+xs
 			right: 10px
+		.dishful &
+			right: 34px
+			+ms
+				right: 10px
 		.dishes-menu &
 			right: 59px
+			+md
+				right: 24px
+			+sm
+				right: 10px
 	.slick-list
 		overflow: visible
 	&__slider-wrap
@@ -116,6 +132,8 @@
 		.dishful &
 			padding-top: 35px
 			padding-bottom: 47px
+			+md
+				padding: 20px 0
 	&__bottom
 		.menu &
 			position: absolute
@@ -137,11 +155,19 @@
 		width: 100%
 		+lg
 			padding: 0 70px 0 91px
-		+sm
+		+md
 			padding: 0 90px
 			text-align: center
 		+xs
 			padding: 0 50px
+		.dishful &
+			max-width: none
+			padding: 0 100px
+			text-align: center
+			+md
+				padding: 0 60px
+			+md
+				padding: 0 40px
 	&__title
 		+lg
 			font-size: 29px
@@ -149,13 +175,14 @@
 			text-transform: none
 			+sm
 				display: block
+		&.title
+			font-size: 21px
 	&__subtitle
 		margin-top: 8px
 		font-size: 16px
 		+sm
-			max-width: 66%
 			text-align: center
-			margin: 8px auto 0
+			margin: 8px 0 0
 		+ms
 			max-width: none
 	&__btn
