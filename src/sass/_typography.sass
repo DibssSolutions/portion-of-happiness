@@ -30,8 +30,9 @@
 	+circe
 	+f(22px, 700)
 	text-transform: uppercase
-	.modal &
-		color: $brown
+	&:not([class*="text"])
+		.modal &
+			color: $brown
 
 .title-xs
 	+circe
@@ -86,7 +87,32 @@ article
 		li
 	&__title,
 	h1
-		@extend .title
+		+circe
+		+f(30px, 700, 1.2)
+		text-transform: uppercase
+		color: $brown
+		+md
+			font-size: 26px
+		&_lg
+			font-size: 30px
+			letter-spacing: -0.015em
+			+md
+				font-size: 30px
+		&_m
+			font-size: 23px
+			line-height: 1.5
+			letter-spacing: -0.02em
+			+lg
+				font-size: 21px
+			+sm
+				font-size: 16px
+			span
+				color: $green
+		&_s
+			+f(22px, 700, 1)
+			color: $white
+			+lg
+				font-size: 18px
 		&:not(:last-child)
 			margin-bottom: 52px
 			margin-top: 50px

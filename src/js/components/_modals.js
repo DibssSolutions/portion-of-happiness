@@ -1,4 +1,4 @@
-import {OPEN, ACTIVE, BODY, OVERFLOW_HIDDEN} from './../constants';
+import {OPEN, ACTIVE, BODY} from './../constants';
 
 ;(() => {
 
@@ -10,16 +10,18 @@ import {OPEN, ACTIVE, BODY, OVERFLOW_HIDDEN} from './../constants';
 
     control.on('click', e => {
       e.preventDefault();
-      BODY.addClass('is-fixed');
+      BODY.addClass('is-open-popup');
       if (!control.hasClass(ACTIVE)) {
         modals.removeClass(OPEN);
         modal.addClass(OPEN);
         controls.removeClass(ACTIVE);
         control.addClass(ACTIVE);
+        BODY.addClass('is-open-popup');
       }
       else {
         modal.removeClass(OPEN);
         control.removeClass(ACTIVE);
+        BODY.removeClass('is-open-popup');
       }
     });
   });
@@ -31,12 +33,12 @@ import {OPEN, ACTIVE, BODY, OVERFLOW_HIDDEN} from './../constants';
 
     const hide = () => {
       modal.removeClass(OPEN);
-      BODY.removeClass('is-fixed');
+      BODY.removeClass('is-open-popup');
       controls.removeClass(ACTIVE);
     };
 
     BODY.on('click', e => {
-      if ($(e.target).closest(inner).length || $(e.target).closest(close).length || $(e.target).closest(controls).length ) return;
+      if ($(e.target).closest('[data-modal-container]').length || $(e.target).closest('[data-modal-close]').length || $(e.target).closest('[data-modal-control]').length ) return;
       hide();
     });
 

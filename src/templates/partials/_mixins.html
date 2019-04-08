@@ -189,18 +189,18 @@
 	<div class="rating-item__inner">
 		<div class="rating-item__img" style="background-image: url(./img/{{props.img}})">
 			<div class="rating-item__mood-wrap">
-				{% for item in [
-					'ratingGood.png',
-					'ratingNormal.png',
-					'ratingBad.png'
-				] %}
-				<!-- <div class="rating-item__mood" style="background-image: url(./img/{{item}})"></div> -->
-				<label class="rating-item__mood check">
-					<input type="checkbox">
-					<img src="./img/ratingGood.png" alt="" class="rating-item__mood-icon rating-item__mood-icon_checked">
-					<img src="./img/ratingNormal.png" alt="" class="rating-item__mood-icon rating-item__mood-icon_disabled">
+				<label class="shop-good__mood check check_icon">
+					<input type="radio" name="{% if props.radioName %}{{props.radioName or rating}}{% endif %}" checked>
+					{{ icon('good') }}
 				</label>
-				{% endfor %}
+				<label class="shop-good__mood check">
+					<input type="radio" name="{% if props.radioName %}{{props.radioName or rating}}{% endif %}">
+					{{ icon('middle') }}
+				</label>
+				<label class="shop-good__mood check">
+					<input type="radio" name="{% if props.radioName %}{{props.radioName or rating}}{% endif %}">
+					{{ icon('bad') }}
+				</label>
 			</div>
 		</div>
 		<div class="rating-item__content">
@@ -217,18 +217,18 @@
 		<h3 class="rating-item__title title-s">{{props.title}}</h3>
 		<div class="rating-item__icon" style="background-image: url(./img/ratingTruck.png)"></div>
 		<div class="rating-item__mood-wrap">
-			{% for item in [
-				'ratingGood.png',
-				'ratingNormal.png',
-				'ratingBad.png'
-			] %}
-			<!-- <div class="rating-item__mood" style="background-image: url(./img/{{item}})"></div> -->
-			<label class="rating-item__mood check">
-				<input type="checkbox">
-				<img src="./img/ratingGood.png" alt="" class="rating-item__mood-icon rating-item__mood-icon_checked">
-				<img src="./img/ratingNormal.png" alt="" class="rating-item__mood-icon rating-item__mood-icon_disabled">
+			<label class="shop-good__mood check check_icon">
+				<input type="radio" name="rating-1">
+				{{ icon('good') }}
 			</label>
-			{% endfor %}
+			<label class="shop-good__mood check">
+				<input type="radio" name="rating-1">
+				{{ icon('middle') }}
+			</label>
+			<label class="shop-good__mood check">
+				<input type="radio" name="rating-1" checked>
+				{{ icon('bad') }}
+			</label>
 		</div>
 		</div>
 	</div>

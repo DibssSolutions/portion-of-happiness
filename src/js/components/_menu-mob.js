@@ -22,6 +22,6 @@ burger.on('click', function(e) {
 
 
 BODY.on('click', e => {
-  if ($(e.target).closest(menuMob).length || $(e.target).closest(burger).length) return;
+  if ($(e.target).closest('.js-mob-menu').length || $(e.target).closest('.js-toggle').length) return;
   hide();
 });

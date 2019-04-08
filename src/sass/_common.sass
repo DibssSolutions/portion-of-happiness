@@ -1,9 +1,10 @@
 body
-	background: #FFF
+	background: $white
 	line-height: 1.4
 	+roboto
 	font-size: 15px
 	min-width: 320px
+	&.is-open-popup,
 	&.is-overflow-hidden
 		overflow: hidden
 
@@ -11,7 +12,8 @@ a
 	text-decoration: none
 	color: currentColor
 
-
+.text-green
+	color: $green 
 [data-tabs]
 	// overflow: hidden
 	[data-tabs-control]

@@ -138,12 +138,29 @@
 	cursor: pointer
 	font-size: 22px
 	user-select: none
+	+hover
+		.icon-good
+			color: #ca4e97
+		.icon-middle
+			color: #3aab36
+		.icon-bad
+			color: #000
 	.person &
 		width: 100%
 		height: 100%
 	.main-dish &
 		width: 55px
 		height: 55px
+	&_icon
+		width: 60px
+		height: 60px
+	.icon
+		position: absolute
+		top: 0
+		left: 0
+		font-size: 60px
+		color: #858585 
+		transition: color .3s
 	&__text
 		position: relative
 		padding-left: 40px
@@ -190,12 +207,12 @@
 			+ .check__checkmark
 			+ .check__text:after
 				background-color: $green
-			+ .rating-item__mood-icon_checked
-				opacity: 1
-				visibility: visible
-			~ .rating-item__mood-icon_disabled
-				opacity: 0
-				visibility: hidden
+			~ .icon-good
+				color: #ca4e97
+			~ .icon-middle
+				color: #3aab36
+			~ .icon-bad
+				color: #000
 		&:checked
 			+ .check__checkmark:after
 				background-color: $green

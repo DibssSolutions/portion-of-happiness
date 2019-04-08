@@ -1,6 +1,6 @@
 ---
 title: Order
-bodyClass: is-overflow-hidden
+bodyClass: is-open-popup
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -191,31 +191,37 @@ bodyClass: is-overflow-hidden
 						{
 							img: 'menu-slide1.jpg',
 							title: 'СОЧНАЯ ГОВЯДИНА',
-							subtitle: 'Доставка 25.03.2018'
+							subtitle: 'Доставка 25.03.2018',
+							radioName: 'r-1'
 						},
 						{
 							img: 'menu-slide1.jpg',
 							title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами с паровыми овощами',
-							subtitle: 'Доставка 25.03.2018'
+							subtitle: 'Доставка 25.03.2018',
+							radioName: 'r-2'
 						},
 						{
 							img: 'menu-slide1.jpg',
 							title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами с паровыми овощами',
-							subtitle: 'Доставка 25.03.2018'
+							subtitle: 'Доставка 25.03.2018',
+							radioName: 'r-3'
 						},
 						{
 							img: 'menu-slide1.jpg',
 							title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами с паровыми овощами',
-							subtitle: 'Доставка 25.03.2018'
+							subtitle: 'Доставка 25.03.2018',
+							radioName: 'r-4'
 						},
 						{
 							img: 'menu-slide1.jpg',
 							title: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами с паровыми овощами',
-							subtitle: 'Доставка 25.03.2018'
+							subtitle: 'Доставка 25.03.2018',
+							radioName: 'r-5'
 						},
 						{
 							title: 'Оцените сервис доставки',
-							empty: true
+							empty: true,
+							radioName: 'r-6'
 						}
 					] %}
 						{% if item.empty %}
@@ -227,27 +233,24 @@ bodyClass: is-overflow-hidden
 				</div>
 				<div class="rating__shop">
 					<div class="rating__shop-left">
-						<h3 class="rating__shop-title title-s">Оцените товары из Лавки</h3>
+						<h3 class="rating__shop-title title-s text-green">Оцените товары из Лавки</h3>
 					</div>
 					<ol class="rating__shop-right">
 						{% for item in range(0, 3) %}
 						<li class="shop-good">
 							<div class="shop-good__name">Название товара</div>
 							<div class="shop-good__mood-wrap">
-								<label class="shop-good__mood check">
-									<input type="checkbox" checked>
-									<img src="./img/ratingGood.png" alt="" class="rating-item__mood-icon rating-item__mood-icon_checked">
-									<img src="./img/ratingNormal.png" alt="" class="rating-item__mood-icon rating-item__mood-icon_disabled">
+								<label class="shop-good__mood check check_icon">
+									<input type="radio" name="pr{{loop.index}}">
+									{{ mixins.icon('good') }}
 								</label>
 								<label class="shop-good__mood check">
-									<input type="checkbox">
-									<img src="./img/ratingGood.png" alt="" class="rating-item__mood-icon rating-item__mood-icon_checked">
-									<img src="./img/ratingNormal.png" alt="" class="rating-item__mood-icon rating-item__mood-icon_disabled">
+									<input type="radio" name="pr{{loop.index}}" checked>
+									{{ mixins.icon('middle') }}
 								</label>
 								<label class="shop-good__mood check">
-									<input type="checkbox">
-									<img src="./img/ratingGood.png" alt="" class="rating-item__mood-icon rating-item__mood-icon_checked">
-									<img src="./img/ratingBad.png" alt="" class="rating-item__mood-icon rating-item__mood-icon_disabled">
+									<input type="radio" name="pr{{loop.index}}">
+									{{ mixins.icon('bad') }}
 								</label>
 							</div>
 						</li>
