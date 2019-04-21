@@ -11,6 +11,8 @@
 	padding: 34px 34px 22px
 	display: flex
 	justify-content: space-between
+	+md
+		flex-direction: column
 	&.subscription-item_empty
 		display: block
 		padding: 75px 0 108px
@@ -45,6 +47,8 @@
 			font-size: 15px
 		&_lg
 			font-size: 25px
+			+md
+				font-size: 22px
 			span
 				text-transform: none
 	&__text-wrap
@@ -63,6 +67,8 @@
 				opacity: 0.6
 	&__right
 		margin-bottom: 15px
+		+md
+			margin: 15px 0 0 
 	&__message
 		font-size: 27px
 		color: $green
@@ -76,8 +82,16 @@
 	flex-direction: column
 	justify-content: space-between
 	text-align: right
+	+md
+		flex-direction: initial
+		text-align: left
+	+sm
+		flex-direction: column
 	&__sum
 		font-size: 18px
+		+md
+			br
+				display: none
 		span
 			display: block
 			font-size: 25px
@@ -97,6 +111,10 @@
 	&__unavailable
 		font-size: 18px
 		opacity: 0.6
+		+sm
+			margin-top: 10px
 	&__btn
+		+sm
+			margin-top: 10px
 		.btn
 			font-size: 13px

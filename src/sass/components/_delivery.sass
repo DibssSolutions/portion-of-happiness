@@ -3,12 +3,19 @@
 	padding-bottom: 40px
 	&__top
 		display: flex
+		flex-wrap: wrap
 		margin: 0 -45px
 	&__option
 		width: 50%
 		padding: 0 45px
+		+sm
+			width: 100%
+		&:not(:first-child)
+			margin-top: 30px
 		&-title
 			padding-bottom: 36px
+			+sm
+				padding-bottom: 16px
 		p
 			&:not(:last-child)
 				padding-bottom: 10px
@@ -22,20 +29,32 @@
 	&__day
 		padding-top: 50px
 		display: flex
+		flex-wrap: wrap
 		&-left
 			width: 35%
 			padding-right: 40px
+			+md
+				padding-right: 0
+				margin-bottom: 10px
+				width: 100%
 		&-text
 			padding-top: 10px
 		&-right
 			display: flex
+			flex-wrap: wrap
 		&-check
 			padding-top: 67px
-			&:not(:first-child)
-				padding-left: 55px
+			+sm
+				padding-top: 40px
+			&:not(:last-child)
+				margin-right: 55px
+				+sm
+					margin-right: 30px
 	&__interval
 		padding-top: 40px
 		display: flex
+		+md
+			flex-direction: column
 	&__pay
 		padding-top: 60px
 		&-title
@@ -44,8 +63,12 @@
 		&-items
 			display: flex
 			justify-content: space-between
+			+xs
+				flex-direction: column
 		&-aside
 			padding-top: 30px
+			+sm
+				padding-top: 15px
 			a
 				text-decoration: underline
 
@@ -55,6 +78,8 @@
 		position: relative
 		&:not(:first-child)
 			padding-left: 137px
+			+sm
+				padding-left: 32px
 			&:before
 				content: ''
 				position: absolute
@@ -83,8 +108,18 @@
 .pay-item
 	display: flex
 	align-items: center
+	+sm
+		flex-direction: column
+		text-align: center
 	.delivery__pay-items &
 		padding-right: 40px
+		+sm
+			padding: 0 10px
+		+xs
+			padding: 0
+			width: 100%
+		&:not(:last-child)
+			margin-bottom: 15px
 	&__icon
 		+circle(85)
 		background-color: $green
@@ -92,5 +127,7 @@
 		background-size: 70%
 		margin-right: 25px
 		flex-shrink: 0
+		+sm
+			margin: 0 auto 10px
 		.pay-item_icon-sm &
 			background-size: 55%

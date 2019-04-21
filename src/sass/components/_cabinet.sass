@@ -1,29 +1,45 @@
 .cabinet
 	padding: 45px 0
+	+md
+		padding: 20px 0 35px
 	&__user
 		padding-bottom: 35px
 	&__bonus
 		padding-top: 50px
 	&__personal
 		padding-top: 64px
+		+sm
+			padding-top: 30px
 	&__personal-info
 		margin-top: 20px
 	&__address
 		padding-top: 40px
 		&-content
+			position: relative
 			margin-top: 20px
 			padding: 40px 30px 44px 40px
 			background-color: $lightGray
 			display: flex
+			+sm
+				padding: 0
 		&-map
 			width: 51%
 			height: 450px
+			+sm
+				width: 100%
 		&-main
 			padding-left: 50px
 			display: flex
 			flex-direction: column
 			justify-content: space-between
 			font-size: 18px
+			+sm
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				padding: 20px 16px
 		&-street
 			padding-bottom: 27px
 		&-btn
@@ -32,13 +48,19 @@
 				+lg
 					&:not(:last-child)
 						margin-bottom: 20px
+						+sm
+							margin-bottom: 10px
 				&:not(:last-child)
 					margin-right: 25px
+					+sm
+						margin-right: 10px
 	&__card
 		padding-top: 39px
 		&-content
 			margin-top: 20px
 			padding: 45px 30px 20px 35px
+			+sm
+				padding: 20px 16px
 		&-text
 			font-size: 18px
 			padding-bottom: 33px
@@ -52,19 +74,25 @@
 			text-align: right
 			+md
 				margin-top: 20px
-				text-align: center
+				text-align: left
 			.btn
 				min-width: 200px
 				&:not(:last-child)
 					margin-right: 25px
+					+sm
+						margin: 0 10px 10px 0
 	&__subscribe
 		padding-top: 40px
 		&-content
 			margin-top: 20px
 			padding: 30px 35px 35px
+			+sm
+				padding: 20px 16px
 			p
 				max-width: 790px
 				font-size: 18px
+				+sm
+					font-size: 14px
 				&:not(:last-child)
 					padding-bottom: 11px
 			a
@@ -74,6 +102,8 @@
 		padding-top: 14px
 	&__btn
 		padding-top: 45px
+		+sm
+			padding-top: 30px
 		.btn
 			min-width: 272px
 .agreement
@@ -87,10 +117,15 @@
 	display: flex
 	justify-content: space-between
 	align-items: center
+	+md
+		flex-direction: column
+		align-items: flex-start
 	&__person
 		display: flex
 		align-items: center
 		padding-right: 10px
+		+md
+			width: 100%
 	&__icon
 		display: inline-flex
 		font-size: 80px
@@ -98,18 +133,36 @@
 		color: $brown
 		+lg
 			font-size: 60px
+		+md
+			padding-right: 15px
+			font-size: 40px
 	&__name
 		+circe
 		font-size: 30px
 		color: $cardTitle
+		+md
+			line-height: 1.1
+			font-size: 20px
+	&__btn
+		+md
+			margin-top: 10px
+			width: 100%
 	&__points
 		font-size: 38px
 		font-weight: 700
+		+sm
+			font-size: 30px
 
 .options
 	background-color: $powder
+	&__inner
+		+md
+			overflow: auto
 	&__list
-		display: flex
+		display: flex 
+		+md
+			display: block
+			white-space: nowrap 
 	&__item
 		width: 25%
 		text-align: center
@@ -118,11 +171,17 @@
 		transition: background-color .3s
 		+hover
 			background-color: $greenActive
+		+md
+			width: auto
+			vertical-align: top
+			display: inline-block
 		a
 			display: block
-			padding: 12px 0
+			padding: 12px 20px
 		.options_delivery &
 			width: 33.3%
+			+md
+				width: auto
 		&.is-active
 			background-color: $greenActive
 
@@ -130,6 +189,8 @@
 	&__top
 		display: flex
 		padding-bottom: 23px
+		+sm
+			flex-direction: column
 		p
 			padding-top: 17px
 	&__left
@@ -138,26 +199,46 @@
 		margin-right: 25px
 		+lg
 			width: 30%
+		+sm
+			margin-right: 0
+			width: 100%
 	p
 		font-size: 18px
+		+sm
+			font-size: 16px
 	&__control
 		display: flex
+		flex-wrap: wrap
 		align-items: center
 		padding-top: 60px
 		padding-bottom: 55px
+		+md
+			padding: 30px 0
+		+sm
+			flex-direction: column
+			align-items: flex-start
 	&__btn
 		padding-right: 13px
+		+sm
+			padding-right: 0
+			max-width: 300px
 	&__link
 		display: block
 		text-decoration: underline
 		font-size: 18px
+		+sm
+			margin-top: 10px
 	&__share
 		position: relative
 		padding: 20px 30px 30px
+		+sm
+			padding: 20px 16px
 		&-img
 			position: absolute
 			top: -40px
 			right: 33px
+			+md
+				display: none
 			img
 				width: 239px
 				+lg
@@ -168,6 +249,9 @@
 			padding-right: 30px
 			+lg
 				width: 80%
+			+md
+				padding-right: 0
+				width: 100%
 			.bold
 				font-weight: 700
 		&-accent
@@ -175,14 +259,19 @@
 			+f(30px, 700, 1)
 			text-transform: uppercase
 			color: $green
+			+sm
+				font-size: 22px
 			span
 				font-size: 52px
 				line-height: 1
+				+sm
+					font-size: 28px
 	&__promo
 		display: flex
 		align-items: center
 		justify-content: space-between
 		padding-top: 25px
+		flex-wrap: wrap
 		.subscriptions__bonus &, .order-page__bonus &
 			justify-content: flex-start
 	&__promocode
@@ -194,20 +283,36 @@
 		margin-right: 64px
 		span
 			font-size: 19px
+			+sm
+				margin-right: 15px
 		+lg
 			margin-right: 0
+		+sm
+			margin: 15px 0 0
+			width: 100%
+			flex-wrap: wrap
 		.subscriptions__bonus &, .order-page__bonus &
 			margin-right: 0
 			margin-left: 94px
+			+sm
+				margin-left: 0
 		&-list
 			display: flex
 			align-items: center
+			+sm
+				margin-top: 5px
+				align-items: flex-start
 		&-item
 			font-size: 27px
 			color: $brown
 			opacity: .8
 			transition: opacity .3s
 			margin-left: 24px
+			+sm
+				margin-left: 0
+			&:not(:first-child)
+				+sm
+					margin-left: 10px
 			+hover
 				opacity: 1
 			a
@@ -216,11 +321,18 @@
 .cashback
 	display: flex
 	padding: 23px 35px 9px 0
+	+sm
+		padding: 20px 16px
+		flex-direction: column
 	&__percent
 		padding-left: 30px
 		+circe
 		+f(30px, 700, 1)
 		text-transform: uppercase
+		+md
+			font-size: 28px
+		+sm
+			padding-left: 0
 		.cashback_pink &
 			color: $pink
 		.cashback_orange &
@@ -228,6 +340,8 @@
 		span
 			font-size: 52px
 			line-height: 1
+			+md
+				font-size: 42px
 	&__color
 		.cashback_pink &
 			color: $pink
@@ -235,29 +349,47 @@
 			color: $orange
 	p
 		padding-top: 18px
+		+sm
+			padding-top: 5px
 
 .personal-info
 	position: relative
 	background-color: $lightGray
 	padding: 29px 34px
+	+sm
+		padding: 20px 16px
 	&__name
 		font-size: 25px
 		padding-bottom: 18px
+		+sm
+			font-size: 18px
 	&__phone
 		font-size: 25px
 		font-weight: 700
 		padding-bottom: 2px
+		+sm
+			font-size: 18px
 	&__mail
 		font-size: 18px
 		font-weight: 700
 		padding-bottom: 20px
+		+sm
+			font-size: 16px
 	&__aside
 		font-size: 18px
+		+sm
+			font-size: 16px
 	&__btn
 		position: absolute
 		bottom: 19px
 		right: 28px
 		min-width: 200px
+		+sm
+			position: relative
+			margin-top: 15px
+			right: 0
+			bottom: 0
+			max-width: 200px
 
 .bonus-promo
 	+circe
@@ -265,6 +397,8 @@
 	color: $grayInput
 	width: 100%
 	padding: 0 20px
+	+sm
+		font-size: 20px
 	.proposal__promo-input &
 		+f(30px, 400)
 		color: $green

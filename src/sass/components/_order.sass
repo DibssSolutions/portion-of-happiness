@@ -1,12 +1,18 @@
 .order-page
 	&__title
 		padding-top: 50px
+		+sm
+			padding-top: 30px
 	&__order
 		margin-top: 36px
+		+sm
+			margin-top: 30px
 	&__item
 		margin-top: 20px
 	&__bonus
 		padding-top: 75px
+		+sm
+			padding-top: 45px
 
 
 .order
@@ -15,27 +21,48 @@
 	display: flex
 	justify-content: space-between
 	font-size: 18px
+	+md
+		flex-direction: column
+	+sm
+		padding: 20px 16px
+		font-size: 14px
 	&.order_empty
 		display: block
 		padding: 75px 0 108px
 	&__main
 		padding-right: 40px
+		+sm
+			padding-right: 0
 	&__header
 		font-size: 25px
 		padding-bottom: 23px
+		+sm
+			padding-bottom: 16px
+			font-size: 18px
 		span
 			font-weight: 700
 	&__footer
 		padding-top: 30px
+		+sm
+			padding-top: 16px
 		span
 			font-size: 20px
 			font-weight: 700
 			text-transform: uppercase
+			+sm
+				font-size: 14px
 	&__message
 		font-size: 27px
 		color: $green
 		text-align: center
+		+sm
+			20	
 	&__btn
 		.order_empty &
 			max-width: 200px
 			margin: 25px auto 0
+	&__total
+		+md
+			margin-top: 23px
+		+sm
+			margin-top: 16px

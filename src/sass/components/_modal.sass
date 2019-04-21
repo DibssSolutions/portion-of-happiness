@@ -129,9 +129,14 @@
 	&__shop
 		padding-top: 46px
 		display: flex
+		+sm
+			flex-direction: column
 		&-left
 			width: 20%
 			padding-right: 25px
+			+sm
+				width: 100%
+				padding-right: 0
 		&-title
 			color: $green
 			line-height: 1.2
@@ -141,26 +146,40 @@
 			padding-left: 20px
 			counter-reset: good
 			list-style-type: none
+			+sm
+				width: 100%
+				padding-left: 0
 	&__form
 		padding-top: 19px
 		&-btn
 			padding-top: 30px
 			display: flex
 			justify-content: space-between
+			+sm
+				flex-direction: column
 			a
 				min-width: 200px
+				+sm
+					margin-top: 10px
+					max-width: 300px
 
 .shop-good
 	display: flex
 	justify-content: space-between
+	+sm
+		flex-direction: column
 	&:not(:last-child)
 		padding-bottom: 25px
+		+sm
+			padding-bottom: 0px
 	&__name
 		position: relative
 		padding-left: 15px
 		padding-right: 30px
 		margin-top: 14px
 		max-width: 45% 
+		+sm
+			max-width: 100%
 		&:before
 			counter-increment: good
 			content: counter(good)'.'
@@ -169,15 +188,20 @@
 			left: 0
 	&__mood
 		width: 60px
-		height: 60px
 		+cover
 		margin: 0 10px
 		cursor: pointer
+		+md
+			width: 45px
+			height: auto
 		&-wrap
 			width: 55%
 			padding-right: 20px
 			display: flex
 			justify-content: space-between
+			+sm
+				margin-top: 10px
+				width: 100%
 
 .rating-item
 	padding: 15px
@@ -191,6 +215,8 @@
 			padding: 35px 40px
 	.rating__list &
 		width: 50%
+		+sm
+			width: 100%
 	&__img
 		+cover
 		padding-top: 48%
@@ -270,10 +296,14 @@
 		max-width: 500px
 		padding-right: 20px
 		color: $brown
+		+sm
+			padding-right: 10px
 	&__head
 		display: flex
 		justify-content: space-between
 		padding-right: 80px
+		+sm
+			padding-right: 10px
 	&__icon
 		width: 60px
 		height: 60px
@@ -312,6 +342,8 @@
 		+f(22px, 700)
 		text-transform: uppercase
 		color: $green
+		+sm
+			font-size: 16px
 		span
 			display: block
 	&__icon

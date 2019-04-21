@@ -39,10 +39,11 @@
 			min-height: 276px
 		+sm
 			+flex-size(50%)
+			min-height: 190px
 	&__main
 		margin: 0 auto
 		padding: 0 35px
-		+ms
+		+md
 			padding: 0 10px
 		.about-item &
 			max-width: 250px
@@ -50,11 +51,15 @@
 			padding: 0 0 0 85px
 			+lg
 				padding-left: 40px
+			+sm
+				padding-left: 15px
 	&__title
 		+sm
 			font-size: 22px
 		+ms
 			font-size: 18px
+			br
+				display: none
 	&__btn
 		margin-top: 30px
 		// +lg

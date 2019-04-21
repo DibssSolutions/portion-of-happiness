@@ -38,8 +38,12 @@
 				outline: none!important
 			&:before
 				display: none
+			+sm
+				min-width: 300px
 		.dropdown
 			min-width: 370px
+			+sm
+				min-width: 300px
 			&-toggle
 				&:after
 					content: ''
@@ -50,7 +54,7 @@
 					background-image: url(../img/arrow-down.svg)
 					+cover
 					width: 16px
-					height: 8px
+					height: 9px
 					top: 50%
 					right: 15px
 		.bootstrap-select .dropdown-toggle .filter-option
