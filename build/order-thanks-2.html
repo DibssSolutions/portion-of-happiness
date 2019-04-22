@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>About</title>
+    <title>Order</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" media="all" href="css/app.css">
   </head>
 
-  <body>
+  <body class="is-open-popup">
     <!-- BEGIN content -->
     <div class="out">
       <header class="header js-header">
@@ -199,86 +199,182 @@
           </div>
         </div>
       </div>
-      <div class="about">
-        <div class="about__inner inner">
-          <h2 class="about__title title">О сервисе</h2>
-        </div>
-        <div class="about__options">
-          <div class="options">
-            <div class="options__inner inner">
-              <ul class="options__list">
-                <li class="options__item title-s is-active">
-                  <a href="#">наша команда</a>
-                </li>
-                <li class="options__item bg-powder-dark title-s">
-                  <a href="#">Поставщики</a>
-                </li>
-                <li class="options__item title-s">
-                  <a href="#">Вакансии</a>
-                </li>
-                <li class="options__item bg-powder-dark title-s">
-                  <a href="#">Контакты</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="inner">
-          <div class="about__main-wrap">
-            <p>Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном</p>
-            <p>Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании.</p>
-          </div>
-        </div>
-        <div class="about-item">
-          <div class="inner-md">
-            <div class="info-item ">
-              <div class="info-item__img" style="background-image: url(./img/team.png)"></div>
-              <div class="info-item__main">
-                <h2 class="info-item__title title">Наша команда</h2>
+      <div class="cabinet">
+        <div class="cabinet__inner inner">
+          <div class="cabinet__user">
+            <div class="user">
+              <div class="user__person">
+                <div class="user__icon">
+                  <svg class="icon icon-user">
+                    <use xlink:href="img/sprite.svg#icon-user"></use>
+                  </svg>
+                </div>
+                <div class="user__name">Анжелика Владимировна Августовская</div>
+              </div>
+              <div class="user__btn">
+                <a href="#" class="btn btn_green btn_square"><span><span class="user__points">2500</span> баллов</span></a>
               </div>
             </div>
           </div>
-          <div class="about-item__text inner">
-            <p>Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. </p>
+        </div>
+        <div class="options">
+          <div class="options__inner inner">
+            <ul class="options__list">
+              <li class="options__item title-s">
+                <a href="#">личные данные</a>
+              </li>
+              <li class="options__item bg-powder-dark title-s">
+                <a href="#">Меню</a>
+              </li>
+              <li class="options__item title-s">
+                <a href="#">Подписки</a>
+              </li>
+              <li class="options__item bg-powder-dark title-s is-active">
+                <a href="#">Заказы</a>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="about-item">
-          <div class="inner-md">
-            <div class="info-item info-item_order">
-              <div class="info-item__img" style="background-image: url(./img/info2.png)"></div>
-              <div class="info-item__main">
-                <h2 class="info-item__title title">Почему<br> «порция счастья»?</h2>
+        <div class="order-page">
+          <div class="order-page__inner inner">
+            <h2 class="order-page__title title">Запланированные заказы </h2>
+            <div class="order-page__order">
+              <div class="order bg-powder">
+                <div class="order__main">
+                  <div class="order__header">Доставка <span>по понедельника, с 9.00 до 12.00</span></div>
+                  <p>Заказ №1269629</p>
+                  <p>Адрес: Санкт-Петербург, Учительская ул., 15, корп, 2, кв, 19 </p>
+                  <p>Получатель: Анжелика Иванова, +7 921 882-45-24</p>
+                  <p>Способ оплаты: наличные</p>
+                  <div class="order__footer">Состав: <span>название блюда, название меню</span></div>
+                </div>
+                <div class="order__total total">
+                  <div class="total__sum"><span>2500 руб. </span>ваш кешбэк: 25 бонусов</div>
+                  <div class="total__unavailable">Недоступен для изменения</div>
+                </div>
+              </div>
+              <div class="order-page__item">
+                <div class="order bg-powder">
+                  <div class="order__main">
+                    <div class="order__header">Доставка <span>по понедельника, с 9.00 до 12.00</span></div>
+                    <p>Заказ №1269629</p>
+                    <p>Адрес: Санкт-Петербург, Учительская ул., 15, корп, 2, кв, 19 </p>
+                    <p>Получатель: Анжелика Иванова, +7 921 882-45-24</p>
+                    <p>Способ оплаты: наличные</p>
+                    <div class="order__footer">Состав: <span>название блюда, название меню</span></div>
+                  </div>
+                  <div class="order__total total">
+                    <div class="total__sum"><span>2500 руб. </span>ваш кешбэк: 25 бонусов</div>
+                    <div class="total__btn">
+                      <a href="#" class="btn btn_green btn_wide"><span>изменить заказ</span></a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="about-item__text inner">
-            <p>Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. Корневой раздел содержит меню подразделов в левом дополнительном блоке и статичный текст о компании. </p>
-          </div>
-        </div>
-        <div class="about__gallery gallery js-gallery">
-          <div class="gallery__item js-gallery-item gallery__item_20">
-            <img src="./img/info2.png" alt="">
-          </div>
-          <div class="gallery__item js-gallery-item gallery__item_35">
-            <img src="./img/info1.png" alt="">
-          </div>
-          <div class="gallery__item js-gallery-item gallery__item_26">
-            <img src="./img/info2.png" alt="">
-          </div>
-          <div class="gallery__item js-gallery-item gallery__item_19">
-            <img src="./img/info1.png" alt="">
-          </div>
-          <div class="gallery__item js-gallery-item gallery__item_29">
-            <img src="./img/info1.png" alt="">
-          </div>
-          <div class="gallery__item js-gallery-item gallery__item_21">
-            <img src="./img/info2.png" alt="">
-          </div>
-          <div class="gallery__item js-gallery-item gallery__item_26">
-            <img src="./img/info1.png" alt="">
-          </div>
-          <div class="gallery__item js-gallery-item gallery__item_24">
-            <img src="./img/info2.png" alt="">
+            <h2 class="order-page__title title">заказы по подписке</h2>
+            <div class="order-page__order">
+              <div class="order bg-powder">
+                <div class="order__main">
+                  <div class="order__header">Доставка <span>по понедельника, с 9.00 до 12.00</span></div>
+                  <p>Заказ №1269629</p>
+                  <p>Адрес: Санкт-Петербург, Учительская ул., 15, корп, 2, кв, 19 </p>
+                  <p>Получатель: Анжелика Иванова, +7 921 882-45-24</p>
+                  <p>Способ оплаты: наличные</p>
+                  <div class="order__footer">Состав: <span>название блюда, название меню</span></div>
+                </div>
+                <div class="order__total total">
+                  <div class="total__sum"><span>2500 руб. </span>ваш кешбэк: 25 бонусов</div>
+                  <div class="total__btn">
+                    <a href="#" class="btn btn_green btn_wide"><span>изменить подписку</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order-page__bonus bonus">
+              <div class="bonus__share bg-green">
+                <div class="bonus__share-left">
+                  <p>Поделись с другом промо-кодом и получи <span class="bonus__share-accent"><span>500 </span>бонусных рублей </span>на свой счет, после того как друг совершит свой первый заказ с твоим промо-кодом.</p>
+                  <p class="bold">Ваш друг тоже получает 500 бонусных рублей на свой счет!</p>
+                  <div class="bonus__promo">
+                    <input type="text" class="bonus__promocode bonus-promo" value="123456" readonly>
+                    <div class="bonus__social">
+                      <span>Поделись промокодом:</span>
+                      <ul class="bonus__social-list">
+                        <li class="bonus__social-item"><a href="#">
+                            <svg class="icon icon-vk">
+                              <use xlink:href="img/sprite.svg#icon-vk"></use>
+                            </svg>
+                          </a></li>
+                        <li class="bonus__social-item"><a href="#">
+                            <svg class="icon icon-facebook">
+                              <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                            </svg>
+                          </a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="bonus__share-img">
+                  <img src="./img/info-box.svg" alt="">
+                </div>
+              </div>
+            </div>
+            <h2 class="order-page__title title">Выполненные заказы</h2>
+            <div class="order-page__order">
+              <div class="order bg-gray">
+                <div class="order__main">
+                  <div class="order__header">Доставка <span>25.07.2019, с 9.00 до 12.00</span></div>
+                  <p>Заказ №1269629</p>
+                  <p>Адрес: Санкт-Петербург, Учительская ул., 15, корп, 2, кв, 19 </p>
+                  <p>Получатель: Анжелика Иванова, +7 921 882-45-24</p>
+                  <p>Способ оплаты: наличные</p>
+                  <div class="order__footer">Состав: <span>название блюда, название меню</span></div>
+                </div>
+                <div class="order__total total">
+                  <div class="total__sum"><span>2500 руб. </span>ваш кешбэк: 25 бонусов</div>
+                  <div class="total__btn">
+                    <a href="#" class="btn btn_pink btn_wide"><span>Оставить отзыв</span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="order-page__item">
+                <div class="order bg-gray">
+                  <div class="order__main">
+                    <div class="order__header">Доставка <span>25.07.2019, с 9.00 до 12.00</span></div>
+                    <p>Заказ №1269629</p>
+                    <p>Адрес: Санкт-Петербург, Учительская ул., 15, корп, 2, кв, 19 </p>
+                    <p>Получатель: Анжелика Иванова, +7 921 882-45-24</p>
+                    <p>Способ оплаты: наличные</p>
+                    <div class="order__footer">Состав: <span>название блюда, название меню</span></div>
+                  </div>
+                  <div class="order__total total">
+                    <div class="total__sum"><span>2500 руб. </span>ваш кешбэк: 25 бонусов</div>
+                    <div class="total__btn">
+                      <a href="#" class="btn btn_pink btn_wide"><span>Оставить отзыв</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-page__item">
+                <div class="order bg-gray">
+                  <div class="order__main">
+                    <div class="order__header">Доставка <span>25.07.2019, с 9.00 до 12.00</span></div>
+                    <p>Заказ №1269629</p>
+                    <p>Адрес: Санкт-Петербург, Учительская ул., 15, корп, 2, кв, 19 </p>
+                    <p>Получатель: Анжелика Иванова, +7 921 882-45-24</p>
+                    <p>Способ оплаты: наличные</p>
+                    <div class="order__footer">Состав: <span>название блюда, название меню</span></div>
+                  </div>
+                  <div class="order__total total">
+                    <div class="total__sum"><span>2500 руб. </span>ваш кешбэк: 25 бонусов</div>
+                    <div class="total__btn">
+                      <a href="#" class="btn btn_pink btn_wide"><span>Оставить отзыв</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -425,6 +521,20 @@
           <a href="#">доставка и оплата</a>
           <a href="#">частые вопросы</a>
           <a href="#">контакты</a>
+        </div>
+      </div>
+      <div class="modal is-open" data-modal="rating-sm-manager">
+        <div class="modal__container" data-modal-container>
+          <div class="modal__inner">
+            <div class="rating-sm rating-sm_manager">
+              <div class="rating-sm__img" style="background-image: url(./img/ratingManager.png)">
+                <div class="rating-sm__text">
+                  <h2 class="rating-sm__title title">большое спасибо!</h2>
+                  <div class="rating-sm__aside">Наш менеджер перезвонит вам в течении часа</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

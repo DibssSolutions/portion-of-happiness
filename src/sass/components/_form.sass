@@ -64,7 +64,8 @@
 			color: $black
 		.filter-option
 			&-inner-inner
-				overflow: auto
+				text-overflow: ellipsis
+				padding-right: 18px
 		.dropdown-menu
 			margin: 0
 			padding: 0
@@ -111,8 +112,10 @@
 		align-items: center
 	.review-form &
 		padding-top: 20px
+
 		
-.form-group
+.form-group,
+.form-control
 	position: relative
 	margin-top: 10px
 	.subscription &
@@ -126,6 +129,7 @@
 		color: $brown
 		padding: 13px 12px
 		border-radius: 5px
+		display: block
 		+placeholder
 			+roboto
 			+f(15px, 400)
@@ -164,8 +168,8 @@
 			color: $black
 			+placeholder
 				color: $black
-
-
+.form-control
+	margin-top: 0
 
 .help-block.form-error
 	font-size: 15px

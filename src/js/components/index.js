@@ -9,3 +9,4 @@ import './_validation';
 import './_isotope';
 import './_scroll-top';
 import './_fancybox';
+import './_inputmask';

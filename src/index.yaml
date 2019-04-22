@@ -59,3 +59,9 @@ PageList:
   ready: 100
 - file: agreement.html
   ready: 100
+- file: order-basket.html
+  ready: 100
+- file: order-thanks.html
+  ready: 100
+- file: order-thanks-2.html
+  ready: 100

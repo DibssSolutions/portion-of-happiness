@@ -1,0 +1,241 @@
+---
+title: Order-orderbasket
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+{{header.block()}}
+{{hero.block({class: 'hero_small'})}}
+{# {% include "partials/_form-main.html"%} #}
+<!-- begin orderbasket -->
+<div class="orderbasket">
+	<div class="orderbasket__inner inner">
+		<h2 class="orderbasket__title title">ОфОрмление заказа:</h2>
+	</div>
+	<div class="orderbasket__wrap">
+		<form action="/">
+			<div class="orderbasket__inner inner">
+				<div class="orderbasket__main">
+					<!-- begin orderbasket-group -->
+					<div class="orderbasket-group">
+						<div class="orderbasket-group__title title">Адрес и время доставки:</div>
+						<!-- begin orderbasket-field -->
+						<div class="orderbasket-field">
+							<!-- begin check -->
+							<label class="orderbasket-field__check check">
+								<input type="radio" checked name="del">
+								<span class="check__text">Самовывоз</span>
+							</label>
+							<!-- end check -->
+							<!-- begin check -->
+							<label class="orderbasket-field__check check">
+								<input type="radio" name="del">
+								<span class="check__text">Доставка курьером </span>
+							</label>
+							<!-- end check -->
+						</div>
+						<!-- end orderbasket-field -->
+						<!-- begin orderbasket-field -->
+						<div class="orderbasket-field">
+							<select name="persons" class="js-select select-md">
+								<option value="">Cанкт-Петербург, Гражданский  простпект, 57, дом 20, кв. 57</option>
+								<option value="">Address</option>
+							</select>
+						</div>
+						<!-- end orderbasket-field -->
+						<!-- begin orderbasket-field -->
+						<div class="orderbasket-field">
+							<div class="orderbasket-row">
+								<div class="orderbasket-col-6">
+									<select name="persons" class="js-select select-md">
+										<option value="">20 март 2018 / понедельник</option>
+										<option value="">date</option>
+									</select>
+								</div>
+								<div class="orderbasket-col-6">
+									<select name="persons" class="js-select select-md">
+										<option value="">10:00 – 14:00</option>
+										<option value="">14:00 – 18:00</option>
+										<option value="">10:00 – 14:00</option>
+										<option value="">14:00 – 18:00</option>
+										<option value="">10:00 – 14:00</option>
+										<option value="">14:00 – 18:00</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<!-- end orderbasket-field -->
+					</div>
+					<!-- end orderbasket-group -->
+					<!-- begin orderbasket-group -->
+					<div class="orderbasket-group">
+						<div class="orderbasket-group__title title">способ оплаты:</div>
+						<!-- begin orderbasket-field -->
+						<div class="orderbasket-field">
+							<!-- begin check -->
+							<label class="orderbasket-field__check check">
+								<input type="radio" name="money-2" checked>
+								<span class="check__text">Наличные</span>
+							</label>
+							<!-- end check -->
+							<!-- begin check -->
+							<label class="orderbasket-field__check check">
+								<input type="radio" name="money-2">
+								<span class="check__text">Банковская карта</span>
+							</label>
+							<!-- end check -->
+						</div>
+						<!-- end orderbasket-field -->
+						<!-- begin orderbasket-field -->
+						<div class="orderbasket-field">
+							<div class="cards">
+								<!-- begin cards-number -->
+								<div class="cards-number">
+									<div class="cards-number__field">
+										<input type="text" class="cards-number__input cards-number__input_lg" placeholder="ХХХХ ХХХХ ХХХХ ХХХХ" data-inputmask-placeholder="ХХХХ ХХХХ ХХХХ ХХХХ" data-inputmask-max="16" data-inputmask="'mask': '9999 9999 9999 9999'" tabindex="1">
+									</div>
+									<div class="cards-number__label">номер карты</div>
+									<div class="cards-number__field">
+										<input type="text" class="cards-number__input" placeholder="Имя владельца карты" tabindex="2">
+									</div>
+									<div class="cards-number__label">латинские буквы</div>
+									<div class="cards-number__field">
+										<input type="text" class="cards-number__input" tabindex="3" placeholder="ММ/ГГ" data-inputmask="'mask': '99/99'" data-inputmask-placeholder="ММ/ГГ">
+									</div>
+									<div class="cards-number__label cards-number__label_red">заполните поле</div>
+								</div>
+								<!-- end cards-number -->
+								<!-- begin cards-cvv -->
+								<div class="cards-cvv">
+									<div class="cards-cvv__footer">
+										<div class="cards-cvv__inf inf js-inf">
+											<a href="#" class="inf__icon js-inf-trigger">?</a>
+										</div>
+										<input tabindex="4" type="text" class="cards-cvv__input" placeholder="CVC/CVV" data-inputmask-placeholder="CVV" data-inputmask="'mask': '999'">
+									</div>
+								</div>
+								<!-- end cards-cvv -->
+							</div>
+						</div>
+						<!-- end orderbasket-field -->
+						<!-- begin orderbasket-field -->
+						<div class="orderbasket-field">
+							<p>Для проверки подлинности карты мы спишем и вернем 1 рубль.</p>
+							<p>Ваша карта будет автоматически привязана к профилю, для удобства платежей.</p>
+							<p>Вы в любой момент можете отвязать или поменять её на другую в личном кабинете.</p>
+						</div>
+						<!-- end orderbasket-field -->
+						
+					</div>
+					<!-- end orderbasket-group -->
+					<!-- begin orderbasket-group -->
+					<div class="orderbasket-group">
+						<!-- begin orderbasket-field -->
+						<div class="orderbasket-field">
+							<div class="orderbasket-row-mod">
+								<div class="orderbasket-col-name">
+									<div class="form-control">
+										<input type="text" placeholder="Имя" tabindex="5">
+									</div>
+								</div>
+								<div class="orderbasket-col-tel">
+									<div class="form-control">
+										<input type="text" placeholder="+ X XXX XXX-XXX-XX" data-inputmask-placeholder="+ X XXX XXX-XXX-XX" data-inputmask="'mask': '+ 9 999 999-999-99'" tabindex="6">
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end orderbasket-field -->
+						<!-- begin orderbasket-field -->
+						<div class="orderbasket-field">
+							<div class="form-control">
+								<textarea placeholder="Ваш коментарий к заказу" tabindex="7"></textarea>
+							</div>
+						</div>
+						<!-- end orderbasket-field -->
+					</div>
+					<!-- end orderbasket-group -->
+					<div class="orderbasket-footer">
+						<a href="#" class="btn btn-border">
+							<svg class="icon icon-arr-left">
+								<use xlink:href="img/sprite.svg#icon-arr-left"></use>
+							</svg>
+							<span>вернутся в меню</span>
+						</a>
+					</div>
+				</div>
+				<div class="orderbasket__sidebar">
+					<div class="ordergroup">
+						<!-- begin check -->
+						<label class="check check_lg check_rl check_full">
+							<input type="checkbox" checked>
+							<span class="check__text">подписка:</span>
+						</label>
+						<!-- end check -->
+						<!-- begin discount -->
+						<div class="discount">
+							<div class="discount__title">
+								скидка 
+								<span class="discount__numb">10%</span>
+							</div>
+							<div class="discount__text">Оформляя подписку, вы получаете скидку 10% на каждый заказ. Вы можете изменить состав заказа, время и адрес доставк или отменить подписку в личном кабинет за 5 дней до ближайшей доставки.</div>
+						</div>
+					</div>
+					<!-- end discount -->
+					<div class="ordergroup">
+						<div class="ordergroup__field">
+							<div class="ordergroup__label">ваше меню:</div>
+							<div class="ordergroup__label-lg">домашнее</div>
+						</div>
+						<div class="ordergroup__field">
+							<div class="ordergroup__label">Введите промо код:</div>
+							<div class="ordergroup__control">
+								<div class="form-control">
+									<input type="text" placeholder="Promo code" value="123456789" tabindex="8">
+								</div>
+							</div>
+						</div>
+						<div class="ordergroup__field">
+							<div class="ordergroup__label">Спишите бонусы:</div>
+							<div class="ordergroup__control">
+								<div class="form-control">
+									<input type="text" placeholder="Bonus" value="2500" tabindex="9">
+								</div>
+							</div>
+							<div class="ordergroup__bonus">Доступные бонусы: 
+								<div class="ordergroup__bonus-numb">2500</div>
+							</div>
+						</div>
+					</div>
+					<div class="ordergroup">
+						<div class="ordergroup__field">
+							<div class="ordergroup__label">ваш заказ:</div>
+							<div class="ordergroup__label-xl">3750</div> 
+							<div class="ordergroup__label">руб.</div>
+						</div>
+						<div class="ordergroup__bonus">За этот заказ вам начислят: <br>
+							<div class="ordergroup__bonus-numb">125 </div>бонусов
+						</div>
+						<div class="ordergroup__text">Вы можете оплатить заказ баллами. Не более 20% от суммы заказа</div>
+					</div>
+					<div class="ordergroup">
+						<!-- begin check -->
+						<label class="orderbasket-field__check check check_text">
+							<input type="checkbox" name="money" checked>
+							<span class="check__text">Выбирая способ оплаты, вы даете согласие ООО «Подкрепление» <a href="#">на обработку персональных</a> данных, а также подтверждаете, что ознакомились с <a href="#">пользовательским соглашением.</a></span>
+						</label>
+						<!-- end check -->
+						<div class="ordergroup__field">
+							<a href="#" data-modal-control="modalform" class="btn btn_green btn_xl"><span>оформить заказ</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<!-- end orderbasket -->
+{{footer.block({footerBottom: 'footer__bottom_big'})}}
+{{mob_menu.mob_block()}}
+{% endblock %}
