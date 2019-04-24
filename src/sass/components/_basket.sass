@@ -1,21 +1,37 @@
 .orderbasket
 	padding: 41px 0
+	+md
+		padding: 20px 0 40px
 	&__inner
 		.orderbasket__wrap &
 			display: flex
+			flex-wrap: wrap
 			width: 100%
 	&__wrap
 		background-color: #faefdd
 		&:not(:first-child)
 			margin-top: 35px
+			+md
+				padding-bottom: 30px
 	&__main
 		padding: 35px 62px 35px 0
 		width: 63.6%
+		+md
+			padding: 35px 0
+			width: 100%
 	&__sidebar
 		position: relative
+		z-index: 1
 		padding: 30px 35px 30px 47px
 		width: 36.4%
 		background-color: #fbf6ee
+		+md
+			padding: 20px 0 10px
+			margin: 0 -16px
+			min-width: 100%
+			width: auto
+			flex-wrap: wrap
+			display: flex
 		&:before
 			position: absolute
 			content: ''
@@ -24,13 +40,45 @@
 			bottom: 0
 			width: 50vw
 			background-color: #fbf6ee
+			+md
+				width: 100vw
+				left: 50%
+				margin-left: -50vw
+		&:after
+			+md
+				position: absolute
+				content: ''
+				left: 0
+				right: 0
+				bottom: 10px
+				height: 1px
+				width: 100%
+				background-color: #fbf6ee
+	&__ordergroup
+		+md
+			width: 50%
+			padding: 16px
+		+sm
+			width: 100%
+		&:not(:last-child)
+			+md
+				padding: 16px
+
 .cards
 	position: relative
 	padding-right: 160px
+	max-width: 663px
+	+xs
+		padding-right: 0
 	.cards-cvv
 		position: absolute
 		top: 0
 		right: 0
+		+xs
+			position: relative
+		&:not(:first-child)
+			+xs
+				margin-top: 20px
 .cards-cvv,
 .cards-number
 	border-radius: 7px
@@ -82,7 +130,7 @@
 		width: 100%
 		background-color: rgb(224, 224, 224)
 	&__footer
-		margin-top: 159px
+		padding-top: 159px
 		padding-right: 38px
 		text-align: right
 	&__inf
@@ -105,16 +153,28 @@
 	margin: 0 -30px
 	flex-wrap: wrap
 	display: flex
+	+md
+		margin: 0 -15px
 .orderbasket-row-mod
 	margin: 0 -14px
 [class*="orderbasket-col"]
 	width: 100%
 	padding: 0 30px
+	+md
+		padding: 0 15px
 .orderbasket-col-6
 	+flex-size(50%)
+	+sm
+		+flex-size(100%)
+	&:not(:last-child)
+		margin-bottom: 23px
 .orderbasket-col-name,
 .orderbasket-col-tel
 	padding: 0 14px
+	+sm
+		+flex-size(100%)
+	&:not(:last-child)
+		margin-bottom: 23px
 .orderbasket-col-name
 	+flex-size(57%)
 .orderbasket-col-tel
@@ -132,23 +192,43 @@
 		margin-right: 10px
 		min-width: 32%
 		vertical-align: top
+		&:not(:first-child)
+			+xs
+				margin-top: 20px
 
 .orderbasket-footer
 	text-align: right
 	&:not(:first-child)
 		margin-top: 35px
+		+md
+			margin-top: 25px
 
 .ordergroup
 	&:not(:first-child)
 		padding-top: 22px
 	&:not(:last-child)
+		position: relative
 		padding-bottom: 30px
 		border-bottom: 1px solid rgba(#000, .3)
+		+md
+			border: none
+		&:before
+			position: absolute
+			content: ''
+			bottom: 0
+			left: 16px
+			right: 16px
+			height: 1px
+			background-color: rgba(#000, .3)
 	&__field
 		&:not(:first-child)
 			margin-top: 33px
+			+md
+				margin-top: 18px
 		& + .ordergroup__bonus
 			margin-top: 20px
+			+md
+				margin-top: 15px
 	&__label
 		font-weight: 500
 		font-size: 15px
@@ -163,6 +243,8 @@
 		letter-spacing: -0.03em
 		text-transform: uppercase
 		display: inline-block
+		+md
+			font-size: 20px
 	&__label-xl
 		font-size: 36px
 		font-weight: 700
@@ -170,6 +252,8 @@
 		letter-spacing: -0.03em
 		text-transform: uppercase
 		display: inline-block
+		+md
+			font-size: 20px
 	&__control
 		position: relative
 		margin-top: 5px

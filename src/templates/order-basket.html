@@ -156,7 +156,7 @@ title: Order-orderbasket
 						<!-- end orderbasket-field -->
 					</div>
 					<!-- end orderbasket-group -->
-					<div class="orderbasket-footer">
+					<div class="orderbasket-footer md-hide">
 						<a href="#" class="btn btn-border">
 							<svg class="icon icon-arr-left">
 								<use xlink:href="img/sprite.svg#icon-arr-left"></use>
@@ -166,7 +166,7 @@ title: Order-orderbasket
 					</div>
 				</div>
 				<div class="orderbasket__sidebar">
-					<div class="ordergroup">
+					<div class="orderbasket__ordergroup ordergroup">
 						<!-- begin check -->
 						<label class="check check_lg check_rl check_full">
 							<input type="checkbox" checked>
@@ -183,7 +183,7 @@ title: Order-orderbasket
 						</div>
 					</div>
 					<!-- end discount -->
-					<div class="ordergroup">
+					<div class="orderbasket__ordergroup ordergroup">
 						<div class="ordergroup__field">
 							<div class="ordergroup__label">ваше меню:</div>
 							<div class="ordergroup__label-lg">домашнее</div>
@@ -208,7 +208,7 @@ title: Order-orderbasket
 							</div>
 						</div>
 					</div>
-					<div class="ordergroup">
+					<div class="orderbasket__ordergroup ordergroup">
 						<div class="ordergroup__field">
 							<div class="ordergroup__label">ваш заказ:</div>
 							<div class="ordergroup__label-xl">3750</div> 
@@ -219,7 +219,7 @@ title: Order-orderbasket
 						</div>
 						<div class="ordergroup__text">Вы можете оплатить заказ баллами. Не более 20% от суммы заказа</div>
 					</div>
-					<div class="ordergroup">
+					<div class="orderbasket__ordergroup ordergroup">
 						<!-- begin check -->
 						<label class="orderbasket-field__check check check_text">
 							<input type="checkbox" name="money" checked>
@@ -230,6 +230,14 @@ title: Order-orderbasket
 							<a href="#" data-modal-control="modalform" class="btn btn_green btn_xl"><span>оформить заказ</span></a>
 						</div>
 					</div>
+				</div>
+				<div class="orderbasket-footer md-show">
+					<a href="#" class="btn btn-border">
+						<svg class="icon icon-arr-left">
+							<use xlink:href="img/sprite.svg#icon-arr-left"></use>
+						</svg>
+						<span>вернутся в меню</span>
+					</a>
 				</div>
 			</div>
 		</form>

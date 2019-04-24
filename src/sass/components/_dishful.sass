@@ -229,6 +229,8 @@
 			font-size: 30px
 			font-weight: 700
 			text-transform: uppercase
+			+md
+				font-size: 20px
 		.check_rl &
 			padding: 0 50px 0 0
 		.check_full &
@@ -250,6 +252,8 @@
 					+circle(26)
 			.check_lg &
 				+circle(42)
+				+md
+					+circle(26)
 			.check_rl &
 				left: auto
 				right: 0
@@ -280,11 +284,18 @@
 			.check_lg &
 				left: 6px
 				+circle(30)
+				+md
+					left: 6px
+					+circle(20)
 			.check_rl &
 				left: auto
 				right: 3px
 			.check_rl.check_lg &
 				right: 6px
+				left: auto
+				+md
+					left: auto
+					right: 3px
 
 	input
 		position: absolute
@@ -334,6 +345,8 @@
 	&__numb
 		font-size: 40px
 		font-weight: 700
+		+md
+			font-size: 30px
 	&__text
 		letter-spacing: 0.01em
 		font-size: 15px
