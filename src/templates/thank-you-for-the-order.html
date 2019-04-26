@@ -1,0 +1,56 @@
+---
+title: Oreder
+---
+{% extends "layouts/_layout.html" %}
+<!-- bodyClass: is-open-popup -->
+
+{% block content %}
+	
+{{header.block()}}
+{{hero.block({class: 'hero_small'})}}
+{# {% include "partials/_form-main.html"%} #}
+<div class="cabinet">
+	<div class="cabinet__inner inner">
+		<div class="subscriptions">
+			<h2 class="title">ОфОрмление заказа:</h2>
+			<div class="subscriptions__item">
+				<div class="subscription-item subscription-item_empty bg-powder">
+					<div class="subscription-item__message">Спасибо за заказ!</div>
+					<div class="subscription-item__text">
+						<p>Заказ номер № <strong>253567</strong> успешно оформлен.</p>
+						<p>Мы свяжемся с вами для его подтверждения</p>
+					</div>
+					<div class="subscription-item__btn">
+						<a href="#" class="btn btn_green btn_wide">Мои заказы</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cabinet__bonus bonus">
+			<div class="bonus__share bg-green">
+				<div class="bonus__share-left">
+					<p>Поделись с другом промо-кодом и получи <span class="bonus__share-accent"><span>500 </span>бонусных рублей </span>на свой счет, после того как друг совершит свой первый заказ с твоим промо-кодом.</p>
+					<p class="bold">Ваш друг тоже получает 500 бонусных рублей на свой счет!</p>
+					<div class="bonus__promo">
+						<input type="text" class="bonus__promocode bonus-promo" value="123456" readonly>
+						<div class="bonus__social">
+							<span>Поделись промокодом:</span>
+							<ul class="bonus__social-list">
+								<li class="bonus__social-item"><a href="#">{{mixins.icon('vk')}}</a></li>
+								<li class="bonus__social-item"><a href="#">{{mixins.icon('facebook')}}</a></li>
+								<li class="bonus__social-item"><a href="#">{{mixins.icon('insta')}}</a></li>
+								<li class="bonus__social-item"><a href="#">{{mixins.icon('whatsapp')}}</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="bonus__share-img">
+					<img src="./img/info-box.svg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{{footer.block({footerBottom: 'footer__bottom_big'})}}
+{{mob_menu.mob_block()}}
+{% endblock %}

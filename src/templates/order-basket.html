@@ -24,13 +24,13 @@ title: Order-orderbasket
 						<div class="orderbasket-field">
 							<!-- begin check -->
 							<label class="orderbasket-field__check check">
-								<input type="radio" checked name="del">
+								<input type="radio" name="del">
 								<span class="check__text">Самовывоз</span>
 							</label>
 							<!-- end check -->
 							<!-- begin check -->
 							<label class="orderbasket-field__check check">
-								<input type="radio" name="del">
+								<input type="radio" checked name="del">
 								<span class="check__text">Доставка курьером </span>
 							</label>
 							<!-- end check -->
@@ -75,58 +75,78 @@ title: Order-orderbasket
 						<div class="orderbasket-field">
 							<!-- begin check -->
 							<label class="orderbasket-field__check check">
-								<input type="radio" name="money-2" checked>
+								<input type="radio" name="money-2">
 								<span class="check__text">Наличные</span>
 							</label>
 							<!-- end check -->
 							<!-- begin check -->
 							<label class="orderbasket-field__check check">
-								<input type="radio" name="money-2">
+								<input type="radio" name="money-2" checked>
 								<span class="check__text">Банковская карта</span>
 							</label>
 							<!-- end check -->
 						</div>
 						<!-- end orderbasket-field -->
-						<!-- begin orderbasket-field -->
-						<div class="orderbasket-field">
-							<div class="cards">
-								<!-- begin cards-number -->
-								<div class="cards-number">
-									<div class="cards-number__field">
-										<input type="text" class="cards-number__input cards-number__input_lg" placeholder="ХХХХ ХХХХ ХХХХ ХХХХ" data-inputmask-placeholder="ХХХХ ХХХХ ХХХХ ХХХХ" data-inputmask-max="16" data-inputmask="'mask': '9999 9999 9999 9999'" tabindex="1">
-									</div>
-									<div class="cards-number__label">номер карты</div>
-									<div class="cards-number__field">
-										<input type="text" class="cards-number__input" placeholder="Имя владельца карты" tabindex="2">
-									</div>
-									<div class="cards-number__label">латинские буквы</div>
-									<div class="cards-number__field">
-										<input type="text" class="cards-number__input" tabindex="3" placeholder="ММ/ГГ" data-inputmask="'mask': '99/99'" data-inputmask-placeholder="ММ/ГГ">
-									</div>
-									<div class="cards-number__label cards-number__label_red">заполните поле</div>
-								</div>
-								<!-- end cards-number -->
-								<!-- begin cards-cvv -->
-								<div class="cards-cvv">
-									<div class="cards-cvv__footer">
-										<div class="cards-cvv__inf inf js-inf">
-											<a href="#" class="inf__icon js-inf-trigger">?</a>
-										</div>
-										<input tabindex="4" type="text" class="cards-cvv__input" placeholder="CVC/CVV" data-inputmask-placeholder="CVV" data-inputmask="'mask': '999'">
-									</div>
-								</div>
-								<!-- end cards-cvv -->
+						<div class="orderbasket-tab" style="display: none;">
+							<!-- begin orderbasket-field -->
+							<div class="orderbasket-field">
+								С какой суммы понадобится сдача: 
 							</div>
+							<!-- end orderbasket-field -->
+							<!-- begin orderbasket-field -->
+							<div class="orderbasket-field">
+								<div class="orderbasket-row">
+									<div class="orderbasket-col-6">
+										<select name="persons" class="js-select select-md">
+											<option value="">без здачи</option>
+											<option value="">с здачей</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<!-- end orderbasket-field -->
 						</div>
-						<!-- end orderbasket-field -->
-						<!-- begin orderbasket-field -->
-						<div class="orderbasket-field">
-							<p>Для проверки подлинности карты мы спишем и вернем 1 рубль.</p>
-							<p>Ваша карта будет автоматически привязана к профилю, для удобства платежей.</p>
-							<p>Вы в любой момент можете отвязать или поменять её на другую в личном кабинете.</p>
+						<div class="orderbasket-tab">
+							<!-- begin orderbasket-field -->
+							<div class="orderbasket-field">
+								<div class="cards">
+									<!-- begin cards-number -->
+									<div class="cards-number">
+										<div class="cards-number__field">
+											<input type="text" class="cards-number__input cards-number__input_lg" placeholder="ХХХХ ХХХХ ХХХХ ХХХХ" data-inputmask-placeholder="ХХХХ ХХХХ ХХХХ ХХХХ" data-inputmask-max="16" data-inputmask="'mask': '9999 9999 9999 9999'" tabindex="1">
+										</div>
+										<div class="cards-number__label">номер карты</div>
+										<div class="cards-number__field">
+											<input type="text" class="cards-number__input" placeholder="Имя владельца карты" tabindex="2">
+										</div>
+										<div class="cards-number__label">латинские буквы</div>
+										<div class="cards-number__field">
+											<input type="text" class="cards-number__input" tabindex="3" placeholder="ММ/ГГ" data-inputmask="'mask': '99/99'" data-inputmask-placeholder="ММ/ГГ">
+										</div>
+										<div class="cards-number__label cards-number__label_red">заполните поле</div>
+									</div>
+									<!-- end cards-number -->
+									<!-- begin cards-cvv -->
+									<div class="cards-cvv">
+										<div class="cards-cvv__footer">
+											<div class="cards-cvv__inf inf js-inf">
+												<a href="#" class="inf__icon js-inf-trigger">?</a>
+											</div>
+											<input tabindex="4" type="text" class="cards-cvv__input" placeholder="CVC/CVV" data-inputmask-placeholder="CVV" data-inputmask="'mask': '999'">
+										</div>
+									</div>
+									<!-- end cards-cvv -->
+								</div>
+							</div>
+							<!-- end orderbasket-field -->
+							<!-- begin orderbasket-field -->
+							<div class="orderbasket-field">
+								<p>Для проверки подлинности карты мы спишем и вернем 1 рубль.</p>
+								<p>Ваша карта будет автоматически привязана к профилю, для удобства платежей.</p>
+								<p>Вы в любой момент можете отвязать или поменять её на другую в личном кабинете.</p>
+							</div>
+							<!-- end orderbasket-field -->
 						</div>
-						<!-- end orderbasket-field -->
-						
 					</div>
 					<!-- end orderbasket-group -->
 					<!-- begin orderbasket-group -->

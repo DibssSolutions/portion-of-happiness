@@ -1,0 +1,55 @@
+---
+title: kak-radotaet
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+{{header.block()}}
+{{hero.block({class: 'hero_small'})}}
+<section class="info">
+    <div class="info__inner inner-lg">
+    	<div class="info-item info-item_order">
+    		<div class="info-item__img" style="background-image: url(img/info2.jpg)"></div>
+    		<div class="info-item__main">
+    			<h2 class="info-item__title title">доставляем <br>в каждый дом!</h2>
+    			<p>Для вас готовят профессионалы высокого класса, которые действительно любят свое дело.</p>
+    		</div>
+    	</div>
+    	<div class="info-item ">
+    		<div class="info-item__img" style="background-image: url(img/info1.jpg)"></div>
+    		<div class="info-item__main">
+    			<h2 class="info-item__title title">Профессиональные повара</h2>
+    			<p>Наша Миссия «Хххххх хххххххххх хххххх хххххх хххх ххх хххххххххх хххххх хххххх ххххх хххххххххх хххххх хххххх ххххх хххххххххх хххххх хххххх хх».</p>
+    		</div>
+    	</div>
+    	<div class="info-item info-item_order">
+    		<div class="info-item__img" style="background-image: url(img/info2.jpg)"></div>
+    		<div class="info-item__main">
+    			<h2 class="info-item__title title">Строжайшие <br>стандарты <br>качества</h2>
+    			<p>Неизменно высокий уровень производства, строжайший контроль качества на всех этапах и только свежие продукты.</p>
+    		</div>
+    	</div>
+    </div>
+</section>
+{% include "partials/_review.html"%}
+{% for item in [
+	{
+		img: 'blogItem.png',
+		link: 'Наши новости',
+		date: '01.03.2019',
+		title: 'название тема сообщения. Название Название Название'
+	},
+	{
+		img: 'blogItem.png',
+		link: 'Все о еде',
+		date: '01.03.2019',
+		title: 'название тема сообщения. Название Название Название'
+	}
+] %}
+	{{ mixins.blogItem(item) }}
+{% endfor %}
+{{footer.block()}}
+{{mob_menu.mob_block()}}
+
+{% endblock %}

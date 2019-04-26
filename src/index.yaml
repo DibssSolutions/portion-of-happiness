@@ -65,3 +65,9 @@ PageList:
   ready: 100
 - file: order-thanks-2.html
   ready: 100
+- file: order-basket-cash.html
+  ready: 100
+- file: thank-you-for-the-order.html
+  ready: 100
+- file: kak-rabotaet.html
+  ready: 100
