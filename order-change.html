@@ -1,0 +1,914 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Order change</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+
+  <body class="is-open-popup">
+    <!-- BEGIN content -->
+    <div class="out">
+      <header class="header js-header">
+        <div class="header__top">
+          <div class="header__inner inner">
+            <div class="header__toggle js-toggle">
+              <div class="header__toggle-icon js-toggle-icon"></div>
+            </div>
+            <div class="header__left">
+              <div class="header__city">
+                <div class="city">
+                  <div class="city__current">Санкт-Петербург</div>
+                  <div class="city__arrow">
+                    <svg class="icon icon-arrow-down">
+                      <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+                    </svg>
+                  </div>
+                  <ul class="city__list">
+                    <li class="city__item"><a href="#">Москва</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="header__phone"><a href="tel:+78129991929">+7 812 <span>999 1929</span></a></div>
+            </div>
+            <div class="header__logo">
+              <a href="/">
+                <img src="./img/logo.svg" alt="logotype">
+              </a>
+            </div>
+            <div class="header__right">
+              <h1 class="header__title">
+                <span hidden>Порция щастья</span>
+                <a href="/">
+                  <svg class="icon icon-logo-mob">
+                    <use xlink:href="img/sprite.svg#icon-logo-mob"></use>
+                  </svg>
+                </a>
+              </h1>
+              <div class="header__social">
+                <a href="#" class="subscribe">ПОДПИСАТЬСЯ НА НОВОСТИ</a>
+                <ul class="social">
+                  <li class="social__item">
+                    <a href="#">
+                      <svg class="icon icon-insta">
+                        <use xlink:href="img/sprite.svg#icon-insta"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a href="#">
+                      <svg class="icon icon-vk">
+                        <use xlink:href="img/sprite.svg#icon-vk"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a href="#">
+                      <svg class="icon icon-facebook">
+                        <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="account-wrap">
+                <a href="#" class="btn btn_pink btn_sm"><span>войти</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="header__inner inner">
+            <div class="header__left">
+              <ul class="main-menu">
+                <li class="main-menu__item main-menu__item_submenu">
+                  <a href="#" class="main-menu__link">меню <span class="main-menu__arrow">
+                      <svg class="icon icon-arrow-down">
+                        <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <ul class="main-menu__submenu">
+                    <li class="main-menu__submenu-item"><a href="#" class="main-menu__submenu-link">домашнее меню</a></li>
+                    <li class="main-menu__submenu-item"><a href="#" class="main-menu__submenu-link">шеф-меню</a></li>
+                    <li class="main-menu__submenu-item"><a href="#" class="main-menu__submenu-link">легкое меню</a></li>
+                    <li class="main-menu__submenu-item"><a href="#" class="main-menu__submenu-link">блюда на выбор</a></li>
+                  </ul>
+                </li>
+                <li class="main-menu__item"><a href="#" class="main-menu__link">лавка</a></li>
+                <li class="main-menu__item"><a href="#" class="main-menu__link">акции</a></li>
+                <li class="main-menu__item"><a href="#" class="main-menu__link">блог</a></li>
+                <li class="main-menu__item"><a href="#" class="main-menu__link">о сервисе</a></li>
+              </ul>
+            </div>
+            <div class="header__right">
+              <div class="header__basket basket">
+                <div class="basket__text">
+                  <div class="basket__title">моя покупка:</div>
+                  <div class="basket__sum">3750</div>
+                  <div class="basket__currency">руб.</div>
+                </div>
+                <div class="basket__btn"><a href="#" class="btn btn_orange"><span>заказать</span></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="hero hero_small">
+        <div class="hero__inner js-hero-slider-wrap">
+          <div class="hero__arrows">
+            <div class="hero__arrows_inner inner">
+              <div class="hero__prev-arrow js-hero-prev">
+                <svg class="icon icon-arrow-left">
+                  <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                </svg>
+              </div>
+              <div class="hero__next-arrow js-hero-next">
+                <svg class="icon icon-arrow-right">
+                  <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="hero__slider hero-slider js-hero-slider">
+            <div class="hero-slider__slide">
+              <div class="hero-slider__bg" style="background-image: url(./img/slide1.jpg)">
+                <div class="hero-slider__inner inner">
+                  <div class="hero-slider__text">
+                    <div class="hero-slider__title">
+                      <h2 class="title title_lg">ПРАЗДНИЧНОЕ ПРЕДЛОЖЕНИЕ:<br> “НЕДЕЛЯ ДЛЯ ДВОИХ”</h2>
+                      <div class="hero-slider__btn">
+                        <a href="#" class="btn btn_pink"><span>выбрать меню</span></a>
+                      </div>
+                    </div>
+                    <div class="hero-slider__content">
+                      <p> РЕКЛАМНЫЙ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТИК РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТИК </p>
+                      <div class="hero-slider__btn">
+                        <a href="#" class="btn btn_pink btn_md"><span>выбрать меню</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-slider__slide">
+              <div class="hero-slider__bg" style="background-image: url(./img/slide1.jpg)">
+                <div class="hero-slider__inner inner">
+                  <div class="hero-slider__text">
+                    <div class="hero-slider__title">
+                      <h2 class="title title_lg">2ПРАЗДНИЧНОЕ ПРЕДЛОЖЕНИЕ: “НЕДЕЛЯ ДЛЯ ДВОИХ”</h2>
+                      <div class="hero-slider__btn">
+                        <a href="#" class="btn btn_pink"><span>выбрать меню</span></a>
+                      </div>
+                    </div>
+                    <div class="hero-slider__content">
+                      <p> РЕКЛАМНЫЙ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТИК РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТИК </p>
+                      <div class="hero-slider__btn">
+                        <a href="#" class="btn btn_pink btn_md"><span>выбрать меню</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-slider__slide">
+              <div class="hero-slider__bg" style="background-image: url(./img/slide1.jpg)">
+                <div class="hero-slider__inner inner">
+                  <div class="hero-slider__text">
+                    <div class="hero-slider__title">
+                      <h2 class="title title_lg">3ПРАЗДНИЧНОЕ ПРЕДЛОЖЕНИЕ: “НЕДЕЛЯ ДЛЯ ДВОИХ”</h2>
+                      <div class="hero-slider__btn">
+                        <a href="#" class="btn btn_pink"><span>выбрать меню</span></a>
+                      </div>
+                    </div>
+                    <div class="hero-slider__content">
+                      <p> РЕКЛАМНЫЙ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТИК РЕКЛАМНЫЙ ТЕКСТ ТЕКСТ РЕКЛАМНЫЙ ТЕКСТИК </p>
+                      <div class="hero-slider__btn">
+                        <a href="#" class="btn btn_pink btn_md"><span>выбрать меню</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cabinet">
+        <div class="cabinet__inner inner">
+          <div class="cabinet__user">
+            <div class="user">
+              <div class="user__person">
+                <div class="user__icon">
+                  <svg class="icon icon-user">
+                    <use xlink:href="img/sprite.svg#icon-user"></use>
+                  </svg>
+                </div>
+                <div class="user__name">Анжелика Владимировна Августовская</div>
+              </div>
+              <div class="user__btn">
+                <a href="#" class="btn btn_green btn_square"><span><span class="user__points">2500</span> баллов</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="options">
+          <div class="options__inner inner">
+            <ul class="options__list">
+              <li class="options__item title-s">
+                <a href="#">личные данные</a>
+              </li>
+              <li class="options__item bg-powder-dark title-s">
+                <a href="#">Меню</a>
+              </li>
+              <li class="options__item title-s">
+                <a href="#">Подписки</a>
+              </li>
+              <li class="options__item bg-powder-dark title-s is-active">
+                <a href="#">Заказы</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="order-page">
+          <div class="order-page__inner inner">
+            <h2 class="order-page__title title">Запланированные заказы </h2>
+            <div class="order-page__order">
+              <div class="order bg-powder">
+                <div class="order__main">
+                  <div class="order__header">Доставка <span>по понедельника, с 9.00 до 12.00</span></div>
+                  <p>Заказ №1269629</p>
+                  <p>Адрес: Санкт-Петербург, Учительская ул., 15, корп, 2, кв, 19 </p>
+                  <p>Получатель: Анжелика Иванова, +7 921 882-45-24</p>
+                  <p>Способ оплаты: наличные</p>
+                  <div class="order__footer">Состав: <span>название блюда, название меню</span></div>
+                </div>
+                <div class="order__total total">
+                  <div class="total__sum"><span>2500 руб. </span>ваш кешбэк: 25 бонусов</div>
+                  <div class="total__unavailable">Недоступен для изменения</div>
+                </div>
+              </div>
+              <div class="order-page__item">
+                <div class="order bg-powder">
+                  <div class="order__main">
+                    <div class="order__header">Доставка <span>по понедельника, с 9.00 до 12.00</span></div>
+                    <p>Заказ №1269629</p>
+                    <p>Адрес: Санкт-Петербург, Учительская ул., 15, корп, 2, кв, 19 </p>
+                    <p>Получатель: Анжелика Иванова, +7 921 882-45-24</p>
+                    <p>Способ оплаты: наличные</p>
+                    <div class="order__footer">Состав: <span>название блюда, название меню</span></div>
+                  </div>
+                  <div class="order__total total">
+                    <div class="total__sum"><span>2500 руб. </span>ваш кешбэк: 25 бонусов</div>
+                    <div class="total__btn">
+                      <a href="#" class="btn btn_green btn_wide"><span>изменить заказ</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h2 class="order-page__title title">заказы по подписке</h2>
+            <div class="order-page__order">
+              <div class="order bg-powder">
+                <div class="order__main">
+                  <div class="order__header">Доставка <span>по понедельника, с 9.00 до 12.00</span></div>
+                  <p>Заказ №1269629</p>
+                  <p>Адрес: Санкт-Петербург, Учительская ул., 15, корп, 2, кв, 19 </p>
+                  <p>Получатель: Анжелика Иванова, +7 921 882-45-24</p>
+                  <p>Способ оплаты: наличные</p>
+                  <div class="order__footer">Состав: <span>название блюда, название меню</span></div>
+                </div>
+                <div class="order__total total">
+                  <div class="total__sum"><span>2500 руб. </span>ваш кешбэк: 25 бонусов</div>
+                  <div class="total__btn">
+                    <a href="#" class="btn btn_green btn_wide"><span>изменить подписку</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order-page__bonus bonus">
+              <div class="bonus__share bg-green">
+                <div class="bonus__share-left">
+                  <p>Поделись с другом промо-кодом и получи <span class="bonus__share-accent"><span>500 </span>бонусных рублей </span>на свой счет, после того как друг совершит свой первый заказ с твоим промо-кодом.</p>
+                  <p class="bold">Ваш друг тоже получает 500 бонусных рублей на свой счет!</p>
+                  <div class="bonus__promo">
+                    <input type="text" class="bonus__promocode bonus-promo" value="123456" readonly>
+                    <div class="bonus__social">
+                      <span>Поделись промокодом:</span>
+                      <ul class="bonus__social-list">
+                        <li class="bonus__social-item"><a href="#">
+                            <svg class="icon icon-vk">
+                              <use xlink:href="img/sprite.svg#icon-vk"></use>
+                            </svg>
+                          </a></li>
+                        <li class="bonus__social-item"><a href="#">
+                            <svg class="icon icon-facebook">
+                              <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                            </svg>
+                          </a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="bonus__share-img">
+                  <img src="./img/info-box.svg" alt="">
+                </div>
+              </div>
+            </div>
+            <h2 class="order-page__title title">Выполненные заказы</h2>
+            <div class="order-page__order">
+              <div class="order bg-gray">
+                <div class="order__main">
+                  <div class="order__header">Доставка <span>25.07.2019, с 9.00 до 12.00</span></div>
+                  <p>Заказ №1269629</p>
+                  <p>Адрес: Санкт-Петербург, Учительская ул., 15, корп, 2, кв, 19 </p>
+                  <p>Получатель: Анжелика Иванова, +7 921 882-45-24</p>
+                  <p>Способ оплаты: наличные</p>
+                  <div class="order__footer">Состав: <span>название блюда, название меню</span></div>
+                </div>
+                <div class="order__total total">
+                  <div class="total__sum"><span>2500 руб. </span>ваш кешбэк: 25 бонусов</div>
+                  <div class="total__btn">
+                    <a href="#" class="btn btn_pink btn_wide"><span>Оставить отзыв</span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="order-page__item">
+                <div class="order bg-gray">
+                  <div class="order__main">
+                    <div class="order__header">Доставка <span>25.07.2019, с 9.00 до 12.00</span></div>
+                    <p>Заказ №1269629</p>
+                    <p>Адрес: Санкт-Петербург, Учительская ул., 15, корп, 2, кв, 19 </p>
+                    <p>Получатель: Анжелика Иванова, +7 921 882-45-24</p>
+                    <p>Способ оплаты: наличные</p>
+                    <div class="order__footer">Состав: <span>название блюда, название меню</span></div>
+                  </div>
+                  <div class="order__total total">
+                    <div class="total__sum"><span>2500 руб. </span>ваш кешбэк: 25 бонусов</div>
+                    <div class="total__btn">
+                      <a href="#" class="btn btn_pink btn_wide"><span>Оставить отзыв</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-page__item">
+                <div class="order bg-gray">
+                  <div class="order__main">
+                    <div class="order__header">Доставка <span>25.07.2019, с 9.00 до 12.00</span></div>
+                    <p>Заказ №1269629</p>
+                    <p>Адрес: Санкт-Петербург, Учительская ул., 15, корп, 2, кв, 19 </p>
+                    <p>Получатель: Анжелика Иванова, +7 921 882-45-24</p>
+                    <p>Способ оплаты: наличные</p>
+                    <div class="order__footer">Состав: <span>название блюда, название меню</span></div>
+                  </div>
+                  <div class="order__total total">
+                    <div class="total__sum"><span>2500 руб. </span>ваш кешбэк: 25 бонусов</div>
+                    <div class="total__btn">
+                      <a href="#" class="btn btn_pink btn_wide"><span>Оставить отзыв</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer__inner inner">
+          <div class="footer__top">
+            <div class="footer__logo">
+              <div class="footer-logo">
+                <svg class="icon icon-logo">
+                  <use xlink:href="img/sprite.svg#icon-logo"></use>
+                </svg>
+              </div>
+              <div class="footer-slogan">ДОСТАВЛЯЕМ<br> В КАЖДЫЙ ДОМ!</div>
+            </div>
+            <div class="footer__menu-wrap">
+              <div class="footer__menu-title">меню:</div>
+              <div class="footer__menu">
+                <ul class="footer__menu-block">
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">домашнее меню</a></li>
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">шеф-меню</a></li>
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">легкое меню</a></li>
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">блюда на выбор</a></li>
+                </ul>
+                <ul class="footer__menu-block">
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">лавка</a></li>
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">акции</a></li>
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">блог</a></li>
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">отзывы</a></li>
+                </ul>
+                <ul class="footer__menu-block">
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">как это работает</a></li>
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">доставка и оплата</a></li>
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">частые вопросы</a></li>
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">поставщики</a></li>
+                </ul>
+                <ul class="footer__menu-block">
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">о сервисе</a></li>
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">наша команда</a></li>
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">вакансии</a></li>
+                  <li class="footer__menu-item"><a href="#" class="footer__menu-link">контакты</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__contacts">
+              <div class="footer__contacts-item">
+                <div class="footer__contacts-city">cанкт-петербург</div>
+                <a href="tel:+78129991929" class="footer__contacts-phone">+7 812 <span>999 1929</span></a>
+              </div>
+              <div class="footer__contacts-item">
+                <div class="footer__contacts-city">москва</div>
+                <a href="tel:+78129991929" class="footer__contacts-phone">+7 812 <span>999 1929</span></a>
+              </div>
+            </div>
+            <div class="footer__agree">
+              <a href="#" class="footer__agree-link">Пользовательское соглашение</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom footer__bottom_big">
+          <div class="footer__bottom-wrap inner">
+            <div class="footer__copyright"> © ПОРЦИЯ СЧАСТЬЯ 2019 </div>
+            <div class="footer__social">
+              <ul class="social">
+                <li class="social__item">
+                  <a href="#">
+                    <svg class="icon icon-insta">
+                      <use xlink:href="img/sprite.svg#icon-insta"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#">
+                    <svg class="icon icon-vk">
+                      <use xlink:href="img/sprite.svg#icon-vk"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#">
+                    <svg class="icon icon-facebook">
+                      <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+              <a href="#" class="subscribe">ПОДПИСАТЬСЯ НА НОВОСТИ</a>
+            </div>
+            <div class="footer__stores stores">
+              <div class="stores__item">
+                <a href="#"><img src="./img/apple.svg" alt=""></a>
+              </div>
+              <div class="stores__item">
+                <a href="#"><img src="./img/google-play.svg" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="mob-menu js-mob-menu">
+        <ul class="mob-menu__list">
+          <li class="mob-menu__item is-active"><a href="#" class="mob-menu__link">Главная</a></li>
+          <li class="mob-menu__item mob-menu__item_submenu">
+            <a href="#" class="mob-menu__link">меню</a>
+            <ul class="mob-menu__submenu">
+              <li class="mob-menu__submenu-item"><a href="#" class="mob-menu__submenu-link">домашнее меню</a></li>
+              <li class="mob-menu__submenu-item"><a href="#" class="mob-menu__submenu-link">шеф-меню</a></li>
+              <li class="mob-menu__submenu-item"><a href="#" class="mob-menu__submenu-link">легкое меню</a></li>
+              <li class="mob-menu__submenu-item"><a href="#" class="mob-menu__submenu-link">блюда на выбор</a></li>
+            </ul>
+          </li>
+          <li class="mob-menu__item"><a href="#" class="mob-menu__link">лавка</a></li>
+          <li class="mob-menu__item"><a href="#" class="mob-menu__link">акции</a></li>
+          <li class="mob-menu__item"><a href="#" class="mob-menu__link">о сервисе</a></li>
+        </ul>
+        <div class="mob-menu__contacts">
+          <div class="mob-menu__contacts-wrap">
+            <div class="mob-menu__arr" style="background-image: url(./img/arrow-city.png)"></div>
+            <div class="mob-menu__city">Санкт-Петербург</div>
+          </div>
+          <div class="mob-menu__phone"><a href="tel:+78129991929">+7 812 <span>999 1929</span></a></div>
+        </div>
+        <div class="mob-menu__buttons">
+          <a href="#" class="btn btn_pink btn_sm"><span>войти</span></a>
+          <a href="#" class="btn btn_green btn_sm"><span>зарегистрироваться</span></a>
+        </div>
+        <div class="mob-menu__socials">
+          <a href="#" class="mob-menu__socials-icon">
+            <svg class="icon icon-instagram-m">
+              <use xlink:href="img/sprite.svg#icon-instagram-m"></use>
+            </svg>
+          </a>
+          <a href="#" class="mob-menu__socials-icon">
+            <svg class="icon icon-vk-m">
+              <use xlink:href="img/sprite.svg#icon-vk-m"></use>
+            </svg>
+          </a>
+          <a href="#" class="mob-menu__socials-icon">
+            <svg class="icon icon-facebook-m">
+              <use xlink:href="img/sprite.svg#icon-facebook-m"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="mob-menu__aside">
+          <a href="#">доставка и оплата</a>
+          <a href="#">частые вопросы</a>
+          <a href="#">контакты</a>
+        </div>
+      </div>
+      <div class="modal modal_order is-open" data-modal="order-change">
+        <div class="modal__container modal__container_xl" data-modal-container>
+          <div class="modal__inner">
+            <div class="cabinet">
+              <div class="preorder">
+                <div class="preorder__topic preorder__topic_modal">
+                  <div class="preorder__inner">
+                    <div class="preorder__left">
+                      <h3 class="preorder__subtitle title">изменениение заказа:</h3>
+                    </div>
+                    <div class="preorder__right">
+                      <div class="preorder__total">мой заказ: <div class="preorder__total-numb">3750 <div class="preorder__total-currency"> руб.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="preorder__inner">
+                  <div class="preorder__row">
+                    <div class="preorder__left">
+                      <div class="preorder__item-title">Меню «Домашнее» на 5-12 апреля</div>
+                      <div class="preorder__label">Блюда на 5 дней, на 2 персоны:</div>
+                      <div class="preorder__text text-uppercase">СОЧНАЯ ГОВЯДИНА с паровыми овощами СОЧНАЯ ГОВЯДИНА с паровыми овощами СОЧНАЯ ГОВЯДИНА с паровыми овощами СОЧНАЯ ГОВЯДИНА с паровыми овощами СОЧНАЯ ГОВЯДИНА с паровыми овощами</div>
+                    </div>
+                    <div class="preorder__right">
+                      <div class="preorder__top">
+                        <div class="preorder__summ">2500 руб.</div>
+                        <div class="preorder__bonus">ваш кешбэк: 25 бонусов</div>
+                      </div>
+                      <div class="preorder__bottom">
+                        <div class="preorder__choose">
+                          <div class="choose js-choose" data-max-number="20">
+                            <button class="choose__minus js-choose-minus" type="button">-</button>
+                            <input type="text" align="center" class="choose__input" value="1" readonly>
+                            <button class="choose__plus js-choose-plus" type="button">+</button>
+                          </div>
+                        </div>
+                        <div class="preorder__remove">
+                          <button class="btn-remove" type="button">
+                            <svg class="icon icon-trash">
+                              <use xlink:href="img/sprite.svg#icon-trash"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="preorder__row">
+                    <div class="preorder__left">
+                      <div class="preorder__item-title">Дополнительное блюдо</div>
+                      <div class="preorder__text text-uppercase">Суп домашний с офощами</div>
+                    </div>
+                    <div class="preorder__right">
+                      <div class="preorder__top">
+                        <div class="preorder__summ">310 руб.</div>
+                        <div class="preorder__bonus">ваш кешбэк: 25 бонусов</div>
+                      </div>
+                      <div class="preorder__bottom">
+                        <div class="preorder__choose">
+                          <div class="choose js-choose" data-max-number="20">
+                            <button class="choose__minus js-choose-minus" type="button">-</button>
+                            <input type="text" align="center" class="choose__input" value="1" readonly>
+                            <button class="choose__plus js-choose-plus" type="button">+</button>
+                          </div>
+                        </div>
+                        <div class="preorder__remove">
+                          <button class="btn-remove" type="button">
+                            <svg class="icon icon-trash">
+                              <use xlink:href="img/sprite.svg#icon-trash"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="preorder__row">
+                    <div class="preorder__left">
+                      <div class="preorder__item-title">Дополнительное блюдо</div>
+                      <div class="preorder__text text-uppercase">Суп домашний с офощами</div>
+                    </div>
+                    <div class="preorder__right">
+                      <div class="preorder__top">
+                        <div class="preorder__summ">550 руб.</div>
+                        <div class="preorder__bonus">ваш кешбэк: 25 бонусов</div>
+                      </div>
+                      <div class="preorder__bottom">
+                        <div class="preorder__choose">
+                          <div class="choose js-choose" data-max-number="20">
+                            <button class="choose__minus js-choose-minus" type="button">-</button>
+                            <input type="text" align="center" class="choose__input" value="1" readonly>
+                            <button class="choose__plus js-choose-plus" type="button">+</button>
+                          </div>
+                        </div>
+                        <div class="preorder__remove">
+                          <button class="btn-remove" type="button">
+                            <svg class="icon icon-trash">
+                              <use xlink:href="img/sprite.svg#icon-trash"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="preorder__row">
+                    <div class="preorder__left">
+                      <div class="preorder__item-title">Фермерские товары</div>
+                      <div class="preorder__text">ТВОРОГ 5%, порция 100 гр.</div>
+                    </div>
+                    <div class="preorder__right">
+                      <div class="preorder__top">
+                        <div class="preorder__summ">80 руб.</div>
+                        <div class="preorder__bonus">ваш кешбэк: 25 бонусов</div>
+                      </div>
+                      <div class="preorder__bottom">
+                        <div class="preorder__choose">
+                          <div class="choose js-choose" data-max-number="20">
+                            <button class="choose__minus js-choose-minus" type="button">-</button>
+                            <input type="text" align="center" class="choose__input" value="1" readonly>
+                            <button class="choose__plus js-choose-plus" type="button">+</button>
+                          </div>
+                        </div>
+                        <div class="preorder__remove">
+                          <button class="btn-remove" type="button">
+                            <svg class="icon icon-trash">
+                              <use xlink:href="img/sprite.svg#icon-trash"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="preorder__row preorder__row_mod">
+                    <div class="preorder__left">
+                      <!-- begin orderbasket-group -->
+                      <div class="orderbasket-group">
+                        <div class="orderbasket-group__title title">Адрес и время доставки:</div>
+                        <!-- begin orderbasket-field -->
+                        <div class="orderbasket-field">
+                          <!-- begin check -->
+                          <label class="orderbasket-field__check check">
+                            <input type="radio" checked name="del">
+                            <span class="check__text">Самовывоз</span>
+                          </label>
+                          <!-- end check -->
+                          <!-- begin check -->
+                          <label class="orderbasket-field__check check">
+                            <input type="radio" name="del">
+                            <span class="check__text">Доставка курьером </span>
+                          </label>
+                          <!-- end check -->
+                        </div>
+                        <!-- end orderbasket-field -->
+                        <!-- begin orderbasket-field -->
+                        <div class="orderbasket-field">
+                          <select name="persons" class="js-select select-md">
+                            <option value="">Cанкт-Петербург, Гражданский простпект, 57, дом 20, кв. 57</option>
+                            <option value="">Address</option>
+                          </select>
+                        </div>
+                        <!-- end orderbasket-field -->
+                        <!-- begin orderbasket-field -->
+                        <div class="orderbasket-field">
+                          <div class="orderbasket-row">
+                            <div class="orderbasket-col-6">
+                              <select name="persons" class="js-select select-md">
+                                <option value="">20 март 2018 / понедельник</option>
+                                <option value="">date</option>
+                              </select>
+                            </div>
+                            <div class="orderbasket-col-6">
+                              <select name="persons" class="js-select select-md">
+                                <option value="">10:00 – 14:00</option>
+                                <option value="">14:00 – 18:00</option>
+                                <option value="">10:00 – 14:00</option>
+                                <option value="">14:00 – 18:00</option>
+                                <option value="">10:00 – 14:00</option>
+                                <option value="">14:00 – 18:00</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end orderbasket-field -->
+                      </div>
+                      <!-- end orderbasket-group -->
+                      <!-- begin orderbasket-group -->
+                      <div class="orderbasket-group">
+                        <div class="orderbasket-group__title title">способ оплаты:</div>
+                        <!-- begin orderbasket-field -->
+                        <div class="orderbasket-field">
+                          <!-- begin check -->
+                          <label class="orderbasket-field__check check">
+                            <input type="radio" name="money-2" checked>
+                            <span class="check__text">Наличные</span>
+                          </label>
+                          <!-- end check -->
+                          <!-- begin check -->
+                          <label class="orderbasket-field__check check">
+                            <input type="radio" name="money-2">
+                            <span class="check__text">Банковская карта</span>
+                          </label>
+                          <!-- end check -->
+                        </div>
+                        <!-- end orderbasket-field -->
+                        <div class="orderbasket-tab" style="display: none;">
+                          <!-- begin orderbasket-field -->
+                          <div class="orderbasket-field"> С какой суммы понадобится сдача: </div>
+                          <!-- end orderbasket-field -->
+                          <!-- begin orderbasket-field -->
+                          <div class="orderbasket-field">
+                            <div class="orderbasket-row">
+                              <div class="orderbasket-col-6">
+                                <select name="persons" class="js-select select-md">
+                                  <option value="">без здачи</option>
+                                  <option value="">с здачей</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end orderbasket-field -->
+                        </div>
+                        <div class="orderbasket-tab">
+                          <!-- begin orderbasket-field -->
+                          <div class="orderbasket-field">
+                            <div class="cards">
+                              <!-- begin cards-number -->
+                              <div class="cards-number">
+                                <div class="cards-number__field">
+                                  <input type="text" class="cards-number__input cards-number__input_lg" placeholder="ХХХХ ХХХХ ХХХХ ХХХХ" data-inputmask-placeholder="ХХХХ ХХХХ ХХХХ ХХХХ" data-inputmask-max="16" data-inputmask="'mask': '9999 9999 9999 9999'" tabindex="1">
+                                </div>
+                                <div class="cards-number__label">номер карты</div>
+                                <div class="cards-number__field">
+                                  <input type="text" class="cards-number__input" placeholder="Имя владельца карты" tabindex="2">
+                                </div>
+                                <div class="cards-number__label">латинские буквы</div>
+                                <div class="cards-number__field">
+                                  <input type="text" class="cards-number__input" tabindex="3" placeholder="ММ/ГГ" data-inputmask="'mask': '99/99'" data-inputmask-placeholder="ММ/ГГ">
+                                </div>
+                                <div class="cards-number__label cards-number__label_red">заполните поле</div>
+                              </div>
+                              <!-- end cards-number -->
+                              <!-- begin cards-cvv -->
+                              <div class="cards-cvv">
+                                <div class="cards-cvv__footer">
+                                  <div class="cards-cvv__inf inf js-inf">
+                                    <a href="#" class="inf__icon js-inf-trigger">?</a>
+                                  </div>
+                                  <input tabindex="4" type="text" class="cards-cvv__input" placeholder="CVC/CVV" data-inputmask-placeholder="CVV" data-inputmask="'mask': '999'">
+                                </div>
+                              </div>
+                              <!-- end cards-cvv -->
+                            </div>
+                          </div>
+                          <!-- end orderbasket-field -->
+                          <!-- begin orderbasket-field -->
+                          <div class="orderbasket-field">
+                            <p>Для проверки подлинности карты мы спишем и вернем 1 рубль.</p>
+                            <p>Ваша карта будет автоматически привязана к профилю, для удобства платежей.</p>
+                            <p>Вы в любой момент можете отвязать или поменять её на другую в личном кабинете.</p>
+                          </div>
+                          <!-- end orderbasket-field -->
+                        </div>
+                      </div>
+                      <!-- end orderbasket-group -->
+                      <!-- begin orderbasket-group -->
+                      <div class="orderbasket-group">
+                        <!-- begin orderbasket-field -->
+                        <div class="orderbasket-field">
+                          <div class="orderbasket-row-mod">
+                            <div class="orderbasket-col-name">
+                              <div class="form-control">
+                                <input type="text" placeholder="Имя" tabindex="5">
+                              </div>
+                            </div>
+                            <div class="orderbasket-col-tel">
+                              <div class="form-control">
+                                <input type="text" placeholder="+ X XXX XXX-XXX-XX" data-inputmask-placeholder="+ X XXX XXX-XXX-XX" data-inputmask="'mask': '+ 9 999 999-999-99'" tabindex="6">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end orderbasket-field -->
+                        <!-- begin orderbasket-field -->
+                        <div class="orderbasket-field">
+                          <div class="form-control">
+                            <textarea placeholder="Ваш коментарий к заказу" tabindex="7"></textarea>
+                          </div>
+                        </div>
+                        <!-- end orderbasket-field -->
+                      </div>
+                      <!-- end orderbasket-group -->
+                    </div>
+                    <div class="preorder__right sm-hide"></div>
+                  </div>
+                  <div class="preorder__footer">
+                    <div class="preorder__left sm-hide">
+                      <a href="#" class="btn btn-border">
+                        <svg class="icon icon-arr-left">
+                          <use xlink:href="img/sprite.svg#icon-arr-left"></use>
+                        </svg>
+                        <span>вернутся в меню</span>
+                      </a>
+                    </div>
+                    <div class="preorder__right">
+                      <a href="#" class="btn btn_green btn_xl"><span>изменить заказ</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END content -->
+    <div class="modal" data-modal="modalform">
+      <div class="modal__container" data-modal-container>
+        <div class="modal__inner">
+          <div class="form-main">
+            <h3 class="form-main__title title title_m">Спасибо, что обратились в наш сервис. <br>Оставьте свои данные, и наш менеджер свяжется с вами в ближайшее время</h3>
+            <form action="/" class="form form_main">
+              <div class="form-group">
+                <input type="text" class="form__input" placeholder="Ваше имя">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form__input" placeholder="Контактный телефон">
+              </div>
+              <div class="form-group">
+                <textarea class="form__textarea" name="help" placeholder="Ваши коментарии"></textarea>
+              </div>
+              <div class="form__btn">
+                <button type="submit" class="btn btn_green"><span>отправить</span></button>
+              </div>
+            </form>
+            <div class="modal-close">
+              <button type="button" class="btn-close btn-close_brown" data-modal-close></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=7a9648bf-398b-4673-ad66-512ef28875ce&lang=ru_RU" type="text/javascript"></script>
+    <!-- AMAvq1wBAAAANbBgKQMBYG4gOwEAC5FlNodSn9e9nN8vbW8AAAAAAAAAAAAvcykOmloMA0RVuLJnoBo97jOTpA== -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function()
+      {
+        var map = document.querySelectorAll('.map');
+        if (map.length)
+        {
+          ymaps.ready(function()
+          {
+            map.forEach(function(el)
+            {
+              var newMap = new ymaps.Map(el,
+              {
+                center: [55.76, 37.64],
+                zoom: 10
+              });
+              map.behaviors.disable('scrollZoom');
+              map.controls.remove('smallMapDefaultSet');
+              map.controls.remove('trafficControl');
+              map.controls.remove('rulerControl');
+              map.container.fitToViewport();
+              if (map)
+              {
+                ymaps.modules.require(['Placemark', 'Circle'], function(Placemark, Circle)
+                {
+                  var placemark = new Placemark([55.76, 37.64],
+                  {},
+                  {
+                    iconLayout: 'default#image',
+                    iconImageHref: './img/point.png',
+                    iconImageSize: [39, 64],
+                    iconImageOffset: [-15, -64]
+                  });
+                  map.geoObjects.add(placemark);
+                });
+              }
+            });
+          });
+        }
+      });
+
+    </script>
+    <!-- END scripts -->
+  </body>
+
+</html>
