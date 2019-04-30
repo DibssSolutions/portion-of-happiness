@@ -2,11 +2,11 @@ ProjectTitle: template
 
 PageList:
 - file: page.html
-  ready: 50
+  ready: 100
 - file: page-login.html
-  ready: 50
+  ready: 100
 - file: page-anonymous.html
-  ready: 50
+  ready: 100
 - file: card.html
   ready: 100
 - file: card-full.html
@@ -14,20 +14,24 @@ PageList:
 - file: card-single.html
   ready: 100
 - file: menu.html
-  ready: 50
+  ready: 100
 - file: stock.html
   ready: 100
 - file: proposal_1.html
-  ready: 50
+  ready: 100
 - file: proposal_2.html
-  ready: 50
+  ready: 100
 - file: proposal_3.html
-  ready: 50
+  ready: 100
 - file: blog.html
-  ready: 50
+  ready: 100
 - file: blog-item.html
-  ready: 50
+  ready: 100
 - file: cabinet.html
+  ready: 100
+- file: kabinet-4.html
+  ready: 100
+- file: kabinet-5.html
   ready: 100
 - file: subscriptions.html
   ready: 100
@@ -36,6 +40,8 @@ PageList:
 - file: order.html
   ready: 100
 - file: order_none.html
+  ready: 100
+- file: order-change.html
   ready: 100
 - file: about.html
   ready: 100
@@ -70,4 +76,6 @@ PageList:
 - file: thank-you-for-the-order.html
   ready: 100
 - file: kak-rabotaet.html
+  ready: 100
+- file: menu_zakaz_2_korzina.html
   ready: 100

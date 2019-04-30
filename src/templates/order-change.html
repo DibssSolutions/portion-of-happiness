@@ -1,0 +1,425 @@
+---
+title: Order change
+bodyClass: is-open-popup
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+{{header.block()}}
+{{hero.block({class: 'hero_small'})}}
+{# {% include "partials/_form-main.html"%} #}
+<div class="cabinet">
+	<div class="cabinet__inner inner">
+		<div class="cabinet__user">
+			<div class="user">
+				<div class="user__person">
+					<div class="user__icon">{{mixins.icon('user')}}</div>
+					<div class="user__name">Анжелика Владимировна Августовская</div>
+				</div>
+				<div class="user__btn">
+					<a href="#" class="btn btn_green btn_square"><span><span class="user__points">2500</span> баллов</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="options">
+		<div class="options__inner inner">
+			<ul class="options__list">
+				<li class="options__item title-s">
+					<a href="#">личные данные</a>
+				</li>
+				<li class="options__item bg-powder-dark title-s">
+					<a href="#">Меню</a>
+				</li>
+				<li class="options__item title-s">
+					<a href="#">Подписки</a>
+				</li>
+				<li class="options__item bg-powder-dark title-s is-active">
+					<a href="#">Заказы</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="order-page">
+		<div class="order-page__inner inner">
+			<h2 class="order-page__title title">Запланированные заказы </h2>
+			<div class="order-page__order">
+				<div class="order bg-powder">
+					<div class="order__main">
+						<div class="order__header">Доставка <span>по понедельника, с 9.00 до 12.00</span></div>
+						<p>Заказ №1269629</p>
+						<p>Адрес: Санкт-Петербург, Учительская ул., 15, корп, 2, кв, 19 </p>
+						<p>Получатель: Анжелика Иванова, +7 921 882-45-24</p>
+						<p>Способ оплаты: наличные</p>
+						<div class="order__footer">Состав: <span>название блюда, название меню</span></div>
+					</div>
+					<div class="order__total total">
+						<div class="total__sum"><span>2500 руб. </span>ваш кешбэк: 25 бонусов</div>
+						<div class="total__unavailable">Недоступен для изменения</div>
+					</div>
+				</div>
+				<div class="order-page__item">
+					<div class="order bg-powder">
+						<div class="order__main">
+							<div class="order__header">Доставка <span>по понедельника, с 9.00 до 12.00</span></div>
+							<p>Заказ №1269629</p>
+							<p>Адрес: Санкт-Петербург, Учительская ул., 15, корп, 2, кв, 19 </p>
+							<p>Получатель: Анжелика Иванова, +7 921 882-45-24</p>
+							<p>Способ оплаты: наличные</p>
+							<div class="order__footer">Состав: <span>название блюда, название меню</span></div>
+						</div>
+						<div class="order__total total">
+							<div class="total__sum"><span>2500 руб. </span>ваш кешбэк: 25 бонусов</div>
+							<div class="total__btn">
+								<a href="#" class="btn btn_green btn_wide"><span>изменить заказ</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2 class="order-page__title title">заказы по подписке</h2>
+			<div class="order-page__order">
+				<div class="order bg-powder">
+					<div class="order__main">
+						<div class="order__header">Доставка <span>по понедельника, с 9.00 до 12.00</span></div>
+						<p>Заказ №1269629</p>
+						<p>Адрес: Санкт-Петербург, Учительская ул., 15, корп, 2, кв, 19 </p>
+						<p>Получатель: Анжелика Иванова, +7 921 882-45-24</p>
+						<p>Способ оплаты: наличные</p>
+						<div class="order__footer">Состав: <span>название блюда, название меню</span></div>
+					</div>
+					<div class="order__total total">
+						<div class="total__sum"><span>2500 руб. </span>ваш кешбэк: 25 бонусов</div>
+						<div class="total__btn">
+							<a href="#" class="btn btn_green btn_wide"><span>изменить подписку</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="order-page__bonus bonus">
+				<div class="bonus__share bg-green">
+					<div class="bonus__share-left">
+						<p>Поделись с другом промо-кодом и получи <span class="bonus__share-accent"><span>500 </span>бонусных рублей </span>на свой счет, после того как друг совершит свой первый заказ с твоим промо-кодом.</p>
+						<p class="bold">Ваш друг тоже получает 500 бонусных рублей на свой счет!</p>
+						<div class="bonus__promo">
+							<input type="text" class="bonus__promocode bonus-promo" value="123456" readonly>
+							<div class="bonus__social">
+								<span>Поделись промокодом:</span>
+								<ul class="bonus__social-list">
+									<li class="bonus__social-item"><a href="#">{{mixins.icon('vk')}}</a></li>
+									<li class="bonus__social-item"><a href="#">{{mixins.icon('facebook')}}</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="bonus__share-img">
+						<img src="./img/info-box.svg" alt="">
+					</div>
+				</div>
+			</div>
+			<h2 class="order-page__title title">Выполненные заказы</h2>
+			<div class="order-page__order">
+				<div class="order bg-gray">
+					<div class="order__main">
+						<div class="order__header">Доставка <span>25.07.2019, с 9.00 до 12.00</span></div>
+						<p>Заказ №1269629</p>
+						<p>Адрес: Санкт-Петербург, Учительская ул., 15, корп, 2, кв, 19 </p>
+						<p>Получатель: Анжелика Иванова, +7 921 882-45-24</p>
+						<p>Способ оплаты: наличные</p>
+						<div class="order__footer">Состав: <span>название блюда, название меню</span></div>
+					</div>
+					<div class="order__total total">
+						<div class="total__sum"><span>2500 руб. </span>ваш кешбэк: 25 бонусов</div>
+						<div class="total__btn">
+							<a href="#" class="btn btn_pink btn_wide"><span>Оставить отзыв</span></a>
+						</div>
+					</div>
+				</div>
+				<div class="order-page__item">
+					<div class="order bg-gray">
+						<div class="order__main">
+							<div class="order__header">Доставка <span>25.07.2019, с 9.00 до 12.00</span></div>
+							<p>Заказ №1269629</p>
+							<p>Адрес: Санкт-Петербург, Учительская ул., 15, корп, 2, кв, 19 </p>
+							<p>Получатель: Анжелика Иванова, +7 921 882-45-24</p>
+							<p>Способ оплаты: наличные</p>
+							<div class="order__footer">Состав: <span>название блюда, название меню</span></div>
+						</div>
+						<div class="order__total total">
+							<div class="total__sum"><span>2500 руб. </span>ваш кешбэк: 25 бонусов</div>
+							<div class="total__btn">
+								<a href="#" class="btn btn_pink btn_wide"><span>Оставить отзыв</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="order-page__item">
+					<div class="order bg-gray">
+						<div class="order__main">
+							<div class="order__header">Доставка <span>25.07.2019, с 9.00 до 12.00</span></div>
+							<p>Заказ №1269629</p>
+							<p>Адрес: Санкт-Петербург, Учительская ул., 15, корп, 2, кв, 19 </p>
+							<p>Получатель: Анжелика Иванова, +7 921 882-45-24</p>
+							<p>Способ оплаты: наличные</p>
+							<div class="order__footer">Состав: <span>название блюда, название меню</span></div>
+						</div>
+						<div class="order__total total">
+							<div class="total__sum"><span>2500 руб. </span>ваш кешбэк: 25 бонусов</div>
+							<div class="total__btn">
+								<a href="#" class="btn btn_pink btn_wide"><span>Оставить отзыв</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{{footer.block({footerBottom: 'footer__bottom_big'})}}
+{{mob_menu.mob_block()}}
+{# {% include "partials/_form-sm.html"%} #}
+
+
+<div class="modal modal_order is-open" data-modal="order-change">
+	<div class="modal__container modal__container_xl" data-modal-container>
+		<div class="modal__inner">
+			<div class="cabinet">
+				<div class="preorder">
+					<div class="preorder__topic preorder__topic_modal">
+						<div class="preorder__inner">
+							<div class="preorder__left">
+								<h3 class="preorder__subtitle title">изменениение заказа:</h3>
+							</div>
+							<div class="preorder__right"><div class="preorder__total">мой заказ: <div class="preorder__total-numb">3750 <div class="preorder__total-currency"> руб.</div></div></div></div>
+						</div>
+					</div>
+					<div class="preorder__inner">
+						{% for item in [{
+							title: 'Меню «Домашнее» на 5-12 апреля',
+							label: 'Блюда на 5 дней, на 2 персоны:',
+							text: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами СОЧНАЯ ГОВЯДИНА с паровыми овощами СОЧНАЯ ГОВЯДИНА с паровыми овощами СОЧНАЯ ГОВЯДИНА с паровыми овощами СОЧНАЯ ГОВЯДИНА с паровыми овощами',
+							summ: '2500 руб.',
+							bonus: 'ваш кешбэк: 25 бонусов'
+						}, {
+							title: 'Дополнительное блюдо',
+							text: 'Суп домашний с офощами',
+							summ: '310 руб.',
+							bonus: 'ваш кешбэк: 25 бонусов'
+						}, {
+							title: 'Дополнительное блюдо',
+							text: 'Суп домашний с офощами',
+							summ: '550 руб.',
+							bonus: 'ваш кешбэк: 25 бонусов'
+						}, {
+							title: 'Фермерские товары',
+							text: 'ТВОРОГ 5%, порция 100 гр.',
+							summ: '80 руб.',
+							bonus: 'ваш кешбэк: 25 бонусов'
+						}] %}
+					    <div class="preorder__row">
+					    	<div class="preorder__left">
+					    		<div class="preorder__item-title">{{ item.title }}</div>
+					    		{% if item.label %}
+					    		<div class="preorder__label">{{ item.label }}</div>
+					    		{% endif %}
+					    		<div class="preorder__text{% if not loop.last %} text-uppercase{% endif %}">{{ item.text }}</div>
+					    	</div>
+					    	<div class="preorder__right">
+					    		<div class="preorder__top">
+					    			<div class="preorder__summ">{{ item.summ }}</div>
+					    			<div class="preorder__bonus">{{ item.bonus }}</div>
+					    		</div>
+					    		<div class="preorder__bottom">
+					    			<div class="preorder__choose">
+					    				{{ mixins.choose() }}
+					    			</div>
+					    			<div class="preorder__remove">
+					    				<button class="btn-remove" type="button">{{ mixins.icon('trash') }}</button>
+					    			</div>
+					    		</div>
+					    	</div>
+					    </div>
+						{% endfor %}
+						<div class="preorder__row preorder__row_mod">
+							<div class="preorder__left">
+								<!-- begin orderbasket-group -->
+								<div class="orderbasket-group">
+									<div class="orderbasket-group__title title">Адрес и время доставки:</div>
+									<!-- begin orderbasket-field -->
+									<div class="orderbasket-field">
+										<!-- begin check -->
+										<label class="orderbasket-field__check check">
+											<input type="radio" checked name="del">
+											<span class="check__text">Самовывоз</span>
+										</label>
+										<!-- end check -->
+										<!-- begin check -->
+										<label class="orderbasket-field__check check">
+											<input type="radio" name="del">
+											<span class="check__text">Доставка курьером </span>
+										</label>
+										<!-- end check -->
+									</div>
+									<!-- end orderbasket-field -->
+									<!-- begin orderbasket-field -->
+									<div class="orderbasket-field">
+										<select name="persons" class="js-select select-md">
+											<option value="">Cанкт-Петербург, Гражданский  простпект, 57, дом 20, кв. 57</option>
+											<option value="">Address</option>
+										</select>
+									</div>
+									<!-- end orderbasket-field -->
+									<!-- begin orderbasket-field -->
+									<div class="orderbasket-field">
+										<div class="orderbasket-row">
+											<div class="orderbasket-col-6">
+												<select name="persons" class="js-select select-md">
+													<option value="">20 март 2018 / понедельник</option>
+													<option value="">date</option>
+												</select>
+											</div>
+											<div class="orderbasket-col-6">
+												<select name="persons" class="js-select select-md">
+													<option value="">10:00 – 14:00</option>
+													<option value="">14:00 – 18:00</option>
+													<option value="">10:00 – 14:00</option>
+													<option value="">14:00 – 18:00</option>
+													<option value="">10:00 – 14:00</option>
+													<option value="">14:00 – 18:00</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<!-- end orderbasket-field -->
+								</div>
+								<!-- end orderbasket-group -->
+								<!-- begin orderbasket-group -->
+								<div class="orderbasket-group">
+									<div class="orderbasket-group__title title">способ оплаты:</div>
+									<!-- begin orderbasket-field -->
+									<div class="orderbasket-field">
+										<!-- begin check -->
+										<label class="orderbasket-field__check check">
+											<input type="radio" name="money-2" checked>
+											<span class="check__text">Наличные</span>
+										</label>
+										<!-- end check -->
+										<!-- begin check -->
+										<label class="orderbasket-field__check check">
+											<input type="radio" name="money-2">
+											<span class="check__text">Банковская карта</span>
+										</label>
+										<!-- end check -->
+									</div>
+									<!-- end orderbasket-field -->
+									<div class="orderbasket-tab" style="display: none;">
+										<!-- begin orderbasket-field -->
+										<div class="orderbasket-field">
+											С какой суммы понадобится сдача: 
+										</div>
+										<!-- end orderbasket-field -->
+										<!-- begin orderbasket-field -->
+										<div class="orderbasket-field">
+											<div class="orderbasket-row">
+												<div class="orderbasket-col-6">
+													<select name="persons" class="js-select select-md">
+														<option value="">без здачи</option>
+														<option value="">с здачей</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<!-- end orderbasket-field -->
+									</div>
+									<div class="orderbasket-tab">
+										<!-- begin orderbasket-field -->
+										<div class="orderbasket-field">
+											<div class="cards">
+												<!-- begin cards-number -->
+												<div class="cards-number">
+													<div class="cards-number__field">
+														<input type="text" class="cards-number__input cards-number__input_lg" placeholder="ХХХХ ХХХХ ХХХХ ХХХХ" data-inputmask-placeholder="ХХХХ ХХХХ ХХХХ ХХХХ" data-inputmask-max="16" data-inputmask="'mask': '9999 9999 9999 9999'" tabindex="1">
+													</div>
+													<div class="cards-number__label">номер карты</div>
+													<div class="cards-number__field">
+														<input type="text" class="cards-number__input" placeholder="Имя владельца карты" tabindex="2">
+													</div>
+													<div class="cards-number__label">латинские буквы</div>
+													<div class="cards-number__field">
+														<input type="text" class="cards-number__input" tabindex="3" placeholder="ММ/ГГ" data-inputmask="'mask': '99/99'" data-inputmask-placeholder="ММ/ГГ">
+													</div>
+													<div class="cards-number__label cards-number__label_red">заполните поле</div>
+												</div>
+												<!-- end cards-number -->
+												<!-- begin cards-cvv -->
+												<div class="cards-cvv">
+													<div class="cards-cvv__footer">
+														<div class="cards-cvv__inf inf js-inf">
+															<a href="#" class="inf__icon js-inf-trigger">?</a>
+														</div>
+														<input tabindex="4" type="text" class="cards-cvv__input" placeholder="CVC/CVV" data-inputmask-placeholder="CVV" data-inputmask="'mask': '999'">
+													</div>
+												</div>
+												<!-- end cards-cvv -->
+											</div>
+										</div>
+										<!-- end orderbasket-field -->
+										<!-- begin orderbasket-field -->
+										<div class="orderbasket-field">
+											<p>Для проверки подлинности карты мы спишем и вернем 1 рубль.</p>
+											<p>Ваша карта будет автоматически привязана к профилю, для удобства платежей.</p>
+											<p>Вы в любой момент можете отвязать или поменять её на другую в личном кабинете.</p>
+										</div>
+										<!-- end orderbasket-field -->
+									</div>
+								</div>
+								<!-- end orderbasket-group -->
+								<!-- begin orderbasket-group -->
+								<div class="orderbasket-group">
+									<!-- begin orderbasket-field -->
+									<div class="orderbasket-field">
+										<div class="orderbasket-row-mod">
+											<div class="orderbasket-col-name">
+												<div class="form-control">
+													<input type="text" placeholder="Имя" tabindex="5">
+												</div>
+											</div>
+											<div class="orderbasket-col-tel">
+												<div class="form-control">
+													<input type="text" placeholder="+ X XXX XXX-XXX-XX" data-inputmask-placeholder="+ X XXX XXX-XXX-XX" data-inputmask="'mask': '+ 9 999 999-999-99'" tabindex="6">
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- end orderbasket-field -->
+									<!-- begin orderbasket-field -->
+									<div class="orderbasket-field">
+										<div class="form-control">
+											<textarea placeholder="Ваш коментарий к заказу" tabindex="7"></textarea>
+										</div>
+									</div>
+									<!-- end orderbasket-field -->
+								</div>
+								<!-- end orderbasket-group -->
+							</div>
+							<div class="preorder__right sm-hide"></div>
+						</div>
+						<div class="preorder__footer">
+							<div class="preorder__left sm-hide">
+								<a href="#" class="btn btn-border">
+								 	{{ mixins.icon('arr-left') }}
+									<span>вернутся в меню</span>
+								</a>
+							</div>
+							<div class="preorder__right">
+								<a href="#" class="btn btn_green btn_xl"><span>изменить заказ</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

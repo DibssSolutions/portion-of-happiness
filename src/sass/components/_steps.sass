@@ -1,0 +1,69 @@
+.steps
+	padding: 35px 0 44px
+	background-color: #f0f6ec
+	&__title
+		margin-bottom: 40px
+	&__row
+		margin: 0 -16px
+		display: flex
+		flex-wrap: wrap
+		counter-reset: list
+	&__col
+		padding: 0 16px
+		width: 33.3%
+		+sm
+			width: 100%
+		&:not(:first-child)
+			margin-top: 20px
+	&__item
+		position: relative
+		padding-left: 98px
+		font-size: 16px
+		+md
+			padding-left: 50px
+			font-size: 14px
+		&:before
+			position: absolute
+			counter-increment: list
+			content: counter(list) 
+			left: 0
+			top: 0
+			+circle(68)
+			text-align: center
+			color: $white
+			line-height: 68px
+			font-size: 30px
+			font-weight: 700
+			+circe
+			background-color: #3aab36
+			+md
+				+circle(35)
+				line-height: 35px
+				font-size: 16px
+		a
+			transition: border-color .3s
+			border-bottom: 1px solid
+			+hover
+				border-color: transparent
+		p
+			&:not(:first-child)
+				margin-top: 14px
+	&__item-title
+		min-height: 85px
+		margin-bottom: 24px
+		font-size: 20px
+		font-weight: 400
+		+md
+			margin-bottom: 15px
+			font-size: 18px
+		+sm
+			min-height: auto
+	&__footer
+		margin-top: 65px
+		+sm
+			margin-top: 40px
+		.btn
+			&:not(:last-child)
+				margin-right: 35px
+				+sm
+					margin: 0 20px 20px 0

@@ -29,3 +29,39 @@
 		p
 			&:not(:last-child)
 				padding-bottom: 10px
+
+.faq-section
+	padding: 32px 0 35px
+	background-color: rgba(249,178,85,.1)
+	&__title
+		&:not(:last-child)
+			margin-bottom: 32px
+			+sm
+				margin-bottom: 22px
+	&__row
+		margin: 0 -9px -18px
+		display: flex
+		flex-wrap: wrap
+	&__col
+		margin-bottom: 18px
+		padding: 0 9px
+		width: 33.3%
+		+sm
+			width: 100%
+	&__item
+		min-height: 260px
+		height: 100%
+		padding: 20px 26px
+		background-color: $white
+		+sm
+			min-height: auto
+	&__title-item
+		margin-bottom: 7px
+		min-height: 54px
+		color: #6aa943
+		font-size: 20px
+		font-weight: 700
+		line-height: 1.2
+	&__form
+		&:not(:first-child)
+			margin-top: 24px

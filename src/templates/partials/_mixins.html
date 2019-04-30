@@ -235,3 +235,12 @@
 </div>
 {% endmacro %}
 {# RATING #}
+
+
+{% macro choose(props) %}
+  <div class="choose js-choose{% if props.class %} choose_{{ props.class }}{% endif %}" data-max-number="20">
+    <button class="choose__minus js-choose-minus" type="button">-</button>
+    <input type="text" align="center" class="choose__input" value="1" readonly>
+    <button class="choose__plus js-choose-plus" type="button">+</button>
+  </div>
+{% endmacro %}

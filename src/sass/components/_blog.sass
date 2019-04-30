@@ -21,6 +21,8 @@
 .grid-sizer, .blog-item
 	width: 45.3%
 	float: left
+	&_full
+		width: 100%
 .blog-item
 	display: block
 	+cover
@@ -195,3 +197,35 @@
 		font-size: 12px
 		&:not(:first-child)
 			padding-top: 10px
+
+.section-blog
+	padding: 45px 0 62px
+	&__row
+		padding: 0 14px
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		+sm
+			padding: 0
+	&__col
+		padding: 0 16px
+		width: 50%
+		+clr
+		+sm
+			padding: 0
+			width: 100%
+		&:not(:first-child)
+			+sm
+				margin-top: 20px
+	&__head
+		margin-bottom: 30px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		justify-content: space-between
+	&__head-left
+		padding-right: 10px

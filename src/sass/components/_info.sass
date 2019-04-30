@@ -1,5 +1,9 @@
 .info
 	padding: 25px 0
+	&__main-title
+		margin: 22px 0 37px
+		+sm
+			margin-top: 0
 	&__inner
 		+md
 			padding: 0
@@ -24,6 +28,12 @@
 			left: 30%
 	&:not(:last-child)
 		margin-bottom: 20px
+	&_sm
+		margin-bottom: 50px
+		+md
+			display: none
+		&:before
+			display: none
 	&__img
 		// max-width: 1065px
 		// width: 66.5%
@@ -40,7 +50,8 @@
 		+sm
 			+flex-size(50%)
 			min-height: 190px
-	&__main
+	&__main,
+	&__sm
 		margin: 0 auto
 		padding: 0 35px
 		+md
@@ -52,14 +63,55 @@
 			+lg
 				padding-left: 40px
 			+sm
-				padding-left: 15px
+				padding-left: 15px	
+	&__main
+		&_pb
+			padding: 30px 35px 105px 35px
+			+md
+				padding: 10px
+			.info-item_order &
+				padding-left: 0
+				+md
+					padding: 10px
+	&__sm
+		+flex-size(33%)
+		display: flex
+		justify-content: flex-end
+		padding-right: 50px
+		img
+			margin-top: -105px
+		&_rotate-8
+			+rotate(8)
+		.info-item_order &
+			padding: 0 0 0 30px
+			justify-content: flex-start
+			order: 2
+	&__lg
+		padding-left: 45px
+		+flex-size(67%)
+		line-height: 1.6
+		.info-item_order &
+			order: 1
+			padding-left: 140px
+		+sm
+			+flex-size(50%)
+		p
+			strong
+				text-transform: uppercase
+				font-size: 17px
+				font-weight: 700
 	&__title
+		+prevent-text
 		+sm
 			font-size: 22px
 		+ms
 			font-size: 18px
 			br
 				display: none
+	&__text
+		margin-top: 17px
+		+sm
+			display: none
 	&__btn
 		margin-top: 30px
 		// +lg

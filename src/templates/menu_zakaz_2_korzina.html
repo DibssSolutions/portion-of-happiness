@@ -1,0 +1,93 @@
+---
+title: menu-zakaz-2-korzina
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+{{header.block()}}
+{{hero.block({class: 'hero_small'})}}
+<div class="cabinet">
+	<div class="cabinet__inner inner">
+		<h2 class="title">ОфОрмление заказа:</h2>
+	</div>
+	<div class="preorder">
+		<div class="preorder__topic">
+			<div class="preorder__inner inner">
+				<div class="preorder__topic-left">
+					<h3 class="preorder__subtitle title">В вашем заказе:</h3>
+				</div>
+				<div class="preorder__total">мой заказ: <div class="preorder__total-numb">3750 <div class="preorder__total-currency"> руб.</div></div></div>
+			</div>
+		</div>
+		<div class="preorder__wrap">
+			<div class="preorder__inner inner">
+				{% for item in [{
+					title: 'Меню «Домашнее» на 5-12 апреля',
+					label: 'Блюда на 5 дней, на 2 персоны:',
+					text: 'СОЧНАЯ ГОВЯДИНА с паровыми овощами СОЧНАЯ ГОВЯДИНА с паровыми овощами СОЧНАЯ ГОВЯДИНА с паровыми овощами СОЧНАЯ ГОВЯДИНА с паровыми овощами СОЧНАЯ ГОВЯДИНА с паровыми овощами',
+					summ: '2500 руб.',
+					bonus: 'ваш кешбэк: 25 бонусов'
+				}, {
+					title: 'Дополнительное блюдо',
+					text: 'Суп домашний с офощами',
+					summ: '310 руб.',
+					bonus: 'ваш кешбэк: 25 бонусов'
+				}, {
+					title: 'Дополнительное блюдо',
+					text: 'Суп домашний с офощами',
+					summ: '550 руб.',
+					bonus: 'ваш кешбэк: 25 бонусов'
+				}, {
+					title: 'Фермерские товары',
+					text: 'ТВОРОГ 5%, порция 100 гр.',
+					summ: '80 руб.',
+					bonus: 'ваш кешбэк: 25 бонусов'
+				}] %}
+			    <div class="preorder__row">
+			    	<div class="preorder__left">
+			    		<div class="preorder__item-title">{{ item.title }}</div>
+			    		{% if item.label %}
+			    		<div class="preorder__label">{{ item.label }}</div>
+			    		{% endif %}
+			    		<div class="preorder__text{% if not loop.last %} text-uppercase{% endif %}">{{ item.text }}</div>
+			    	</div>
+			    	<div class="preorder__right">
+			    		<div class="preorder__top">
+			    			<div class="preorder__summ">{{ item.summ }}</div>
+			    			<div class="preorder__bonus">{{ item.bonus }}</div>
+			    		</div>
+			    		<div class="preorder__bottom">
+			    			<div class="preorder__choose">
+			    				{{ mixins.choose() }}
+			    			</div>
+			    			<div class="preorder__remove">
+			    				<button class="btn-remove" type="button">{{ mixins.icon('trash') }}</button>
+			    			</div>
+			    		</div>
+			    	</div>
+			    </div>
+				{% endfor %}
+				<div class="preorder__footer">
+					<div class="preorder__left">
+						<a href="#" class="btn btn-border sm-hide">
+			             	{{ mixins.icon('arr-left') }}
+			            	<span>вернутся в меню</span>
+			            </a>
+			            <a href="#" class="btn btn_orange btn_xl"><span>добавить товары из лавки</span></a>
+					</div>
+					<div class="preorder__right">
+						<a href="#" class="btn btn_green btn_xl"><span>оформить заказ</span></a>
+						<a href="#" class="btn btn-border sm-show">
+			             	{{ mixins.icon('arr-left') }}
+			            	<span>вернутся в меню</span>
+			            </a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{{footer.block({footerBottom: 'footer__bottom_big'})}}
+{{mob_menu.mob_block()}}
+{% endblock %}

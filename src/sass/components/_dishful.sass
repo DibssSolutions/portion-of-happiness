@@ -436,3 +436,40 @@
 	// transition: background-color .3s
 	&.is-active
 		background-color: $greenLight
+
+.choose
+	align-items: center
+	display: inline-flex
+	&__minus,
+	&__plus
+		position: relative
+		+roboto
+		font-weight: 700
+		line-height: 1
+		font-size: 22px
+		background-color: transparent
+		&:before
+			position: absolute
+			content: ''
+			top: -5px
+			left: -5px
+			right: -5px
+			bottom: -5px
+	&__minus
+		margin-right: 5px
+	&__plus
+		margin-left: 5px
+	&__input
+		width: 30px
+		height: 30px
+		color: #1e1e1c
+		text-align: center
+		+roboto
+		font-weight: 700
+		line-height: 1
+		font-size: 22px
+		border: 1px solid #1e1e1c
+		background-color: transparent
+		border-radius: 2px
+		&::placeholder
+			text-align: center

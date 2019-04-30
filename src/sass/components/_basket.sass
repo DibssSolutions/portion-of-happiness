@@ -89,7 +89,7 @@
 	height: 225px
 .cards-number
 	position: relative
-	z-index: 2
+	z-index: 1
 	padding: 40px 35px
 	&__field
 		&:not(:first-child)
@@ -280,4 +280,206 @@
 		&:not(:first-child)
 			margin-top: 10px
 
+.preorder
+	&:not(:first-child)
+		margin-top: 30px
+	.modal &
+		font-size: 15px
+	&__topic
+		padding: 30px 0
+		margin-bottom: 8px
+		background-color: #fef7ee
+		.preorder__inner
+			align-items: center
+			justify-content: space-between
+			flex-wrap: wrap
+			display: flex
+		&_modal
+			padding: 0
+			margin-bottom: 0
+			background-color: transparent
+	&__wrap
+		background-color: #faefdd
+	&__topic-left,
+	&__total
+		width: 50%
+		+sm
+			width: 100%
+			&:not(:last-child)
+				margin-bottom: 10px
+	&__total
+		text-align: right
+		font-size: 15px
+		font-weight: 500
+		text-transform: uppercase
+		+sm
+			text-align: left
+	&__total-numb
+		margin-left: 10px
+		font-size: 37px
+		font-weight: 700
+		display: inline
+		+sm
+			font-size: 28px
+	&__total-currency
+		font-size: 20px
+		text-transform: lowercase
+		display: inline
+		+sm
+			font-size: 18px
+	&__row,
+	&__footer
+		position: relative
+		z-index: 1
+		justify-content: space-between
+		flex-wrap: wrap
+		display: flex
+		&:not(:last-child)
+			border-bottom: 1px solid #7d776f
+	&__inner
+		counter-reset: list 
+	&__row
+		position: relative
+		&:before
+			position: absolute
+			counter-increment: list
+			content: counter(list)". "
+			left: 0
+			top: 26px
+			color: #483d3c
+			+circe
+			line-height: 1
+			font-weight: 700
+			font-size: 30px
+			+sm
+				top: 22px
+				font-size: 28px
+		&_mod
+			padding-bottom: 0
+			&:before
+				display: none
+			&:not(:last-child)
+				border: none
+	&__footer
+		+sm
+			padding: 20px 0 40px
+		.btn
+			margin-top: 10px
+			min-width: auto
+			+sm
+				margin-top: 20px
+			&:not(:last-child)
+				margin-right: 15px
+	&__left
+		font-size: 20px
+		font-weight: 400
+		width: 63.5%
+		padding: 25px 15px 25px 43px
+		+sm
+			padding: 20px 0
+			font-size: 16px
+			width: 100%
+		.modal &
+			padding-right: 30px
+			+sm
+				padding-right: 0
+		.preorder__topic_modal &,
+		.preorder__row_mod &
+			padding-left: 0
+		.preorder__row_mod &
+			padding-bottom: 0
+		.preorder__footer &
+			padding-top: 50px
+			justify-content: space-between
+			flex-wrap: wrap
+			align-items: center
+			display: flex
+			+md
+				flex-direction: column
+				align-items: flex-start
+				.btn_xl
+					order: -1
+			+sm
+				padding: 0
+			.modal &
+				padding: 45px 25px 50px
+	&__right
+		position: relative
+		padding: 25px 0 25px 44px
+		width: 36.5%
+		flex-direction: column
+		display: flex
+		justify-content: space-between
+		font-size: 18px
+		background-color: #fef7ee
+		+sm
+			padding: 20px 0
+			width: 100%
+			background-color: transparent
+		.preorder__footer &
+			padding-top: 50px
+			flex-direction: column
+			align-items: flex-start
+			+sm
+				padding: 0
+		.modal &
+			background-color: rgba(254, 240, 221, 0.5)
+		&:before
+			position: absolute
+			content: ''
+			top: 0
+			bottom: -1px
+			left: 100%
+			width: 50vw
+			background-color: #fef7ee
+			+sm
+				z-index: -1
+				width: 100vw
+				left: 50%
+				margin-left: -50vw
+			.preorder__footer &
+				+sm
+					display: none
+			.modal &
+				background-color: rgba(254, 240, 221, 0.5)
+		.preorder__total
+			width: 100%
+			text-align: left
+	&__item-title,
+	&__label
+		font-size: 22px
+		font-weight: 700
+	&__item-title
+		+sm
+			padding-left: 33px
+	&__label
+		margin-top: 10px
+	&__text
+		margin-top: 8px
+		max-width: 440px
+	&__summ
+		font-size: 25px
+		font-weight: 700
+	&__bottom
+		margin-top: 33px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		+sm
+			margin-top: 15px
+	&__choose,
+	&__remove
+		font-size: 0
+		&:not(:last-child)
+			margin-right: 32px
 
+.btn-remove
+	font-size: 0
+	line-height: 1
+	background-color: transparent
+	.icon
+		font-size: 30px

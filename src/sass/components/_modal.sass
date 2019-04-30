@@ -47,6 +47,11 @@
 		text-align: left
 		+sm
 			max-width: 600px
+		&_xl
+			max-width: 1308px
+	&_order
+		.modal__inner
+			overflow: hidden
 	&__inner
 		border: 10px solid $coffee-opa
 		padding: 38px 50px 35px
@@ -57,6 +62,10 @@
 		+sm
 			border: 5px solid $coffee-opa
 			padding: 20px
+		.modal__container_xl &
+			padding: 0 93px
+			+lg
+				padding: 0 30px
 		.rating &
 			max-width: 930px
 			padding: 32px 67px 35px

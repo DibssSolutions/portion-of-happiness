@@ -10,3 +10,5 @@ import './_isotope';
 import './_scroll-top';
 import './_fancybox';
 import './_inputmask';
+import './_choose';
+import './_drop';
