@@ -474,12 +474,12 @@
                 center: [55.76, 37.64],
                 zoom: 10
               });
-              map.behaviors.disable('scrollZoom');
-              map.controls.remove('smallMapDefaultSet');
-              map.controls.remove('trafficControl');
-              map.controls.remove('rulerControl');
-              map.container.fitToViewport();
-              if (map)
+              newMap.behaviors.disable('scrollZoom');
+              newMap.controls.remove('smallMapDefaultSet');
+              newMap.controls.remove('trafficControl');
+              newMap.controls.remove('rulerControl');
+              newMap.container.fitToViewport();
+              if (newMap)
               {
                 ymaps.modules.require(['Placemark', 'Circle'], function(Placemark, Circle)
                 {
@@ -488,10 +488,10 @@
                   {
                     iconLayout: 'default#image',
                     iconImageHref: './img/point.png',
-                    iconImageSize: [39, 64],
-                    iconImageOffset: [-15, -64]
+                    iconImageSize: [19, 32],
+                    iconImageOffset: [-15, -32]
                   });
-                  map.geoObjects.add(placemark);
+                  newMap.geoObjects.add(placemark);
                 });
               }
             });
