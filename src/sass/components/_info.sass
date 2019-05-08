@@ -18,14 +18,12 @@
 	&:before
 		content: ''
 		position: absolute
-		width: 100%
+		width: 50vw
 		height: 100%
 		background-color: $orange-bg
 		top: 0
 		left: 50%
 		z-index: -1
-		+md
-			left: 30%
 	&:not(:last-child)
 		margin-bottom: 20px
 	&_sm
@@ -121,6 +119,5 @@
 				min-width: auto
 	&.info-item_order
 		&:before
-			left: -50%
-			+md
-			left: -30%
+			left: auto
+			right: 50%
