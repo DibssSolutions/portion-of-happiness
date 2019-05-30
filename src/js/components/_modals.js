@@ -37,7 +37,7 @@ import {OPEN, ACTIVE, BODY} from './../constants';
       controls.removeClass(ACTIVE);
     };
 
-    BODY.on('click', e => {
+    modal.on('click', e => {
       if ($(e.target).closest('[data-modal-container]').length || $(e.target).closest('[data-modal-close]').length || $(e.target).closest('[data-modal-control]').length ) return;
       hide();
     });

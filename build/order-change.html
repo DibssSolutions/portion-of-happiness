@@ -11,7 +11,7 @@
     <link rel="stylesheet" media="all" href="css/app.css">
   </head>
 
-  <body class="is-open-popup">
+  <body>
     <!-- BEGIN content -->
     <div class="out">
       <header class="header js-header">
@@ -369,7 +369,7 @@
                   <div class="order__total total">
                     <div class="total__sum"><span>2500 руб. </span>ваш кешбэк: 25 бонусов</div>
                     <div class="total__btn">
-                      <a href="#" class="btn btn_pink btn_wide"><span>Оставить отзыв</span></a>
+                      <a href="#" data-modal-control="order-change" class="btn btn_pink btn_wide"><span>Оставить отзыв</span></a>
                     </div>
                   </div>
                 </div>
@@ -523,7 +523,7 @@
           <a href="#">контакты</a>
         </div>
       </div>
-      <div class="modal modal_order is-open" data-modal="order-change">
+      <div class="modal modal_order" data-modal="order-change">
         <div class="modal__container modal__container_xl" data-modal-container>
           <div class="modal__inner">
             <div class="cabinet">

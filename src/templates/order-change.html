@@ -1,6 +1,5 @@
 ---
 title: Order change
-bodyClass: is-open-popup
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -167,7 +166,7 @@ bodyClass: is-open-popup
 						<div class="order__total total">
 							<div class="total__sum"><span>2500 руб. </span>ваш кешбэк: 25 бонусов</div>
 							<div class="total__btn">
-								<a href="#" class="btn btn_pink btn_wide"><span>Оставить отзыв</span></a>
+								<a href="#" data-modal-control="order-change" class="btn btn_pink btn_wide"><span>Оставить отзыв</span></a>
 							</div>
 						</div>
 					</div>
@@ -181,7 +180,7 @@ bodyClass: is-open-popup
 {# {% include "partials/_form-sm.html"%} #}
 
 
-<div class="modal modal_order is-open" data-modal="order-change">
+<div class="modal modal_order" data-modal="order-change">
 	<div class="modal__container modal__container_xl" data-modal-container>
 		<div class="modal__inner">
 			<div class="cabinet">
