@@ -68,7 +68,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "bootstrap-select": "^1.13.2",
+    "bootstrap-select": "^1.13.6",
     "inputmask": "^4.0.6",
     "isotope-layout": "^3.0.6",
     "isotope-packery": "^2.0.1",
